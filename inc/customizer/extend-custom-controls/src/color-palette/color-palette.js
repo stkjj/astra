@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import AstraColorPickerControl from '../common/astra-color-picker-control';
 
-import testJSON from '../common/astra-common-function'; 
+import astraIsJSON from '../common/astra-common-function';
 
 import {useEffect, useState} from 'react';
 
@@ -16,19 +16,19 @@ const ColorPaletteComponent = props => {
 
 	let defaultValue = props.control.params.default;
 
-	const {		
-		label,		
+	const {
+		label,
 	} = props.control.params;
 
 	const [state, setState] = (value) ? useState(props.control.setting.get()) : useState(defaultValue);
-		
+
 	useEffect( () => {
 		// If settings are changed externally.
 		if( state !== value ) {
 			setState(value);
 		}
 	}, [props]);
-	
+
 
 	let labelHtml = null;
 
@@ -38,7 +38,7 @@ const ColorPaletteComponent = props => {
 
 	const handleChangeComplete = ( color,patterntype,index ) => {
 		let value;
-		
+
 		if (typeof color === 'string') {
 			value = color;
 		} else if (undefined !== color.rgb && undefined !== color.rgb.a && 1 !== color.rgb.a) {
@@ -46,12 +46,12 @@ const ColorPaletteComponent = props => {
 		} else {
 			value = color.hex;
 		}
-		
+
 		updateValues(value,patterntype,index);
 	};
-	
+
 	const updateValues = (value,patterntype,index) => {
-		
+
 		let obj = {
 			...state
 		};
@@ -62,22 +62,22 @@ const ColorPaletteComponent = props => {
 		let palette_index = {
 			...palette[index]
 		};
-		
+
 		palette_index[0] = value
 		palette[index] = palette_index
 		obj[patterntype] = palette
-		
+
 		var newcolor = obj[obj.patterntype][index][0]
-		
+
 		setState(obj)
-		
-		props.control.setting.set( obj );		
-		
+
+		props.control.setting.set( obj );
+
 
 	};
 
 	const editLabel = (value,index) => {
-		
+
 
 		let obj = {
 			...state
@@ -89,21 +89,21 @@ const ColorPaletteComponent = props => {
 		let palette_index = {
 			...palette[index]
 		};
-		
+
 		palette_index[1] = value
 		palette[index] = palette_index
 		obj[obj.patterntype] = palette
 
 		setState(obj)
-		props.control.setting.set( obj );		
+		props.control.setting.set( obj );
 
 	}
 
 	const addNewColorToPalette = () => {
-		
+
 		var label =  `Custom Color ${Object.keys(state[state.patterntype]).length - 4 }`
 		var new_color_array = [ "#ffffff", label ];
-		
+
 		let obj = {
 			...state
 		};
@@ -112,10 +112,10 @@ const ColorPaletteComponent = props => {
 			...obj[obj.patterntype]
 		};
 		respectivePalette[Object.keys(respectivePalette).length] = new_color_array;
-		
+
 		obj[obj.patterntype] = respectivePalette;
-		
-		setState(obj);	
+
+		setState(obj);
 		props.control.setting.set( obj );
 
 	}
@@ -126,10 +126,10 @@ const ColorPaletteComponent = props => {
 		}
 
 		var result = Object.keys(obj.pattern1).map((key) => obj.pattern1[key]);
-		const filteredItems = result.slice(0, index).concat(result.slice(index + 1, result.length))	
+		const filteredItems = result.slice(0, index).concat(result.slice(index + 1, result.length))
 		obj.pattern1 = filteredItems;
-		
-		setState(obj);	
+
+		setState(obj);
 		props.control.setting.set( obj );
 
 	}
@@ -145,7 +145,7 @@ const ColorPaletteComponent = props => {
 								value={ state.pattern1[index][1] }
 								onChange={ ( value ) => editLabel(value,index) }
 							/>
-							<span title={(index <= 4) ? __( "This color can't be deleted","astra" ) :'' } ><Button className='ast-palette-delete' 							
+							<span title={(index <= 4) ? __( "This color can't be deleted","astra" ) :'' } ><Button className='ast-palette-delete'
 							disabled ={(index <= 4) ? true :false }
 							onClick={ () => { deleteCustomPalette(index,item) } } >
 								<Dashicon icon="trash" />
@@ -155,8 +155,8 @@ const ColorPaletteComponent = props => {
 								onChangeComplete={(color, backgroundType) => handleChangeComplete(color,'pattern1',index)}
 								backgroundType = { 'color' }
 								allowGradient={ false }
-								allowImage={ false }		
-								disablePalette={true}	
+								allowImage={ false }
+								disablePalette={true}
 								colorIndicator = {undefined !== state.pattern1 && state.pattern1 ? state.pattern1[index][0] : ''}
 							/>
 						</div>
@@ -164,7 +164,7 @@ const ColorPaletteComponent = props => {
 				}) }
 				<Button className='ast-add-new-color'  isPrimary onClick={ () => addNewColorToPalette() }>
 					<Dashicon icon="plus" /><span> Add New Color</span>
-				</Button>	
+				</Button>
 				<Button className='ast-palette-import' isPrimary onClick={ () => { state.isVisible ? toggleClose() : toggleVisible() } }>
 				 	<Dashicon icon="open-folder" /> Presets
 				</Button>
@@ -200,7 +200,7 @@ const ColorPaletteComponent = props => {
 			</span>;
 	};
 
-	const resetValue = (value) => {		
+	const resetValue = (value) => {
 		setState(value);
 		props.control.setting.set(value);
 	};
@@ -218,52 +218,52 @@ const ColorPaletteComponent = props => {
 		};
 		obj['isVisible'] = false
 		if ( state.isVisible === true ) {
-			setState(obj)			
+			setState(obj)
 		}
 	};
 
 
 	const updateRootCss = (e) =>{
 			Object.values(e.detail.palette.pattern1).map( ( item, index ) => {
-				var maindiv =  document.getElementById('customize-preview')				
-				var iframe = maindiv.getElementsByTagName('iframe')[0]				
-				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;			
-				innerDoc.documentElement.style.setProperty('--ast-global-palette' + index, item[0] );	
-				document.documentElement.style.setProperty('--ast-global-palette' + index, item[0] );		
+				var maindiv =  document.getElementById('customize-preview')
+				var iframe = maindiv.getElementsByTagName('iframe')[0]
+				var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+				innerDoc.documentElement.style.setProperty('--ast-global-palette' + index, item[0] );
+				document.documentElement.style.setProperty('--ast-global-palette' + index, item[0] );
 
 			} );
 	}
 	document.addEventListener( 'UpdatePaletteStateInIframe', updateRootCss, false ); //Updating the root css for iframe.
-	
+
 	const handlePresetPalette = (item) => {
-	
+
 		var obj = {
 			...state
 		}
-			
+
 		var patternArray = {
 			...obj.pattern1
 		}
 
-		Object.keys(patternArray).map( (  index ) => { 
-		
+		Object.keys(patternArray).map( (  index ) => {
+
 			if(obj.presetPalette[item][index]){
 				var patternArrayIndex = {
 					...patternArray[index]
 				}
 				patternArrayIndex[0] = obj.presetPalette[item][index]
 				patternArray[index] =  patternArrayIndex;
-			}			
+			}
 		})
-	
+
 		obj['pattern1'] = patternArray
 		obj['importError'] = false
 		obj['isVisible'] = false
 		obj['customImportText'] = ''
 
-		setState(obj)	
+		setState(obj)
 		props.control.setting.set( obj );
-		
+
 	}
 
 
@@ -272,8 +272,8 @@ const ColorPaletteComponent = props => {
 			...state
 		};
 		obj['customImportText'] = text
-		setState(obj)		
-		
+		setState(obj)
+
 	}
 
 	const handleTextImport = () =>{
@@ -287,10 +287,10 @@ const ColorPaletteComponent = props => {
 			}));
 			return;
 		}
-		
-		if ( testJSON(importText) && Object.keys( JSON.parse( importText ) ).length === 5 ) {
+
+		if ( astraIsJSON(importText) && Object.keys( JSON.parse( importText ) ).length === 5 ) {
 			var customImportText = JSON.parse( importText );
-	
+
 			let obj = {
 				...state
 			}
@@ -298,25 +298,25 @@ const ColorPaletteComponent = props => {
 				...obj.pattern1
 			}
 
-			Object.keys(patternArray).map( (  index ) => { 		
+			Object.keys(patternArray).map( (  index ) => {
 				if(customImportText[index]){
 					var patternArrayIndex = {
 						...patternArray[index]
 					}
 					patternArrayIndex[0] = customImportText[index]
 					patternArray[index] =  patternArrayIndex;
-				}			
+				}
 			})
-		
+
 			obj.presetPalette.push(customImportText); //Keep copy of imported palette.
-			obj['pattern1'] = patternArray			
+			obj['pattern1'] = patternArray
 			obj['importError'] = false
 			obj['isVisible'] = false
 			obj['customImportText'] = ''
 
-			setState(obj)	
-			props.control.setting.set( obj );		
-			
+			setState(obj)
+			props.control.setting.set( obj );
+
 		}else{
 			setState(prevState => ({
 				...prevState,
@@ -325,7 +325,7 @@ const ColorPaletteComponent = props => {
 		}
 
 	}
-	
+
 	const exportCopied = (item) => {
 		setState(prevState => ({
 			...prevState,
@@ -342,7 +342,7 @@ const ColorPaletteComponent = props => {
 
 
 	const deletePalette = (index,item) => {
-		
+
 		let obj = {
 			...state
 		}
@@ -350,27 +350,27 @@ const ColorPaletteComponent = props => {
 		const filteredItems = obj.presetPalette.slice(0, index).concat(obj.presetPalette.slice(index + 1, obj.presetPalette.length))
 
 		obj.presetPalette = filteredItems;
-		
-		setState(obj)	
+
+		setState(obj)
 		props.control.setting.set( obj );
 
 	};
 
-	
+
 
 	return <>
-		
+
 		<label className="customizer-text">
 			{ labelHtml }
 		</label>
 		{renderOperationButtons()}
-		
-		<div className="ast-color-palette-wrapper">	
-			{ patternhtml }			
-		</div>		
+
+		<div className="ast-color-palette-wrapper">
+			{ patternhtml }
+		</div>
 		<input type="hidden" data-palette={JSON.stringify(state[state.patterntype])} id="ast-color-palette-hidden"/>
-		
-		<div className='ast-palette-import-wrap'>			
+
+		<div className='ast-palette-import-wrap'>
 			{ state.isVisible && (
                 <Popover position={"bottom center"} onClose={ toggleClose } className="ast-global-palette-import">
                    <TabPanel className="ast-palette-popover-tabs"
@@ -395,9 +395,9 @@ const ColorPaletteComponent = props => {
 										if ( 'import' === tab.name ) {
 											tabout = (
 												<>
-													{ Object.keys( state.presetPalette ).map( ( item, index ) => { 
-														
-														return ( 
+													{ Object.keys( state.presetPalette ).map( ( item, index ) => {
+
+														return (
 														<div key={index}>
 															<Button
 																className='ast-palette-item'
@@ -410,14 +410,14 @@ const ColorPaletteComponent = props => {
 																		<div key={ subIndex } style={ {
 																			width: 25,
 																			height: 25,
-																			marginBottom: 0,		
+																			marginBottom: 0,
 																			transform: 'scale(1)',
 																			transition: '100ms transform ease',
 																		} } className="ast-palette-individual-item-wrap">
 																			<span
 																				className='ast-palette-individual-item'
 																				style={ {
-																					color: `${ state.presetPalette[item][color] }`,																					
+																					color: `${ state.presetPalette[item][color] }`,
 																				} }
 																				>
 																			</span>
@@ -433,12 +433,12 @@ const ColorPaletteComponent = props => {
 															>
 																{ state.exportCopied === item ? <Dashicon icon="yes" /> : <Dashicon icon="admin-page" /> }
 															</ClipboardButton>
-															
+
 															<Button className='ast-palette-delete'  onClick={ () => { deletePalette(index,item) } } key={`delete-${index}`}>
 																<Dashicon icon="trash" />
 															</Button>
 														</div>
-															
+
 														)
 													} )}
 												</>
@@ -449,7 +449,7 @@ const ColorPaletteComponent = props => {
 													<div >
 														<h4>{ __( "Required Format","astra" ) }</h4>
 														<p className="palette-format">{`["#733492","#AC238C","#24B460","#C0C2BA","#CBCB38"]`}</p>
-													</div>	
+													</div>
 													<TextareaControl
 														label={ __( 'Import color set from text data.', 'astra' ) }
 														help={ __( 'Follow required format given above.', 'astra' ) }
@@ -468,7 +468,7 @@ const ColorPaletteComponent = props => {
 														{ __('Import', 'astra' ) }
 													</Button>
 												</>
-												
+
 											);
 										}
 									}
