@@ -134,7 +134,7 @@ const ColorPaletteComponent = props => {
 
 	}
 
-	var patternHtml = (
+	const patternHtml = (
 		<div className="ast-color-palette-wrap">
 			{ Object.keys(state.pattern1).map((item,index)=>{
 				return (
