@@ -135,7 +135,7 @@ const ColorPaletteComponent = props => {
 	}
 
 	var patternHtml = (
-		<div className="ast-color-palette1-wrap">
+		<div className="ast-color-palette-wrap">
 			{ Object.keys(state.pattern1).map((item,index)=>{
 				return (
 					<div className={`ast-color-picker-palette-${index+1} `} key={index}>
@@ -351,7 +351,6 @@ const ColorPaletteComponent = props => {
 	};
 
 	return <>
-
 		<label className="customizer-text">
 			{ labelHtml }
 		</label>
