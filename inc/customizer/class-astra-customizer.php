@@ -107,7 +107,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 		 * @since x.x.x
 		 * @var Array
 		 */
-		public static $localize_arr = array();
+		public static $custmizer_localize_array = array();
 
 		/**
 		 * Initiator
@@ -136,7 +136,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				add_action( 'customize_register', array( $this, 'prepare_group_configs' ), 9 );
 			}
 
-			$this->prepare_localize_arr();
+			$this->prepare_customizer_localize_array();
 
 			$this->check_filters_for( 'astra_color_palettes' );
 
@@ -160,13 +160,13 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 		 *
 		 * @since x.x.x
 		 */
-		public function prepare_localize_arr() {
+		public function prepare_customizer_localize_array() {
 			$string             = $this->generate_font_dropdown();
 			$tmpl               = '<div class="ast-field-settings-modal">
 					<ul class="ast-fields-wrap">
 					</ul>
 			</div>';
-			self::$localize_arr = array(
+			self::$custmizer_localize_array = array(
 				'customizer' => array(
 					'settings'            => array(
 						'sidebars'     => array(
@@ -208,7 +208,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 		 */
 		public function check_filters_for( $hook = '' ) {
 			if ( has_filter( $hook ) ) {
-				self::$localize_arr['customizer']['is_old_palette_used'] = true;
+				self::$custmizer_localize_array['customizer']['is_old_palette_used'] = true;
 			}
 		}
 
@@ -1230,7 +1230,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				'astra',
 				apply_filters(
 					'astra_theme_customizer_js_localize',
-					self::$localize_arr
+					self::$custmizer_localize_array
 				)
 			);
 		}
