@@ -776,7 +776,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	$defaults['mobile-header-label-line-height']    = '';
 	$defaults['mobile-header-label-font-size']      = '';
 
-	/** 
+	/**
 	 * Global Color Palette.
 	 */
 	$defaults['global-color-palette'] = array(
@@ -785,7 +785,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 			array( '#0274be', __( 'Theme Color', 'astra' ) ),
 			array( '#0274b2', __( 'Link Color', 'astra' ) ),
 			array( '#3a3a31', __( 'Link Hover Color', 'astra' ) ),
-			array( '#3a3a3b', __( 'Heading Color ( H1 - H6 )', 'astra' ) ),           
+			array( '#3a3a3b', __( 'Heading Color ( H1 - H6 )', 'astra' ) ),
 		),
 		'patterntype'      => 'pattern1',
 		'isVisible'        => false,
@@ -794,41 +794,32 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 		'importError'      => false,
 		'presetPalette'    => array(
 			array(
-				'#92589D',
-				'#98899B',
-				'#F3E273',
-				'#B69F47',
-				'#23DE8D',
+				'#7e6c6c',
+				'#f87575',
+				'#ffa9a3',
+				'#b9e6ff',
+				'#5c95ff',
 			),
 			array(
-				'#733492',
-				'#AC238C',
-				'#24B460',
-				'#C0C2BA',
-				'#CBCB38',
+				'#562c2c',
+				'#f2542d',
+				'#f5dfbb',
+				'#0e9594',
+				'#127475',
 			),
 			array(
-				'#E224EF',
-				'#3D10B2',
-				'#7A9140',
-				'#0401D6',
-				'#D3830B',
+				'#0d1b2a',
+				'#1b263b',
+				'#415a77',
+				'#778da9',
+				'#e0e1dd',
 			),
-			array(
-				'#2A7DD7',
-				'#72258F',
-				'#16396A',
-				'#A512F8',
-				'#1034E6',
-			),
-			
 		),
-
 	);
+
 	/**
 	* Mobile Menu
 	*/
-
 	// Specify all the default values for Menu from here.
 	$defaults['header-mobile-menu-bg-color']   = '';
 	$defaults['header-mobile-menu-color']      = '';
