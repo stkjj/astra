@@ -13,33 +13,33 @@ const ResponsiveColorComponent = props => {
 		var regex = /\d+/g;
 		var string = temp_dbval.desktop;
 		var matches = string.match(regex);
-		var updated_palette = props.customizer.control('astra-settings[global-color-palette]').setting.get()		
+		var updated_palette = props.customizer.control('astra-settings[global-color-palette]').setting.get()
 		temp_dbval.desktop = updated_palette[updated_palette.patterntype][matches][0]
 		value = temp_dbval
-	}else{		
+	}else{
 		 value = props.control.setting.get();
 	}
 	const isVisible = false
 	const [props_value, setPropsValue] = useState(value,isVisible);
 
 	const updateValues = ( value, key ) => {
-		
+
 		let obj = {
 			...props_value
-		};		
-	
+		};
+
 		if( key === "desktop" ){
-		
-			if(props.control.container[0].getAttribute('paletteindex')){	
+
+			if(props.control.container[0].getAttribute('paletteindex')){
 				obj[key] = 'var(--ast-global-palette'+props.control.container[0].getAttribute('paletteindex')+')';
-				
+
 			}else{
 				obj[key] = value;
 			}
 		}else{
 
 			obj[key] = value;
-			
+
 		}
 
 		setPropsValue(obj);
@@ -47,16 +47,16 @@ const ResponsiveColorComponent = props => {
 	};
 
 	const updatepaletteuse = (value,index,defaultset) =>{
-		
+
 		props.control.container[0].setAttribute('paletteused', value);
-		props.control.container[0].setAttribute('paletteindex', index);		
-		props.control.container[0].setAttribute('defaultset', defaultset);		
+		props.control.container[0].setAttribute('paletteindex', index);
+		props.control.container[0].setAttribute('defaultset', defaultset);
 	}
 
 	var globalPalette = props.customizer.control('astra-settings[global-color-palette]').setting.get()
 
 	const handleGlobalColorPopupBtn = (value,index,defaultset,color,key) => {
-		updatepaletteuse(value,index,defaultset);		
+		updatepaletteuse(value,index,defaultset);
 		updateValues(color,key);
 	}
 
@@ -71,13 +71,13 @@ const ResponsiveColorComponent = props => {
 	if(temp_dbval.desktop && temp_dbval.desktop.includes("palette")){
 		var regex = /\d+/g;
 		var string = temp_dbval.desktop;
-		paletteSelectedIndex = string.match(regex)[0];	
+		paletteSelectedIndex = string.match(regex)[0];
 	}
 
 	const renderGlobalPalette = () =>{
 		return (
 		<div className="ast-global-color-btn-wrap">
-				<button	className="ast-global-color-btn components-button is-secondary" 
+				<button	className="ast-global-color-btn components-button is-secondary"
 				onClick={e => {
 					e.preventDefault();
 					setPropsValue(prevState => ({
@@ -87,8 +87,8 @@ const ResponsiveColorComponent = props => {
 				}}>
 					<Dashicon icon='admin-site-alt3' style={{
 						width: 14,
-						height: 14,
-						fontSize: 14
+						height: 12,
+						fontSize: 13
 					}}/>
 				</button>
 				{ props_value.isVisible && (
@@ -106,9 +106,9 @@ const ResponsiveColorComponent = props => {
 							}}/>
 						</Button>
 						<hr/>
-						{ Object.keys( globalPalette.pattern1 ).map( ( item, index ) => { 
-												
-							return ( 
+						{ Object.keys( globalPalette.pattern1 ).map( ( item, index ) => {
+
+							return (
 								<Button
 									className='ast-global-color-individual-btn'
 									onClick={ () =>handleGlobalColorPopupBtn( true,index,'no',globalPalette.pattern1[item][0],'desktop' ) }
@@ -117,7 +117,7 @@ const ResponsiveColorComponent = props => {
 									title={ globalPalette.pattern1[item][1]}
 								>
 									<div className={paletteSelectedIndex === item ? 'ast-global-color-sticker selected' : 'ast-global-color-sticker' }
-										style={{ background:globalPalette.pattern1[item][0] }} 
+										style={{ background:globalPalette.pattern1[item][0] }}
 									/>
 									<div className="ast-global-color-title">{ globalPalette.pattern1[item][1]}</div>
 									<div className="ast-global-color-hexcode">{ globalPalette.pattern1[item][0]}</div>
@@ -142,7 +142,7 @@ const ResponsiveColorComponent = props => {
 
 		return <span className="customize-control-title">
 			<>
-				
+
 				<div className="ast-color-btn-reset-wrap">
 					<button
 						className="ast-reset-btn components-button components-circular-option-picker__clear is-secondary is-small"
@@ -173,13 +173,13 @@ const ResponsiveColorComponent = props => {
 	};
 
 	const renderSettings = ( key ) => {
-	
+
 		return <AstraColorPickerControl
 			color={undefined !== value[key] && value[key] ? value[key] : ''}
 			onChangeComplete={(color, backgroundType) => handleChangeComplete(color, key)} backgroundType={'color'}
 			allowGradient={false} allowImage={false}
 			defautColorPalette = {props.customizer.control('astra-settings[global-color-palette]').setting.get()}
-			isPaletteUsed={key=='desktop' ? (value,index,defaultset) => updatepaletteuse(value,index,defaultset):''} 
+			isPaletteUsed={key=='desktop' ? (value,index,defaultset) => updatepaletteuse(value,index,defaultset):''}
 			container ={props.control.container[0]}
 			disablePalette={true}
 			colorIndicator = {dbValue.desktop}

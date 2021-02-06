@@ -11,17 +11,17 @@ const ColorComponent = props => {
 		var regex = /\d+/g;
 		var string = props.control.setting.get();
 		var matches = string.match(regex);
-		var updated_palette = props.customizer.control('astra-settings[global-color-palette]').setting.get()		
+		var updated_palette = props.customizer.control('astra-settings[global-color-palette]').setting.get()
 		value = updated_palette[updated_palette.patterntype][matches][0]
 	}else{
 		 value = props.control.setting.get();
 	}
 
 	let defaultValue = props.control.params.default;
-	
+
 	const [state, setState] = useState({
 		value: value,
-		isVisible:false,	
+		isVisible:false,
 	});
 
 	useEffect( () => {
@@ -36,19 +36,19 @@ const ColorComponent = props => {
 			...prevState,
 			value: value
 		}));
-		
-		if(props.control.container[0].getAttribute('paletteindex')){			
+
+		if(props.control.container[0].getAttribute('paletteindex')){
 			props.control.setting.set('var(--ast-global-palette'+props.control.container[0].getAttribute('paletteindex')+')');
 		}else{
 			props.control.setting.set(value);
 		}
-		
+
 	};
 
-	const updatepaletteuse = (value,index,defaultset) =>{		
+	const updatepaletteuse = (value,index,defaultset) =>{
 		props.control.container[0].setAttribute('paletteused', value);
-		props.control.container[0].setAttribute('paletteindex', index);	
-		props.control.container[0].setAttribute('defaultset', defaultset);		
+		props.control.container[0].setAttribute('paletteindex', index);
+		props.control.container[0].setAttribute('defaultset', defaultset);
 	}
 
 	const toggleClose = () => {
@@ -57,10 +57,10 @@ const ColorComponent = props => {
 			isVisible: false
 		}));
     };
-    
+
 	var globalPalette = props.customizer.control('astra-settings[global-color-palette]').setting.get()
 
-	const handleGlobalColorPopupBtn = (value,index,defaultset,color) => {	
+	const handleGlobalColorPopupBtn = (value,index,defaultset,color) => {
 		updatepaletteuse(value,index,defaultset);
 		updateValues(color)
 	}
@@ -69,14 +69,14 @@ const ColorComponent = props => {
 	if(props.control.setting.get() && props.control.setting.get().includes("palette")){
 		var regex = /\d+/g;
 		var string = props.control.setting.get();
-		paletteSelectedIndex = string.match(regex)[0];	
+		paletteSelectedIndex = string.match(regex)[0];
     }
-    
+
 	const renderOperationButtons = () => {
 		return <span className="customize-control-title">
 				<>
 					<div className="ast-global-color-btn-wrap">
-						<button	className="ast-global-color-btn components-button is-secondary" 
+						<button	className="ast-global-color-btn components-button is-secondary"
 						onClick={e => {
 							e.preventDefault();
 							setState(prevState => ({
@@ -86,8 +86,8 @@ const ColorComponent = props => {
 						}}>
 							<Dashicon icon='admin-site-alt3' style={{
 								width: 14,
-								height: 14,
-								fontSize: 14
+								height: 12,
+								fontSize: 13
 							}}/>
 						</button>
 						{ state.isVisible && (
@@ -105,9 +105,9 @@ const ColorComponent = props => {
 									}}/>
 								</Button>
 								<hr/>
-								{ Object.keys( globalPalette.pattern1 ).map( ( item, index ) => { 
-														
-									return ( 
+								{ Object.keys( globalPalette.pattern1 ).map( ( item, index ) => {
+
+									return (
 										<Button
 											className='ast-global-color-individual-btn'
 											onClick={ () =>handleGlobalColorPopupBtn( true,index,'no',globalPalette.pattern1[item][0] ) }
@@ -116,7 +116,7 @@ const ColorComponent = props => {
 											title={ globalPalette.pattern1[item][1]}
 										>
 											<div className={ paletteSelectedIndex === item ? 'ast-global-color-sticker selected' : 'ast-global-color-sticker' }
-												style={{ background:globalPalette.pattern1[item][0] }} 
+												style={{ background:globalPalette.pattern1[item][0] }}
 											/>
 											<div className="ast-global-color-title">{ globalPalette.pattern1[item][1]}</div>
 											<div className="ast-global-color-hexcode">{ globalPalette.pattern1[item][0]}</div>
@@ -190,7 +190,7 @@ const ColorComponent = props => {
 									 disablePalette={true}
 									 colorIndicator = {props.control.setting.get()}
 									 />
-									 
+
 
 		</div>
 	</>;

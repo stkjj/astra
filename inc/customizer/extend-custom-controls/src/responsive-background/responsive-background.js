@@ -102,7 +102,7 @@ const ResponsiveBackground = props => {
 	if(state.value['desktop']['background-color'] && state.value['desktop']['background-color'].includes("palette")){
 		var regex = /\d+/g;
 		var string = state.value['desktop']['background-color'];
-		paletteSelectedIndex = string.match(regex)[0];	
+		paletteSelectedIndex = string.match(regex)[0];
 	}
 	const renderGlobalPalette = () => {
 		return (
@@ -117,8 +117,8 @@ const ResponsiveBackground = props => {
 				}}>
 					<Dashicon icon='admin-site-alt3' style={{
 						width: 14,
-						height: 14,
-						fontSize: 14
+						height: 12,
+						fontSize: 13
 					}}/>
 				</button>
 				{ state.isVisible && (

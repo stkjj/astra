@@ -594,7 +594,7 @@ final class Astra_Builder_Helper {
 			array(
 				'logo'    => array(
 					'name'    => __( 'Logo', 'astra' ),
-					'icon'    => 'admin-appearance',
+					'icon'    => 'admin-site-alt3',
 					'section' => 'title_tagline',
 					'delete'  => false,
 				),
@@ -657,7 +657,7 @@ final class Astra_Builder_Helper {
 			array(
 				'logo'           => array(
 					'name'    => __( 'Logo', 'astra' ),
-					'icon'    => 'admin-appearance',
+					'icon'    => 'admin-site-alt3',
 					'section' => 'title_tagline',
 				),
 				'search'         => array(
@@ -1038,7 +1038,7 @@ final class Astra_Builder_Helper {
 			if ( ! empty( $grids ) ) {
 
 				foreach ( $grids as $grid_row => $row_grids ) {
-					
+
 					$components = array();
 					if ( ! empty( $row_grids ) ) {
 
@@ -1053,12 +1053,12 @@ final class Astra_Builder_Helper {
 							}
 
 							$result = array_values( $grid );
-							
+
 							if ( is_array( $result ) ) {
 								$loaded_component = call_user_func_array( 'array_merge', $result );
 								$components[]     = is_array( $loaded_component ) ? $loaded_component : array();
 							}
-						}                   
+						}
 					}
 
 					$loaded_components[ $grid_row ] = call_user_func_array( 'array_merge', $components );
@@ -1068,7 +1068,7 @@ final class Astra_Builder_Helper {
 			if ( ! empty( $loaded_components ) ) {
 				// For both devices(mobile & desktop).
 				$loaded_components['header_both'] = array_merge( $loaded_components['header_desktop'], $loaded_components['header_mobile'] );
-				
+
 				// For All device and builder type.
 				$all_components           = call_user_func_array( 'array_merge', array_values( $loaded_components ) );
 				$loaded_components['all'] = array_unique( $all_components );
@@ -1076,9 +1076,9 @@ final class Astra_Builder_Helper {
 
 			self::$loaded_grid = $loaded_components;
 		}
-		
+
 		$loaded_components = self::$loaded_grid;
-		
+
 		if ( 'all' === $builder_type && ! empty( $loaded_components['all'] ) ) {
 			$is_loaded = in_array( $component_id, $loaded_components['all'], true );
 		} else {

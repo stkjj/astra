@@ -13,10 +13,10 @@ const Background = props => {
 		var regex = /\d+/g;
 		var string = tempDbValue['background-color'];
 		var matches = string.match(regex);
-		var updated_palette = props.customizer.control('astra-settings[global-color-palette]').setting.get()		
+		var updated_palette = props.customizer.control('astra-settings[global-color-palette]').setting.get()
 		tempDbValue['background-color'] = updated_palette[updated_palette.patterntype][matches][0]
 		value = tempDbValue
-	}else{		
+	}else{
 		 value = props.control.setting.get();
 	}
 
@@ -50,34 +50,34 @@ const Background = props => {
 	};
 
 	const updatePaletteuse = (value,index,defaultset) =>{
-		
+
 		props.control.container[0].setAttribute('paletteused', value);
-		props.control.container[0].setAttribute('paletteindex', index);		
-		props.control.container[0].setAttribute('defaultset', defaultset);		
+		props.control.container[0].setAttribute('paletteindex', index);
+		props.control.container[0].setAttribute('defaultset', defaultset);
 
 	}
 
 	var globalPalette = props.customizer.control('astra-settings[global-color-palette]').setting.get()
 
 	const handleGlobalColorPopupBtn = (value,index,defaultset,colorvalue) => {
-		
+
 		updatePaletteuse(value,index,defaultset)
 		var tempDbValue = Object.assign({},props_value);
 
 		tempDbValue['background-color'] = colorvalue;
 		tempDbValue['background-type'] = 'color';
-		
+
 		const finalvalue = Object.assign({}, tempDbValue)
 
 		setPropsValue( finalvalue );
 
-		if(props.control.container[0].getAttribute('paletteindex')){	
+		if(props.control.container[0].getAttribute('paletteindex')){
 			tempDbValue['background-color'] = 'var(--ast-global-palette'+props.control.container[0].getAttribute('paletteindex')+')';
 			props.control.setting.set(tempDbValue);
 		}else{
 			props.control.setting.set(tempDbValue);
 		}
-		
+
 	}
 
 	const toggleClose = () => {
@@ -91,13 +91,13 @@ const Background = props => {
 	if(tempDbValue['background-color'] && tempDbValue['background-color'].includes("palette")){
 		var regex = /\d+/g;
 		var string = tempDbValue['background-color'];
-		paletteSelectedIndex = string.match(regex)[0];	
+		paletteSelectedIndex = string.match(regex)[0];
 	}
 
 	const renderReset = () => {
 		return <span className="customize-control-title">
 			<div className="ast-global-color-btn-wrap">
-					<button	className="ast-global-color-btn components-button is-secondary" 
+					<button	className="ast-global-color-btn components-button is-secondary"
 					onClick={e => {
 						e.preventDefault();
 						setPropsValue(prevState => ({
@@ -107,8 +107,8 @@ const Background = props => {
 					}}>
 						<Dashicon icon='admin-site-alt3' style={{
 							width: 14,
-							height: 14,
-							fontSize: 14
+							height: 12,
+							fontSize: 13
 						}}/>
 					</button>
 					{ props_value.isVisible && (
@@ -126,9 +126,9 @@ const Background = props => {
 								}}/>
 							</Button>
 							<hr/>
-							{ Object.keys( globalPalette.pattern1 ).map( ( item, index ) => { 
-													
-								return ( 
+							{ Object.keys( globalPalette.pattern1 ).map( ( item, index ) => {
+
+								return (
 									<Button
 										className='ast-global-color-individual-btn'
 										onClick={ () =>handleGlobalColorPopupBtn( true,index,'no',globalPalette.pattern1[item][0] ) }
@@ -137,7 +137,7 @@ const Background = props => {
 										title={ globalPalette.pattern1[item][1]}
 									>
 										<div className={ paletteSelectedIndex === item ? 'ast-global-color-sticker selected' : 'ast-global-color-sticker' }
-											style={{ background:globalPalette.pattern1[item][0] }} 
+											style={{ background:globalPalette.pattern1[item][0] }}
 										/>
 										<div className="ast-global-color-title">{ globalPalette.pattern1[item][1]}</div>
 										<div className="ast-global-color-hexcode">{ globalPalette.pattern1[item][0]}</div>
@@ -217,11 +217,11 @@ const Background = props => {
 				onSelectImage={(media, backgroundType) => onSelectImage(media, backgroundType)}
 				onChangeImageOptions={(mainKey, value, backgroundType) => onChangeImageOptions(mainKey, value, backgroundType)}
 				backgroundType={undefined !== props_value['background-type'] && props_value['background-type'] ? props_value['background-type'] : 'color'}
-				allowGradient={true} allowImage={true} 
+				allowGradient={true} allowImage={true}
 				defautColorPalette = {props.customizer.control('astra-settings[global-color-palette]').setting.get()}
-				isPaletteUsed={ (value,index,defaultset) => updatePaletteuse(value,index,defaultset)} 
+				isPaletteUsed={ (value,index,defaultset) => updatePaletteuse(value,index,defaultset)}
 				container ={props.control.container[0]}
-				disablePalette={true} 
+				disablePalette={true}
 				colorIndicator = {dbValue['background-color']}
 				/>
 		</>;
@@ -245,10 +245,10 @@ const Background = props => {
 		};
 		obj['background-color'] = value;
 		obj['background-type'] = backgroundType;
-		
+
 		setPropsValue( obj );
 
-		if(props.control.container[0].getAttribute('paletteindex')){	
+		if(props.control.container[0].getAttribute('paletteindex')){
 			obj['background-color'] = 'var(--ast-global-palette'+props.control.container[0].getAttribute('paletteindex')+')';
 
 			props.control.setting.set(obj);
