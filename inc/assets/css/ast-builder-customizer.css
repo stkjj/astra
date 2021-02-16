@@ -4833,3 +4833,84 @@ i.fipicon-angle-left:before {
 	background: #424242;
 	color: #fff;
 }
+
+#react-confirm-alert {
+	position:absolute;
+	z-index:999999;
+}
+
+.react-confirm-alert-body {
+	background:#fff;
+	border-radius:10px;
+	box-shadow:0 20px 75px rgba(0,0,0,0.13);
+	color:#666;
+	font-family:Arial,Helvetica,sans-serif;
+	padding:30px;
+	text-align:left;
+	width:400px;
+}
+
+.react-confirm-alert-body > h1 {
+	margin-top:0;
+}
+
+.react-confirm-alert-body > h3 {
+	font-size:16px;
+	margin:0;
+}
+
+.react-confirm-alert-button-group {
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	justify-content:flex-start;
+	margin-top:20px;
+}
+
+.react-confirm-alert-button-group > button {
+	background:#444;
+	border:none;
+	border-radius:5px;
+	color:#eee;
+	cursor:pointer;
+	display:inline-block;
+	font-size:12px;
+	margin-right:10px;
+	outline:none;
+	padding:6px 18px;
+}
+
+.react-confirm-alert-button-group > button.ast-element-delete {
+	background:#f36d6d;
+}
+
+.react-confirm-alert-overlay {
+	-ms-align-items:center;
+	align-items:center;
+	background:rgba(255,255,255,0.9);
+	bottom:0;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	display:flex;
+	justify-content:center;
+	left:0;
+	opacity:1;
+	position:fixed;
+	right:0;
+	top:0;
+	z-index:99;
+}
+
+.react-confirm-alert-svg {
+	left:0;
+	position:absolute;
+	top:0;
+}
+
+body.react-confirm-alert-body-element {
+	overflow:hidden;
+}

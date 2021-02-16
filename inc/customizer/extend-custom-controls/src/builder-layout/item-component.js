@@ -1,5 +1,6 @@
 const {Dashicon, Button} = wp.components;
 const {__} = wp.i18n;
+import { confirmAlert } from 'react-confirm-alert';
 
 
 const ItemComponent = props => {
@@ -94,8 +95,26 @@ const ItemComponent = props => {
 						  }
 
 						  e.stopPropagation();
-						  deleteItem(props);
-						  props.removeItem(props.item);
+
+						  confirmAlert({
+							  title: __('Confirm Deletion!', 'astra'),
+							  message: __('Are you sure to delete?', 'astra'),
+							  buttons: [
+								  {
+									  label: 'Delete',
+									  className: 'ast-element-delete',
+									  onClick: () => {
+										  deleteItem(props);
+										  props.removeItem(props.item);
+									  }
+								  },
+								  {
+									  label: 'Cancel',
+									  onClick: () => {}
+								  }
+							  ]
+						  });
+
 					  }}
 					  className="dashicons dashicons-trash">
 				</span>
