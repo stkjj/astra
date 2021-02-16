@@ -101,7 +101,7 @@ const ItemComponent = props => {
 							  message: __('Are you sure to delete?', 'astra'),
 							  buttons: [
 								  {
-									  label: 'Delete',
+									  label: __('Delete', 'astra'),
 									  className: 'ast-element-delete',
 									  onClick: () => {
 										  deleteItem(props);
@@ -109,7 +109,7 @@ const ItemComponent = props => {
 									  }
 								  },
 								  {
-									  label: 'Cancel',
+									  label: __('Cancel', 'astra'),
 									  onClick: () => {}
 								  }
 							  ]
