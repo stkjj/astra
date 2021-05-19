@@ -257,22 +257,6 @@
 			top: 0;
 		}
 	}
-	.ast-has-mobile-header-logo {
-		.custom-logo-link{
-			display: none;
-		}
-		.custom-mobile-logo-link{
-			display: inline-block;
-		}
-	}
-	&.ast-mobile-inherit-site-logo{
-		.ast-has-mobile-header-logo{
-			.custom-logo-link,
-			.astra-logo-svg{
-				display: block;
-			}
-		}
-	}
 	.ast-builder-menu {
 		width: 100%;
 	}

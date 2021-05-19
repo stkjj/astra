@@ -3430,19 +3430,6 @@ body .entry-content .wp-block-latest-posts li {
   top: 0;
 }
 
-.ast-header-break-point .ast-has-mobile-header-logo .custom-logo-link {
-  display: none;
-}
-
-.ast-header-break-point .ast-has-mobile-header-logo .custom-mobile-logo-link {
-  display: inline-block;
-}
-
-.ast-header-break-point.ast-mobile-inherit-site-logo .ast-has-mobile-header-logo .custom-logo-link,
-.ast-header-break-point.ast-mobile-inherit-site-logo .ast-has-mobile-header-logo .astra-logo-svg {
-  display: block;
-}
-
 .ast-header-break-point .ast-builder-menu {
   width: 100%;
 }
