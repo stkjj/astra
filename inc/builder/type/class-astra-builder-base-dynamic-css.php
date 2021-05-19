@@ -394,11 +394,9 @@ if ( ! class_exists( 'Astra_Builder_Base_Dynamic_CSS' ) ) {
 				.ast-header-break-point .ast-has-mobile-header-logo .custom-logo-link {
 					display: none;
 				}
-				
 				.ast-header-break-point .ast-has-mobile-header-logo .custom-mobile-logo-link {
 					display: inline-block;
 				}
-				
 				.ast-header-break-point.ast-mobile-inherit-site-logo .ast-has-mobile-header-logo .custom-logo-link,
 				.ast-header-break-point.ast-mobile-inherit-site-logo .ast-has-mobile-header-logo .astra-logo-svg {
 					display: block;
