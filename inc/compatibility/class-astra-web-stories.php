@@ -10,15 +10,6 @@
 use Google\Web_Stories;
 
 /**
- * If plugin - 'Google\Web_Stories' not exist then return.
- * Uses Web_Stories\Admin\Customizer per web stories 1.7.1 release.
- * See https://github.com/google/web-stories-wp/pull/7266/files
- */
-if ( ! class_exists( 'Google\Web_Stories\Admin\Customizer' ) ) {
-	return;
-}
-
-/**
  * Astra Web_Stories Compatibility
  *
  * @since 3.2.0
@@ -73,8 +64,12 @@ class Astra_Web_Stories {
 	 * @return String Generated dynamic CSS for Heading Colors.
 	 */
 	public function web_stories_css( $dynamic_css, $dynamic_css_filtered = '' ) {
-		// Use Web_Stories\Admin\Customizer per web stories 1.7.1 release. See https://github.com/google/web-stories-wp/pull/7266/files
-		$options = get_option( Web_Stories\Admin\Customizer::STORY_OPTION );
+		// Using function check instead of class as there can be changes in the web stories plugin later, see 1.7.1 release https://github.com/google/web-stories-wp/pull/7266/files.
+		if ( ! function_exists( 'Google\Web_Stories\render_theme_stories' ) ) {
+			return;
+		}
+		
+		$options = get_option( 'web_stories_customizer_settings' );
 
 		// bail if web stories are not enabled on the frontend.
 		if ( empty( $options['show_stories'] ) || true !== $options['show_stories'] ) {
