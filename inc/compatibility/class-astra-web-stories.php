@@ -10,7 +10,7 @@
 use Google\Web_Stories;
 
 // If plugin - 'Google\Web_Stories' not exist then return.
-if ( ! class_exists( 'Google\Web_Stories\Customizer' ) ) {
+if ( ! class_exists( 'Google\Web_Stories\Admin\Customizer' ) ) {
 	return;
 }
 
@@ -69,7 +69,7 @@ class Astra_Web_Stories {
 	 * @return String Generated dynamic CSS for Heading Colors.
 	 */
 	public function web_stories_css( $dynamic_css, $dynamic_css_filtered = '' ) {
-		$options = get_option( Web_Stories\Customizer::STORY_OPTION );
+		$options = get_option( Web_Stories\Admin\Customizer::STORY_OPTION );
 
 		// bail if web stories are not enabled on the frontend.
 		if ( empty( $options['show_stories'] ) || true !== $options['show_stories'] ) {
