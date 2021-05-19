@@ -43,7 +43,7 @@ if ( ! class_exists( 'Astra_Builder_Base_Dynamic_CSS' ) ) {
 		public function __construct() {
 
 			add_filter( 'astra_dynamic_theme_css', array( $this, 'footer_dynamic_css' ) );
-			add_filter( 'astra_dynamic_theme_css', array( $this, 'mobile_header_css' ) );
+			add_filter( 'astra_dynamic_theme_css', array( $this, 'mobile_header_logo_css' ) );
 		}
 
 		/**
@@ -384,7 +384,7 @@ if ( ! class_exists( 'Astra_Builder_Base_Dynamic_CSS' ) ) {
 		 * @since x.x.x
 		 * @return string
 		 */
-		public static function mobile_header_css( $dynamic_css ) {
+		public static function mobile_header_logo_css( $dynamic_css ) {
 			
 			$mobile_header_logo            = astra_get_option( 'mobile-header-logo' );
 			$different_mobile_header_order = astra_get_option( 'different-mobile-logo' );
