@@ -7,8 +7,6 @@
  * @package Astra
  */
 
-use Google\Web_Stories;
-
 /**
  * Astra Web_Stories Compatibility
  *
@@ -45,12 +43,12 @@ class Astra_Web_Stories {
 	 * @return void
 	 */
 	public function web_stories_embed() {
-		if ( ! function_exists( 'Google\Web_Stories\render_theme_stories' ) ) {
+		if ( ! function_exists( '\Google\Web_Stories\render_theme_stories' ) ) {
 			return;
 		}
 
 		// Embed web stories above header with pre-configured customizer settings.
-		Web_Stories\render_theme_stories();
+		\Google\Web_Stories\render_theme_stories();
 	}
 
 	/**
@@ -65,10 +63,10 @@ class Astra_Web_Stories {
 	 */
 	public function web_stories_css( $dynamic_css, $dynamic_css_filtered = '' ) {
 		// Using function check instead of class as there can be changes in the web stories plugin later, see 1.7.1 release https://github.com/google/web-stories-wp/pull/7266/files.
-		if ( ! function_exists( 'Google\Web_Stories\render_theme_stories' ) ) {
+		if ( ! function_exists( '\Google\Web_Stories\render_theme_stories' ) ) {
 			return;
 		}
-		
+
 		$options = get_option( 'web_stories_customizer_settings' );
 
 		// bail if web stories are not enabled on the frontend.
