@@ -60,10 +60,11 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/**
 			 * - Variable Declaration
 			 */
-			$is_site_rtl        = is_rtl();
-			$site_content_width = astra_get_option( 'site-content-width', 1200 );
-			$header_logo_width  = astra_get_option( 'ast-header-responsive-logo-width' );
-			$container_layout   = astra_get_option( 'site-content-layout' );
+			$is_site_rtl            = is_rtl();
+			$site_content_width     = astra_get_option( 'site-content-width', 1200 );
+			$header_logo_width      = astra_get_option( 'ast-header-responsive-logo-width' );
+			$header_svg_logo_height = astra_get_option( 'ast-header-responsive-svg-logo-height' );
+			$container_layout       = astra_get_option( 'site-content-layout' );
 
 			// Site Background Color.
 			$box_bg_obj = astra_get_option( 'site-layout-outside-bg-obj-responsive' );
