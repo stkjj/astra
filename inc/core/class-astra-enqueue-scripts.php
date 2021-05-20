@@ -374,11 +374,13 @@ if ( ! class_exists( 'Astra_Enqueue_Scripts' ) ) {
 		/**
 		 * Enqueue galleries relates CSS on gallery_style filter.
 		 *
+		 * @param string $gallery_style gallery style and div.
 		 * @since x.x.x
-		 * @return void
+		 * @return string
 		 */
-		public function enqueue_galleries_style() {
+		public function enqueue_galleries_style( $gallery_style ) {
 			wp_enqueue_style( 'astra-galleries-css' );
+			return $gallery_style;
 		}
 
 	}
