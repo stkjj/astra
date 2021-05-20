@@ -304,6 +304,15 @@ class Astra_Social_Component_Dynamic_CSS {
 	 */
 	public static function get_social_static_css() {
 		$social_static_css = '
+		.ast-builder-social-element:hover {
+			color: #0274be;
+		}
+		.ast-social-stack-desktop .ast-builder-social-element,
+		.ast-social-stack-tablet .ast-builder-social-element,
+		.ast-social-stack-mobile .ast-builder-social-element {
+		  margin-top: 6px;
+		  margin-bottom: 6px;
+		}
 		.ast-social-color-type-official .ast-builder-social-element, .ast-social-color-type-official .social-item-label {
 			color: var(--color);
 			background-color: var(--background-color);
@@ -321,15 +330,6 @@ class Astra_Social_Component_Dynamic_CSS {
 		}
 		.ast-footer-social-wrap {
 			width: 100%;
-		}
-		.ast-builder-social-element:hover {
-			color: #0274be;
-		}
-		.ast-social-stack-desktop .ast-builder-social-element,
-		.ast-social-stack-tablet .ast-builder-social-element,
-		.ast-social-stack-mobile .ast-builder-social-element {
-		  margin-top: 6px;
-		  margin-bottom: 6px;
 		}';
 		
 		if ( is_rtl() ) {
