@@ -96,7 +96,10 @@ if ( ! class_exists( 'Astra_Beaver_Builder' ) ) :
 		 * @since x.x.x
 		 */
 		public function add_styles( $assets ) {
-			$assets['css']['astra-bb-builder'] = 'compatibility/page-builder/bb-plugin';
+
+			if ( ! empty( $assets['css'] ) ) {
+				$assets['css'] = array( 'astra-bb-builder' => 'compatibility/page-builder/bb-plugin' ) + $assets['css'];          
+			}
 			return $assets;
 		}
 
