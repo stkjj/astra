@@ -654,8 +654,6 @@ function isJsonString( str ) {
 				var dynamicStyle = '.astra-logo-svg{ height: ' + logo_width['desktop'] + 'px;} @media( max-width: 768px ) { .astra-logo-svg{ height: ' + logo_width['tablet'] + 'px;} @media( max-width: 544px ) .astra-logo-svg{ height: '+ logo_width['mobile'] + 'px;}' +
 			    '#masthead .site-logo-img img { max-height: ' + logo_width['mobile'] + 'px; } .astra-logo-svg{width: ' + logo_width['mobile'] + 'px !important; } }';
 				astra_add_dynamic_css( 'ast-header-responsive-svg-logo-height', dynamicStyle );
-				// var mobileLogoStyle = '.ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['tablet'] + 'px; } @media( max-width: 768px ) { .ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['tablet'] + 'px; }  @media( max-width: 544px ) { .ast-header-break-point #masthead .site-logo-img .custom-mobile-logo-link img { max-width: ' + logo_width['mobile'] + 'px; }';
-				// astra_add_dynamic_css( 'mobile-header-logo-width', mobileLogoStyle );
 			}
 			else{
 				wp.customize.preview.send( 'refresh' );

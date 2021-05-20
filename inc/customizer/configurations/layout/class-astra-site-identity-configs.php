@@ -218,7 +218,7 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 					'section'           => $_section,
 					'transport'         => 'postMessage',
 					'default'           => astra_get_option( 'ast-header-responsive-logo-width' ),
-					'priority'          => 6,
+					'priority'          => 7,
 					'title'             => __( 'Logo Width', 'astra' ),
 					'suffix'            => 'px',
 					'input_attrs'       => array(
