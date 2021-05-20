@@ -236,6 +236,15 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	);
 
 	/**
+	 * Logo Height defaults.
+	 */
+	$defaults['ast-header-responsive-svg-logo-height'] = array(
+		'desktop' => '',
+		'tablet'  => '',
+		'mobile'  => '',
+	);
+
+	/**
 	 * Below Header Defaults.
 	 */
 	$defaults['hbb-header-layout'] = 'below-header-layout-1';
@@ -1701,4 +1710,3 @@ function prepare_menu_defaults( $defaults, $index ) {
 
 	return $defaults;
 }
-

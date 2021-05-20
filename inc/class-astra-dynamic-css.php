@@ -54,16 +54,11 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			 *     - Small Footer CSS
 			 * - 404 Page
 			 * - Secondary
-			 * - Global CSS
-			 */
-
-			/**
-			 * - Variable Declaration
-			 */
-			$is_site_rtl        = is_rtl();
-			$site_content_width = astra_get_option( 'site-content-width', 1200 );
-			$header_logo_width  = astra_get_option( 'ast-header-responsive-logo-width' );
-			$container_layout   = astra_get_option( 'site-content-layout' );
+			 * - Global         $is_site_rtl            = is_rtl();
+			$site_content_width     = astra_get_option( 'site-content-width', 1200 );
+			$header_logo_width      = astra_get_option( 'ast-header-responsive-logo-width' );
+			$header_svg_logo_height = astra_get_option( 'ast-header-responsive-svg-logo-height' );
+			$container_layout       = astra_get_option( 'site-content-layout' );
 
 			// Site Background Color.
 			$box_bg_obj = astra_get_option( 'site-layout-outside-bg-obj-responsive' );
@@ -352,7 +347,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'max-width' => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
 				),
 				'.astra-logo-svg'                => array(
-					'width' => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
+					'width'  => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
+					'height' => astra_get_css_value( $header_svg_logo_height['desktop'], 'px' ),
 				),
 				'.ast-archive-description .ast-archive-title' => array(
 					'font-size' => astra_responsive_font( $archive_summary_title_font_size, 'desktop' ),
@@ -2103,7 +2099,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'font-size' => astra_responsive_font( $single_post_title_font_size, 'tablet', 30 ),
 				),
 				'.astra-logo-svg'                => array(
-					'width' => astra_get_css_value( $header_logo_width['tablet'], 'px' ),
+					'width'  => astra_get_css_value( $header_logo_width['tablet'], 'px' ),
+					'height' => astra_get_css_value( $header_svg_logo_height['tablet'], 'px' ),
 				),
 				'header .custom-logo-link img, .ast-header-break-point .site-logo-img .custom-mobile-logo-link img' => array(
 					'max-width' => astra_get_css_value( $header_logo_width['tablet'], 'px' ),
@@ -2200,7 +2197,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'max-width' => astra_get_css_value( $header_logo_width['mobile'], 'px' ),
 				),
 				'.astra-logo-svg'                => array(
-					'width' => astra_get_css_value( $header_logo_width['mobile'], 'px' ),
+					'width'  => astra_get_css_value( $header_logo_width['mobile'], 'px' ),
+					'height' => astra_get_css_value( $header_svg_logo_height['mobile'], 'px' ),
 				),
 				'.ast-header-break-point .site-logo-img .custom-mobile-logo-link img' => array(
 					'max-width' => astra_get_css_value( $header_logo_width['mobile'], 'px' ),

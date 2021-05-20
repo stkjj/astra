@@ -218,7 +218,7 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 					'section'           => $_section,
 					'transport'         => 'postMessage',
 					'default'           => astra_get_option( 'ast-header-responsive-logo-width' ),
-					'priority'          => 7,
+					'priority'          => 6,
 					'title'             => __( 'Logo Width', 'astra' ),
 					'suffix'            => 'px',
 					'input_attrs'       => array(
@@ -227,6 +227,36 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 						'max'  => 600,
 					),
 					'divider'           => array( 'ast_class' => 'ast-bottom-divider ast-top-divider' ),
+				),
+
+				/**
+				 * Option: SVG Logo Height
+				 */
+				array(
+					'name'              => ASTRA_THEME_SETTINGS . '[ast-header-responsive-svg-logo-height]',
+					'type'              => 'control',
+					'control'           => 'ast-responsive-slider',
+					'sanitize_callback' => array( 'Astra_Customizer_Sanitizes', 'sanitize_responsive_slider' ),
+					'section'           => $_section,
+					'transport'         => 'postMessage',
+					'default'           => astra_get_option( 'ast-header-responsive-svg-logo-height' ),
+					'priority'          => 7,
+					'title'             => __( 'SVG Logo Height', 'astra' ),
+					'suffix'            => 'px',
+					'input_attrs'       => array(
+						'min'  => 0,
+						'step' => 1,
+						'max'  => 600,
+					),
+					'context'           => array(
+						'relation' => 'AND',
+						Astra_Builder_Helper::$general_tab_config,
+						array(
+							'setting'  => 'custom_logo',
+							'operator' => '!=',
+							'value'    => '',
+						),
+					),
 				),
 
 				/**
