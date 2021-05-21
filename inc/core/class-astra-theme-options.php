@@ -216,6 +216,9 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 						'tablet'  => '',
 						'mobile'  => '',
 					),
+					'header-color-site-title'              => '',
+					'header-color-h-site-title'            => '',
+					'header-color-site-tagline'            => '',
 					'display-site-title-responsive'        => array(
 						'desktop' => 1,
 						'tablet'  => 1,

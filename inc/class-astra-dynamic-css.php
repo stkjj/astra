@@ -60,10 +60,13 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/**
 			 * - Variable Declaration
 			 */
-			$is_site_rtl                = is_rtl();
-			$site_content_width         = astra_get_option( 'site-content-width', 1200 );
-			$header_logo_width          = astra_get_option( 'ast-header-responsive-logo-width' );
-			$container_layout           = astra_get_option( 'site-content-layout' );
+			$is_site_rtl        = is_rtl();
+			$site_content_width = astra_get_option( 'site-content-width', 1200 );
+			$header_logo_width  = astra_get_option( 'ast-header-responsive-logo-width' );
+			$container_layout   = astra_get_option( 'site-content-layout' );
+			$title_color        = astra_get_option( 'header-color-site-title' );
+			$title_hover_color  = astra_get_option( 'header-color-h-site-title' );
+			$tagline_color      = astra_get_option( 'header-color-site-tagline' );
 			$desktop_title_visibility   = ( ( astra_get_option( 'display-site-title-responsive' ) )['desktop'] ) ? 'block' : 'none';
 			$tablet_title_visibility    = ( ( astra_get_option( 'display-site-title-responsive' ) )['tablet'] ) ? 'block' : 'none';
 			$mobile_title_visibility    = ( ( astra_get_option( 'display-site-title-responsive' ) )['mobile'] ) ? 'block' : 'none';
@@ -318,13 +321,13 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$css_output = array(
 
 				// HTML.
-				'html'                           => array(
+				'html'                                   => array(
 					'font-size' => astra_get_font_css_value( (int) $body_font_size_desktop * 6.25, '%' ),
 				),
-				'a, .page-title'                 => array(
+				'a, .page-title'                         => array(
 					'color' => esc_attr( $link_color ),
 				),
-				'a:hover, a:focus'               => array(
+				'a:hover, a:focus'                       => array(
 					'color' => esc_attr( $link_hover_color ),
 				),
 				'body, button, input, select, textarea, .ast-button, .ast-custom-button' => array(
@@ -334,10 +337,10 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'line-height'    => esc_attr( $body_line_height ),
 					'text-transform' => esc_attr( $body_text_transform ),
 				),
-				'blockquote'                     => array(
+				'blockquote'                             => array(
 					'border-color' => astra_hex_to_rgba( $link_color, 0.15 ),
 				),
-				'p, .entry-content p'            => array(
+				'p, .entry-content p'                    => array(
 					'margin-bottom' => astra_get_css_value( $para_margin_bottom, 'em' ),
 				),
 
@@ -345,37 +348,46 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'h1, .entry-content h1, .entry-content h1 a, h2, .entry-content h2, .entry-content h2 a, h3, .entry-content h3, .entry-content h3 a, h4, .entry-content h4, .entry-content h4 a, h5, .entry-content h5, .entry-content h5 a, h6, .entry-content h6, .entry-content h6 a, .site-title, .site-title a',
 					'h1, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3, h4, .entry-content h4, h5, .entry-content h5, h6, .entry-content h6, .site-title, .site-title a'
-				)                                => array(
+				)                                        => array(
 					'font-family'    => astra_get_css_value( $headings_font_family, 'font' ),
 					'font-weight'    => astra_get_css_value( $headings_font_weight, 'font' ),
 					'text-transform' => esc_attr( $headings_text_transform ),
 				),
 
-				'.site-title'                    => array(
+				'.ast-site-identity .site-title a'       => array(
+					'color' => esc_attr( $title_color ),
+				),
+				'.ast-site-identity .site-title a:hover' => array(
+					'color' => esc_attr( $title_hover_color ),
+				),
+				'.ast-site-identity .site-description'   => array(
+					'color' => esc_attr( $tagline_color ),
+				),
+				'.site-title'                            => array(
 					'font-size' => astra_responsive_font( $site_title_font_size, 'desktop' ),
 					'display'   => esc_attr( $desktop_title_visibility ),
 				),
-				'header .custom-logo-link img'   => array(
+				'header .custom-logo-link img'           => array(
 					'max-width' => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
 				),
-				'.astra-logo-svg'                => array(
+				'.astra-logo-svg'                        => array(
 					'width' => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
 				),
 				'.ast-archive-description .ast-archive-title' => array(
 					'font-size' => astra_responsive_font( $archive_summary_title_font_size, 'desktop' ),
 				),
-				'.site-header .site-description' => array(
+				'.site-header .site-description'         => array(
 					'font-size' => astra_responsive_font( $site_tagline_font_size, 'desktop' ),
 					'display'   => esc_attr( $desktop_tagline_visibility ),
 				),
-				'.entry-title'                   => array(
+				'.entry-title'                           => array(
 					'font-size' => astra_responsive_font( $archive_post_title_font_size, 'desktop' ),
 				),
 				// Conditionally select the css selectors with or without achors.
 				self::conditional_headings_css_selectors(
 					'h1, .entry-content h1, .entry-content h1 a',
 					'h1, .entry-content h1'
-				)                                => array(
+				)                                        => array(
 					'font-size'      => astra_responsive_font( $heading_h1_font_size, 'desktop' ),
 					'font-weight'    => astra_get_css_value( $h1_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h1_font_family, 'font' ),
@@ -387,7 +399,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'h2, .entry-content h2, .entry-content h2 a',
 					'h2, .entry-content h2'
-				)                                => array(
+				)                                        => array(
 					'font-size'      => astra_responsive_font( $heading_h2_font_size, 'desktop' ),
 					'font-weight'    => astra_get_css_value( $h2_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h2_font_family, 'font' ),
@@ -399,7 +411,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'h3, .entry-content h3, .entry-content h3 a',
 					'h3, .entry-content h3'
-				)                                => array(
+				)                                        => array(
 					'font-size'      => astra_responsive_font( $heading_h3_font_size, 'desktop' ),
 					'font-weight'    => astra_get_css_value( $h3_font_weight, 'font' ),
 					'font-family'    => astra_get_css_value( $h3_font_family, 'font' ),
@@ -411,7 +423,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'h4, .entry-content h4, .entry-content h4 a',
 					'h4, .entry-content h4'
-				)                                => array(
+				)                                        => array(
 					'font-size'   => astra_responsive_font( $heading_h4_font_size, 'desktop' ),
 					'line-height' => esc_attr( $h4_line_height ),
 				),
@@ -420,7 +432,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'h5, .entry-content h5, .entry-content h5 a',
 					'h5, .entry-content h5'
-				)                                => array(
+				)                                        => array(
 					'font-size'   => astra_responsive_font( $heading_h5_font_size, 'desktop' ),
 					'line-height' => esc_attr( $h5_line_height ),
 				),
@@ -429,7 +441,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'h6, .entry-content h6, .entry-content h6 a',
 					'h6, .entry-content h6'
-				)                                => array(
+				)                                        => array(
 					'font-size'   => astra_responsive_font( $heading_h6_font_size, 'desktop' ),
 					'line-height' => esc_attr( $h6_line_height ),
 				),
@@ -438,7 +450,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'font-size' => astra_responsive_font( $single_post_title_font_size, 'desktop' ),
 				),
 				// Global CSS.
-				'::selection'                    => array(
+				'::selection'                            => array(
 					'background-color' => esc_attr( $theme_color ),
 					'color'            => esc_attr( $selection_text_color ),
 				),
@@ -447,7 +459,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				self::conditional_headings_css_selectors(
 					'body, h1, .entry-title a, .entry-content h1, .entry-content h1 a, h2, .entry-content h2, .entry-content h2 a, h3, .entry-content h3, .entry-content h3 a, h4, .entry-content h4, .entry-content h4 a, h5, .entry-content h5, .entry-content h5 a, h6, .entry-content h6, .entry-content h6 a',
 					'body, h1, .entry-title a, .entry-content h1, h2, .entry-content h2, h3, .entry-content h3, h4, .entry-content h4, h5, .entry-content h5, h6, .entry-content h6'
-				)                                => array(
+				)                                        => array(
 					'color' => esc_attr( $text_color ),
 				),
 
@@ -479,7 +491,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 
 				// Blog Post Meta Typography.
-				'.entry-meta, .entry-meta *'     => array(
+				'.entry-meta, .entry-meta *'             => array(
 					'line-height' => '1.45',
 					'color'       => esc_attr( $link_color ),
 				),
@@ -488,12 +500,12 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 
 				// Blockquote Text Color.
-				'blockquote'                     => array(
+				'blockquote'                             => array(
 					'color' => astra_adjust_brightness( $text_color, 75, 'darken' ),
 				),
 
 				// Widget Title.
-				'.widget-title'                  => array(
+				'.widget-title'                          => array(
 					'font-size' => astra_get_font_css_value( (int) $body_font_size_desktop * 1.428571429 ),
 					'color'     => esc_attr( $text_color ),
 				),
@@ -507,7 +519,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'background'   => esc_attr( $link_color ),
 					'border-color' => esc_attr( $link_color ),
 				),
-				'.calendar_wrap #today > a'      => array(
+				'.calendar_wrap #today > a'              => array(
 					'color' => astra_get_foreground_color( $link_color ),
 				),
 
@@ -3260,11 +3272,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				transition: all 0.2s linear;
 			}
 
-			.ast-site-header-cart .cart-container *,
-			.ast-edd-site-header-cart .ast-edd-cart-container * {
-				transition: all 0s linear;
-			}
-
 			.ast-site-header-cart .ast-woo-header-cart-info-wrap,
 			.ast-edd-site-header-cart .ast-edd-header-cart-info-wrap {
 				padding: 0 2px;
@@ -3437,7 +3444,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					min-width: 18px;
 					border-radius: 99px;
 					text-align: center;
-					z-index: 1;
+					z-index: 4;
 				}
 				li.woocommerce-custom-menu-item .ast-site-header-cart i.astra-icon:after,
 				li.edd-custom-menu-item .ast-edd-site-header-cart span.astra-icon:after {
@@ -3494,7 +3501,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					min-width: 18px;
 					border-radius: 99px;
 					text-align: center;
-					z-index: 1;
+					z-index: 4;
 				}
 				li.woocommerce-custom-menu-item .ast-site-header-cart i.astra-icon:after,
 				li.edd-custom-menu-item .ast-edd-site-header-cart span.astra-icon:after {
@@ -3532,6 +3539,15 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					vertical-align: middle;
 					text-align: right;
 				}';
+			}
+			// This CSS requires in case of :before Astra icons. But in case of SVGs this loads twice that's why removed this from static & loading conditionally.
+			if ( false === Astra_Icons::is_svg_icons() ) {
+				$cart_static_css .= '
+				.ast-site-header-cart .cart-container *,
+				.ast-edd-site-header-cart .ast-edd-cart-container * {
+					transition: all 0s linear;
+				}
+				';
 			}
 			return $cart_static_css;
 		}
