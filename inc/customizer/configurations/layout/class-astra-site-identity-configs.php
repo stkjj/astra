@@ -333,15 +333,47 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 							'context'    => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? array(
 								Astra_Builder_Helper::$design_tab_config,
 								array(
-									'setting'  => ASTRA_THEME_SETTINGS . '[display-site-title]',
-									'operator' => '==',
-									'value'    => true,
+									'relation' => 'OR',
+									array(
+										'setting'     => ASTRA_THEME_SETTINGS . '[display-site-title-responsive]',
+										'setting-key' => 'desktop',
+										'operator'    => '==',
+										'value'       => true,
+									),
+									array(
+										'setting'     => ASTRA_THEME_SETTINGS . '[display-site-title-responsive]',
+										'setting-key' => 'tablet',
+										'operator'    => '==',
+										'value'       => true,
+									),
+									array(
+										'setting'     => ASTRA_THEME_SETTINGS . '[display-site-title-responsive]',
+										'setting-key' => 'mobile',
+										'operator'    => '==',
+										'value'       => true,
+									),
 								),
 							) : array(
 								array(
-									'setting'  => ASTRA_THEME_SETTINGS . '[display-site-title]',
-									'operator' => '==',
-									'value'    => true,
+									'relation' => 'OR',
+									array(
+										'setting'     => ASTRA_THEME_SETTINGS . '[display-site-title-responsive]',
+										'setting-key' => 'desktop',
+										'operator'    => '==',
+										'value'       => true,
+									),
+									array(
+										'setting'     => ASTRA_THEME_SETTINGS . '[display-site-title-responsive]',
+										'setting-key' => 'tablet',
+										'operator'    => '==',
+										'value'       => true,
+									),
+									array(
+										'setting'     => ASTRA_THEME_SETTINGS . '[display-site-title-responsive]',
+										'setting-key' => 'mobile',
+										'operator'    => '==',
+										'value'       => true,
+									),
 								),
 							),
 						),

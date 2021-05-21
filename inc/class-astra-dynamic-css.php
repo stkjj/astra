@@ -60,13 +60,13 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/**
 			 * - Variable Declaration
 			 */
-			$is_site_rtl        = is_rtl();
-			$site_content_width = astra_get_option( 'site-content-width', 1200 );
-			$header_logo_width  = astra_get_option( 'ast-header-responsive-logo-width' );
-			$container_layout   = astra_get_option( 'site-content-layout' );
-			$title_color        = astra_get_option( 'header-color-site-title' );
-			$title_hover_color  = astra_get_option( 'header-color-h-site-title' );
-			$tagline_color      = astra_get_option( 'header-color-site-tagline' );
+			$is_site_rtl                = is_rtl();
+			$site_content_width         = astra_get_option( 'site-content-width', 1200 );
+			$header_logo_width          = astra_get_option( 'ast-header-responsive-logo-width' );
+			$container_layout           = astra_get_option( 'site-content-layout' );
+			$title_color                = astra_get_option( 'header-color-site-title' );
+			$title_hover_color          = astra_get_option( 'header-color-h-site-title' );
+			$tagline_color              = astra_get_option( 'header-color-site-tagline' );
 			$desktop_title_visibility   = ( ( astra_get_option( 'display-site-title-responsive' ) )['desktop'] ) ? 'block' : 'none';
 			$tablet_title_visibility    = ( ( astra_get_option( 'display-site-title-responsive' ) )['tablet'] ) ? 'block' : 'none';
 			$mobile_title_visibility    = ( ( astra_get_option( 'display-site-title-responsive' ) )['mobile'] ) ? 'block' : 'none';
