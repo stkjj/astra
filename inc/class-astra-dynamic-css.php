@@ -3168,17 +3168,17 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		 * Whether to remove or not following CSS which restricts logo size on responsive devices.
 		 *
 		 * @media (max-width: 544px) {
-		 *	.site-branding img,
-		 *	.site-header .site-logo-img .custom-logo-link img {
-		 *		max-width: 100%;
-		 *	}
+		 *  .site-branding img,
+		 *  .site-header .site-logo-img .custom-logo-link img {
+		 *      max-width: 100%;
+		 *  }
 		 * }
 		 *
 		 * @since x.x.x
 		 * @return boolean false if it is an existing user, true if not.
 		 */
 		public static function remove_logo_max_width_mobile_static_css() {
-			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
+			$astra_settings                                  = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['can-remove-logo-max-width-css'] = isset( $astra_settings['can-remove-logo-max-width-css'] ) ? false : true;
 			return apply_filters( 'astra_remove_logo_max_width_css', $astra_settings['can-remove-logo-max-width-css'] );
 		}
