@@ -7,6 +7,11 @@
  * @package Astra
  */
 
+// If plugin - 'Google\Web_Stories' not exist then return.
+if ( ! class_exists( 'Google\Web_Stories\Customizer' ) ) {
+	return;
+}
+
 /**
  * Astra Web_Stories Compatibility
  *
