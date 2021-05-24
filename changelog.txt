@@ -10,6 +10,7 @@ v3.5.0 (Unreleased)
 - Fix: Text alignment issue for footer Widget 3 and Widget 4 when Astra Pro is deactivated.
 - Fix: Removed unwanted dividers from customizer setting sections.
 - Fix: Builder - WooCommerce & EDD cart - Duplicate transition CSS avoided in case normal Astra CSS icons.
+- Fix: WooCommerce - "Product Categories" widget's child elements have missing icon when Astra's SVGs enabled.
 
 v3.4.6
 - Fix: Footer alignment not working after update of v3.4.5.
