@@ -281,7 +281,9 @@ if ( ! class_exists( 'Astra_Builder_UI_Controller' ) ) {
 							<?php echo self::fetch_svg_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					</button>
 					<div class="astra-cart-drawer-title">
-					Shopping Cart
+					<?php
+						echo apply_filters( 'astra_header_cart_flyout_shopping_cart_text', __( 'Shopping Cart', 'astra' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					?>
 					</div>
 				</div>
 				<div class="astra-cart-drawer-content">
