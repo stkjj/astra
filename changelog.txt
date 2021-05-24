@@ -1,3 +1,6 @@
+v3.4.6
+- Fix: Footer alignment not working after update of v3.4.5.
+
 v3.4.5
 - Fix: Compatibility with Google Web Stories plugin v1.7.0.
 

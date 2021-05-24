@@ -7,6 +7,11 @@
  * @package Astra
  */
 
+// If plugin - 'Google\Web_Stories' not exist then return.
+if ( ! defined( 'WEBSTORIES_VERSION' ) ) {
+	return;
+}
+
 /**
  * Astra Web_Stories Compatibility
  *
@@ -64,7 +69,7 @@ class Astra_Web_Stories {
 	public function web_stories_css( $dynamic_css, $dynamic_css_filtered = '' ) {
 		// Using function check instead of class as there can be changes in the web stories plugin later, see 1.7.1 release https://github.com/google/web-stories-wp/pull/7266/files.
 		if ( ! function_exists( '\Google\Web_Stories\render_theme_stories' ) ) {
-			return;
+			return $dynamic_css;
 		}
 
 		$options = get_option( 'web_stories_customizer_settings' );
