@@ -68,7 +68,7 @@ if ( ! class_exists( 'Astra_Body_Colors_Configs' ) ) {
 					'section'  => $_section,
 					'type'     => 'control',
 					'control'  => 'ast-color',
-					'default'  => astra_get_option( 'link-color', '#0274be' ),
+					'default'  => astra_get_option( 'link-color', '#0170B9' ),
 					'priority' => 5,
 					'title'    => __( 'Link Color', 'astra' ),
 				),
