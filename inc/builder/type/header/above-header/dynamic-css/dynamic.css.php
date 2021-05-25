@@ -55,9 +55,6 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 	 * Above Header General options
 	 */
 	$common_css_output = array(
-		'ast-above-header-bar.ast-header-sticked'       => array(
-			'z-index' => 9,
-		),
 		'.ast-above-header .main-header-bar-navigation' => array(
 			'height' => '100%',
 		),
@@ -85,6 +82,11 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 			'line-height' => astra_get_css_value( $hba_header_height_desktop, 'px' ),
 		),
 	);
+	if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
+		$common_css_output['ast-above-header-bar.ast-header-sticked'] = array(
+			'z-index' => 9,
+		);
+	}
 
 	$parse_css .= astra_parse_css( $common_css_output );
 
