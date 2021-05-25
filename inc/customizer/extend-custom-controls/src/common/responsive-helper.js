@@ -390,6 +390,10 @@ export function siteTitleTaglineDependentControl ( control ) {
             siteTaglineDependentControls(control);
         });
     }
+
+    jQuery(document).ready(function(){
+        restoreGeneralTabControls();
+    });
 }
 
 /**
@@ -438,6 +442,31 @@ function inlineLogoTitleToggleVisibility(){
 
     var dynamicStyle = '.preview-desktop #customize-control-astra-settings-logo-title-inline { display: ' + desktopToggleVal + ';} .preview-tablet #customize-control-astra-settings-logo-title-inline { display: ' + tabletToggleVal + ';} .preview-mobile #customize-control-astra-settings-logo-title-inline { display: ' + mobileToggleVal + ';}';
     responsive_helper_dynamic_css( 'inline-logo-title-toggle-visibility', dynamicStyle );
+}
+
+/**
+ * Restore visibility of Title and Tagline controls on click of Genaral tab
+ */
+function restoreGeneralTabControls(){
+
+    var genral_tab = document.querySelector('#sub-accordion-section-title_tagline .ahfb-general-tab');
+    jQuery(genral_tab).click(function(){
+
+        var controls = [];
+        controls.push(document.querySelector('#customize-control-blogname'));
+        controls.push(document.querySelector('#customize-control-astra-settings-logo-title-inline'));
+        controls.push(document.querySelector('#customize-control-blogdescription'));
+        controls.push(document.querySelector('#customize-control-astra-settings-ast-site-title-tagline-divider'));
+        controls.push(document.querySelector('#mnhh'));
+
+        jQuery(document).ready(function(){
+            controls.forEach(control => {
+                if( null !== control && 'list-item' === control.style.getPropertyValue('display') ){
+                    control.style.removeProperty('display');
+                }
+            });
+        });
+    });
 }
 
 /**
