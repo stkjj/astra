@@ -363,7 +363,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				'header .custom-logo-link img'           => array(
 					'max-width' => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
 				),
-				'.astra-logo-svg'                => array(
+				'.astra-logo-svg'                        => array(
 					'width'  => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
 					'height' => astra_get_css_value( ( ! empty( $header_logo_width['desktop-svg-height'] ) && ! is_customize_preview() ) ? $header_logo_width['desktop-svg-height'] : '', 'px' ),
 				),
