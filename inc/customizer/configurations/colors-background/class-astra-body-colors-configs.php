@@ -55,7 +55,7 @@ if ( ! class_exists( 'Astra_Body_Colors_Configs' ) ) {
 					'type'     => 'control',
 					'control'  => 'ast-color',
 					'section'  => $_section,
-					'default'  => astra_get_option( 'theme-color', '#0274be' ),
+					'default'  => astra_get_option( 'theme-color', '#0170B9' ),
 					'priority' => 5,
 					'title'    => __( 'Theme Color', 'astra' ),
 				),
