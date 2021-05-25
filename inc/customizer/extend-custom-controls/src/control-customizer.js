@@ -76,7 +76,7 @@
 		 * Trigger on ast-header-responsive-logo-width change.
 		 */
 		 api('astra-settings[ast-header-responsive-logo-width]', function (value) {
-			value.bind(function (checked) {
+			value.bind(function (currVal) {
 
 				let customizer_preview_container =  document.getElementById('customize-preview')
 				let iframe 						 = customizer_preview_container.getElementsByTagName('iframe')[0]
@@ -86,6 +86,39 @@
 					var existingValues 	    = api('astra-settings[ast-header-responsive-logo-width]').get();
 					let desktopHeight       = htmlContent.querySelector('#ast-desktop-header .astra-logo-svg').clientHeight;
 					let mobileTabletHeight  = htmlContent.querySelector('#ast-mobile-header .astra-logo-svg').clientHeight;
+					let selectedDevice = wp.customize.previewedDevice.get();
+					switch (selectedDevice) {
+						case 'desktop':
+							existingValues['desktop-svg-height'] = desktopHeight;
+							break;
+						case 'tablet':
+							existingValues['tablet-svg-height']  = mobileTabletHeight;
+							break;
+						case 'mobile':
+							existingValues['mobile-svg-height']  = mobileTabletHeight;
+							break;
+						default:
+							break;
+					}
+					api('astra-settings[ast-header-responsive-logo-width]').set( existingValues );
+				}
+			});
+		});
+
+		/**
+		 * Trigger on transparent-header-logo-width change.
+		 */
+		 api('astra-settings[transparent-header-logo-width]', function (value) {
+			value.bind(function (currVal) {
+
+				let customizer_preview_container =  document.getElementById('customize-preview')
+				let iframe 						 = customizer_preview_container.getElementsByTagName('iframe')[0]
+				let htmlContent 				 = iframe.contentDocument || iframe.contentWindow.document;
+				
+				if( htmlContent.querySelector('.transparent-custom-logo .astra-logo-svg') ) {
+					let existingValues 	    = api('astra-settings[transparent-header-logo-width]').get();
+					let desktopHeight       = htmlContent.querySelector('#ast-desktop-header .transparent-custom-logo .astra-logo-svg').clientHeight;
+					let mobileTabletHeight  = htmlContent.querySelector('#ast-mobile-header .transparent-custom-logo .astra-logo-svg').clientHeight;
 					let selectedDevice = wp.customize.previewedDevice.get();
 					switch (selectedDevice) {
 						case 'desktop':
