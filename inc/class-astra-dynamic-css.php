@@ -60,11 +60,10 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/**
 			 * - Variable Declaration
 			 */
-			$is_site_rtl            = is_rtl();
-			$site_content_width     = astra_get_option( 'site-content-width', 1200 );
-			$header_logo_width      = astra_get_option( 'ast-header-responsive-logo-width' );
-			$header_svg_logo_height = astra_get_option( 'ast-header-responsive-svg-logo-height' );
-			$container_layout       = astra_get_option( 'site-content-layout' );
+			$is_site_rtl        = is_rtl();
+			$site_content_width = astra_get_option( 'site-content-width', 1200 );
+			$header_logo_width  = astra_get_option( 'ast-header-responsive-logo-width' );
+			$container_layout   = astra_get_option( 'site-content-layout' );
 
 			// Site Background Color.
 			$box_bg_obj = astra_get_option( 'site-layout-outside-bg-obj-responsive' );
@@ -354,7 +353,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.astra-logo-svg'                => array(
 					'width'  => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
-					'height' => astra_get_css_value( $header_svg_logo_height['desktop'], 'px' ),
+					'height' => astra_get_css_value( ( ! empty( $header_logo_width['desktop-svg-height'] ) && ! is_customize_preview() ) ? $header_logo_width['desktop-svg-height'] : '', 'px' ),
 				),
 				'.ast-archive-description .ast-archive-title' => array(
 					'font-size' => astra_responsive_font( $archive_summary_title_font_size, 'desktop' ),
@@ -2106,7 +2105,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.astra-logo-svg'                => array(
 					'width'  => astra_get_css_value( $header_logo_width['tablet'], 'px' ),
-					'height' => astra_get_css_value( $header_svg_logo_height['tablet'], 'px' ),
+					'height' => astra_get_css_value( ( ! empty( $header_logo_width['tablet-svg-height'] ) && ! is_customize_preview() ) ? $header_logo_width['tablet-svg-height'] : '', 'px' ),
 				),
 				'header .custom-logo-link img, .ast-header-break-point .site-logo-img .custom-mobile-logo-link img' => array(
 					'max-width' => astra_get_css_value( $header_logo_width['tablet'], 'px' ),
@@ -2204,7 +2203,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.astra-logo-svg'                => array(
 					'width'  => astra_get_css_value( $header_logo_width['mobile'], 'px' ),
-					'height' => astra_get_css_value( $header_svg_logo_height['mobile'], 'px' ),
+					'height' => astra_get_css_value( ( ! empty( $header_logo_width['mobile-svg-height'] ) && ! is_customize_preview() ) ? $header_logo_width['mobile-svg-height'] : '', 'px' ),
 				),
 				'.ast-header-break-point .site-logo-img .custom-mobile-logo-link img' => array(
 					'max-width' => astra_get_css_value( $header_logo_width['mobile'], 'px' ),

@@ -73,6 +73,39 @@
 		});
 
 		/**
+		 * Trigger on ast-header-responsive-logo-width change.
+		 */
+		 api('astra-settings[ast-header-responsive-logo-width]', function (value) {
+			value.bind(function (checked) {
+
+				let customizer_preview_container =  document.getElementById('customize-preview')
+				let iframe 						 = customizer_preview_container.getElementsByTagName('iframe')[0]
+				let htmlContent 				 = iframe.contentDocument || iframe.contentWindow.document;
+				
+				if( htmlContent.querySelector('.astra-logo-svg') ) {
+					var existingValues 	    = api('astra-settings[ast-header-responsive-logo-width]').get();
+					let desktopHeight       = htmlContent.querySelector('#ast-desktop-header .astra-logo-svg').clientHeight;
+					let mobileTabletHeight  = htmlContent.querySelector('#ast-mobile-header .astra-logo-svg').clientHeight;
+					let selectedDevice = wp.customize.previewedDevice.get();
+					switch (selectedDevice) {
+						case 'desktop':
+							existingValues['desktop-svg-height'] = desktopHeight;
+							break;
+						case 'tablet':
+							existingValues['tablet-svg-height']  = mobileTabletHeight;
+							break;
+						case 'mobile':
+							existingValues['mobile-svg-height']  = mobileTabletHeight;
+							break;
+						default:
+							break;
+					}
+					api('astra-settings[ast-header-responsive-logo-width]').set( existingValues );
+				}
+			});
+		});
+
+		/**
 		 * Pass data to previewer when device changed.
 		 */
 
