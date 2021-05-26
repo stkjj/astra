@@ -18,35 +18,10 @@
 	grid-template-columns: 1fr auto 1fr;
 }
 
-/* Divider component */
-.ast-container[data-section="section-above-header-builder"],
-.ast-container[data-section="section-primary-header-builder"],
-.ast-container[data-section="section-below-header-builder"],
-.ast-container[data-section="section-above-header-builder"] .site-header-above-section-left,
-.ast-container[data-section="section-above-header-builder"] .site-header-above-section-center,
-.ast-container[data-section="section-above-header-builder"] .site-header-above-section-right,
-.ast-container[data-section="section-primary-header-builder"] .site-header-primary-section-left,
-.ast-container[data-section="section-primary-header-builder"] .site-header-primary-section-center,
-.ast-container[data-section="section-primary-header-builder"] .site-header-primary-section-right,
-.ast-container[data-section="section-below-header-builder"] .site-header-below-section-left,
-.ast-container[data-section="section-below-header-builder"] .site-header-below-section-center,
-.ast-container[data-section="section-below-header-builder"] .site-header-below-section-right {
-	position: relative;
-}
-
 .ast-builder-layout-element {
 	align-items: center;
 }
-.ast-footer-social-wrap {
-	.ast-builder-social-element {
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-}
+
 .ast-builder-grid-row.ast-grid-center-col-layout-only {
 	display: flex;
 	height: 100%;
@@ -130,27 +105,6 @@
 }
 
 /**
- * AST HF Builder - Widgets related CSS.
- * Text/HTML Widget.
- */
-.ast-builder-html-element {
-	img.alignnone {
-		display: inline-block;
-	}
-	p {
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-.footer-widget-area[data-section^="section-fb-html-"] .ast-builder-html-element {
-	text-align: center;
-}
-
-/**
  * AST HF Builder - Logo related CSS.
  * Align center section's Site title & Tagline center align.
  */
@@ -160,9 +114,6 @@
 	    display: inline-flex;
 	    vertical-align: middle;
 	    align-items: center;
-	}
-	.site-logo-img {
-		padding-right: 1em;
 	}
 }
 .ast-grid-section-center {
@@ -182,35 +133,7 @@
 		}
 	}
 }
-/**
- * AST HF Builder - Widgets related CSS.
- * Social Widget.
- */
-.ast-builder-social-element {
-	line-height: 1;
-	color: #3a3a3a;
-	background: transparent;
-	vertical-align: middle;
-	transition: all 0.01s;
-	margin-left: 6px;
-	margin-right: 6px;
-	justify-content: center;
-	align-items: center;
-	&:hover {
-		color: #0274be;
-	}
-	.social-item-label {
-		padding-left: 6px;
-	}
-}
-.ast-social-stack-desktop,
-.ast-social-stack-tablet,
-.ast-social-stack-mobile {
-	.ast-builder-social-element {
-		margin-top: 6px;
-		margin-bottom: 6px;
-	}
-}
+
 .ahfb-svg-iconset {
 	display: -webkit-inline-box;
 	display: inline-flex;
@@ -223,25 +146,6 @@
 			transition: none;
 		}
 	}
-}
-.social-show-label-true {
-	.ast-builder-social-element {
-		width: auto;
-		padding: 0 0.4em;
-	}
-}
-.ast-header-social-wrap {
-	.ast-builder-social-element {
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-}
-[data-section^="section-fb-social-icons-"] .footer-social-inner-wrap {
-	text-align: center;
 }
 
 /**
@@ -297,9 +201,7 @@
 .ast-footer-copyright {
 	width: 100%;
 }
-.ast-footer-social-wrap {
-	width: 100%;
-}
+
 .footer-nav-wrap .astra-footer-vertical-menu {
 	display: grid;
 }
