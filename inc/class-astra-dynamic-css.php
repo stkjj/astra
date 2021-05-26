@@ -547,6 +547,23 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				);
 			}
 
+			$page_header_logo = ( defined( 'ASTRA_EXT_VER' ) && Astra_Ext_Extension::is_active( 'advanced-headers' ) && Astra_Ext_Advanced_Headers_Loader::astra_advanced_headers_design_option( 'logo-url' ) ) ? true : false;
+
+			if ( get_theme_mod( 'custom_logo' ) 
+				|| astra_get_option( 'transparent-header-logo' ) 
+				|| astra_get_option( 'sticky-header-logo' ) 
+				|| $page_header_logo 
+				|| is_customize_preview() ) {
+
+				$css_output['.ast-logo-title-inline .site-logo-img'] = array(
+					'padding-right' => '1em',
+				);
+
+				$css_output['.site-logo-img img'] = array(
+					' transition' => 'all 0.2s linear',
+				);
+			}
+
 			/* Parse CSS from array() */
 			$parse_css = astra_parse_css( $css_output );
 
