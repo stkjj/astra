@@ -11,6 +11,7 @@ v3.5.0 (Unreleased)
 - Fix: Removed unwanted dividers from customizer setting sections.
 - Fix: Builder - WooCommerce & EDD cart - Duplicate transition CSS avoided in case normal Astra CSS icons.
 - Fix: WooCommerce - "Product Categories" widget's child elements have missing icon when Astra's SVGs enabled.
+- Fix: Core Web Vital - Accessibility - Background and foreground colors do not have a sufficient contrast ratio.
 
 v3.4.6
 - Fix: Footer alignment not working after update of v3.4.5.
