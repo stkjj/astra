@@ -2570,18 +2570,20 @@ body .entry-content .wp-block-latest-posts li {
   margin-bottom: 0;
 }
 
-/* Mobile Off-canvas CSS */
-[data-section="astra_customizer_mobile_header_button"] .menu-link {
-  display: none;
+.site-primary-footer-wrap {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.site-above-footer-wrap,
+.site-below-footer-wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .ast-hfb-header.ast-header-break-point .main-header-bar-navigation {
   width: 100%;
   margin: 0;
-}
-
-.ast-off-canvas-active body.ast-main-header-nav-open {
-  overflow: hidden;
 }
 
 .ast-hfb-header .menu-toggle.toggled .ast-mobile-svg {
