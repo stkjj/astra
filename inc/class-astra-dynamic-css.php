@@ -566,7 +566,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			/* Parse CSS from array() */
 			$parse_css = astra_parse_css( $css_output );
-
+			
 			if ( ! Astra_Builder_Helper::$is_header_footer_builder_active ) {
 
 				$old_header_mobile_toggle = array(
