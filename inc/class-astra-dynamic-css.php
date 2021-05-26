@@ -559,9 +559,26 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				}
 			}
 
+			$page_header_logo = ( defined( 'ASTRA_EXT_VER' ) && Astra_Ext_Extension::is_active( 'advanced-headers' ) && Astra_Ext_Advanced_Headers_Loader::astra_advanced_headers_design_option( 'logo-url' ) ) ? true : false;
+
+			if ( get_theme_mod( 'custom_logo' ) 
+				|| astra_get_option( 'transparent-header-logo' ) 
+				|| astra_get_option( 'sticky-header-logo' ) 
+				|| $page_header_logo 
+				|| is_customize_preview() ) {
+
+				$css_output['.ast-logo-title-inline .site-logo-img'] = array(
+					'padding-right' => '1em',
+				);
+
+				$css_output['.site-logo-img img'] = array(
+					' transition' => 'all 0.2s linear',
+				);
+			}
+
 			/* Parse CSS from array() */
 			$parse_css = astra_parse_css( $css_output );
-
+			
 			if ( ! Astra_Builder_Helper::$is_header_footer_builder_active ) {
 
 				$old_header_mobile_toggle = array(
@@ -1707,60 +1724,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/* Parse CSS from array() -> max-width: (mobile-breakpoint) px  */
 			$parse_css .= astra_parse_css( $global_button_mobile, '', astra_get_mobile_breakpoint() );
 
-			if ( is_current_post_comment_enabled() ) {
-
-				$global_button_comment_mobile = array(
-					'.ast-separate-container .comments-count-wrapper' => array(
-						'padding' => '1.5em 1em',
-					),
-					'.ast-separate-container .ast-comment-list li.depth-1' => array(
-						'padding'       => '1.5em 1em',
-						'margin-bottom' => '1.5em',
-					),
-					'.ast-separate-container .ast-comment-list .bypostauthor' => array(
-						'padding' => '.5em',
-					),
-					'.ast-separate-container .comment-respond' => array(
-						'padding' => '1.5em 1em',
-					),
-					// Single Post Meta.
-					'.ast-comment-meta'    => array(
-						'font-size' => ! empty( $body_font_size['mobile'] ) ? astra_get_font_css_value( (int) $body_font_size['mobile'] * 0.8571428571, 'px', 'mobile' ) : '',
-					),
-					'.comment-reply-title' => array(
-						'font-size' => ! empty( $body_font_size['mobile'] ) ? astra_get_font_css_value( (int) $body_font_size['mobile'] * 1.66666, 'px', 'mobile' ) : '',
-					),
-					'.ast-comment-list #cancel-comment-reply-link' => array(
-						'font-size' => astra_responsive_font( $body_font_size, 'mobile' ),
-					),
-				);
-
-				$parse_css .= astra_parse_css( $global_button_comment_mobile, '', astra_get_mobile_breakpoint() );
-
-				if ( $is_site_rtl ) {
-					$global_button_mobile_lang_direction_css = array(
-						'.ast-comment-list .children' => array(
-							'margin-right' => '0.66666em',
-						),
-						'.ast-separate-container .ast-comment-list .bypostauthor li' => array(
-							'padding' => '0 .5em 0 0',
-						),
-					);
-				} else {
-					$global_button_mobile_lang_direction_css = array(
-						'.ast-comment-list .children' => array(
-							'margin-left' => '0.66666em',
-						),
-						'.ast-separate-container .ast-comment-list .bypostauthor li' => array(
-							'padding' => '0 0 0 .5em',
-						),
-					);
-				}
-				/* Parse CSS from array() -> max-width: (mobile-breakpoint) px  */
-				$parse_css .= astra_parse_css( $global_button_mobile_lang_direction_css, '', astra_get_mobile_breakpoint() );
-
-			}
-
 			/**
 			 * Global button CSS - -> max-width: (tablet-breakpoint) px.
 			 */
@@ -1797,54 +1760,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			/* Parse CSS from array() -> max-width: (tablet-breakpoint) px CSS */
 			$parse_css .= astra_parse_css( $global_button_tablet, '', astra_get_tablet_breakpoint() );
-
-			if ( is_current_post_comment_enabled() ) {
-
-				$global_button_comment_tablet = array(
-					'.ast-comment-avatar-wrap img' => array(
-						'max-width' => '2.5em',
-					),
-					'.comments-area'               => array(
-						'margin-top' => '1.5em',
-					),
-					'.ast-separate-container .comments-count-wrapper' => array(
-						'padding' => '2em 2.14em',
-					),
-					'.ast-separate-container .ast-comment-list li.depth-1' => array(
-						'padding' => '1.5em 2.14em',
-					),
-					'.ast-separate-container .comment-respond' => array(
-						'padding' => '2em 2.14em',
-					),
-					// Single Post Meta.
-					'.ast-comment-meta'            => array(
-						'font-size' => ! empty( $body_font_size['tablet'] ) ? astra_get_font_css_value( (int) $body_font_size['tablet'] * 0.8571428571, 'px', 'tablet' ) : '',
-					),
-					'.comment-reply-title'         => array(
-						'font-size' => ! empty( $body_font_size['tablet'] ) ? astra_get_font_css_value( (int) $body_font_size['tablet'] * 1.66666, 'px', 'tablet' ) : '',
-					),
-					'.ast-comment-list #cancel-comment-reply-link' => array(
-						'font-size' => astra_responsive_font( $body_font_size, 'tablet' ),
-					),
-				);
-
-				$parse_css .= astra_parse_css( $global_button_comment_tablet, '', astra_get_tablet_breakpoint() );
-
-				if ( $is_site_rtl ) {
-					$global_button_tablet_lang_direction_css = array(
-						'.ast-comment-avatar-wrap' => array(
-							'margin-left' => '0.5em',
-						),
-					);
-				} else {
-					$global_button_tablet_lang_direction_css = array(
-						'.ast-comment-avatar-wrap' => array(
-							'margin-right' => '0.5em',
-						),
-					);
-				}
-				$parse_css .= astra_parse_css( $global_button_tablet_lang_direction_css, '', astra_get_tablet_breakpoint() );
-			}
 
 			if ( Astra_Builder_Helper::is_component_loaded( 'search', 'header', 'mobile' ) ) {
 
@@ -2263,6 +2178,25 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/* Parse CSS from array()*/
 			$parse_css .= astra_parse_css( $site_width, astra_get_tablet_breakpoint( '', 1 ) );
 
+			if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
+				$mega_menu_css = array(
+					'.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-full-megamenu-wrapper .sub-menu, .ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-megamenu .sub-menu' => array(
+						'box-shadow' => 'none',
+					),
+					'.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-full-megamenu-wrapper' => array(
+						'box-shadow' => '0 4px 10px -2px rgba(0, 0, 0, 0.1)',
+					),
+					'.ast-desktop .main-header-menu > .menu-item .astra-full-megamenu-wrapper:before' => array(
+						'position'  => 'absolute',
+						'content'   => '',
+						'top'       => '0',
+						'right'     => '0',
+						'width'     => '100%',
+						'transform' => 'translateY(-100%)',
+					),
+				);
+				$parse_css    .= astra_parse_css( $mega_menu_css );
+			}
 			/**
 			 * Astra Fonts
 			 */
