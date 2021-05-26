@@ -3016,10 +3016,6 @@ body {
   margin-right: auto;
 }
 
-.site-logo-img img {
-  transition: all 0.2s linear;
-}
-
 /**
  * 8 - Header Widget Area
  */
@@ -3875,14 +3871,6 @@ li.ast-masthead-custom-menu-items .ast-search-icon .astra-search-icon {
 .entry-content > :last-child,
 .entry-summary > :last-child {
   margin-bottom: 0;
-}
-
-.comment-content a {
-  word-wrap: break-word;
-}
-
-.bypostauthor {
-  display: block;
 }
 
 /* .alignwide & .alignfull CSS compatibility */
