@@ -457,7 +457,6 @@ function restoreGeneralTabControls(){
         controls.push(document.querySelector('#customize-control-astra-settings-logo-title-inline'));
         controls.push(document.querySelector('#customize-control-blogdescription'));
         controls.push(document.querySelector('#customize-control-astra-settings-ast-site-title-tagline-divider'));
-        controls.push(document.querySelector('#mnhh'));
 
         jQuery(document).ready(function(){
             controls.forEach(control => {
