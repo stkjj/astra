@@ -3190,13 +3190,13 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		 * Font CSS support for widget-title heading fonts & fonts which are not working in editor.
 		 *
 		 * 1. Adding Font-weight support to widget titles.
- 		 * 2. Customizer font CSS not supporting in editor.
+		 * 2. Customizer font CSS not supporting in editor.
 		 *
 		 * @since x.x.x
 		 * @return boolean false if it is an existing user, true if not.
 		 */
 		public static function support_font_css_to_widget_and_in_editor() {
-			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
+			$astra_settings                                        = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['can-support-widget-and-editor-fonts'] = isset( $astra_settings['can-support-widget-and-editor-fonts'] ) ? false : true;
 			return apply_filters( 'astra_heading_fonts_typo_support', $astra_settings['can-support-widget-and-editor-fonts'] );
 		}
