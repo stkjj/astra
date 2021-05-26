@@ -739,32 +739,6 @@ ins {
   text-decoration: none;
 }
 
-ul, ol {
-  margin: 0 0 1.5em 3em;
-}
-
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
-
-li > ul,
-li > ol {
-  margin-bottom: 0;
-  margin-left: 1.5em;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin: 0 1.5em 1.5em;
-}
-
 table, th, td {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -3110,19 +3084,7 @@ body .entry-content .wp-block-latest-posts li {
 /**
  * 10 - Submenu container box shadow 
  */
-.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-full-megamenu-wrapper .sub-menu {
-  box-shadow: none;
-}
-
-.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-megamenu .sub-menu {
-  box-shadow: none;
-}
-
 .ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .sub-menu {
-  box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1);
-}
-
-.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-full-megamenu-wrapper {
   box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.1);
 }
 
@@ -3476,8 +3438,7 @@ body .entry-content .wp-block-latest-posts li {
   width: 150px;
 }
 
-.ast-desktop .main-header-menu > .menu-item .sub-menu:before,
-.ast-desktop .main-header-menu > .menu-item .astra-full-megamenu-wrapper:before {
+.ast-desktop .main-header-menu > .menu-item .sub-menu:before {
   position: absolute;
   content: '';
   top: 0;
