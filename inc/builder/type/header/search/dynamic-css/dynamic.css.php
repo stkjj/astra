@@ -60,15 +60,6 @@ function astra_hb_search_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' )
 			'position' => 'relative',
 			'z-index'  => '3',
 		),
-		'.ast-search-menu-icon.ast-inline-search .search-field' => array(
-			'width'         => '100%',
-			'padding'       => '0.60em',
-			'padding-right' => '5.5em',
-		),
-		'.site-header-section-left .ast-search-menu-icon.slide-search .search-form .search-field' => array(
-			'margin-right' => 'unset',
-			'margin-left'  => '10px',
-		),
 		$selector . ' .ast-search-menu-icon .search-form .search-field:-ms-input-placeholder,' . $selector . ' .ast-search-menu-icon .search-form .search-field:-ms-input-placeholder' => array(
 			'opacity' => '0.5',
 		),
@@ -165,9 +156,6 @@ function astra_search_static_css() {
 	.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .main-header-bar-navigation .ast-search-icon {
 		display: none;
 	}
-	.ast-search-icon .astra-search-icon {
-		font-size: 1.3em;
-	}
 	.main-header-bar .main-header-bar-navigation .ast-search-icon {
 		display: block;
 		z-index: 4;
@@ -257,6 +245,11 @@ function astra_search_static_css() {
 		  width: 100%;
 		  padding-left: 5.5em;
 		}
+		.ast-search-menu-icon.ast-inline-search .search-field {
+			width : 100%;
+			padding : 0.60em;
+			padding-left : 5.5em;
+		}
 		.site-header-section-left .ast-search-menu-icon.slide-search .search-form {
 			padding-right: 3em;
 			padding-left: unset;
@@ -298,6 +291,11 @@ function astra_search_static_css() {
 		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon.ast-inline-search .search-field {
 		  width: 100%;
 		  padding-right: 5.5em;
+		}
+		.ast-search-menu-icon.ast-inline-search .search-field {
+			width : 100%;
+			padding : 0.60em;
+			padding-right : 5.5em;
 		}
 		.site-header-section-left .ast-search-menu-icon.slide-search .search-form {
 			padding-left: 3em;
