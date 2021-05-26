@@ -1847,10 +1847,6 @@ body {
   margin-left: auto;
 }
 
-.header-main-layout-3 .ast-main-header-bar-alignment {
-  margin-right: auto;
-}
-
 #site-navigation {
   height: 100%;
 }
@@ -2477,8 +2473,35 @@ body .entry-content .wp-block-latest-posts li {
   text-align: center;
 }
 
-.header-main-layout-2 .site-header-section-left .ast-site-identity {
-  text-align: left;
+/**
+ * AST HF Builder - Widgets related CSS.
+ * Social Widget.
+ */
+.ast-builder-social-element {
+  line-height: 1;
+  color: #3a3a3a;
+  background: transparent;
+  vertical-align: middle;
+  transition: all 0.01s;
+  margin-left: 6px;
+  margin-right: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ast-builder-social-element:hover {
+  color: #0274be;
+}
+
+.ast-builder-social-element .social-item-label {
+  padding-left: 6px;
+}
+
+.ast-social-stack-desktop .ast-builder-social-element,
+.ast-social-stack-tablet .ast-builder-social-element,
+.ast-social-stack-mobile .ast-builder-social-element {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .ahfb-svg-iconset {
