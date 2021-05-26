@@ -22,7 +22,7 @@ function astra_old_header_custom_menu_css( $dynamic_css ) {
 
 	$menu_item = astra_get_option( 'header-main-rt-section' );
 	if ( false === Astra_Builder_Helper::$is_header_footer_builder_active ) {
-
+		$static_css = '';
 		if ( 'widget' == $menu_item ) {
 
 			$static_css = '
