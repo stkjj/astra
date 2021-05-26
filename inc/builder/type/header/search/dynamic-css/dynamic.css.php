@@ -51,15 +51,6 @@ function astra_hb_search_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' )
 	 * Search CSS.
 	 */
 	$css_output_desktop = array(
-		'.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-form' => array(
-			'padding'  => '0',
-			'display'  => 'block',
-			'overflow' => 'hidden',
-		),
-		'.ast-search-menu-icon'                         => array(
-			'position' => 'relative',
-			'z-index'  => '3',
-		),
 		$selector . ' .ast-search-menu-icon .search-form .search-field:-ms-input-placeholder,' . $selector . ' .ast-search-menu-icon .search-form .search-field:-ms-input-placeholder' => array(
 			'opacity' => '0.5',
 		),
@@ -153,9 +144,7 @@ function astra_hb_search_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' )
  */
 function astra_search_static_css() {
 	$search_css = '
-	.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .main-header-bar-navigation .ast-search-icon {
-		display: none;
-	}
+	
 	.main-header-bar .main-header-bar-navigation .ast-search-icon {
 		display: block;
 		z-index: 4;
@@ -228,23 +217,6 @@ function astra_search_static_css() {
 
 	if ( is_rtl() ) {
 		$search_css .= '
-		.ast-header-break-point.ast-header-custom-item-outside .main-header-bar .ast-search-icon {
-			margin-left: 1em;
-		}
-		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-submit {
-			display: block;
-			position: absolute;
-			height: 100%;
-			top: 0;
-			left: 0;
-			padding: 0 1em;
-			border-radius: 0;
-		}
-		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-field,
-		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon.ast-inline-search .search-field {
-		  width: 100%;
-		  padding-left: 5.5em;
-		}
 		.ast-search-menu-icon.ast-inline-search .search-field {
 			width : 100%;
 			padding : 0.60em;
@@ -275,23 +247,6 @@ function astra_search_static_css() {
 		}';
 	} else {
 		$search_css .= '
-		.ast-header-break-point.ast-header-custom-item-outside .main-header-bar .ast-search-icon {
-			margin-right: 1em;
-		}
-		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-submit {
-			display: block;
-			position: absolute;
-			height: 100%;
-			top: 0;
-			right: 0;
-			padding: 0 1em;
-			border-radius: 0;
-		}
-		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon .search-field,
-		.ast-header-break-point.ast-header-custom-item-inside .main-header-bar .ast-search-menu-icon.ast-inline-search .search-field {
-		  width: 100%;
-		  padding-right: 5.5em;
-		}
 		.ast-search-menu-icon.ast-inline-search .search-field {
 			width : 100%;
 			padding : 0.60em;
