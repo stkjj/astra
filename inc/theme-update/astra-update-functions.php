@@ -2991,3 +2991,22 @@ function astra_update_related_posts_grid_layout() {
 		update_option( 'astra-settings', $theme_options );
 	}
 }
+
+/**
+ * Do not apply new font-weight heading support CSS in editor/frontend directly.
+ *
+ * 1. Adding Font-weight support to widget titles.
+ * 2. Customizer font CSS not supporting in editor.
+ *
+ * @since x.x.x
+ *
+ * @return void
+ */
+function astra_headings_font_support() {
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( ! isset( $theme_options['can-support-widget-and-editor-fonts'] ) ) {
+		$theme_options['can-support-widget-and-editor-fonts'] = false;
+		update_option( 'astra-settings', $theme_options );
+	}
+}

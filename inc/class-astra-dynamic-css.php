@@ -1114,6 +1114,23 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $gb_patterns_min_mobile_css, astra_get_mobile_breakpoint() );
 			}
 
+			if ( self::support_font_css_to_widget_and_in_editor() ) {
+				$widget_title_font_weight_support = array(
+					'h1.widget-title' => array(
+						'font-weight' => esc_attr( $h1_font_weight ),
+					),
+					'h2.widget-title' => array(
+						'font-weight' => esc_attr( $h2_font_weight ),
+					),
+					'h3.widget-title' => array(
+						'font-weight' => esc_attr( $h3_font_weight ),
+					),
+				);
+
+				/* Parse CSS from array() -> All media CSS */
+				$parse_css .= astra_parse_css( $widget_title_font_weight_support );
+			}
+
 			$static_layout_css = array(
 				'.ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single' => array(
 					'padding' => '1.5em 2.14em',
@@ -3167,6 +3184,21 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['guntenberg-button-pattern-compat-css'] = isset( $astra_settings['guntenberg-button-pattern-compat-css'] ) ? false : true;
 			return apply_filters( 'astra_gutenberg_patterns_compatibility', $astra_settings['guntenberg-button-pattern-compat-css'] );
+		}
+
+		/**
+		 * Font CSS support for widget-title heading fonts & fonts which are not working in editor.
+		 *
+		 * 1. Adding Font-weight support to widget titles.
+ 		 * 2. Customizer font CSS not supporting in editor.
+		 *
+		 * @since x.x.x
+		 * @return boolean false if it is an existing user, true if not.
+		 */
+		public static function support_font_css_to_widget_and_in_editor() {
+			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
+			$astra_settings['can-support-widget-and-editor-fonts'] = isset( $astra_settings['can-support-widget-and-editor-fonts'] ) ? false : true;
+			return apply_filters( 'astra_heading_fonts_typo_support', $astra_settings['can-support-widget-and-editor-fonts'] );
 		}
 
 		/**
