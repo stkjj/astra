@@ -18,35 +18,10 @@
 	grid-template-columns: 1fr auto 1fr;
 }
 
-/* Divider component */
-.ast-container[data-section="section-above-header-builder"],
-.ast-container[data-section="section-primary-header-builder"],
-.ast-container[data-section="section-below-header-builder"],
-.ast-container[data-section="section-above-header-builder"] .site-header-above-section-left,
-.ast-container[data-section="section-above-header-builder"] .site-header-above-section-center,
-.ast-container[data-section="section-above-header-builder"] .site-header-above-section-right,
-.ast-container[data-section="section-primary-header-builder"] .site-header-primary-section-left,
-.ast-container[data-section="section-primary-header-builder"] .site-header-primary-section-center,
-.ast-container[data-section="section-primary-header-builder"] .site-header-primary-section-right,
-.ast-container[data-section="section-below-header-builder"] .site-header-below-section-left,
-.ast-container[data-section="section-below-header-builder"] .site-header-below-section-center,
-.ast-container[data-section="section-below-header-builder"] .site-header-below-section-right {
-	position: relative;
-}
-
 .ast-builder-layout-element {
 	align-items: center;
 }
-.ast-footer-social-wrap {
-	.ast-builder-social-element {
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-}
+
 .ast-builder-grid-row.ast-grid-center-col-layout-only {
 	display: flex;
 	height: 100%;
@@ -108,48 +83,6 @@
 	flex-grow: 1;
 }
 
-/* Account Component */
-.ast-header-account-type-icon {
-	display: inline-flex;
-	align-self: center;
-	vertical-align: middle;
-}
-
-.ast-header-account-type-avatar {
-	.avatar {
-		display: inline;
-		border-radius: 100%;
-		max-width: 100%;
-	}
-}
-.site-header-focus-item.ast-header-account:hover > .customize-partial-edit-shortcut {
-	opacity: 0;
-}
-.site-header-focus-item.ast-header-account:hover > * > .customize-partial-edit-shortcut {
-	opacity: 1;
-}
-
-/**
- * AST HF Builder - Widgets related CSS.
- * Text/HTML Widget.
- */
-.ast-builder-html-element {
-	img.alignnone {
-		display: inline-block;
-	}
-	p {
-		&:first-child {
-			margin-top: 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-.footer-widget-area[data-section^="section-fb-html-"] .ast-builder-html-element {
-	text-align: center;
-}
-
 /**
  * AST HF Builder - Logo related CSS.
  * Align center section's Site title & Tagline center align.
@@ -160,9 +93,6 @@
 	    display: inline-flex;
 	    vertical-align: middle;
 	    align-items: center;
-	}
-	.site-logo-img {
-		padding-right: 1em;
 	}
 }
 .ast-grid-section-center {
@@ -175,13 +105,7 @@
 		}
 	}
 }
-.header-main-layout-2 {
-	.site-header-section-left {
-		.ast-site-identity {
-			text-align: left;
-		}
-	}
-}
+
 /**
  * AST HF Builder - Widgets related CSS.
  * Social Widget.
@@ -224,25 +148,6 @@
 		}
 	}
 }
-.social-show-label-true {
-	.ast-builder-social-element {
-		width: auto;
-		padding: 0 0.4em;
-	}
-}
-.ast-header-social-wrap {
-	.ast-builder-social-element {
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-	}
-}
-[data-section^="section-fb-social-icons-"] .footer-social-inner-wrap {
-	text-align: center;
-}
 
 /**
  * AST HF Builder - Widgets related CSS.
@@ -264,8 +169,7 @@
 	align-content: center;
 }
 .main-header-bar,
-.ast-above-header,
-.ast-below-header {
+.ast-above-header {
 	.main-header-bar-navigation {
 		height: 100%;
 	}
@@ -294,9 +198,6 @@
 }
 .ast-footer-social-wrap {
 	width: 100%;
-}
-.footer-nav-wrap .astra-footer-vertical-menu {
-	display: grid;
 }
 #astra-footer-menu {
 	margin: 0;
@@ -347,21 +248,8 @@
 	}
 	.ast-mobile-header-wrap {
 		.ast-above-header-wrap,
-		.ast-main-header-wrap,
-		.ast-below-header-wrap {
+		.ast-main-header-wrap{
 			.main-header-bar-navigation {
-				.inline-on-mobile {
-					.menu-item .menu-link {
-						border: none;
-					}
-					.menu-item-has-children {
-						>.ast-menu-toggle {
-							&::before {
-								font-size: .6rem;
-							}
-						}
-					}
-				}
 				.ast-submenu-expanded {
 					>.ast-menu-toggle {
 						&::before {
@@ -399,20 +287,11 @@
 	padding-bottom: 20px;
 }
 
-/* Mobile Off-canvas CSS */
-[data-section="astra_customizer_mobile_header_button"] {
-	.menu-link {
-		display: none;
-	}
-}
 .ast-hfb-header.ast-header-break-point {
 	.main-header-bar-navigation {
 		width: 100%;
 		margin: 0;
 	}
-}
-.ast-off-canvas-active body.ast-main-header-nav-open {
-	overflow: hidden;
 }
 .ast-hfb-header {
 	.menu-toggle.toggled {
@@ -468,13 +347,6 @@
 		padding: .5em;
 		align-items: center;
 		display: flex;
-	}
-}
-.ast-search-menu-icon.ast-inline-search {
-	.search-field {
-		width: 100%;
-		padding: 0.60em;
-		padding-right: 5.5em;
 	}
 }
 .site-footer-focus-item[CLASS*="ast-footer-button-"] {
@@ -534,28 +406,6 @@
 		>.menu-link:hover {
 			transition: all .3s ease;
 			transform: scale(1.2);
-		}
-	}
-}
-
-.ast-header-search {
-	.ast-search-menu-icon .search-form .search-field::placeholder {
-		opacity: 0.5;
-	}
-}
-
-/** Search CSS for Left side rows */
-.site-header-section-left {
-	.ast-search-menu-icon.slide-search {
-		.search-form {
-			padding-left: 3em;
-			padding-right: unset;
-			left: -1em;
-			right: unset;
-			.search-field {
-				margin-right: unset;
-				margin-left: 10px;
-			}
 		}
 	}
 }
