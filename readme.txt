@@ -63,6 +63,9 @@ https://fontawesome.com/v5.15/icons/pen-square?style=solid
 https://fontawesome.com/v5.15/icons/user-tie?style=solid
 https://fontawesome.com/v5.15/icons/user-tie?style=solid
 
+Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://www.humaaans.com/ )
+NOTE: Illustrations can be donwloaded on main page of https://www.humaaans.com/ using 'Download' button hence there are no links to the illustrations.
+
 = Normalizing styles =
 
 Normalizing styles have been helped along thanks to the fine work of.
