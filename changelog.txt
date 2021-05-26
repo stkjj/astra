@@ -1,5 +1,6 @@
 v3.5.1 (Unreleased)
 - Improvement: Added headings font-weight support to widget-title headings. ( Need Doc )
+- Fix: Customizer's font & color settings not reflecting in Gutenberg editor. ( Need Doc )
 
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
