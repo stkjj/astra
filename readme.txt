@@ -56,13 +56,12 @@ There are multiple ways you can use a child theme with the Astra Theme, Use any 
 
 = Screenshot Licenses =
 
-Screenshot images are all licensed under Creative Commons Zero (CC0) ( https://pxhere.com/en/license )
-https://pxhere.com/en/photo/100653
-https://pxhere.com/en/photo/759723
-https://pxhere.com/en/photo/1259448
-https://pxhere.com/en/photo/1456591
-https://pxhere.com/en/photo/1389199
-
+Icons used in the Screenshot images are all licensed under Creative Commons ( CC BY 4.0 ) License ( https://fontawesome.com/license/free )
+https://fontawesome.com/v5.15/icons/store?style=solid
+https://fontawesome.com/v5.15/icons/shopping-cart?style=solid
+https://fontawesome.com/v5.15/icons/pen-square?style=solid
+https://fontawesome.com/v5.15/icons/user-tie?style=solid
+https://fontawesome.com/v5.15/icons/user-tie?style=solid
 
 = Normalizing styles =
 
