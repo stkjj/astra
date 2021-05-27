@@ -128,8 +128,8 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 					),
 					// Colors.
 					'text-color'                           => '#3a3a3a',
-					'link-color'                           => '#0274be',
-					'theme-color'                          => '#0274be',
+					'link-color'                           => '#0170B9',
+					'theme-color'                          => '#0170B9',
 					'link-h-color'                         => '#3a3a3a',
 
 					// Footer Bar Background.
@@ -216,6 +216,9 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 						'tablet'  => '',
 						'mobile'  => '',
 					),
+					'header-color-site-title'              => '',
+					'header-color-h-site-title'            => '',
+					'header-color-site-tagline'            => '',
 					'display-site-title'                   => 1,
 					'display-site-tagline'                 => 0,
 					'logo-title-inline'                    => 1,
