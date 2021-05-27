@@ -2635,11 +2635,6 @@ body .entry-content .wp-block-latest-posts li {
   transform: scale(1.2);
 }
 
-/** Above header z-index for Sticky Above Header Submenu */
-.ast-above-header-bar.ast-header-sticked {
-  z-index: 9;
-}
-
 /* Footer menu spacing between each menu items. */
 @media (min-width: 769px) {
   .footer-nav-wrap .astra-footer-horizontal-menu li {
