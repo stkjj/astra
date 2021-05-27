@@ -56,7 +56,9 @@ There are multiple ways you can use a child theme with the Astra Theme, Use any 
 
 = Screenshot Licenses =
 
-Icons used in the Screenshot images are all licensed under Creative Commons ( CC BY 4.0 ) License ( https://fontawesome.com/license/free )
+Screenshot image is a collage of actual sites created using the Astra WordPress Theme.
+
+Icons used in the Screenshot image are all licensed under Creative Commons ( CC BY 4.0 ) License ( https://fontawesome.com/license/free )
 https://fontawesome.com/v5.15/icons/store?style=solid
 https://fontawesome.com/v5.15/icons/shopping-cart?style=solid
 https://fontawesome.com/v5.15/icons/pen-square?style=solid
@@ -65,6 +67,12 @@ https://fontawesome.com/v5.15/icons/user-tie?style=solid
 
 Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://www.humaaans.com/ )
 NOTE: Illustrations can be donwloaded on main page of https://www.humaaans.com/ using 'Download' button hence there are no links to the illustrations.
+
+Some hand drawn illustrations used are created by Brainstorm Force and released under Creative Commons ( CC0 ) License.
+
+The same site as screenshot can be imported from here https://websitedemos.net/landing-page-08/.
+
+For more information, refer to this document on how to create page like in the screenshot -
 
 = Normalizing styles =
 
