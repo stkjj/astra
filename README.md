@@ -72,7 +72,7 @@ Some hand-drawn illustrations used are created by Brainstorm Force and released 
 
 The same site as screenshot can be imported from here https://websitedemos.net/landing-page-08/.
 
-For more information, refer to this document on how to create a page like in the screenshot -
+For more information, refer to this document on how to create a page like in the screenshot - https://wpastra.com/docs/replicating-the-screenshot/.
 
 ### Normalizing styles ###
 
