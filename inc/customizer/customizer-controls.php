@@ -20,5 +20,6 @@ require $control_dir . '/class-astra-customizer-control-base.php';
 require $control_dir . '/typography/class-astra-control-typography.php';
 require $control_dir . '/description/class-astra-control-description.php';
 require $control_dir . '/customizer-link/class-astra-control-customizer-link.php';
+require $control_dir . '/customizer-refresh/class-astra-control-customizer-refresh.php';
 require $control_dir . '/font-variant/class-astra-control-font-variant.php';
 // @codingStandardsIgnoreEnd WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound

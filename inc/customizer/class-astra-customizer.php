@@ -1051,6 +1051,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			require ASTRA_THEME_DIR . 'inc/customizer/configurations/typography/class-astra-content-typo-configs.php';
 			require ASTRA_THEME_DIR . 'inc/customizer/configurations/typography/class-astra-header-typo-configs.php';
 			require ASTRA_THEME_DIR . 'inc/customizer/configurations/typography/class-astra-single-typo-configs.php';
+			require ASTRA_THEME_DIR . 'inc/customizer/configurations/performance/class-astra-performace-configs.php';
 
 			if ( astra_existing_header_footer_configs() ) {
 				require ASTRA_THEME_DIR . 'inc/customizer/configurations/buttons/class-astra-existing-button-configs.php';
@@ -1132,6 +1133,13 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				)
 			);
 
+			Astra_Customizer_Control_Base::add_control(
+				'ast-customizer-refresh',
+				array(
+					'callback'          => 'Astra_Control_Customizer_refresh',
+					'sanitize_callback' => '',
+				)
+			);
 
 			/**
 			 * Helper files
