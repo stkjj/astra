@@ -153,16 +153,6 @@
  * AST HF Builder - Widgets related CSS.
  * Button.
  */
-[data-section*="section-hb-button-"],
-[data-section*="section-fb-button-"] {
-	.menu-link {
-		display: none;
-	}
-}
-
-[CLASS*="ast-footer-button-"][data-section^="section-fb-button-"] {
-	justify-content: center;
-}
 
 .ast-footer-copyright {
 	p {
@@ -421,6 +411,21 @@
 }
 
 /* Footer menu spacing between each menu items. */
-.ast-builder-layout-element[data-section^="section-hb-button-"] {
-	display: flex;
+@media (min-width: $col-md ) {
+	.footer-nav-wrap {
+		.astra-footer-horizontal-menu {
+			li {
+				margin: 0;
+				&:first-child a {
+					padding-left: 0;
+				}
+				&:last-child a {
+					padding-right: 0;
+				}
+			}
+			a {
+				padding: 0 0.5em;
+			}
+		}
+	}
 }
