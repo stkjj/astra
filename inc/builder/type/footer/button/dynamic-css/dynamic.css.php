@@ -79,6 +79,9 @@ function astra_fb_button_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' )
 			'[CLASS*="ast-footer-button-"][data-section^="section-fb-button-"]' => array(
 				'justify-content' => 'center',
 			),
+			'.site-footer-focus-item[CLASS*="ast-footer-button-"]' => array(
+				'display' => 'flex',
+			),
 		);
 		return astra_parse_css( $static_css ) . $dynamic_css;
 	}

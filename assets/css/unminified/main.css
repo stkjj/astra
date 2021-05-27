@@ -2356,9 +2356,16 @@ body .entry-content .wp-block-latest-posts li {
   display: flex;
 }
 
+<<<<<<< HEAD
+.ast-search-menu-icon.ast-inline-search .search-field {
+  width: 100%;
+  padding: 0.60em;
+  padding-right: 5.5em;
+=======
 .site-footer-focus-item[CLASS*="ast-footer-button-"] {
   -js-display: flex;
   display: flex;
+>>>>>>> 4b3177b422450850455a84e732215b2acf573b3d
 }
 
 /** Hover menu style CSS */

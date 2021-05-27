@@ -2410,6 +2410,14 @@ body .entry-content .wp-block-latest-posts li {
  * AST HF Builder - Widgets related CSS.
  * Button.
  */
+<<<<<<< HEAD
+[data-section*="section-hb-button-"] .menu-link,
+[data-section*="section-fb-button-"] .menu-link {
+  display: none;
+}
+
+=======
+>>>>>>> 4b3177b422450850455a84e732215b2acf573b3d
 .ast-footer-copyright p {
   margin-bottom: 0;
 }
@@ -2597,9 +2605,16 @@ body .entry-content .wp-block-latest-posts li {
   display: flex;
 }
 
+<<<<<<< HEAD
+.ast-search-menu-icon.ast-inline-search .search-field {
+  width: 100%;
+  padding: 0.60em;
+  padding-right: 5.5em;
+=======
 .site-footer-focus-item[CLASS*="ast-footer-button-"] {
   -js-display: flex;
   display: flex;
+>>>>>>> 4b3177b422450850455a84e732215b2acf573b3d
 }
 
 /** Hover menu style CSS */

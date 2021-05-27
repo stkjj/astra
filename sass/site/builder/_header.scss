@@ -344,8 +344,12 @@
 		display: flex;
 	}
 }
-.site-footer-focus-item[CLASS*="ast-footer-button-"] {
-	display: flex;
+.ast-search-menu-icon.ast-inline-search {
+	.search-field {
+		width: 100%;
+		padding: 0.60em;
+		padding-right: 5.5em;
+	}
 }
 
 /** Hover menu style CSS */
