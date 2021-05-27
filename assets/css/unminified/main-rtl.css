@@ -2070,8 +2070,7 @@ body .entry-content .wp-block-latest-posts li {
   align-content: center;
 }
 
-.main-header-bar .main-header-bar-navigation,
-.ast-above-header .main-header-bar-navigation {
+.main-header-bar .main-header-bar-navigation {
   height: 100%;
 }
 
