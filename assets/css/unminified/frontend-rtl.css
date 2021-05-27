@@ -2410,10 +2410,6 @@ body .entry-content .wp-block-latest-posts li {
  * AST HF Builder - Widgets related CSS.
  * Button.
  */
-[data-section*="section-hb-button-"] .menu-link {
-  display: none;
-}
-
 .ast-footer-copyright p {
   margin-bottom: 0;
 }
