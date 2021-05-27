@@ -66,13 +66,13 @@ https://fontawesome.com/v5.15/icons/user-tie?style=solid
 https://fontawesome.com/v5.15/icons/user-tie?style=solid
 
 Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://www.humaaans.com/ )
-NOTE: Illustrations can be donwloaded on main page of https://www.humaaans.com/ using 'Download' button hence there are no links to the illustrations.
+NOTE: Illustrations can be downloaded on the main page of https://www.humaaans.com/ using the 'Download' button; hence there are no links to the illustrations.
 
-Some hand drawn illustrations used are created by Brainstorm Force and released under Creative Commons ( CC0 ) License.
+Some hand-drawn illustrations used are created by Brainstorm Force and released under Creative Commons ( CC0 ) License.
 
 The same site as screenshot can be imported from here https://websitedemos.net/landing-page-08/.
 
-For more information, refer to this document on how to create page like in the screenshot -
+For more information, refer to this document on how to create a page like in the screenshot -
 
 = Normalizing styles =
 
