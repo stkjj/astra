@@ -394,6 +394,9 @@ export function siteTitleTaglineDependentControl ( control ) {
     jQuery(document).ready(function(){
         restoreGeneralTabControls();
     });
+    jQuery(document).ready(function(){
+        restoreDesignTabControls();
+    });
 }
 
 /**
@@ -406,8 +409,8 @@ function siteTitleDependentControls(control){
     var tabletToggleVal = ( true === container.find('.ast-responsive-toggle-control.tablet .components-form-toggle__input').prop("checked") ) ? 'block' : 'none';
     var mobileToggleVal = ( true === container.find('.ast-responsive-toggle-control.mobile .components-form-toggle__input').prop("checked") ) ? 'block' : 'none';
 
-    var dynamicStyle = '.preview-desktop #customize-control-blogname { display: ' + desktopToggleVal + ';} .preview-tablet #customize-control-blogname { display: ' + tabletToggleVal + ';} .preview-mobile #customize-control-blogname { display: ' + mobileToggleVal + ';}';
-    responsive_helper_dynamic_css( 'site-title-textbox-visibility', dynamicStyle );
+    var dynamicStyle = '.preview-desktop #customize-control-blogname, .preview-desktop #customize-control-astra-settings-site-identity-title-color-group, .preview-desktop #customize-control-astra-settings-site-title-typography { display: ' + desktopToggleVal + ';} .preview-tablet #customize-control-blogname, .preview-tablet #customize-control-astra-settings-site-identity-title-color-group, .preview-tablet #customize-control-astra-settings-site-title-typography { display: ' + tabletToggleVal + ';} .preview-mobile #customize-control-blogname, .preview-mobile #customize-control-astra-settings-site-identity-title-color-group, .preview-mobile #customize-control-astra-settings-site-title-typography { display: ' + mobileToggleVal + ';}';
+    responsive_helper_dynamic_css( 'site-title-controls-visibility', dynamicStyle );
 
     inlineLogoTitleToggleVisibility();
 }
@@ -422,8 +425,8 @@ function siteTaglineDependentControls(control){
     var tabletToggleVal = ( true === container.find('.ast-responsive-toggle-control.tablet .components-form-toggle__input').prop("checked") ) ? 'block' : 'none';
     var mobileToggleVal = ( true === container.find('.ast-responsive-toggle-control.mobile .components-form-toggle__input').prop("checked") ) ? 'block' : 'none';
 
-    var dynamicStyle = '.preview-desktop #customize-control-blogdescription, .preview-desktop #customize-control-astra-settings-ast-site-title-tagline-divider { display: ' + desktopToggleVal + ';} .preview-tablet #customize-control-blogdescription, .preview-tablet #customize-control-astra-settings-ast-site-title-tagline-divider { display: ' + tabletToggleVal + ';} .preview-mobile #customize-control-blogdescription, .preview-mobile #customize-control-astra-settings-ast-site-title-tagline-divider { display: ' + mobileToggleVal + ';}';
-    responsive_helper_dynamic_css( 'site-tagline-textbox-visibility', dynamicStyle );
+    var dynamicStyle = '.preview-desktop #customize-control-blogdescription, .preview-desktop #customize-control-astra-settings-ast-site-title-tagline-divider, .preview-desktop #customize-control-astra-settings-header-color-site-tagline, .preview-desktop #customize-control-astra-settings-site-tagline-typography { display: ' + desktopToggleVal + ';} .preview-tablet #customize-control-blogdescription, .preview-tablet #customize-control-astra-settings-ast-site-title-tagline-divider, .preview-tablet #customize-control-astra-settings-header-color-site-tagline, .preview-tablet #customize-control-astra-settings-site-tagline-typography { display: ' + tabletToggleVal + ';} .preview-mobile #customize-control-blogdescription, .preview-mobile #customize-control-astra-settings-ast-site-title-tagline-divider, .preview-mobile #customize-control-astra-settings-header-color-site-tagline, .preview-mobile #customize-control-astra-settings-site-tagline-typography { display: ' + mobileToggleVal + ';}';
+    responsive_helper_dynamic_css( 'site-tagline-controls-visibility', dynamicStyle );
 
     inlineLogoTitleToggleVisibility();
 }
@@ -462,6 +465,42 @@ function restoreGeneralTabControls(){
             controls.forEach(control => {
                 if( null !== control && 'list-item' === control.style.getPropertyValue('display') ){
                     control.style.removeProperty('display');
+                }
+            });
+        });
+    });
+}
+
+/**
+ * Restore visibility of Title and Tagline controls on click of Design tab
+ */
+function restoreDesignTabControls(){
+
+    var design_tab = document.querySelector('#sub-accordion-section-title_tagline .ahfb-design-tab');
+    jQuery(design_tab).click(function(){
+
+        var controls = [];
+        controls.push(document.querySelector('#customize-control-astra-settings-site-identity-title-color-group'));
+        controls.push(document.querySelector('#customize-control-astra-settings-site-title-typography'));
+        controls.push(document.querySelector('#customize-control-astra-settings-header-color-site-tagline'));
+        controls.push(document.querySelector('#customize-control-astra-settings-site-tagline-typography'));
+
+        var hide_controls = [];
+        hide_controls.push(document.querySelector('#customize-control-blogname'));
+        hide_controls.push(document.querySelector('#customize-control-astra-settings-logo-title-inline'));
+        hide_controls.push(document.querySelector('#customize-control-blogdescription'));
+        hide_controls.push(document.querySelector('#customize-control-astra-settings-ast-site-title-tagline-divider'));
+
+        jQuery(document).ready(function(){
+            controls.forEach(control => {
+                if( null !== control && 'list-item' === control.style.getPropertyValue('display') ){
+                    control.style.removeProperty('display');
+                }
+            });
+
+            hide_controls.forEach(hide_control => {
+                if( null !== hide_control ){
+                    jQuery(hide_control).hide();
                 }
             });
         });
