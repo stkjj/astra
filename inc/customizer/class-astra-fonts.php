@@ -128,7 +128,7 @@ final class Astra_Fonts {
 	public static function google_fonts_url( $fonts, $subsets = array() ) {
 
 		/* URL */
-		$base_url  = '//fonts.googleapis.com/css';
+		$base_url  = 'https://fonts.googleapis.com/css';
 		$font_args = array();
 		$family    = array();
 
@@ -174,7 +174,11 @@ final class Astra_Fonts {
 
 			$font_args['display'] = astra_get_fonts_display_property();
 
-			return add_query_arg( $font_args, $base_url );
+			$google_font_url = add_query_arg( $font_args, $base_url );
+
+			astra_update_option( 'astra_google_font_url', json_encode( $google_font_url ) );
+
+			return $google_font_url;
 		}
 
 		return '';
