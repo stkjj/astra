@@ -9,7 +9,6 @@ on:
       - release-candidate
       - master
       - dev
-      - static-css-optz
 
 jobs:
   build:
