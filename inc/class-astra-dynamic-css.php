@@ -60,13 +60,21 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/**
 			 * - Variable Declaration
 			 */
-			$is_site_rtl        = is_rtl();
-			$site_content_width = astra_get_option( 'site-content-width', 1200 );
-			$header_logo_width  = astra_get_option( 'ast-header-responsive-logo-width' );
-			$container_layout   = astra_get_option( 'site-content-layout' );
-			$title_color        = astra_get_option( 'header-color-site-title' );
-			$title_hover_color  = astra_get_option( 'header-color-h-site-title' );
-			$tagline_color      = astra_get_option( 'header-color-site-tagline' );
+			$is_site_rtl                = is_rtl();
+			$site_content_width         = astra_get_option( 'site-content-width', 1200 );
+			$header_logo_width          = astra_get_option( 'ast-header-responsive-logo-width' );
+			$container_layout           = astra_get_option( 'site-content-layout' );
+			$title_color                = astra_get_option( 'header-color-site-title' );
+			$title_hover_color          = astra_get_option( 'header-color-h-site-title' );
+			$tagline_color              = astra_get_option( 'header-color-site-tagline' );
+			$site_title_setting         = astra_get_option( 'display-site-title-responsive' );
+			$desktop_title_visibility   = $site_title_setting['desktop'] ? 'block' : 'none';
+			$tablet_title_visibility    = $site_title_setting['tablet'] ? 'block' : 'none';
+			$mobile_title_visibility    = $site_title_setting['mobile'] ? 'block' : 'none';
+			$site_tagline_setting       = astra_get_option( 'display-site-tagline-responsive' );
+			$desktop_tagline_visibility = ( $site_tagline_setting['desktop'] ) ? 'block' : 'none';
+			$tablet_tagline_visibility  = ( $site_tagline_setting['tablet'] ) ? 'block' : 'none';
+			$mobile_tagline_visibility  = ( $site_tagline_setting['mobile'] ) ? 'block' : 'none';
 
 			// Site Background Color.
 			$box_bg_obj = astra_get_option( 'site-layout-outside-bg-obj-responsive' );
@@ -359,6 +367,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.site-title'                            => array(
 					'font-size' => astra_responsive_font( $site_title_font_size, 'desktop' ),
+					'display'   => esc_attr( $desktop_title_visibility ),
 				),
 				'header .custom-logo-link img'           => array(
 					'max-width' => astra_get_css_value( $header_logo_width['desktop'], 'px' ),
@@ -371,6 +380,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.site-header .site-description'         => array(
 					'font-size' => astra_responsive_font( $site_tagline_font_size, 'desktop' ),
+					'display'   => esc_attr( $desktop_tagline_visibility ),
 				),
 				'.entry-title'                           => array(
 					'font-size' => astra_responsive_font( $archive_post_title_font_size, 'desktop' ),
@@ -1980,12 +1990,14 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.site-title'                    => array(
 					'font-size' => astra_responsive_font( $site_title_font_size, 'tablet' ),
+					'display'   => esc_attr( $tablet_title_visibility ),
 				),
 				'.ast-archive-description .ast-archive-title' => array(
 					'font-size' => astra_responsive_font( $archive_summary_title_font_size, 'tablet', 40 ),
 				),
 				'.site-header .site-description' => array(
 					'font-size' => astra_responsive_font( $site_tagline_font_size, 'tablet' ),
+					'display'   => esc_attr( $tablet_tagline_visibility ),
 				),
 				'.entry-title'                   => array(
 					'font-size' => astra_responsive_font( $archive_post_title_font_size, 'tablet', 30 ),
@@ -2073,12 +2085,14 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				),
 				'.site-title'                    => array(
 					'font-size' => astra_responsive_font( $site_title_font_size, 'mobile' ),
+					'display'   => esc_attr( $mobile_title_visibility ),
 				),
 				'.ast-archive-description .ast-archive-title' => array(
 					'font-size' => astra_responsive_font( $archive_summary_title_font_size, 'mobile', 40 ),
 				),
 				'.site-header .site-description' => array(
 					'font-size' => astra_responsive_font( $site_tagline_font_size, 'mobile' ),
+					'display'   => esc_attr( $mobile_tagline_visibility ),
 				),
 				'.entry-title'                   => array(
 					'font-size' => astra_responsive_font( $archive_post_title_font_size, 'mobile', 30 ),
