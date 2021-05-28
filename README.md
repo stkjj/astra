@@ -65,7 +65,7 @@ https://fontawesome.com/v5.15/icons/pen-square?style=solid
 https://fontawesome.com/v5.15/icons/user-tie?style=solid
 https://fontawesome.com/v5.15/icons/user-tie?style=solid
 
-Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://www.humaaans.com/ )
+Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://gumroad.com/l/humaaans )
 https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/standing-24.png
 https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/sitting-2.png
 
