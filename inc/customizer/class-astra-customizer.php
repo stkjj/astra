@@ -318,21 +318,11 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 
 			self::$contexts['blogname'] = array(
 				Astra_Builder_Helper::$general_tab_config,
-				array(
-					'setting'  => ASTRA_THEME_SETTINGS . '[display-site-title]',
-					'operator' => '==',
-					'value'    => true,
-				),
 
 			);
 
 			self::$contexts['blogdescription'] = array(
 				Astra_Builder_Helper::$general_tab_config,
-				array(
-					'setting'  => ASTRA_THEME_SETTINGS . '[display-site-tagline]',
-					'operator' => '==',
-					'value'    => true,
-				),
 
 			);
 
