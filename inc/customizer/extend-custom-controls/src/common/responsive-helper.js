@@ -452,8 +452,8 @@ function inlineLogoTitleToggleVisibility(){
  */
 function restoreGeneralTabControls(){
 
-    var genral_tab = document.querySelector('#sub-accordion-section-title_tagline .ahfb-general-tab');
-    jQuery(genral_tab).click(function(){
+    var genralTab = document.querySelector('#sub-accordion-section-title_tagline .ahfb-general-tab');
+    jQuery(genralTab).click(function(){
 
         var controls = [];
         controls.push(document.querySelector('#customize-control-blogname'));
@@ -476,8 +476,8 @@ function restoreGeneralTabControls(){
  */
 function restoreDesignTabControls(){
 
-    var design_tab = document.querySelector('#sub-accordion-section-title_tagline .ahfb-design-tab');
-    jQuery(design_tab).click(function(){
+    var designTab = document.querySelector('#sub-accordion-section-title_tagline .ahfb-design-tab');
+    jQuery(designTab).click(function(){
 
         var controls = [];
         controls.push(document.querySelector('#customize-control-astra-settings-site-identity-title-color-group'));
@@ -485,11 +485,11 @@ function restoreDesignTabControls(){
         controls.push(document.querySelector('#customize-control-astra-settings-header-color-site-tagline'));
         controls.push(document.querySelector('#customize-control-astra-settings-site-tagline-typography'));
 
-        var hide_controls = [];
-        hide_controls.push(document.querySelector('#customize-control-blogname'));
-        hide_controls.push(document.querySelector('#customize-control-astra-settings-logo-title-inline'));
-        hide_controls.push(document.querySelector('#customize-control-blogdescription'));
-        hide_controls.push(document.querySelector('#customize-control-astra-settings-ast-site-title-tagline-divider'));
+        var hideControls = [];
+        hideControls.push(document.querySelector('#customize-control-blogname'));
+        hideControls.push(document.querySelector('#customize-control-astra-settings-logo-title-inline'));
+        hideControls.push(document.querySelector('#customize-control-blogdescription'));
+        hideControls.push(document.querySelector('#customize-control-astra-settings-ast-site-title-tagline-divider'));
 
         jQuery(document).ready(function(){
             controls.forEach(control => {
@@ -498,9 +498,9 @@ function restoreDesignTabControls(){
                 }
             });
 
-            hide_controls.forEach(hide_control => {
-                if( null !== hide_control ){
-                    jQuery(hide_control).hide();
+            hideControls.forEach(hideControl => {
+                if( null !== hideControl ){
+                    jQuery(hideControl).hide();
                 }
             });
         });
