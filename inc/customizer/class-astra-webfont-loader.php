@@ -235,7 +235,7 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 			}
 
 			ob_start();
-			include $local_path;
+			include $local_path; // PHPCS:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 			return ob_get_clean();
 		}
 
@@ -333,7 +333,7 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 					 */
 					// require file.php if the download_url function doesn't exist.
 					if ( ! function_exists( 'download_url' ) ) {
-						require_once wp_normalize_path( ABSPATH . '/wp-admin/includes/file.php' );
+						require_once wp_normalize_path( ABSPATH . '/wp-admin/includes/file.php' ); // PHPCS:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 					}
 
 					// Download file to temporary location.
@@ -401,12 +401,13 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 		 *
 		 * @access public
 		 * @since x.x.x
-		 * @param string Remote stylesheet.
+		 * @param string $remote_styles Remote stylesheet data.
+		 *
 		 * @return array Returns an array of font-families and the font-files used.
 		 */
 		public function get_remote_files_from_css( $remote_styles = '' ) {
 
-			if( '' === $remote_styles ) {
+			if ( '' === $remote_styles ) {
 				$remote_styles = $this->remote_styles;
 			}
 
@@ -540,7 +541,7 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 		 * @return void
 		 */
 		public function set_font_format( $format = 'woff2' ) {
-			$this->font_format = $format;
+			$this->font_format = apply_filters( 'astra_local_google_fonts_format', $format );
 		}
 
 		/**
@@ -657,7 +658,7 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 			// If the filesystem has not been instantiated yet, do it here.
 			if ( ! $wp_filesystem ) {
 				if ( ! function_exists( 'WP_Filesystem' ) ) {
-					require_once wp_normalize_path( ABSPATH . '/wp-admin/includes/file.php' );
+					require_once wp_normalize_path( ABSPATH . '/wp-admin/includes/file.php' );  // PHPCS:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 				}
 				WP_Filesystem();
 			}

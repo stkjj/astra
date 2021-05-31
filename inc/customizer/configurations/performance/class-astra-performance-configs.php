@@ -54,10 +54,10 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 					'type'     => 'control',
 					'control'  => 'ast-toggle-control',
 					'title'    => __( 'Preload Local Fonts', 'astra' ),
-					'divider'    => array( 'ast_class' => 'ast-top-divider ast-bottom-divider' ),
+					'divider'  => array( 'ast_class' => 'ast-top-divider ast-bottom-divider' ),
 					'section'  => 'section-performance',
 					'priority' => 20,
-					'context'   => array(
+					'context'  => array(
 						array(
 							'setting'  => ASTRA_THEME_SETTINGS . '[load-google-fonts-locally]',
 							'operator' => '==',
@@ -78,7 +78,7 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 					'title'    => __( 'Flush Local Fonts Cache', 'astra-addon' ),
 					'help'     => '<p>' . __( 'Click the button to reset the local fonts cache.', 'astra' ) . '</p> <br/> <input type="button" class="button button-secondary ast-flush-font-files" value="' . __( 'Flush Local Font Files', 'astra' ) . '"/>',
 					'settings' => array(),
-					'context'   => array(
+					'context'  => array(
 						array(
 							'setting'  => ASTRA_THEME_SETTINGS . '[load-google-fonts-locally]',
 							'operator' => '==',
@@ -96,7 +96,7 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 					'type'     => 'control',
 					'control'  => 'ast-toggle-control',
 					'title'    => __( 'Enable CSS Preload', 'astra' ),
-					'divider'    => array( 'ast_class' => 'ast-top-divider' ),
+					'divider'  => array( 'ast_class' => 'ast-top-divider' ),
 					'section'  => 'section-performance',
 					'priority' => 40,
 				),
