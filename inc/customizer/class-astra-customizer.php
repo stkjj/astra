@@ -128,12 +128,43 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 
 			add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_footer_scripts' ) );
 
-
 			add_action( 'customize_register', array( $this, 'customize_register_panel' ), 2 );
 			add_action( 'customize_register', array( $this, 'customize_register' ) );
 			add_action( 'customize_save_after', array( $this, 'customize_save' ) );
 			add_action( 'customize_save_after', array( $this, 'delete_cached_partials' ) );
 			add_action( 'wp_head', array( $this, 'preview_styles' ) );
+
+			add_action( 'wp_ajax_astra_regenerate_fonts_folder', array( $this, 'regenerate_astra_fonts_folder' ) );
+		}
+
+		/**
+		 * Reset font folder
+		 *
+		 * @access public
+		 * @return void
+		 *
+		 * @since x.x.x
+		 */
+		public function regenerate_astra_fonts_folder() {
+
+			check_ajax_referer( 'astra-regenerate-local-fonts', 'nonce' );
+
+			if ( ! current_user_can( 'edit_theme_options' ) ) {
+				wp_send_json_error( 'invalid_permissions' );
+			}
+
+			if ( class_exists( 'Astra_WebFont_Loader' ) ) {
+				$local_font_loader = new Astra_WebFont_Loader( '' );
+				$removed = $local_font_loader->delete_fonts_folder();
+
+				if ( ! $removed ) {
+					wp_send_json_error( 'failed_to_flush' );
+				}
+
+				wp_send_json_success();
+			}
+
+			wp_send_json_error( 'no_font_loader' );
 		}
 
 		/**
@@ -934,6 +965,9 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 					'component_limit'         => Astra_Builder_Helper::$component_limit,
 					'is_site_rtl'             => is_rtl(),
 					'defaults'                => $this->get_control_defaults(),
+					'astraRegenerateFonts'    => wp_create_nonce( 'astra-regenerate-local-fonts' ),
+					'successFlushed'		  => __( 'Successfully Flushed', 'astra' ),
+					'failedFlushed'		      => __( 'Failed, Reload page and try again later.', 'astra' ),
 				)
 			);
 

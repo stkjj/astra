@@ -72,12 +72,12 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 				array(
 					'name'     => ASTRA_THEME_SETTINGS . '[flush-local-font-files]',
 					'type'     => 'control',
-					'control'  => 'ast-customizer-refresh',
+					'control'  => 'ast-description',
 					'section'  => 'section-performance',
-					'default'  => astra_get_option( 'flush-local-font-files' ),
 					'priority' => 30,
-					'description' => __( 'Click the button to reset the local fonts cache.', 'astra-addon' ),
-					'title'    => __( 'Flush Local Font Files', 'astra-addon' ),
+					'title'    => __( 'Flush Local Fonts Cache', 'astra-addon' ),
+					'help'     => '<p>' . __( 'Click the button to reset the local fonts cache.', 'astra' ) . '</p> <br/> <input type="button" class="button button-secondary ast-flush-font-files" value="' . __( 'Flush Local Font Files', 'astra' ) . '"/>',
+					'settings' => array(),
 					'context'   => array(
 						array(
 							'setting'  => ASTRA_THEME_SETTINGS . '[load-google-fonts-locally]',
