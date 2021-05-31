@@ -5,7 +5,7 @@
  * @package wptt/font-loader
  * @license https://opensource.org/licenses/MIT
  *
- * @since 2.1.3
+ * @since x.x.x
  */
 
 if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {

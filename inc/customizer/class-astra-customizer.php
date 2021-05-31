@@ -155,9 +155,9 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 
 			if ( class_exists( 'Astra_WebFont_Loader' ) ) {
 				$local_font_loader = new Astra_WebFont_Loader( '' );
-				$removed = $local_font_loader->delete_fonts_folder();
+				$flushed = $local_font_loader->delete_fonts_folder();
 
-				if ( ! $removed ) {
+				if ( ! $flushed ) {
 					wp_send_json_error( 'failed_to_flush' );
 				}
 
@@ -1154,14 +1154,6 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				array(
 					'callback'         => 'Astra_Control_Customizer_Link',
 					'santize_callback' => array( 'Astra_Customizer_Sanitizes', 'sanitize_customizer_links' ),
-				)
-			);
-
-			Astra_Customizer_Control_Base::add_control(
-				'ast-customizer-refresh',
-				array(
-					'callback'          => 'Astra_Control_Customizer_refresh',
-					'sanitize_callback' => '',
 				)
 			);
 
