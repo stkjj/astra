@@ -1,3 +1,6 @@
+v3.5.1 (Unreleased)
+- Fix: Cart Icon not working with Sticky Header after enabling the option "Hide when scrolling down" on mobile devices. 
+
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
