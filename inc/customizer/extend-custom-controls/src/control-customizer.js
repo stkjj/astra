@@ -78,9 +78,9 @@
 		 api('astra-settings[ast-header-responsive-logo-width]', function (value) {
 			value.bind(function (currVal) {
 
-				let customizer_preview_container =  document.getElementById('customize-preview')
-				let iframe 						 = customizer_preview_container.getElementsByTagName('iframe')[0]
-				let htmlContent 				 = iframe.contentDocument || iframe.contentWindow.document;
+				const customizer_preview_container =  document.getElementById('customize-preview')
+				let iframe 						   = customizer_preview_container.getElementsByTagName('iframe')[0]
+				let htmlContent 				   = iframe.contentDocument || iframe.contentWindow.document;
 				
 				setTimeout(function () { 
 					if( htmlContent.querySelector('.astra-logo-svg') ) {
