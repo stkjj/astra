@@ -634,6 +634,28 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= Astra_Enqueue_Scripts::trim_css( self::load_sidebar_static_css() );
 			}
 
+			if ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) {
+
+				$parse_css .= astra_parse_css(
+					array(
+						'#ast-desktop-header' => array(
+							'display' => 'none',
+						),
+					),
+					'', 
+					astra_get_tablet_breakpoint() 
+				);
+
+				$parse_css .= astra_parse_css(
+					array(
+						'#ast-mobile-header' => array(
+							'display' => 'none',
+						),
+					),
+					astra_get_tablet_breakpoint() 
+				);
+			}
+
 			// Comments CSS.
 			if ( ! Astra_Builder_Helper::apply_flex_based_css() ) {
 				require_once ASTRA_THEME_DIR . 'inc/dynamic-css/comments.php'; // PHPCS:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
