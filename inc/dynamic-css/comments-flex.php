@@ -28,7 +28,7 @@ function astra_comments_css( $dynamic_css ) {
 		$theme_color    = astra_get_option( 'theme-color' );
 		$link_color     = astra_get_option( 'link-color', $theme_color );
 		$is_site_rtl    = is_rtl();
-		
+
 		if ( is_array( $body_font_size ) ) {
 			$body_font_size_desktop = ( isset( $body_font_size['desktop'] ) && '' != $body_font_size['desktop'] ) ? $body_font_size['desktop'] : 15;
 		} else {
@@ -207,12 +207,6 @@ function astra_comments_css( $dynamic_css ) {
 
           .ast-separate-container .comment-reply-title {
             padding-top: 0;
-          }
-          .comment-content a {
-            word-wrap: break-word;
-          }
-          .bypostauthor {
-            display: block;
           }';
 		if ( 'page-builder' == astra_get_content_layout() || 'plain-container' == astra_get_content_layout() ) {
 			$single_post_comment_css .= '
@@ -401,7 +395,7 @@ function astra_comments_css( $dynamic_css ) {
 				'margin-right' => '0.5em',
 			);
 		}
-		
+
 		return $dynamic_css .= astra_parse_css( $global_button_comment_tablet, '', astra_get_tablet_breakpoint() );
 	}
 	return $dynamic_css;
