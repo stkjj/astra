@@ -247,6 +247,10 @@ function astra_comments_css( $dynamic_css ) {
 
       .ast-separate-container .comment-reply-title {
         padding-top: 0;
+      }
+
+      .comment-content a {
+        word-wrap: break-word;
       }';
 
 		if ( $is_site_rtl ) {
