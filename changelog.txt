@@ -1,6 +1,7 @@
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
+- Improvement: Frontend optimization by reducing static CSS and loading it conditionally.
 - Improvement: Added Site Title & Tagline color options from Astra Pro to free theme.
 - Improvement: Builder - WooCommerce Cart & EDD Cart - Filter to change "Shopping Cart" text in responsive flyout. (https://wpastra.com/docs/update-mobile-cart-title/)
 - Improvement: Related Posts - Added responsive support to posts Grid Column Layout.
