@@ -110,6 +110,7 @@ v3.3.0
 - Improvement: Frontend optimization - EDD - Shop Page, Single Product Page.
 - Improvement: Frontend optimization - LifterLMS - All Courses Page.
 - Improvement: Frontend optimization - LearnDash - All Courses Page, Single Course Page.
+- Improvement: Added AMP Meta in style.css. ( Props - https://github.com/milindmore22 )
 - Fix: White Label – White-labeled the Astra Header Footer setting notice.
 - Fix: WooCommerce - Single Product page - Save review form fields cookies consent is misaligned.
 - Fix: Builder - Off-Canvas - Close submenu toggle icon not changing in Mobile Menu element when the submenu is in the expanded state.
