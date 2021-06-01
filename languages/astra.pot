@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-05-28T09:48:21+00:00\n"
+"POT-Creation-Date: 2021-06-01T05:39:32+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: astra\n"
@@ -3059,6 +3059,7 @@ msgstr ""
 #: inc/customizer/configurations/builder/header/class-astra-customizer-woo-cart-configs.php:113
 #: inc/customizer/configurations/buttons/class-astra-customizer-button-configs.php:433
 #: inc/customizer/configurations/buttons/class-astra-existing-button-configs.php:403
+#: inc/customizer/configurations/layout/class-astra-site-identity-configs.php:371
 #: inc/customizer/extend-custom-controls/src/color-group/color-group-component.js:229
 #: inc/customizer/extend-custom-controls/src/color-group/color-group-component.js:267
 msgid "Color"
@@ -3574,6 +3575,10 @@ msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-site-identity-configs.php:296
 msgid "Inline Logo & Site Title"
+msgstr ""
+
+#: inc/customizer/configurations/layout/class-astra-site-identity-configs.php:371
+msgid "Tagline"
 msgstr ""
 
 #: inc/customizer/configurations/layout/class-astra-site-identity-configs.php:443

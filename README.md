@@ -56,13 +56,27 @@ There are multiple ways you can use a child theme with the Astra Theme, Use any 
 
 ### Screenshot Licenses ###
 
-Screenshot images are all licensed under Creative Commons Zero (CC0) ( https://pxhere.com/en/license )
-https://pxhere.com/en/photo/100653
-https://pxhere.com/en/photo/759723
-https://pxhere.com/en/photo/1259448
-https://pxhere.com/en/photo/1456591
-https://pxhere.com/en/photo/1389199
+Screenshot image is a collage of actual sites created using the Astra WordPress Theme.
 
+Icons used in the Screenshot image are all licensed under Creative Commons ( CC BY 4.0 ) License ( https://fontawesome.com/license/free )
+https://fontawesome.com/v5.15/icons/store?style=solid
+https://fontawesome.com/v5.15/icons/shopping-cart?style=solid
+https://fontawesome.com/v5.15/icons/pen-square?style=solid
+https://fontawesome.com/v5.15/icons/user-tie?style=solid
+https://fontawesome.com/v5.15/icons/user-tie?style=solid
+
+Illustrations used in the Screenshot images are all licensed under Creative Commons ( CC0 ) License ( https://gumroad.com/l/humaaans )
+https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/standing-24.png
+https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/sitting-2.png
+
+Hand-drawn illustrations used are created by Brainstorm Force and released under Creative Commons ( CC0 ) License.
+https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/girl-with-image-container.png
+https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/boy-with-code-container.png
+https://websitedemos.net/landing-page-08/wp-content/uploads/sites/796/2021/05/web-browser.png
+
+The same site as screenshot can be imported from here https://websitedemos.net/landing-page-08/.
+
+For more information, refer to this document on how to create a page like in the screenshot - https://wpastra.com/docs/replicating-the-screenshot/.
 
 ### Normalizing styles ###
 
