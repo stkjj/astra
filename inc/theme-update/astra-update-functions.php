@@ -3010,3 +3010,29 @@ function astra_headings_font_support() {
 		update_option( 'astra-settings', $theme_options );
 	}
 }
+
+/**
+ * Migrate Site Title & Site Tagline options to new responsive array.
+ *
+ * @since x.x.x
+ *
+ * @return void
+ */
+function astra_site_title_tagline_responsive_control_migration() {
+
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( false === get_option( 'display-site-title-responsive', false ) && isset( $theme_options['display-site-title'] ) ) {
+		$theme_options['display-site-title-responsive']['desktop'] = $theme_options['display-site-title'];
+		$theme_options['display-site-title-responsive']['tablet']  = $theme_options['display-site-title'];
+		$theme_options['display-site-title-responsive']['mobile']  = $theme_options['display-site-title'];
+	}
+
+	if ( false === get_option( 'display-site-tagline-responsive', false ) && isset( $theme_options['display-site-tagline'] ) ) {
+		$theme_options['display-site-tagline-responsive']['desktop'] = $theme_options['display-site-tagline'];
+		$theme_options['display-site-tagline-responsive']['tablet']  = $theme_options['display-site-tagline'];
+		$theme_options['display-site-tagline-responsive']['mobile']  = $theme_options['display-site-tagline'];
+	}
+
+	update_option( 'astra-settings', $theme_options );
+}
