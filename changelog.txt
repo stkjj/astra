@@ -15,6 +15,7 @@ v3.5.0 (Unreleased)
 - Fix: Builder - WooCommerce & EDD cart - Duplicate transition CSS avoided in case normal Astra CSS icons.
 - Fix: WooCommerce - "Product Categories" widget's child elements have missing icon when Astra's SVGs enabled.
 - Fix: Footer Builder - Hide on mobile/tablet for above footer is not working on frontend.
+- Fix: WooCommerce - Product's Sale bubble appears on the header on scroll due to z-index.
 
 v3.4.7
 - Updated the theme screenshot and added license information for the images used in the screenshot.
