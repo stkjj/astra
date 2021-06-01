@@ -2,7 +2,7 @@ v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
 - Improvement: Added Site Title & Tagline color options from Astra Pro to free theme.
-- Improvement: Builder - WooCommerce Cart & EDD Cart - Filter to change "Shopping Cart" text in responsive flyout. ( Need Doc )
+- Improvement: Builder - WooCommerce Cart & EDD Cart - Filter to change "Shopping Cart" text in responsive flyout. (https://wpastra.com/docs/update-mobile-cart-title/)
 - Improvement: Related Posts - Added responsive support to posts Grid Column Layout.
 - Improvement: Core Web Vital – Accessibility - always show aria-label attribute on builder social icons. (Props - https://github.com/tristanmason)
 - Improvement: Core Web Vital - Accessibility - Background and foreground colors do not have a sufficient contrast ratio.
