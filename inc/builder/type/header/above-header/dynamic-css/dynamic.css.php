@@ -82,7 +82,7 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 			'line-height' => astra_get_css_value( $hba_header_height_desktop, 'px' ),
 		),
 	);
-	if ( is_astra_addon_3_5_0_beta_lesser_version() ) {
+	if ( is_astra_addon_3_5_0_beta_version() ) {
 		$common_css_output['ast-above-header-bar.ast-header-sticked'] = array(
 			'z-index' => 9,
 		);

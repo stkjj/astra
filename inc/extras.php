@@ -583,6 +583,6 @@ function astra_target_rules_for_related_posts() {
  *
  * @since  x.x.x
  */
-function is_astra_addon_3_5_0_beta_lesser_version() {
+function is_astra_addon_3_5_0_beta_version() {
 	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0-beta.1', '<' );
 }
