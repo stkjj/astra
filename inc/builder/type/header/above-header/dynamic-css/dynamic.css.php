@@ -82,7 +82,7 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 			'line-height' => astra_get_css_value( $hba_header_height_desktop, 'px' ),
 		),
 	);
-	if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
+	if ( is_astra_addon_3_5_0_beta_lesser_version() ) {
 		$common_css_output['ast-above-header-bar.ast-header-sticked'] = array(
 			'z-index' => 9,
 		);
@@ -138,7 +138,7 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 
 	$dynamic_css .= Astra_Builder_Base_Dynamic_CSS::prepare_advanced_margin_padding_css( $_section, $parent_selector );
 
-	$dynamic_css .= Astra_Builder_Base_Dynamic_CSS::prepare_visibility_css( $_section, '.ast-above-header-bar', 'block', $mobile_tablet_default_display = 'grid' ); 
+	$dynamic_css .= Astra_Builder_Base_Dynamic_CSS::prepare_visibility_css( $_section, '.ast-above-header-bar', 'block', $mobile_tablet_default_display = 'grid' );
 
 	return $dynamic_css;
 }
