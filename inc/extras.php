@@ -579,10 +579,10 @@ function astra_target_rules_for_related_posts() {
 /**
  * Check the Astra addon 3.5.0-beta version is using.
  *
- * Note: Remove this while releasing stable v3.5.0 release, because "preg_replace" is heavy function, we should not use this ideally.
+ * Note: Update this function while releasing stable v3.5.0.
  *
  * @since  x.x.x
  */
 function is_astra_addon_3_5_0_beta_lesser_version() {
-	return defined( 'ASTRA_EXT_VER' ) && version_compare( preg_replace( '/[^0-9\.]/', '', ASTRA_EXT_VER ), '3.5.0', '<' );
+	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0-beta.1', '<' );
 }
