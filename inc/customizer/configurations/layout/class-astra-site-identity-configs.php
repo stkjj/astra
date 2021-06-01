@@ -368,7 +368,7 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 							'control'   => 'ast-color',
 							'transport' => 'postMessage',
 							'default'   => astra_get_option( 'header-color-site-tagline' ),
-							'title'     => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? __( 'Tagline', 'astra-addon' ) : __( 'Color', 'astra-addon' ),
+							'title'     => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? __( 'Tagline', 'astra' ) : __( 'Color', 'astra' ),
 							'section'   => 'title_tagline',
 							'priority'  => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? 8 : 12,
 							'context'   => ( true === Astra_Builder_Helper::$is_header_footer_builder_active ) ? array( Astra_Builder_Helper::$design_tab_config ) : '',
