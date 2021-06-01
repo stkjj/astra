@@ -588,11 +588,11 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					'padding-right' => '1em',
 				);
 			}
-			
-			if ( get_theme_mod( 'custom_logo' ) 
-				|| astra_get_option( 'transparent-header-logo' ) 
-				|| astra_get_option( 'sticky-header-logo' ) 
-				|| $page_header_logo 
+
+			if ( get_theme_mod( 'custom_logo' )
+				|| astra_get_option( 'transparent-header-logo' )
+				|| astra_get_option( 'sticky-header-logo' )
+				|| $page_header_logo
 				|| is_customize_preview() ) {
 
 				$css_output['.site-logo-img img'] = array(
@@ -602,7 +602,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			/* Parse CSS from array() */
 			$parse_css = astra_parse_css( $css_output );
-			
+
 			if ( ! Astra_Builder_Helper::$is_header_footer_builder_active ) {
 
 				$old_header_mobile_toggle = array(
@@ -2206,7 +2206,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/* Parse CSS from array()*/
 			$parse_css .= astra_parse_css( $site_width, astra_get_tablet_breakpoint( '', 1 ) );
 
-			if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
+			if ( is_astra_addon_3_5_0_beta_version() ) {
 				$mega_menu_css = array(
 					'.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-full-megamenu-wrapper .sub-menu, .ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-megamenu .sub-menu' => array(
 						'box-shadow' => 'none',

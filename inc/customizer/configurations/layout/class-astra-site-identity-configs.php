@@ -311,7 +311,7 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 			 * @since x.x.x
 			 */
 			$load_site_tagline_color_controls = true;
-			if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
+			if ( is_astra_addon_3_5_0_beta_version() ) {
 				$load_site_tagline_color_controls = false;
 			}
 
