@@ -417,6 +417,10 @@ p.demo_store,
 	}
 }
 
+.ast-header-break-point.ast-hfb-header.ast-woocommerce-cart-menu .ast-site-header-cart {
+	padding: 0;
+}
+
 /**
  * Main WooCommerce styles
  */
@@ -1112,7 +1116,7 @@ p.demo_store,
 		background-color: $highlight;
 		color: $highlightext;
 		-webkit-font-smoothing: antialiased;
-		z-index: 9;
+		z-index: 99;
 	}
 
 	/**
@@ -3573,19 +3577,6 @@ button.pswp__button--zoom:hover {
 
 		> li {
 	    	padding: 2px 0px;
-
-	    	ul {
-		    	li:before {
-					content: "\e900";
-				    padding: 0 5px 0 5px;
-				    display: inline-block;
-				    font-family: Astra;
-				    transform: rotate(-90deg);
-				    font-size: 11px;
-				    font-size: 0.7rem;
-				}
-	    	}
-
 	    }
 
 		> li:first-child {
