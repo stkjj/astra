@@ -575,3 +575,14 @@ function astra_target_rules_for_related_posts() {
 
 	return apply_filters( 'astra_showcase_related_posts', $allow_related_posts );
 }
+
+/**
+ * Check the Astra addon 3.5.0-beta version is using.
+ *
+ * Note: Update this function while releasing stable v3.5.0.
+ *
+ * @since  x.x.x
+ */
+function is_astra_addon_3_5_0_beta_version() {
+	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0-beta.1', '<' );
+}
