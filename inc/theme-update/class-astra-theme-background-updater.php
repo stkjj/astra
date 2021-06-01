@@ -83,6 +83,8 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 			),
 			'3.5.0' => array(
 				'astra_update_related_posts_grid_layout',
+			),
+			'3.5.1' => array(
 				'astra_headings_font_support',
 			),
 		);
