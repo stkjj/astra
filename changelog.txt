@@ -1,3 +1,6 @@
+v3.5.0-beta.2
+- Fix: Aspect ratio is changed for YouTube embed block.
+
 v3.5.0-beta.1
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
