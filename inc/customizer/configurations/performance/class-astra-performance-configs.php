@@ -40,6 +40,7 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 					'default'  => astra_get_option( 'load-google-fonts-locally' ),
 					'type'     => 'control',
 					'control'  => 'ast-toggle-control',
+					'transport'   => 'postMessage',
 					'title'    => __( 'Load Google Fonts Locally', 'astra' ),
 					'section'  => 'section-performance',
 					'priority' => 10,
@@ -56,6 +57,7 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 					'title'    => __( 'Preload Local Fonts', 'astra' ),
 					'divider'  => array( 'ast_class' => 'ast-top-divider ast-bottom-divider' ),
 					'section'  => 'section-performance',
+					'transport'   => 'postMessage',
 					'priority' => 20,
 					'context'  => array(
 						array(
@@ -95,6 +97,7 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 					'default'  => astra_get_option( 'enable-css-preload' ),
 					'type'     => 'control',
 					'control'  => 'ast-toggle-control',
+					'transport'   => 'postMessage',
 					'title'    => __( 'Enable CSS Preload', 'astra' ),
 					'divider'  => array( 'ast_class' => 'ast-top-divider' ),
 					'section'  => 'section-performance',

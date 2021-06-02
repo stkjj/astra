@@ -710,7 +710,6 @@
 				$.post( ajaxurl, data, function ( response ) {
 					if ( response && response.success ) {
 						$( 'input.ast-flush-font-files' ).val( AstraBuilderCustomizerData.successFlushed );
-						api.previewer.refresh();
 					} else {
 						$( 'input.ast-flush-font-files' ).val( AstraBuilderCustomizerData.failedFlushed );
 					}
