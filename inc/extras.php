@@ -584,8 +584,11 @@ function astra_target_rules_for_related_posts() {
  * @since x.x.x
  * @return bool
  */
-function astra_enqueue_style( $stylesheet ) {
-	wp_enqueue_style( $stylesheet );
+function astra_enqueue_style( $stylesheet, $asset_url ) {
+
+	echo '<link rel="preload" id="' . $stylesheet . '" href="' . $asset_url . '" as="style" type="text/css" media="all">';
+
+	// wp_enqueue_style( $stylesheet );
 	// wp_print_styles( $stylesheet );
 }
 
@@ -593,7 +596,10 @@ function astra_enqueue_style( $stylesheet ) {
 function astra_preload_styles( $html, $handle, $href, $media ) {
 	// Check for preloading only Astra stylesheets.
 	if( ! is_admin() && strpos( $handle, 'astra' ) !== false && strpos( $handle, 'css' ) !== false ) {
-		$html = str_replace( "rel='stylesheet'", "rel='preload' as='style'", $html );
+		// $html = str_replace( "rel='stylesheet'", 'rel="preload" as="style"', $html );
+		// vl( $html );
+		$html = '<link rel="preload" id="' . $handle . '" href="' . $href . '" as="style" type="text/css" media="' . $media . '">';
+		// vl( $html );
 	}
 
     return $html;
