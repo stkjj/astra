@@ -575,3 +575,28 @@ function astra_target_rules_for_related_posts() {
 
 	return apply_filters( 'astra_showcase_related_posts', $allow_related_posts );
 }
+
+/**
+ * Provision to print styles or normally enqueue stylesheets.
+ *
+ * @param string $stylesheet stylesheet ID to be enqueue.
+ *
+ * @since x.x.x
+ * @return bool
+ */
+function astra_enqueue_style( $stylesheet ) {
+	wp_enqueue_style( $stylesheet );
+	// wp_print_styles( $stylesheet );
+}
+
+
+function astra_preload_styles( $html, $handle, $href, $media ) {
+	// Check for preloading only Astra stylesheets.
+	if( ! is_admin() && strpos( $handle, 'astra' ) !== false && strpos( $handle, 'css' ) !== false ) {
+		$html = str_replace( "rel='stylesheet'", "rel='preload' as='style'", $html );
+	}
+
+    return $html;
+}
+
+// add_filter( 'style_loader_tag', 'astra_preload_styles', 10, 4 );
