@@ -977,8 +977,9 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 					'is_site_rtl'             => is_rtl(),
 					'defaults'                => $this->get_control_defaults(),
 					'astraRegenerateFonts'    => wp_create_nonce( 'astra-regenerate-local-fonts' ),
+					'initialFlushText'        => __( 'Flush Local Font Files', 'astra' ),
 					'successFlushed'          => __( 'Successfully Flushed', 'astra' ),
-					'failedFlushed'           => __( 'Failed, Reload page and try again later.', 'astra' ),
+					'failedFlushed'           => __( 'Failed, Please try again later.', 'astra' ),
 				)
 			);
 

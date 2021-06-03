@@ -710,8 +710,16 @@
 				$.post( ajaxurl, data, function ( response ) {
 					if ( response && response.success ) {
 						$( 'input.ast-flush-font-files' ).val( AstraBuilderCustomizerData.successFlushed );
+						setTimeout(function () {
+							$( 'input.ast-flush-font-files' ).prop('disabled', false);
+							$( 'input.ast-flush-font-files' ).val( AstraBuilderCustomizerData.initialFlushText );
+						}, 1000);
 					} else {
 						$( 'input.ast-flush-font-files' ).val( AstraBuilderCustomizerData.failedFlushed );
+						setTimeout(function () {
+							$( 'input.ast-flush-font-files' ).prop('disabled', false);
+							$( 'input.ast-flush-font-files' ).val( AstraBuilderCustomizerData.initialFlushText );
+						}, 1000);
 					}
 				});
 			});
