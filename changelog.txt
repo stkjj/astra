@@ -1,3 +1,6 @@
+v3.5.1 (Unreleased)
+- New: Performance - Load Google Font locally option.
+
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
