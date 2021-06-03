@@ -647,6 +647,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 				if ('undefined' !== typeof __main_header_all[i]) {
 
+					// To handle the comma seprated selector added above we need this loop.
 					for( var k=0; k < __main_header_all.length; k++ ){
 
 						if (document.querySelector('header.site-header').classList.contains('ast-builder-menu-toggle-link')) {
