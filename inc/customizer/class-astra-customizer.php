@@ -113,6 +113,12 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			add_action( 'customize_preview_init', array( $this, 'preview_init' ) );
 
 			if ( is_admin() || is_customize_preview() ) {
+
+				// Disable block editor for widgets in the customizer.
+				if ( defined( 'GUTENBERG_VERSION' ) && version_compare( GUTENBERG_VERSION, '10.7.1', '>=' ) ) {
+					add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
+				}
+
 				add_action( 'customize_register', array( $this, 'include_configurations' ), 2 );
 				add_action( 'customize_register', array( $this, 'prepare_customizer_javascript_configs' ) );
 				add_action( 'customize_register', array( $this, 'astra_pro_upgrade_configurations' ), 2 );
