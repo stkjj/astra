@@ -124,7 +124,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			}
 			
 			// Disable block editor for widgets in the customizer.
-			if ( defined( 'GUTENBERG_VERSION' ) && version_compare( GUTENBERG_VERSION, '10.7.1', '>=' ) && is_customize_preview() ) {
+			if ( defined( 'GUTENBERG_VERSION' ) && version_compare( GUTENBERG_VERSION, '10.6.2', '>' ) && is_customize_preview() ) {
 				add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
 			}
 
