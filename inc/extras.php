@@ -575,34 +575,3 @@ function astra_target_rules_for_related_posts() {
 
 	return apply_filters( 'astra_showcase_related_posts', $allow_related_posts );
 }
-
-/**
- * Provision to print styles or normally enqueue stylesheets.
- *
- * @param string $handle stylesheet ID to be enqueue.
- *
- * @since x.x.x
- * @return bool
- */
-function astra_enqueue_style( $handle, $source, $dependencies, $astra_version, $media ) {
-
-	echo '<link rel="preload" id="' . $handle . '-css" href="' . $source . '" as="style" type="text/css" media="' . $media . '">';
-
-	// wp_enqueue_style( $handle, $source, $dependencies, $astra_version, $media );
-}
-
-
-function astra_preload_styles( $html, $handle, $href, $media ) {
-	// Check for preloading only Astra stylesheets.
-	// if( ! is_admin() && strpos( $handle, 'astra' ) !== false && strpos( $handle, 'css' ) !== false ) {
-	if( ! is_admin() && 'astra-contact-form-7' === $handle ) {
-		// $html = str_replace( "rel='stylesheet'", 'rel="preload" as="style"', $html );
-		// vl( $html );
-		$html = '<link rel="preload" id="' . $handle . '" href="' . $href . '" as="style" type="text/css" media="' . $media . '">';
-		// vl( $html );
-	}
-
-    return $html;
-}
-
-// add_filter( 'style_loader_tag', 'astra_preload_styles', 10, 4 );

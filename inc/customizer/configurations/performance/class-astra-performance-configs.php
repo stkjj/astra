@@ -88,21 +88,6 @@ if ( ! class_exists( 'Astra_Performance_Configs' ) ) {
 						),
 					),
 				),
-
-				/**
-				 * Option: Enable CSS preload.
-				 */
-				array(
-					'name'     => ASTRA_THEME_SETTINGS . '[enable-css-preload]',
-					'default'  => astra_get_option( 'enable-css-preload' ),
-					'type'     => 'control',
-					'control'  => 'ast-toggle-control',
-					'transport'   => 'postMessage',
-					'title'    => __( 'Enable CSS Preload', 'astra' ),
-					'divider'  => array( 'ast_class' => 'ast-top-divider' ),
-					'section'  => 'section-performance',
-					'priority' => 40,
-				),
 			);
 
 			return array_merge( $configurations, $_configs );
