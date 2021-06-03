@@ -1,3 +1,6 @@
+v3.5.1
+- Fix - Secondary menu not expendable on mobile when it is outside of Off Canvas.
+
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.

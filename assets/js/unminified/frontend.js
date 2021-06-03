@@ -613,7 +613,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 	AstraToggleSetup = function () {
 
 		if ( 'off-canvas' === mobileHeaderType || 'full-width' === mobileHeaderType ) {
-			// comma seprated selector added, if menu is outside of off-canvas then submenu will not clickable, it work only for off-cnavas area submenu.
+			// comma separated selector added, if menu is outside of Off-Canvas then submenu is not clickable, it work only for Off-Canvas area with dropdown style.
 			var __main_header_all = document.querySelectorAll( '#ast-mobile-popup, #ast-mobile-header' );
 			if ( body.classList.contains('ast-header-break-point') ) {
 
@@ -648,7 +648,7 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 				if ('undefined' !== typeof __main_header_all[i]) {
 
 					// To handle the comma seprated selector added above we need this loop.
-					for( var k=0; k < __main_header_all.length; k++ ){
+					for( var mainHeaderCount =0; mainHeaderCount  < __main_header_all.length; mainHeaderCount++ ){
 
 						if (document.querySelector('header.site-header').classList.contains('ast-builder-menu-toggle-link')) {
 							var astra_menu_toggle = __main_header_all[k].querySelectorAll('ul.main-header-menu .menu-item-has-children > .menu-link, ul.main-header-menu .ast-menu-toggle');
