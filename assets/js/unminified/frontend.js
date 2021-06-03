@@ -613,7 +613,8 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 	AstraToggleSetup = function () {
 
 		if ( 'off-canvas' === mobileHeaderType || 'full-width' === mobileHeaderType ) {
-			var __main_header_all = document.querySelectorAll( '#ast-mobile-popup' );
+			// comma seprated selector added, if menu is outside of off-canvas then submenu will not clickable, it work only for off-cnavas area submenu.
+			var __main_header_all = document.querySelectorAll( '#ast-mobile-popup, #ast-mobile-header' );
 			if ( body.classList.contains('ast-header-break-point') ) {
 
 				var menu_toggle_all   = document.querySelectorAll( '#ast-mobile-header .main-header-menu-toggle' );
@@ -646,17 +647,20 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 
 				if ('undefined' !== typeof __main_header_all[i]) {
 
-					if (document.querySelector('header.site-header').classList.contains('ast-builder-menu-toggle-link')) {
-						var astra_menu_toggle = __main_header_all[i].querySelectorAll('ul.main-header-menu .menu-item-has-children > .menu-link, ul.main-header-menu .ast-menu-toggle');
-					} else {
-						var astra_menu_toggle = __main_header_all[i].querySelectorAll('ul.main-header-menu .ast-menu-toggle');
-					}
-					// Add Eventlisteners for Submenu.
-					if (astra_menu_toggle.length > 0) {
+					for( var k=0; k < __main_header_all.length; k++ ){
 
-						for (var j = 0; j < astra_menu_toggle.length; j++) {
+						if (document.querySelector('header.site-header').classList.contains('ast-builder-menu-toggle-link')) {
+							var astra_menu_toggle = __main_header_all[k].querySelectorAll('ul.main-header-menu .menu-item-has-children > .menu-link, ul.main-header-menu .ast-menu-toggle');
+						} else {
+							var astra_menu_toggle = __main_header_all[k].querySelectorAll('ul.main-header-menu .ast-menu-toggle');
+						}
+						// Add Eventlisteners for Submenu.
+						if (astra_menu_toggle.length > 0) {
 
-							astra_menu_toggle[j].addEventListener('click', AstraToggleSubMenu, false);
+							for (var j = 0; j < astra_menu_toggle.length; j++) {
+
+								astra_menu_toggle[j].addEventListener('click', AstraToggleSubMenu, false);
+							}
 						}
 					}
 				}
