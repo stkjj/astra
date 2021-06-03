@@ -17,7 +17,7 @@ v3.5.0 (Unreleased)
 - Fix: Footer Builder - Hide on mobile/tablet for above footer is not working on frontend.
 
 v3.4.8
-- Fix: Customizer not working when latest Gutenberg plugin is active.
+- Fix: Customizer not working when Gutenberg plugin v10.7.0 and above is active.
 
 v3.4.7
 - Updated the theme screenshot and added license information for the images used in the screenshot.
