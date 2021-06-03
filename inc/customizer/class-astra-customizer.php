@@ -177,6 +177,12 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 		 */
 		public function delete_cached_partials() {
 			delete_option( 'astra_partials_config_cache' );
+
+			// Delete previously stored local fonts data, if exists.
+			if ( astra_get_option( 'load-google-fonts-locally', false ) && class_exists( 'Astra_WebFont_Loader' ) ) {
+				$local_webfont_loader = new Astra_WebFont_Loader( '' );
+				$local_webfont_loader->astra_delete_fonts_folder();
+			}
 		}
 
 		/**

@@ -668,29 +668,6 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 	}
 }
 
-if ( ! function_exists( 'ast_get_webfont_styles' ) ) {
-	/**
-	 * Get styles for a webfont.
-	 *
-	 * This will get the CSS from the remote API,
-	 * download any fonts it contains,
-	 * replace references to remote URLs with locally-downloaded assets,
-	 * and finally return the resulting CSS.
-	 *
-	 * @since x.x.x
-	 *
-	 * @param string $url    The URL of the remote webfont.
-	 * @param string $format The font-format. If you need to support IE, change this to "woff".
-	 *
-	 * @return string Returns the CSS.
-	 */
-	function ast_get_webfont_styles( $url, $format = 'woff2' ) {
-		$font = new Astra_WebFont_Loader( $url );
-		$font->set_font_format( $format );
-		return $font->get_styles();
-	}
-}
-
 if ( ! function_exists( 'ast_get_webfont_url' ) ) {
 	/**
 	 * Get a stylesheet URL for a webfont.
