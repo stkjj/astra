@@ -127,7 +127,7 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 
 			// Add a cleanup routine.
 			$this->schedule_cleanup();
-			add_action( 'delete_fonts_folder', array( $this, 'delete_fonts_folder' ) );
+			add_action( 'astra_delete_fonts_folder', array( $this, 'astra_delete_fonts_folder' ) );
 		}
 
 		/**
@@ -419,7 +419,8 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 			foreach ( $font_faces as $font_face ) {
 
 				// Make sure we only process styles inside this declaration.
-				$style = explode( '}', $font_face )[0];
+				$style = explode( '}', $font_face );
+				$style = isset( $style[0] ) ? $style[0] : '';
 
 				// Sanity check.
 				if ( false === strpos( $style, 'font-family' ) ) {
@@ -626,8 +627,8 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 		 */
 		public function schedule_cleanup() {
 			if ( ! is_multisite() || ( is_multisite() && is_main_site() ) ) {
-				if ( ! wp_next_scheduled( 'delete_fonts_folder' ) && ! wp_installing() ) {
-					wp_schedule_event( time(), self::CLEANUP_FREQUENCY, 'delete_fonts_folder' );
+				if ( ! wp_next_scheduled( 'astra_delete_fonts_folder' ) && ! wp_installing() ) {
+					wp_schedule_event( time(), self::CLEANUP_FREQUENCY, 'astra_delete_fonts_folder' );  // phpcs:ignore WPThemeReview.PluginTerritory.ForbiddenFunctions.cron_functionality_wp_schedule_event
 				}
 			}
 		}
@@ -641,7 +642,7 @@ if ( ! class_exists( 'Astra_WebFont_Loader' ) ) {
 		 * @since x.x.x
 		 * @return bool
 		 */
-		public function delete_fonts_folder() {
+		public function astra_delete_fonts_folder() {
 			return $this->get_filesystem()->delete( $this->get_fonts_folder(), true );
 		}
 

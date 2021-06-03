@@ -122,7 +122,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				add_filter( 'customize_dynamic_partial_args', array( $this, 'filter_dynamic_partial_args' ), 10, 2 );
 
 			}
-			
+
 			// Disable block editor for widgets in the customizer.
 			if ( defined( 'GUTENBERG_VERSION' ) && version_compare( GUTENBERG_VERSION, '10.6.2', '>' ) && is_customize_preview() ) {
 				add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' );
@@ -160,7 +160,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 
 			if ( class_exists( 'Astra_WebFont_Loader' ) ) {
 				$local_font_loader = new Astra_WebFont_Loader( '' );
-				$flushed           = $local_font_loader->delete_fonts_folder();
+				$flushed           = $local_font_loader->astra_delete_fonts_folder();
 
 				if ( ! $flushed ) {
 					wp_send_json_error( 'failed_to_flush' );
