@@ -1,3 +1,6 @@
+v3.5.1
+- Fix: Broken layout WooCommerce Shop/Archive page on mobile view when using elementor template or Product archive widget.
+
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
