@@ -134,6 +134,9 @@ if ( ! class_exists( 'Astra_Elementor' ) ) :
 						'width'  => 'auto',
 						'margin' => '0',
 					),
+					'.elementor-element .woocommerce .woocommerce-result-count' => array(
+						'float' => 'none',
+					),
 				),
 				'',
 				astra_get_mobile_breakpoint() 
