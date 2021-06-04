@@ -575,3 +575,31 @@ function astra_target_rules_for_related_posts() {
 
 	return apply_filters( 'astra_showcase_related_posts', $allow_related_posts );
 }
+
+/**
+ * Get a stylesheet URL for a webfont.
+ *
+ * @since x.x.x
+ *
+ * @param string $url    The URL of the remote webfont.
+ * @param string $format The font-format. If you need to support IE, change this to "woff".
+ *
+ * @return string Returns the CSS.
+ */
+function ast_get_webfont_url( $url, $format = 'woff2' ) {
+	$font = new Astra_WebFont_Loader( $url );
+	$font->set_font_format( $format );
+	return $font->get_url();
+}
+
+/**
+ * Get the file preloads.
+ *
+ * @param string $url    The URL of the remote webfont.
+ * @param string $format The font-format. If you need to support IE, change this to "woff".
+ */
+function ast_load_preload_local_fonts( $url, $format = 'woff2' ) {
+	$font = new Astra_WebFont_Loader( $url );
+	$font->set_font_format( $format );
+	$font->preload_local_fonts();
+}
