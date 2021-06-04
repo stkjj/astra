@@ -651,9 +651,9 @@ var astraTriggerEvent = function astraTriggerEvent( el, typeArg ) {
 					for( var mainHeaderCount =0; mainHeaderCount  < __main_header_all.length; mainHeaderCount++ ){
 
 						if (document.querySelector('header.site-header').classList.contains('ast-builder-menu-toggle-link')) {
-							var astra_menu_toggle = __main_header_all[k].querySelectorAll('ul.main-header-menu .menu-item-has-children > .menu-link, ul.main-header-menu .ast-menu-toggle');
+							var astra_menu_toggle = __main_header_all[mainHeaderCount].querySelectorAll('ul.main-header-menu .menu-item-has-children > .menu-link, ul.main-header-menu .ast-menu-toggle');
 						} else {
-							var astra_menu_toggle = __main_header_all[k].querySelectorAll('ul.main-header-menu .ast-menu-toggle');
+							var astra_menu_toggle = __main_header_all[mainHeaderCount].querySelectorAll('ul.main-header-menu .ast-menu-toggle');
 						}
 						// Add Eventlisteners for Submenu.
 						if (astra_menu_toggle.length > 0) {
