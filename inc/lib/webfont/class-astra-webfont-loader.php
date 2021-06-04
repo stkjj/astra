@@ -2,7 +2,7 @@
 /**
  * Download webfonts locally.
  *
- * @package wptt/font-loader
+ * @package WPTT/webfont-loader
  * @license https://opensource.org/licenses/MIT
  *
  * @since x.x.x
