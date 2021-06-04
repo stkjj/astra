@@ -587,7 +587,7 @@ function astra_target_rules_for_related_posts() {
  * @return string Returns the CSS.
  */
 function ast_get_webfont_url( $url, $format = 'woff2' ) {
-	$font = new Astra_WebFont_Loader( $url );
+	$font = astra_webfont_loader_instance( $url );
 	$font->set_font_format( $format );
 	return $font->get_url();
 }
@@ -599,7 +599,7 @@ function ast_get_webfont_url( $url, $format = 'woff2' ) {
  * @param string $format The font-format. If you need to support IE, change this to "woff".
  */
 function ast_load_preload_local_fonts( $url, $format = 'woff2' ) {
-	$font = new Astra_WebFont_Loader( $url );
+	$font = astra_webfont_loader_instance( $url );
 	$font->set_font_format( $format );
 	$font->preload_local_fonts();
 }

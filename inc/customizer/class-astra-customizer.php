@@ -158,7 +158,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 			}
 
 			if ( class_exists( 'Astra_WebFont_Loader' ) ) {
-				$local_font_loader = new Astra_WebFont_Loader( '' );
+				$local_font_loader = astra_webfont_loader_instance( '' );
 				$flushed           = $local_font_loader->astra_delete_fonts_folder();
 
 				if ( ! $flushed ) {
@@ -179,7 +179,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 
 			// Delete previously stored local fonts data, if exists.
 			if ( astra_get_option( 'load-google-fonts-locally' ) && class_exists( 'Astra_WebFont_Loader' ) ) {
-				$local_webfont_loader = new Astra_WebFont_Loader( '' );
+				$local_webfont_loader = astra_webfont_loader_instance( '' );
 				$local_webfont_loader->astra_delete_fonts_folder();
 			}
 		}

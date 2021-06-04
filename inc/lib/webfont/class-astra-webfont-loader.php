@@ -664,3 +664,14 @@ class Astra_WebFont_Loader {
 		return $wp_filesystem;
 	}
 }
+
+/**
+ * Create instance of Astra_WebFont_Loader class.
+ *
+ * @param string $font_url Google font URL to set data.
+ * @return object
+ * @since x.x.x
+ */
+function astra_webfont_loader_instance( $font_url = '' ) {
+	return new Astra_WebFont_Loader( $font_url );
+}
