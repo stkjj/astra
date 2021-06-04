@@ -114,7 +114,7 @@ final class Astra_Fonts {
 		$google_font_url = self::google_fonts_url( $google_fonts, $font_subset );
 
 		// Do not load Google font remote or local font asset if not any font selected.
-		if( '' === $google_font_url ) {
+		if ( '' === $google_font_url ) {
 			return;
 		}
 
