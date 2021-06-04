@@ -2,7 +2,7 @@ v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
 - Improvement: Added Site Title & Tagline color options from Astra Pro to free theme.
-- Improvement: Builder - WooCommerce Cart & EDD Cart - Filter to change "Shopping Cart" text in responsive flyout. ( Need Doc )
+- Improvement: Builder - WooCommerce Cart & EDD Cart - Filter to change "Shopping Cart" text in responsive flyout. (https://wpastra.com/docs/update-mobile-cart-title/)
 - Improvement: Related Posts - Added responsive support to posts Grid Column Layout.
 - Improvement: Core Web Vital – Accessibility - always show aria-label attribute on builder social icons. (Props - https://github.com/tristanmason)
 - Improvement: Core Web Vital - Accessibility - Background and foreground colors do not have a sufficient contrast ratio.
@@ -15,6 +15,12 @@ v3.5.0 (Unreleased)
 - Fix: Builder - WooCommerce & EDD cart - Duplicate transition CSS avoided in case normal Astra CSS icons.
 - Fix: WooCommerce - "Product Categories" widget's child elements have missing icon when Astra's SVGs enabled.
 - Fix: Footer Builder - Hide on mobile/tablet for above footer is not working on frontend.
+
+v3.4.8
+- Fix: Customizer not working when Gutenberg plugin v10.7.0 and above is active.
+
+v3.4.7
+- Updated the theme screenshot and added license information for the images used in the screenshot.
 
 v3.4.6
 - Fix: Footer alignment not working after update of v3.4.5.
