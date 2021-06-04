@@ -1,3 +1,6 @@
+v3.5.1 (Unreleased)
+- Fix: WooCommerce - product search widget buton not align on other than shop and single product page.
+
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
