@@ -577,12 +577,11 @@ function astra_target_rules_for_related_posts() {
 }
 
 /**
- * Check the Astra addon 3.5.0-beta version is using.
+ * Check the Astra addon 3.5.0 version is using or not.
+ * As this is major update and frequently we used version_compare, added a function for this for easy maintenance.
  *
- * Note: Update this function while releasing stable v3.5.0.
- *
- * @since  x.x.x
+ * @since  3.5.0
  */
-function is_astra_addon_3_5_0_beta_version() {
-	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0-beta.1', '<' );
+function is_astra_addon_3_5_0_version() {
+	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' );
 }

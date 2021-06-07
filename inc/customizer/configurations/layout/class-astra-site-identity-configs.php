@@ -308,10 +308,10 @@ if ( ! class_exists( 'Astra_Site_Identity_Configs' ) ) {
 			 * We adding this control only to maintain backwards. Remove this condition after 2-3 updates of add-on.
 			 * Moving Site Title color & Tagline color option into theme.
 			 *
-			 * @since x.x.x
+			 * @since 3.5.0
 			 */
 			$load_site_tagline_color_controls = true;
-			if ( is_astra_addon_3_5_0_beta_version() ) {
+			if ( is_astra_addon_3_5_0_version() ) {
 				$load_site_tagline_color_controls = false;
 			}
 
