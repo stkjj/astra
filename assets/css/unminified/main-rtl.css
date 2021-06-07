@@ -1541,6 +1541,10 @@ body {
   margin-bottom: 0;
 }
 
+.bypostauthor {
+  display: block;
+}
+
 /* .alignwide & .alignfull CSS compatibility */
 .ast-no-sidebar {
   /* Boxed & Content Boxed container alignment support */
