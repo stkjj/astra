@@ -590,7 +590,7 @@ function ast_get_webfont_url( $url, $format = 'woff2' ) {
 
 	// Check if already Google font URL present or not. Basically avoiding 'Astra_WebFont_Loader' class rendering.
 	$astra_font_url = astra_get_option( 'astra_font_url', false );
-	if( $astra_font_url ) {
+	if ( $astra_font_url ) {
 		return json_decode( $astra_font_url );
 	}
 
@@ -611,7 +611,7 @@ function ast_load_preload_local_fonts( $url, $format = 'woff2' ) {
 	// Check if cached font files data preset present or not. Basically avoiding 'Astra_WebFont_Loader' class rendering.
 	$astra_local_font_files = get_site_option( 'astra_local_font_files', false );
 
-	if( is_array( $astra_local_font_files ) && ! empty( $astra_local_font_files ) ) {
+	if ( is_array( $astra_local_font_files ) && ! empty( $astra_local_font_files ) ) {
 		$font_format = apply_filters( 'astra_local_google_fonts_format', $format );
 		foreach ( $astra_local_font_files as $key => $local_font ) {
 			if ( $local_font ) {
