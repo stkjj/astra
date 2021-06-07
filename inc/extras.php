@@ -577,27 +577,6 @@ function astra_target_rules_for_related_posts() {
 }
 
 /**
- * Improving performance for Astra self hosted Google fonts.
- *
- * Check if Local Fonts feature is enable or not.
- * 1. If enable we will check local fonts & stylesheet assets are present or not & we will load accordingly.
- * 2. If not then return false, no need to load class & assets anymore.
- *
- * @since x.x.x
- * @return bool True/False.
- */
-function astra_is_local_fonts_enable() {
-
-	$local_fonts_enable = false;
-
-	if ( astra_get_option( 'enable-related-posts' ) && is_singular( $supported_post_type ) ) {
-		$allow_related_posts = true;
-	}
-
-	return
-}
-
-/**
  * Get a stylesheet URL for a webfont.
  *
  * @since x.x.x
@@ -608,6 +587,14 @@ function astra_is_local_fonts_enable() {
  * @return string Returns the CSS.
  */
 function ast_get_webfont_url( $url, $format = 'woff2' ) {
+
+	// Check if already Google font URL present or not. Basically avoiding 'Astra_WebFont_Loader' class rendering.
+	$astra_font_url = astra_get_option( 'astra_font_url', false );
+	if( $astra_font_url ) {
+		return json_decode( $astra_font_url );
+	}
+
+	// Now create font URL if its not present.
 	$font = astra_webfont_loader_instance( $url );
 	$font->set_font_format( $format );
 	return $font->get_url();
@@ -620,6 +607,20 @@ function ast_get_webfont_url( $url, $format = 'woff2' ) {
  * @param string $format The font-format. If you need to support IE, change this to "woff".
  */
 function ast_load_preload_local_fonts( $url, $format = 'woff2' ) {
+
+	// Check if cached font files data preset present or not. Basically avoiding 'Astra_WebFont_Loader' class rendering.
+	$astra_local_font_files = get_site_option( 'astra_local_font_files', false );
+
+	if( is_array( $astra_local_font_files ) && ! empty( $astra_local_font_files ) ) {
+		$font_format = apply_filters( 'astra_local_google_fonts_format', $format );
+		foreach ( $astra_local_font_files as $key => $local_font ) {
+			if ( $local_font ) {
+				echo '<link rel="preload" href="' . esc_url( $local_font ) . '" as="font" type="font/' . esc_attr( $font_format ) . '" crossorigin>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+		}
+		return;
+	}
+
 	$font = astra_webfont_loader_instance( $url );
 	$font->set_font_format( $format );
 	$font->preload_local_fonts();

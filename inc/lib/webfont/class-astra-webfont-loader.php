@@ -148,10 +148,12 @@ class Astra_WebFont_Loader {
 			}
 		}
 
+		$astra_font_url = file_exists( $this->get_local_stylesheet_path() ) ? $this->get_local_stylesheet_url() : $this->remote_url;
+
 		// If the local file exists, return its URL, with a fallback to the remote URL.
-		return file_exists( $this->get_local_stylesheet_path() )
-			? $this->get_local_stylesheet_url()
-			: $this->remote_url;
+		astra_update_option( 'astra_font_url', json_encode( $astra_font_url ) );
+
+		return $astra_font_url;
 	}
 
 	/**
@@ -386,6 +388,9 @@ class Astra_WebFont_Loader {
 				$local_font[] = end( $files );
 			}
 		}
+
+		// Caching this for further optimization.
+		update_site_option( 'astra_local_font_files', $local_font );
 
 		foreach ( $local_font as $key => $local_font ) {
 			if ( $local_font ) {
@@ -641,6 +646,9 @@ class Astra_WebFont_Loader {
 	 * @return bool
 	 */
 	public function astra_delete_fonts_folder() {
+		// Delete previously created supportive options.
+		astra_delete_option( 'astra_font_url' );
+		delete_site_option( 'astra_local_font_files' );
 		return $this->get_filesystem()->delete( $this->get_fonts_folder(), true );
 	}
 
