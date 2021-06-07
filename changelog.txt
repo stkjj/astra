@@ -1,4 +1,5 @@
 v3.5.1 (Unreleased)
+- Fix: Cart Icon not working with Sticky Header after enabling the option "Hide when scrolling down" on mobile devices. 
 - Fix: Secondary menu not expendable on mobile when it is outside of Off Canvas.
 
 v3.5.0 (Unreleased)
@@ -18,6 +19,9 @@ v3.5.0 (Unreleased)
 - Fix: Builder - WooCommerce & EDD cart - Duplicate transition CSS avoided in case normal Astra CSS icons.
 - Fix: WooCommerce - "Product Categories" widget's child elements have missing icon when Astra's SVGs enabled.
 - Fix: Footer Builder - Hide on mobile/tablet for above footer is not working on frontend.
+
+v3.4.8
+- Fix: Customizer not working when Gutenberg plugin v10.7.0 and above is active.
 
 v3.4.7
 - Updated the theme screenshot and added license information for the images used in the screenshot.
