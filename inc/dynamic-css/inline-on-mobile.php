@@ -3,7 +3,7 @@
  * Inline On Mobile - Dynamic CSS.
  *
  * @package astra
- * @since x.x.x
+ * @since 3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ add_filter( 'astra_dynamic_theme_css', 'astra_inline_on_mobile_css' );
  * Inline On Mobile - Dynamic CSS.
  *
  * @param string $dynamic_css Dynamic CSS.
- * @since x.x.x
+ * @since 3.5.0
  * @return string
  */
 function astra_inline_on_mobile_css( $dynamic_css ) {
