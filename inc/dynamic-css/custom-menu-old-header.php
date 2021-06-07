@@ -3,7 +3,7 @@
  * Old Header Menu Last Item - Dynamic CSS
  *
  * @package astra
- * @since x.x.x
+ * @since 3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ add_filter( 'astra_dynamic_theme_css', 'astra_old_header_custom_menu_css' );
  * Old Header Menu Last Item - Dynamic CSS.
  *
  * @param string $dynamic_css 
- * @since x.x.x
+ * @since 3.5.0
  */
 function astra_old_header_custom_menu_css( $dynamic_css ) {
 
