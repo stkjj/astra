@@ -1,4 +1,12 @@
 v3.5.0
+- Fix: Aspect ratio is changed for YouTube embed block.
+- Fix: Spacing CSS missing when 'Inline Logo and Title' option is enabled.
+- Updated the theme screenshot.
+- Fix: JS Console error in blog/archive customizer settings.
+- Fix: WooCommerce - Product's Sale bubble appears on the header on scroll due to z-index.
+- Fix: Site Title and Tagline context not working properly for new Header Footer builder.
+
+v3.5.0-beta.1
 - New: Related Posts - Option to change "Related Posts" title.
 - New: Related Posts - Alignment option for "Related Posts" title.
 - Improvement: Frontend optimization by reducing static CSS and loading it conditionally.
@@ -16,8 +24,6 @@ v3.5.0
 - Fix: Builder - WooCommerce & EDD cart - Duplicate transition CSS avoided in case normal Astra CSS icons.
 - Fix: WooCommerce - "Product Categories" widget's child elements have missing icon when Astra's SVGs enabled.
 - Fix: Footer Builder - Hide on mobile/tablet for above footer is not working on frontend.
-- Fix: WooCommerce - Product's Sale bubble appears on the header on scroll due to z-index.
-- Fix: Aspect ratio is changed for YouTube embed block.
 
 v3.4.7
 - Updated the theme screenshot and added license information for the images used in the screenshot.
