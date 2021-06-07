@@ -6,7 +6,7 @@
  * @package Astra
  */
 
- ( function( $ ) {
+( function( $ ) {
 
 	/* Internal shorthand */
 	var api = wp.customize;
