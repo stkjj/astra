@@ -577,6 +577,27 @@ function astra_target_rules_for_related_posts() {
 }
 
 /**
+ * Improving performance for Astra self hosted Google fonts.
+ *
+ * Check if Local Fonts feature is enable or not.
+ * 1. If enable we will check local fonts & stylesheet assets are present or not & we will load accordingly.
+ * 2. If not then return false, no need to load class & assets anymore.
+ *
+ * @since x.x.x
+ * @return bool True/False.
+ */
+function astra_is_local_fonts_enable() {
+
+	$local_fonts_enable = false;
+
+	if ( astra_get_option( 'enable-related-posts' ) && is_singular( $supported_post_type ) ) {
+		$allow_related_posts = true;
+	}
+
+	return
+}
+
+/**
  * Get a stylesheet URL for a webfont.
  *
  * @since x.x.x
