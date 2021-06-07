@@ -5,6 +5,7 @@ v3.5.0
 - Fix: JS Console error in blog/archive customizer settings.
 - Fix: WooCommerce - Product's Sale bubble appears on the header on scroll due to z-index.
 - Fix: Site Title and Tagline context not working properly for new Header Footer builder.
+- Fix: Version compare updated to v3.5.0 to support Site Title & Tagline pro color controls dependency.
 
 v3.5.0-beta.1
 - New: Related Posts - Option to change "Related Posts" title.
