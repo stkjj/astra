@@ -1,6 +1,9 @@
 v3.5.1 (Unreleased)
+- Fix: Max-width responsive CSS enlarges logo size on mobile devices in old header layout.
 - Fix: Cart Icon not working with Sticky Header after enabling the option "Hide when scrolling down" on mobile devices.
-- Fix: Changing Off-canvas flyout close button color not reflecting on frontend. 
+- Fix: Secondary menu not expendable on mobile when it is outside of Off Canvas.
+- Improvement: Added close button for multiselect selected items in Google font variants.
+- Fix: Changing Off-canvas flyout close button color not reflecting on frontend.
 
 v3.5.0 (Unreleased)
 - New: Related Posts - Option to change "Related Posts" title.
