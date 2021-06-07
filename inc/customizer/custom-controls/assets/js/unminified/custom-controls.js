@@ -6,7 +6,7 @@
  * @package Astra
  */
 
-( function( $ ) {
+ ( function( $ ) {
 
 	/* Internal shorthand */
 	var api = wp.customize;
@@ -2039,7 +2039,7 @@ S2.define('select2/selection/multiple',[
       }
 
       $selection.text(formatted);
-      $selection.append('&nbsp;<span class="select2-selection__choice__remove" role="presentation" aria-hidden="true">&times; </span>');
+      $selection.append('<span class="select2-selection__choice__remove" role="presentation" aria-hidden="true">&times; </span>');
       $selection.prop('title', selection.title || selection.text);
 
       $selection.data('data', selection);
