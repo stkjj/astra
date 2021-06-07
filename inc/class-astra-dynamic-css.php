@@ -2212,6 +2212,22 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			/* Parse CSS from array()*/
 			$parse_css .= astra_parse_css( $site_width, astra_get_tablet_breakpoint( '', 1 ) );
+			
+			if ( Astra_Builder_Helper::apply_flex_based_css() ) {
+				$max_site_container_css = array(
+					'.ast-container' => array(
+						'display' => 'flex',
+					),
+				);
+				$parse_css             .= astra_parse_css( $max_site_container_css, astra_get_tablet_breakpoint( '', 1 ) );
+
+				$min_site_container_css = array(
+					'.ast-container' => array(
+						'flex-direction' => 'column',
+					),
+				);
+				$parse_css             .= astra_parse_css( $min_site_container_css, '', astra_get_tablet_breakpoint() );
+			}
 
 			if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
 				$mega_menu_css = array(
