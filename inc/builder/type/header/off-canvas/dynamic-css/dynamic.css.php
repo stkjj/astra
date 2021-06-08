@@ -35,18 +35,18 @@ function astra_off_canvas_row_setting( $dynamic_css, $dynamic_css_filtered = '' 
 	$menu_content_alignment      = 'center';
 	$inner_spacing               = astra_get_option( 'off-canvas-inner-spacing' );
 	$mobile_header_type          = astra_get_option( 'mobile-header-type' );
-	$is_site_rtl 				 = is_rtl();
+	$is_site_rtl                 = is_rtl();
 
 	$inner_spacing = ( isset( $inner_spacing ) ) ? (int) $inner_spacing : '';
 
 	if ( 'flex-start' === $offcanvas_content_alignment ) {
 		$menu_content_alignment = 'left';
-		if( $is_site_rtl ) {
+		if ( $is_site_rtl ) {
 			$menu_content_alignment = 'right';
 		}
 	} elseif ( 'flex-end' === $offcanvas_content_alignment ) {
 		$menu_content_alignment = 'right';
-		if( $is_site_rtl ) {
+		if ( $is_site_rtl ) {
 			$menu_content_alignment = 'left';
 		}
 	}

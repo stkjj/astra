@@ -2817,27 +2817,27 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			}
 
 			$submenu_toggle = '';
-			$is_site_rtl = is_rtl();
+			$is_site_rtl    = is_rtl();
 
 			if ( false === Astra_Icons::is_svg_icons() ) {
 				// Update styles depend on RTL sites.
-				$transform_svg_style = 'translate(0,-50%) rotate(270deg)';
+				$transform_svg_style            = 'translate(0,-50%) rotate(270deg)';
 				$transform_nested_svg_transform = 'translate(0, -2px) rotateZ(270deg)';
-				$default_left_rtl_right = 'left';
-				$default_right_rtl_left = 'right';
-				if( $is_site_rtl ) {
-					$transform_svg_style = 'translate(0,-50%) rotate(90deg)';
+				$default_left_rtl_right         = 'left';
+				$default_right_rtl_left         = 'right';
+				if ( $is_site_rtl ) {
+					$transform_svg_style            = 'translate(0,-50%) rotate(90deg)';
 					$transform_nested_svg_transform = 'translate(0, -2px) rotateZ(90deg)';
-					$default_left_rtl_right = 'right';
-					$default_right_rtl_left = 'left';
+					$default_left_rtl_right         = 'right';
+					$default_right_rtl_left         = 'left';
 				}
 				$submenu_toggle = array(
 					// HFB / Old Header Footer - CSS compatibility when SVGs are disabled.
 					'.main-header-menu .sub-menu .menu-item.menu-item-has-children > .menu-link:after' => array(
-						'position'  => 'absolute',
-						$default_right_rtl_left     => '1em',
-						'top'       => '50%',
-						'transform' => $transform_svg_style,
+						'position'              => 'absolute',
+						$default_right_rtl_left => '1em',
+						'top'                   => '50%',
+						'transform'             => $transform_svg_style,
 					),
 					'.ast-header-break-point .main-header-bar .main-header-bar-navigation .page_item_has_children > .ast-menu-toggle::before, .ast-header-break-point .main-header-bar .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before, .ast-mobile-popup-drawer .main-header-bar-navigation .menu-item-has-children>.ast-menu-toggle::before, .ast-header-break-point .ast-mobile-header-wrap .main-header-bar-navigation .menu-item-has-children > .ast-menu-toggle::before' => array(
 						'font-weight'     => 'bold',
@@ -2853,17 +2853,17 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 						'text-decoration' => 'inherit',
 						'display'         => 'inline-block',
 						'transform'       => $transform_nested_svg_transform,
-						'margin-' . $default_right_rtl_left    => '5px',
+						'margin-' . $default_right_rtl_left => '5px',
 					),
 					'.widget_search .search-form:after' => array(
-						'font-family' => 'Astra',
-						'font-size'   => '1.2em',
-						'font-weight' => 'normal',
-						'content'     => '"\e8b6"',
-						'position'    => 'absolute',
-						'top'         => '50%',
-						$default_right_rtl_left       => '15px',
-						'transform'   => 'translate(0, -50%)',
+						'font-family'           => 'Astra',
+						'font-size'             => '1.2em',
+						'font-weight'           => 'normal',
+						'content'               => '"\e8b6"',
+						'position'              => 'absolute',
+						'top'                   => '50%',
+						$default_right_rtl_left => '15px',
+						'transform'             => 'translate(0, -50%)',
 					),
 					'.astra-search-icon::before'        => array(
 						'content'                 => '"\e8b6"',
@@ -2885,7 +2885,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 						'text-rendering'          => 'auto',
 						'-webkit-font-smoothing'  => 'antialiased',
 						'-moz-osx-font-smoothing' => 'grayscale',
-						'margin-' . $default_left_rtl_right             => '10px',
+						'margin-' . $default_left_rtl_right => '10px',
 						'line-height'             => 'normal',
 					),
 					'.ast-mobile-popup-drawer .main-header-bar-navigation .ast-submenu-expanded>.ast-menu-toggle::before' => array(
@@ -2898,45 +2898,45 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			} else {
 				if ( ! Astra_Builder_Helper::$is_header_footer_builder_active ) {
 					// Update styles depend on RTL sites.
-					$transform_svg_style = 'translate(0,-50%) rotate(270deg)';
+					$transform_svg_style            = 'translate(0,-50%) rotate(270deg)';
 					$transform_nested_svg_transform = 'translate(0, -2px) rotateZ(270deg)';
-					$default_left_rtl_right = 'left';
-					$default_right_rtl_left = 'right';
-					if( $is_site_rtl ) {
-						$transform_svg_style = 'translate(0,-50%) rotate(900deg)';
+					$default_left_rtl_right         = 'left';
+					$default_right_rtl_left         = 'right';
+					if ( $is_site_rtl ) {
+						$transform_svg_style            = 'translate(0,-50%) rotate(900deg)';
 						$transform_nested_svg_transform = 'translate(0, -2px) rotateZ(90deg)';
-						$default_left_rtl_right = 'right';
-						$default_right_rtl_left = 'left';
+						$default_left_rtl_right         = 'right';
+						$default_right_rtl_left         = 'left';
 					}
 					$submenu_toggle = array(
 						// Old Header Footer - SVG Support.
 						'.ast-desktop .main-header-menu .sub-menu .menu-item.menu-item-has-children>.menu-link .icon-arrow svg' => array(
-							'position'  => 'absolute',
-							$default_right_rtl_left     => '.6em',
-							'top'       => '50%',
-							'transform' => $transform_svg_style,
+							'position'              => 'absolute',
+							$default_right_rtl_left => '.6em',
+							'top'                   => '50%',
+							'transform'             => $transform_svg_style,
 						),
 						'.ast-header-break-point .main-navigation ul .menu-item .menu-link .icon-arrow:first-of-type svg' => array(
-							$default_left_rtl_right      => '.1em',
-							'top'       => '.1em',
-							'transform' => $transform_nested_svg_transform,
+							$default_left_rtl_right => '.1em',
+							'top'                   => '.1em',
+							'transform'             => $transform_nested_svg_transform,
 						),
 					);
 				} else {
-					$transform_svg_style = 'translate(0, -2px) rotateZ(270deg)';
+					$transform_svg_style    = 'translate(0, -2px) rotateZ(270deg)';
 					$default_left_rtl_right = 'left';
-					if( $is_site_rtl ) {
-						$transform_svg_style = 'translate(0, -2px) rotateZ(90deg)';
+					if ( $is_site_rtl ) {
+						$transform_svg_style    = 'translate(0, -2px) rotateZ(90deg)';
 						$default_left_rtl_right = 'right';
 					}
 					$submenu_toggle = array(
 						// New Header Footer - SVG Support.
 						'.ast-header-break-point .main-navigation ul .menu-item .menu-link .icon-arrow:first-of-type svg' => array(
-							'top'         => '.2em',
-							'margin-top'  => '0px',
+							'top'        => '.2em',
+							'margin-top' => '0px',
 							'margin-' . $default_left_rtl_right => '0px',
-							'width'       => '.65em',
-							'transform'   => $transform_svg_style,
+							'width'      => '.65em',
+							'transform'  => $transform_svg_style,
 						),
 						'.ast-mobile-popup-content .ast-submenu-expanded > .ast-menu-toggle' => array(
 							'transform' => 'rotateX(180deg)',
