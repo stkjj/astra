@@ -127,11 +127,14 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$h3_line_height    = astra_get_option( 'line-height-h3' );
 			$h3_text_transform = astra_get_option( 'text-transform-h3' );
 
+			$is_widget_title_support_font_weight = self::support_font_css_to_widget_and_in_editor();
+			$font_weight_prop = ( $is_widget_title_support_font_weight ) ? 'inherit' : 'normal';
+
 			// Fallback for H1 - headings typography.
 			if ( 'inherit' == $h1_font_family ) {
 				$h1_font_family = $headings_font_family;
 			}
-			if ( 'normal' == $h1_font_weight ) {
+			if ( $font_weight_prop === $h1_font_weight ) {
 				$h1_font_weight = $headings_font_weight;
 			}
 			if ( '' == $h1_text_transform ) {
@@ -143,9 +146,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			// Fallback for H2 - headings typography.
 			if ( 'inherit' == $h2_font_family ) {
-					$h2_font_family = $headings_font_family;
+				$h2_font_family = $headings_font_family;
 			}
-			if ( 'normal' == $h2_font_weight ) {
+			if ( $font_weight_prop === $h2_font_weight ) {
 				$h2_font_weight = $headings_font_weight;
 			}
 			if ( '' == $h2_text_transform ) {
@@ -157,9 +160,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			// Fallback for H3 - headings typography.
 			if ( 'inherit' == $h3_font_family ) {
-					$h3_font_family = $headings_font_family;
+				$h3_font_family = $headings_font_family;
 			}
-			if ( 'normal' == $h3_font_weight ) {
+			if ( $font_weight_prop === $h3_font_weight ) {
 				$h3_font_weight = $headings_font_weight;
 			}
 			if ( '' == $h3_text_transform ) {
@@ -644,8 +647,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 							'display' => 'none',
 						),
 					),
-					'', 
-					astra_get_tablet_breakpoint() 
+					'',
+					astra_get_tablet_breakpoint()
 				);
 
 				$parse_css .= astra_parse_css(
@@ -654,7 +657,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 							'display' => 'none',
 						),
 					),
-					astra_get_tablet_breakpoint() 
+					astra_get_tablet_breakpoint()
 				);
 			}
 
@@ -1177,7 +1180,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $gb_patterns_min_mobile_css, astra_get_mobile_breakpoint() );
 			}
 
-			if ( self::support_font_css_to_widget_and_in_editor() ) {
+			if ( $is_widget_title_support_font_weight ) {
 				$widget_title_font_weight_support = array(
 					'h1.widget-title' => array(
 						'font-weight' => esc_attr( $h1_font_weight ),

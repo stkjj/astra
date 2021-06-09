@@ -107,11 +107,14 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 			$single_post_title       = astra_get_option( 'blog-single-post-structure' );
 			$title_enabled_from_meta = get_post_meta( $post_id, 'site-post-title', true );
 
+			$is_widget_title_support_font_weight = Astra_Dynamic_CSS::support_font_css_to_widget_and_in_editor();
+			$font_weight_prop = ( $is_widget_title_support_font_weight ) ? 'inherit' : 'normal';
+
 			// Fallback for H1 - headings typography.
 			if ( 'inherit' == $h1_font_family ) {
 				$h1_font_family = $headings_font_family;
 			}
-			if ( 'normal' == $h1_font_weight ) {
+			if ( $font_weight_prop === $h1_font_weight ) {
 				$h1_font_weight = $headings_font_weight;
 			}
 			if ( '' == $h1_text_transform ) {
@@ -125,7 +128,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 			if ( 'inherit' == $h2_font_family ) {
 				$h2_font_family = $headings_font_family;
 			}
-			if ( 'normal' == $h2_font_weight ) {
+			if ( $font_weight_prop === $h2_font_weight ) {
 				$h2_font_weight = $headings_font_weight;
 			}
 			if ( '' == $h2_text_transform ) {
@@ -139,7 +142,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 			if ( 'inherit' == $h3_font_family ) {
 				$h3_font_family = $headings_font_family;
 			}
-			if ( 'normal' == $h3_font_weight ) {
+			if ( $font_weight_prop === $h3_font_weight ) {
 				$h3_font_weight = $headings_font_weight;
 			}
 			if ( '' == $h3_text_transform ) {
@@ -186,7 +189,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 			$h6_heading_selector  = '';
 			$editor_body_selector = '';
 
-			if ( Astra_Dynamic_CSS::support_font_css_to_widget_and_in_editor() ) {
+			if ( $is_widget_title_support_font_weight ) {
 				$h1_heading_selector  = '.edit-post-visual-editor h1.block-editor-block-list__block';
 				$h2_heading_selector  = '.edit-post-visual-editor h2.block-editor-block-list__block';
 				$h3_heading_selector  = '.edit-post-visual-editor h3.block-editor-block-list__block';
@@ -328,7 +331,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				),
 			);
 
-			if ( ! Astra_Dynamic_CSS::support_font_css_to_widget_and_in_editor() ) {
+			if ( ! $is_widget_title_support_font_weight ) {
 				$desktop_css['.edit-post-visual-editor .block-editor-block-list__block, .edit-post-visual-editor p, .block-editor-block-list__block p, .editor-default-block-appender textarea.editor-default-block-appender__content'] = array(
 					'font-family' => '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif',
 					'font-weight' => 'inherit',
