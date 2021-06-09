@@ -2943,9 +2943,9 @@ function astra_update_cart_style() {
 
 /**
  * Update existing 'Grid Column Layout' option in responsive way in Related Posts.
- * Till this update x.x.x we have 'Grid Column Layout' only for singular option, but now we are improving it as responsive.
+ * Till this update 3.5.0 we have 'Grid Column Layout' only for singular option, but now we are improving it as responsive.
  *
- * @since x.x.x
+ * @since 3.5.0
  * @return void.
  */
 function astra_update_related_posts_grid_layout() {
@@ -2995,7 +2995,7 @@ function astra_update_related_posts_grid_layout() {
 /**
  * Migrate Site Title & Site Tagline options to new responsive array.
  *
- * @since x.x.x
+ * @since 3.5.0
  *
  * @return void
  */
