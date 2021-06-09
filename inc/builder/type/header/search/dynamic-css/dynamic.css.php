@@ -140,7 +140,7 @@ function astra_hb_search_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' )
  * Search Component static CSS.
  * 
  * @return string
- * @since x.x.x
+ * @since 3.5.0
  */
 function astra_search_static_css() {
 	$search_css = '
