@@ -375,7 +375,7 @@ if ( ! class_exists( 'Astra_Enqueue_Scripts' ) ) {
 		 * Enqueue galleries relates CSS on gallery_style filter.
 		 *
 		 * @param string $gallery_style gallery style and div.
-		 * @since x.x.x
+		 * @since 3.5.0
 		 * @return string
 		 */
 		public function enqueue_galleries_style( $gallery_style ) {

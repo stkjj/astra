@@ -249,7 +249,7 @@ function astra_hb_footer_menu_dynamic_css( $dynamic_css, $dynamic_css_filtered =
 /**
  * Footer menu static CSS
  * 
- * @since x.x.x
+ * @since 3.5.0
  * @return string
  */
 function footer_menu_static_css() {

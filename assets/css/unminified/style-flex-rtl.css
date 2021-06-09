@@ -1080,6 +1080,33 @@ textarea,
   font-weight: normal;
 }
 
+/*----------  Media ----------*/
+/* Astra Respnosive oEmbed Video container */
+.ast-oembed-container {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.ast-oembed-container iframe, .ast-oembed-container object, .ast-oembed-container embed {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body .ast-oembed-container * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*----------  Basic Layout  ----------*/
 .ast-hidden {
   display: none !important;
