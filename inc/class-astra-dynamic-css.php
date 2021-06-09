@@ -586,15 +586,17 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			$page_header_logo = ( defined( 'ASTRA_EXT_VER' ) && Astra_Ext_Extension::is_active( 'advanced-headers' ) && Astra_Ext_Advanced_Headers_Loader::astra_advanced_headers_design_option( 'logo-url' ) ) ? true : false;
 
-			if ( get_theme_mod( 'custom_logo' ) 
-				|| astra_get_option( 'transparent-header-logo' ) 
-				|| astra_get_option( 'sticky-header-logo' ) 
-				|| $page_header_logo 
-				|| is_customize_preview() ) {
-
+			if ( astra_get_option( 'logo-title-inline' ) ) {
 				$css_output['.ast-logo-title-inline .site-logo-img'] = array(
 					'padding-right' => '1em',
 				);
+			}
+
+			if ( get_theme_mod( 'custom_logo' )
+				|| astra_get_option( 'transparent-header-logo' )
+				|| astra_get_option( 'sticky-header-logo' )
+				|| $page_header_logo
+				|| is_customize_preview() ) {
 
 				$css_output['.site-logo-img img'] = array(
 					' transition' => 'all 0.2s linear',
@@ -603,7 +605,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			/* Parse CSS from array() */
 			$parse_css = astra_parse_css( $css_output );
-			
+
 			if ( ! Astra_Builder_Helper::$is_header_footer_builder_active ) {
 
 				$old_header_mobile_toggle = array(
@@ -1746,6 +1748,13 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				);
 			}
 
+			// Add/Remove logo max-width: 100%; CSS for logo in old header layout.
+			if ( false === Astra_Builder_Helper::$is_header_footer_builder_active && false === self::remove_logo_max_width_mobile_static_css() ) {
+				$global_button_mobile['.site-branding img, .site-header .site-logo-img .custom-logo-link img'] = array(
+					'max-width' => '100%',
+				);
+			}
+
 			/* Parse CSS from array() -> max-width: (mobile-breakpoint) px  */
 			$parse_css .= astra_parse_css( $global_button_mobile, '', astra_get_mobile_breakpoint() );
 
@@ -2213,7 +2222,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			/* Parse CSS from array()*/
 			$parse_css .= astra_parse_css( $site_width, astra_get_tablet_breakpoint( '', 1 ) );
 
-			if ( defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' ) ) {
+			if ( is_astra_addon_3_5_0_version() ) {
 				$mega_menu_css = array(
 					'.ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-full-megamenu-wrapper .sub-menu, .ast-desktop .main-header-menu:not(#ast-hf-mobile-menu) .astra-megamenu .sub-menu' => array(
 						'box-shadow' => 'none',
@@ -3139,6 +3148,20 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$astra_settings = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['guntenberg-button-pattern-compat-css'] = isset( $astra_settings['guntenberg-button-pattern-compat-css'] ) ? false : true;
 			return apply_filters( 'astra_gutenberg_patterns_compatibility', $astra_settings['guntenberg-button-pattern-compat-css'] );
+		}
+
+		/**
+		 * Whether to remove or not following CSS which restricts logo size on responsive devices.
+		 *
+		 * @see https://github.com/brainstormforce/astra/commit/d09f63336b73d58c8f8951726edbc90671d7f419
+		 *
+		 * @since x.x.x
+		 * @return boolean false if it is an existing user, true if not.
+		 */
+		public static function remove_logo_max_width_mobile_static_css() {
+			$astra_settings                                  = get_option( ASTRA_THEME_SETTINGS );
+			$astra_settings['can-remove-logo-max-width-css'] = isset( $astra_settings['can-remove-logo-max-width-css'] ) ? false : true;
+			return apply_filters( 'astra_remove_logo_max_width_css', $astra_settings['can-remove-logo-max-width-css'] );
 		}
 
 		/**

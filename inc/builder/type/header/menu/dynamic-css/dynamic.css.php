@@ -321,7 +321,7 @@ function astra_hb_menu_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' ) {
  * Load Menu hover style static CSS if any one of the menu hover style is selected.
  * 
  * @return string
- * @since x.x.x
+ * @since 3.5.0
  */
 function astra_menu_hover_style_css() {
 	$hover_style_flg = false;
