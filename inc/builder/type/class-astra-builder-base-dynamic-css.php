@@ -381,7 +381,7 @@ if ( ! class_exists( 'Astra_Builder_Base_Dynamic_CSS' ) ) {
 		 * Different logo for mobile static CSS.
 		 * 
 		 * @param string $dynamic_css Appended dynamic CSS.
-		 * @since x.x.x
+		 * @since 3.5.0
 		 * @return string
 		 */
 		public static function mobile_header_logo_css( $dynamic_css ) {
