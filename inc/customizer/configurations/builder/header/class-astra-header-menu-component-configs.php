@@ -154,7 +154,7 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 					),
 
 					/**
-					 * Option: Submenu Container Animation
+					 * Option: Submenu Animation
 					 */
 					array(
 						'name'       => ASTRA_THEME_SETTINGS . '[header-' . $_prefix . '-submenu-container-animation]',
@@ -163,7 +163,7 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 						'control'    => 'ast-select',
 						'section'    => $_section,
 						'priority'   => 31,
-						'title'      => __( 'Container Animation', 'astra' ),
+						'title'      => __( 'Submenu Animation', 'astra' ),
 						'choices'    => array(
 							''           => __( 'None', 'astra' ),
 							'slide-down' => __( 'Slide Down', 'astra' ),
