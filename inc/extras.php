@@ -577,6 +577,16 @@ function astra_target_rules_for_related_posts() {
 }
 
 /**
+ * Check the Astra addon 3.5.0 version is using or not.
+ * As this is major update and frequently we used version_compare, added a function for this for easy maintenance.
+ *
+ * @since  3.5.0
+ */
+function is_astra_addon_3_5_0_version() {
+	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' );
+}
+
+/**
  * Get a stylesheet URL for a webfont.
  *
  * @since x.x.x
@@ -621,6 +631,7 @@ function ast_load_preload_local_fonts( $url, $format = 'woff2' ) {
 		return;
 	}
 
+	// Now preload font data after processing it, as we didn't get stored data.
 	$font = astra_webfont_loader_instance( $url );
 	$font->set_font_format( $format );
 	$font->preload_local_fonts();
