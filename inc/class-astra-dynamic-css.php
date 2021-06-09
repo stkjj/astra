@@ -128,7 +128,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$h3_text_transform = astra_get_option( 'text-transform-h3' );
 
 			$is_widget_title_support_font_weight = self::support_font_css_to_widget_and_in_editor();
-			$font_weight_prop = ( $is_widget_title_support_font_weight ) ? 'inherit' : 'normal';
+			$font_weight_prop                    = ( $is_widget_title_support_font_weight ) ? 'inherit' : 'normal';
 
 			// Fallback for H1 - headings typography.
 			if ( 'inherit' == $h1_font_family ) {

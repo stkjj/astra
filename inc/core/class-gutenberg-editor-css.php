@@ -108,7 +108,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 			$title_enabled_from_meta = get_post_meta( $post_id, 'site-post-title', true );
 
 			$is_widget_title_support_font_weight = Astra_Dynamic_CSS::support_font_css_to_widget_and_in_editor();
-			$font_weight_prop = ( $is_widget_title_support_font_weight ) ? 'inherit' : 'normal';
+			$font_weight_prop                    = ( $is_widget_title_support_font_weight ) ? 'inherit' : 'normal';
 
 			// Fallback for H1 - headings typography.
 			if ( 'inherit' == $h1_font_family ) {
