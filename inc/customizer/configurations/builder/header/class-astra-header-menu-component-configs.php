@@ -162,7 +162,7 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 						'type'       => 'control',
 						'control'    => 'ast-select',
 						'section'    => $_section,
-						'priority'   => 31,
+						'priority'   => 23,
 						'title'      => __( 'Submenu Animation', 'astra' ),
 						'choices'    => array(
 							''           => __( 'Default', 'astra' ),
@@ -170,10 +170,11 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 							'slide-up'   => __( 'Slide Up', 'astra' ),
 							'fade'       => __( 'Fade', 'astra' ),
 						),
-						'context'    => Astra_Builder_Helper::$general_tab,
+						'context'    => Astra_Builder_Helper::$design_tab,
 						'transport'  => 'postMessage',
 						'responsive' => false,
 						'renderAs'   => 'text',
+						'divider'    => array( 'ast_class' => 'ast-bottom-divider' ),
 					),
 
 					// Option: Submenu Container Divider.
@@ -254,7 +255,6 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 							'step' => 1,
 							'max'  => 200,
 						),
-						'divider'     => array( 'ast_class' => 'ast-bottom-divider' ),
 					),
 
 					// Option: Sub-Menu Border.
