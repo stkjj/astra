@@ -6,6 +6,7 @@ v3.5.1 (Unreleased)
 - Fix: Secondary menu not expendable on mobile when it is outside of Off Canvas.
 - Improvement: Added close button for multiselect selected items in Google font variants.
 - Fix: CLS – Flashing desktop menu on mobile view.
+- Improvement: Changed customizer submenu control title from 'Container Animation' to 'Submenu Animation'.
 
 v3.5.0
 - Fix: Aspect ratio is changed for YouTube embed block.
