@@ -587,7 +587,7 @@ function is_astra_addon_3_5_0_version() {
 }
 
 /**
- * Set flag to manage backward compatibility for v3.5.0 earlier users for the transparent header defatul value changed.
+ * Set flag to manage backward compatibility for v3.5.0 earlier users for the transparent header border bottom default value changed.
  *
  * @since  x.x.x
  */

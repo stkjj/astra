@@ -3008,7 +3008,7 @@ function astra_remove_logo_max_width() {
 }
 
 /**
- * Set flag to maintain backward compatibility for existing users for Transparent Header default value i.e from '' to 0.
+ * Set flag to maintain backward compatibility for existing users for Transparent Header border bottom default value i.e from '' to 0.
  *
  * @since x.x.x
  * @return void.
