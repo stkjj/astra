@@ -4,6 +4,7 @@ v3.6.0 (Unreleased)
 - Fix: Secondary menu not expendable on mobile when it is outside of Off Canvas.
 - Improvement: Added close button for multiselect selected items in Google font variants.
 - Fix: CLS – Flashing desktop menu on mobile view.
+- Fix: WooCommerce - product search widget button not aligned on other than shop and single product page.
 - Improvement: Changed customizer submenu control title from 'Container Animation' to 'Submenu Animation'.
 
 v3.5.0
