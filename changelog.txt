@@ -6,6 +6,7 @@ v3.6.0 (Unreleased)
 - Fix: CLS – Flashing desktop menu on mobile view.
 - Fix: WooCommerce - product search widget button not aligned on other than shop and single product page.
 - Improvement: Changed customizer submenu control title from 'Container Animation' to 'Submenu Animation'.
+- Improvement: Moved 'Submenu Animation' control from General tab to Design  tab.
 - Improvement: Changed sub-menu container animation option name from 'Default' to 'None'.
 
 v3.5.0
