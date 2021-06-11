@@ -344,7 +344,7 @@ function astra_hf_builder_customizer_defaults( $defaults ) {
 	/**
 	 * Header Types - Defaults
 	 */
-	$defaults['transparent-header-main-sep']       = ( false === apply_updated_default_tranparent_header_value() ) ? '' : 0;
+	$defaults['transparent-header-main-sep']       = ( false === astra_transparent_header_default_value() ) ? '' : 0;
 	$defaults['transparent-header-main-sep-color'] = '';
 
 	/**

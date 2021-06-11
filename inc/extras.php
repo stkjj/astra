@@ -591,7 +591,7 @@ function is_astra_addon_3_5_0_version() {
  *
  * @since  x.x.x
  */
-function apply_updated_default_tranparent_header_value() {
+function astra_transparent_header_default_value() {
 	$astra_settings                                      = get_option( ASTRA_THEME_SETTINGS );
 	$astra_settings['transparent-header-default-border'] = isset( $astra_settings['transparent-header-default-border'] ) ? false : true;
 	return apply_filters( 'astra_transparent_header_default_border', $astra_settings['transparent-header-default-border'] );
