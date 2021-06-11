@@ -165,7 +165,7 @@ if ( class_exists( 'Astra_Customizer_Config_Base' ) ) {
 						'priority'   => 23,
 						'title'      => __( 'Submenu Animation', 'astra' ),
 						'choices'    => array(
-							''           => __( 'Default', 'astra' ),
+							''           => __( 'None', 'astra' ),
 							'slide-down' => __( 'Slide Down', 'astra' ),
 							'slide-up'   => __( 'Slide Up', 'astra' ),
 							'fade'       => __( 'Fade', 'astra' ),
