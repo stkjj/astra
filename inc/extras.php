@@ -585,3 +585,14 @@ function astra_target_rules_for_related_posts() {
 function is_astra_addon_3_5_0_version() {
 	return defined( 'ASTRA_EXT_VER' ) && version_compare( ASTRA_EXT_VER, '3.5.0', '<' );
 }
+
+/**
+ * Set flag to manage backward compatibility for v3.5.0 earlier users for the transparent header defatul value changed.
+ *
+ * @since  x.x.x
+ */
+function apply_updated_default_tranparent_header_value() {
+	$astra_settings                                      = get_option( ASTRA_THEME_SETTINGS );
+	$astra_settings['transparent-header-default-border'] = isset( $astra_settings['transparent-header-default-border'] ) ? false : true;
+	return apply_filters( 'astra_transparent_header_default_border', $astra_settings['transparent-header-default-border'] );
+}

@@ -3008,6 +3008,21 @@ function astra_remove_logo_max_width() {
 }
 
 /**
+ * Set flag to maintain backward compatibility for existing users for Transparent Header default value i.e from '' to 0.
+ *
+ * @since x.x.x
+ * @return void.
+ */
+function astra_transparent_header_default_value() {
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( ! isset( $theme_options['transparent-header-default-border'] ) ) {
+		$theme_options['transparent-header-default-border'] = false;
+		update_option( 'astra-settings', $theme_options );
+	}
+}
+
+/**
  * Migrate Site Title & Site Tagline options to new responsive array.
  *
  * @since 3.5.0
