@@ -312,13 +312,6 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				),
 			);
 
-			if ( ! $is_widget_title_support_font_weight ) {
-				$desktop_css['.edit-post-visual-editor .block-editor-block-list__block, .edit-post-visual-editor p, .block-editor-block-list__block p, .editor-default-block-appender textarea.editor-default-block-appender__content'] = array(
-					'font-family' => '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif',
-					'font-weight' => 'inherit',
-				);
-			}
-
 			if ( astra_wp_version_compare( '5.7', '>=' ) ) {
 				$base_background_color = astra_get_responsive_background_obj( $box_bg_obj, 'desktop' );
 				if ( empty( $base_background_color ) ) {
