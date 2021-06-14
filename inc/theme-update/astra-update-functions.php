@@ -3033,6 +3033,7 @@ function astra_headings_font_support() {
 
 	if ( ! isset( $theme_options['can-support-widget-and-editor-fonts'] ) ) {
 		$theme_options['can-support-widget-and-editor-fonts'] = false;
+		update_option( 'astra-settings', $theme_options );
 	}
 }
 
