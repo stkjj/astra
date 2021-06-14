@@ -2993,6 +2993,51 @@ function astra_update_related_posts_grid_layout() {
 }
 
 /**
+ * Migrate Site Title & Site Tagline options to new responsive array.
+ *
+ * @since 3.5.0
+ *
+ * @return void
+ */
+function astra_site_title_tagline_responsive_control_migration() {
+
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( false === get_option( 'display-site-title-responsive', false ) && isset( $theme_options['display-site-title'] ) ) {
+		$theme_options['display-site-title-responsive']['desktop'] = $theme_options['display-site-title'];
+		$theme_options['display-site-title-responsive']['tablet']  = $theme_options['display-site-title'];
+		$theme_options['display-site-title-responsive']['mobile']  = $theme_options['display-site-title'];
+	}
+
+	if ( false === get_option( 'display-site-tagline-responsive', false ) && isset( $theme_options['display-site-tagline'] ) ) {
+		$theme_options['display-site-tagline-responsive']['desktop'] = $theme_options['display-site-tagline'];
+		$theme_options['display-site-tagline-responsive']['tablet']  = $theme_options['display-site-tagline'];
+		$theme_options['display-site-tagline-responsive']['mobile']  = $theme_options['display-site-tagline'];
+	}
+
+	update_option( 'astra-settings', $theme_options );
+}
+
+/**
+ * Do not apply new font-weight heading support CSS in editor/frontend directly.
+ *
+ * 1. Adding Font-weight support to widget titles.
+ * 2. Customizer font CSS not supporting in editor.
+ *
+ * @since x.x.x
+ *
+ * @return void
+ */
+function astra_headings_font_support() {
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( ! isset( $theme_options['can-support-widget-and-editor-fonts'] ) ) {
+		$theme_options['can-support-widget-and-editor-fonts'] = false;
+		update_option( 'astra-settings', $theme_options );
+	}
+}
+
+/**
  * Set flag to avoid direct reflections on live site & to maintain backward compatibility for existing users.
  *
  * @since x.x.x
@@ -3020,30 +3065,4 @@ function astra_transparent_header_default_value() {
 		$theme_options['transparent-header-default-border'] = false;
 		update_option( 'astra-settings', $theme_options );
 	}
-}
-
-/**
- * Migrate Site Title & Site Tagline options to new responsive array.
- *
- * @since 3.5.0
- *
- * @return void
- */
-function astra_site_title_tagline_responsive_control_migration() {
-
-	$theme_options = get_option( 'astra-settings', array() );
-
-	if ( false === get_option( 'display-site-title-responsive', false ) && isset( $theme_options['display-site-title'] ) ) {
-		$theme_options['display-site-title-responsive']['desktop'] = $theme_options['display-site-title'];
-		$theme_options['display-site-title-responsive']['tablet']  = $theme_options['display-site-title'];
-		$theme_options['display-site-title-responsive']['mobile']  = $theme_options['display-site-title'];
-	}
-
-	if ( false === get_option( 'display-site-tagline-responsive', false ) && isset( $theme_options['display-site-tagline'] ) ) {
-		$theme_options['display-site-tagline-responsive']['desktop'] = $theme_options['display-site-tagline'];
-		$theme_options['display-site-tagline-responsive']['tablet']  = $theme_options['display-site-tagline'];
-		$theme_options['display-site-tagline-responsive']['mobile']  = $theme_options['display-site-tagline'];
-	}
-
-	update_option( 'astra-settings', $theme_options );
 }
