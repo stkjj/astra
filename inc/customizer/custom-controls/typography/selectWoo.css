@@ -483,7 +483,3 @@
 
 .select2-container--classic.select2-container--open .select2-dropdown {
   border-color: #5897fb; }
-
-.select2-selection__choice .select2-selection__choice__remove {
-  margin: 0 2px 1px 2px;
-}
