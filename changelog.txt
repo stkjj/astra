@@ -1,7 +1,7 @@
 v3.6.0
 - New: Performance - Load Google Font locally. (https://wpastra.com/docs/self-hosted-google-fonts/)
 - New: Performance - Preload locally hosted Google Font. (https://wpastra.com/docs/self-hosted-google-fonts/)
-- Improvement: added SVG logo height option to resolve the CLS issue.
+- Improvement: Added SVG logo height option to resolve the CLS issue.
 - Improvement: Added close button for multiselect selected items in Google font variants.
 - Improvement: Changed customizer submenu control title from 'Container Animation' to 'Submenu Animation'.
 - Improvement: Moved 'Submenu Animation' control from General tab to Design  tab.
