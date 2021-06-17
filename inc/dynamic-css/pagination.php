@@ -83,7 +83,7 @@ function astra_pagination_css( $dynamic_css ) {
                     margin-bottom: 10px;
                 }
             }
-             .ast-pagination .prev,
+            .ast-pagination .prev,
             .ast-pagination .prev:visited,
             .ast-pagination .prev:focus,
             .ast-pagination .next,
@@ -92,7 +92,6 @@ function astra_pagination_css( $dynamic_css ) {
                 display: inline-block;
                 width: auto;
             }
-            
             .ast-page-builder-template .ast-pagination {
                 padding: 2em;
             }';
