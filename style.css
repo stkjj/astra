@@ -56,4 +56,7 @@ For more information, refer to this document on how to create a page like in the
 Astra default breadcrumb is based on Breadcrumb Trail by Justin Tadlock. (https://github.com/justintadlock/breadcrumb-trail)
 Breadcrumb Trail is distributed under the terms of the GNU GPL v2 or later.
 
+Astra local fonts feature is based on Webfonts Loader by WordPress Themes Team (WPTT). (https://github.com/WPTT/webfont-loader)
+Licensed under MIT ( https://github.com/WPTT/webfont-loader/blob/master/LICENSE )
+
 /* Note: The CSS files are loaded from assets/css/ folder. */
