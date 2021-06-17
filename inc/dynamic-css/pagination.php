@@ -76,15 +76,19 @@ function astra_pagination_css( $dynamic_css ) {
                 }
                 .ast-pagination-circle .ast-pagination .next.page-numbers,
                 .ast-pagination-square .ast-pagination .next.page-numbers{
-                    margin-top: 5px;
+                    margin-top: 10px;
+                }
+                .ast-pagination-circle .ast-pagination .prev.page-numbers,
+                .ast-pagination-square .ast-pagination .prev.page-numbers{
+                    margin-bottom: 10px;
                 }
             }
-            .ast-pagination .prev.page-numbers,
-            .ast-pagination .prev.page-numbers:visited,
-            .ast-pagination .prev.page-numbers:focus,
-            .ast-pagination .next.page-numbers,
-            .ast-pagination .next.page-numbers:visited,
-            .ast-pagination .next.page-numbers:focus {
+             .ast-pagination .prev,
+            .ast-pagination .prev:visited,
+            .ast-pagination .prev:focus,
+            .ast-pagination .next,
+            .ast-pagination .next:visited,
+            .ast-pagination .next:focus {
                 display: inline-block;
                 width: auto;
             }
