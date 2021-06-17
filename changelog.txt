@@ -1,3 +1,6 @@
+v3.6.1 (Unreleased)
+- Fix: Search icon color is not applying to the Search Box style. 
+
 v3.6.0 (Unreleased)
 - Fix: Max-width responsive CSS enlarges logo size on mobile devices in old header layout.
 - Fix: Cart Icon not working with Sticky Header after enabling the option "Hide when scrolling down" on mobile devices.
