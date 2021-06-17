@@ -5,6 +5,7 @@ v3.6.0 (Unreleased)
 - Improvement: Changed sub-menu container animation option name from 'Default' to 'None'.
 - Improvement: Added headings font-weight support to widget-title headings. ( Need Doc )
 - Improvement: Changed Transparent Header Border Bottom default value from '' to 0;
+- Fix: Menu dropdown icons showing at incorrect position in RTL languages.
 - Fix: Customizer's font & color settings not reflecting in Gutenberg editor. ( Need Doc )
 - Fix: Max-width responsive CSS enlarges logo size on mobile devices in old header layout.
 - Fix: Cart Icon not working with Sticky Header after enabling the option "Hide when scrolling down" on mobile devices.
