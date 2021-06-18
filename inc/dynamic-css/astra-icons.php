@@ -3,7 +3,7 @@
  * Astra Icons - Dynamic CSS.
  *
  * @package astra
- * @since x.x.x
+ * @since 3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ add_filter( 'astra_dynamic_theme_css', 'astra_icons_static_css' );
  * Astra Icons - Dynamic CSS.
  *
  * @param string $dynamic_css Dynamic CSS.
- * @since x.x.x
+ * @since 3.5.0
  */
 function astra_icons_static_css( $dynamic_css ) {
 

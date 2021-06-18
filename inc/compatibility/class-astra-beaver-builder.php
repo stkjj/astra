@@ -93,7 +93,7 @@ if ( ! class_exists( 'Astra_Beaver_Builder' ) ) :
 		 *
 		 * @param array $assets list of theme assets (JS & CSS).
 		 * @return array List of updated assets.
-		 * @since x.x.x
+		 * @since 3.5.0
 		 */
 		public function add_styles( $assets ) {
 
