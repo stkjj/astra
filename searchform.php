@@ -17,8 +17,8 @@
  */
 $astra_search_input_placeholder = isset( $args['input_placeholder'] ) ? $args['input_placeholder'] : astra_default_strings( 'string-search-input-placeholder', false );
 $astra_search_show_input_submit = isset( $args['show_input_submit'] ) ? $args['show_input_submit'] : true;
-$astra_search_data_attrs = isset( $args['data_attributes'] ) ? $args['data_attributes'] : '';
-$astra_search_input_value = isset( $args['input_value'] ) ? $args['input_value'] : '';
+$astra_search_data_attrs        = isset( $args['data_attributes'] ) ? $args['data_attributes'] : '';
+$astra_search_input_value       = isset( $args['input_value'] ) ? $args['input_value'] : '';
 
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -32,7 +32,7 @@ $astra_search_input_value = isset( $args['input_value'] ) ? $args['input_value']
 			</button>
 		<?php } ?>
 	</label>
-	<?php if( $astra_search_show_input_submit ) { ?>
+	<?php if ( $astra_search_show_input_submit ) { ?>
 		<input type="submit" class="search-submit" value="Search">
 	<?php } ?>
 </form>
