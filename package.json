@@ -46,5 +46,8 @@
     "test:e2e": "cross-env WP_BASE_URL=http://localhost:8890 wp-scripts test-e2e --config=tests/e2e/jest.config.js",
     "test:e2e:interactive": "npm run test:e2e -- --puppeteer-interactive",
     "test:e2e:ci": "npm run test:e2e -- --runInBand"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^5.1.1"
   }
 }

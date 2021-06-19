@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: REST Delete Astra Settings.
+ * Plugin Name: REST Delete Astra Settings
  * Plugin URI:  https://github.com/brainstormforce/astra
  * Description: Plugin to add REST Endpoint to delete Astra Settings.
  * Author:      Brainstorm Force

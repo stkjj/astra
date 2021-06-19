@@ -3,6 +3,8 @@
  */
  import { get } from 'lodash';
 
+ import apiFetch from '@wordpress/api-fetch';
+
  /**
   * WordPress dependencies
   */
@@ -13,11 +15,6 @@
 	 setBrowserViewport,
 	 trashAllPosts,
  } from '@wordpress/e2e-test-utils';
-
- /**
-  * Internal dependencies
-  */
- import { cleanUpSettings } from '../utils/onboarding-wizard-utils';
 
  /**
   * Environment variables
@@ -209,6 +206,16 @@
 	 } );
  }
 
+/**
+ * Reset the site to default settings.
+ */
+ async function siteReset() {
+	await apiFetch( {
+		path: 'astra/v1/e2e-utils/reset-theme',
+		method: 'DELETE'
+	} );
+ }
+
  /**
   * Before every test suite run, delete all content created by the test. This ensures
   * other posts/comments/etc. aren't dirtying tests and tests don't depend on
@@ -221,7 +228,7 @@
 	 observeConsoleLogging();
 	 await setupBrowser();
 	 await trashAllPosts();
-	 await cleanUpSettings();
+	 await siteReset();
 	 await page.setDefaultNavigationTimeout( 10000 );
 	 await page.setDefaultTimeout( 10000 );
  } );
