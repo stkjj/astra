@@ -3074,7 +3074,7 @@ function astra_transparent_header_default_value() {
  * @return void.
  */
 function astra_clear_cache_assets() {
-	if( class_exists( 'Astra_Cache_Base' ) ) {
+	if ( class_exists( 'Astra_Cache_Base' ) ) {
 		// Clear Astra theme cache.
 		$astra_cache_base_instance = new Astra_Cache_Base( 'astra' );
 		$astra_cache_base_instance->refresh_assets( 'astra' );
