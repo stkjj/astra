@@ -90,6 +90,9 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 				'astra_remove_logo_max_width',
 				'astra_transparent_header_default_value',
 			),
+			'3.6.1' => array(
+				'astra_clear_cache_assets',
+			),
 		);
 
 		/**
