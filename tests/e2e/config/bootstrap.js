@@ -3,7 +3,7 @@
  */
  import { get } from 'lodash';
 
- import apiFetch from '@wordpress/api-fetch';
+ import fetch from 'node-fetch';
 
  /**
   * WordPress dependencies
@@ -210,10 +210,9 @@
  * Reset the site to default settings.
  */
  async function siteReset() {
-	await apiFetch( {
-		path: 'astra/v1/e2e-utils/reset-theme',
-		method: 'DELETE'
-	} );
+	await fetch( 'http://localhost:8890/wp-json/astra/v1/e2e-utils/reset-theme', {
+        method: 'DELETE',
+    });
  }
 
  /**
