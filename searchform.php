@@ -21,6 +21,6 @@
 			</button>
 		<?php } ?>
 	</label>
-	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button', 'astra' ); ?>" />
+	<input type="submit" class="search-submit" value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>" />
 </form>
 <?php
