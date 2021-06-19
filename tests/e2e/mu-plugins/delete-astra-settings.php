@@ -18,6 +18,8 @@ function bootstrap() : void {
 	add_action( 'rest_api_init', __NAMESPACE__ . '\\rest_route' );
 }
 
+bootstrap();
+
 function rest_route() : void {
 	register_rest_route(
 		REST_NAMESPACE, REST_BASE . '/reset-theme', array(
