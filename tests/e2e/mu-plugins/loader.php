@@ -17,8 +17,8 @@ bootstrap();
 add_action(
 	'wp_footer',
 	function () {
-		echo '<pre>';
-		print_r( get_option( 'astra-settings' ) );
+		echo '<pre style="word-break: break-word;">';
+		print_r( json_encode( get_option( 'astra-settings' ), JSON_PRETTY_PRINT ) );
 		echo '</pre>';
 	}
 );
