@@ -9,6 +9,7 @@ import fetch from 'node-fetch';
  * WordPress dependencies
  */
 import {
+	createURL,
 	clearLocalStorage,
 	enablePageDialogAccept,
 	isOfflineMode,
@@ -181,7 +182,7 @@ async function setupBrowser() {
  * Reset the site to default settings.
  */
 async function siteReset() {
-	await fetch( 'http://localhost:8890/wp-json/astra/v1/e2e-utils/reset-theme', {
+	await fetch( createURL( '/wp-json/astra/v1/e2e-utils/reset-theme' ), {
 		method: 'DELETE',
 	});
 }
