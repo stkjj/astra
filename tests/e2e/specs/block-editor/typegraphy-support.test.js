@@ -1,4 +1,4 @@
-import { openCustomizer, setCustomize, openCustomizeSection } from '../../utils/customize';
+import { setCustomize } from '../../utils/customize';
 
 /**
  * @jest-environment jsdom

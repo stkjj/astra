@@ -160,15 +160,11 @@ function observeConsoleLogging() {
 }
 
 /**
- * Runs Axe tests when the block editor is found on the current page.
+ * Runs Axe tests for a page.
  *
  * @return {?Promise} Promise resolving once Axe texts are finished.
  */
-async function runAxeTestsForBlockEditor() {
-	if ( ! await page.$( '.block-editor' ) ) {
-		return;
-	}
-
+async function runAxeTests() {
 	await expect( page ).toPassAxeTests( {
 		/**
 		 * Rules are disabled, as there are still accessibility issues within gutenberg.
@@ -186,13 +182,7 @@ async function runAxeTestsForBlockEditor() {
 			'link-name',
 			'listitem',
 			'region',
-		],
-		exclude: [
-			// Ignores elements created by metaboxes.
-			'.edit-post-layout__metaboxes',
-			// Ignores elements created by TinyMCE.
-			'.mce-container',
-		],
+		]
 	} );
 }
 
@@ -235,7 +225,7 @@ beforeAll( async () => {
 // eslint-disable-next-line jest/require-top-level-describe
 afterEach( async () => {
 	await clearLocalStorage();
-	await runAxeTestsForBlockEditor();
+	await runAxeTests();
 	await setupBrowser();
 } );
 
