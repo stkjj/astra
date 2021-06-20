@@ -5,6 +5,8 @@
  * Description: Plugin to add REST Endpoint to delete Astra Settings.
  * Author:      Brainstorm Force
  * Author URI:  https://brainstormforce.com
+ *
+ * @package Astra
  */
 
 namespace Astra\REST;
