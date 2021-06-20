@@ -1,7 +1,6 @@
 import { createURL, createNewPost, setPostContent, publishPost } from '@wordpress/e2e-test-utils';
 import { setCustomize } from '../../../utils/customize';
 import { TPOGRAPHY_TEST_POST_CONTENT } from '../../../utils/post';
-import { assertCSSValue } from '../../../utils/assertions';
 
 /**
  * @jest-environment jsdom
@@ -33,7 +32,7 @@ describe( 'Global Typography settings in the customizer', () => {
 		page.goto( createURL( '/typography-test/' ), { waitUntil: 'networkidle0' } );
 		await page.waitForSelector( '.entry-content' );
 
-		assertCSSValue( '.entry-content p', 'font-size', `${globalTypegraphy['font-size-body'].desktop}${globalTypegraphy['font-size-body']['desktop-unit']}` );
-		assertCSSValue( '.entry-content p', 'font-family', `${globalTypegraphy['body-font-family']}` );
+		await expect( { selector: '.entry-content p', property: 'font-size' } ).cssValueToBe( `${globalTypegraphy['font-size-body'].desktop}${globalTypegraphy['font-size-body']['desktop-unit']}` );
+		await expect( { selector: '.entry-content p', property: 'font-family' } ).cssValueToBe( `${globalTypegraphy['body-font-family']}` );
 	} );
 } );

@@ -17,6 +17,8 @@ import {
 	trashAllPosts,
 } from '@wordpress/e2e-test-utils';
 
+import './expect-extensions';
+
 /**
  * Environment variables
  */
@@ -219,25 +221,4 @@ afterEach( async () => {
 afterAll( async () => {
 	removePageEvents();
 	await siteReset();
-} );
-
-/**
- * `expect` extension to count the number of elements with a given selector on the page.
- */
-expect.extend( {
-	async countToBe( selector, expected ) {
-		const count = await page.$$eval( selector, ( els ) => els.length );
-
-		if ( count !== expected ) {
-			return {
-				pass: false,
-				message: () => `Expected ${ expected } elements for selector ${ selector }. Received ${ count }.`,
-			};
-		}
-
-		return {
-			pass: true,
-			message: () => `Expected ${ expected } elements for selector ${ selector }.`,
-		};
-	},
 } );
