@@ -212,8 +212,9 @@ afterEach( async () => {
 } );
 
 // eslint-disable-next-line jest/require-top-level-describe
-afterAll( () => {
+afterAll( async () => {
 	removePageEvents();
+	await siteReset();
 } );
 
 /**
