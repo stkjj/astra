@@ -165,6 +165,10 @@ function observeConsoleLogging() {
  * @return {?Promise} Promise resolving once Axe texts are finished.
  */
 async function runAxeTests() {
+	if ( await page.$( 'body.wp-admin' ) ) {
+		return;
+	}
+
 	await expect( page ).toPassAxeTests();
 }
 
