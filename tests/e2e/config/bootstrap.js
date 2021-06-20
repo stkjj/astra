@@ -30,7 +30,6 @@ const { PUPPETEER_TIMEOUT } = process.env;
  * @type {Object<string,string>}
  */
 const OBSERVED_CONSOLE_MESSAGE_TYPES = {
-	warning: 'warn',
 	error: 'error',
 };
 

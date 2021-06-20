@@ -12,13 +12,3 @@ namespace Astra\REST;
 require_once __DIR__ . '/rest-api/namespace.php';
 
 bootstrap();
-
-
-add_action(
-	'wp_footer',
-	function () {
-		echo '<pre style="word-break: break-word;">';
-		print_r( json_encode( get_option( 'astra-settings' ), JSON_PRETTY_PRINT ) );
-		echo '</pre>';
-	}
-);
