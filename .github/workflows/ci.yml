@@ -39,7 +39,12 @@ jobs:
       env:
         COMPOSE_INTERACTIVE_NO_CLI: true
 
+    - name: E2E Tests
+      run: npm run test:e2e:ci
+      if: always()
+
     - uses: preactjs/compressed-size-action@v2
+      if: always()
       with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
         # Any JS files anywhere within a dist directory:
@@ -48,9 +53,6 @@ jobs:
         # Always ignore SourceMaps and node_modules:
         exclude: "{**/*.map,**/node_modules/**}"
         build-script: "dynamic-css"
-
-    - name: E2E Tests
-      run: npm run test:e2e:ci
 
     - name: Stop Docker environment
       run: npm run env:stop
