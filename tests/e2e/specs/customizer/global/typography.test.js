@@ -33,7 +33,7 @@ describe( 'Global Typography settings in the customizer', () => {
 		page.goto( createURL( '/typography-test/' ), { waitUntil: 'networkidle0' } );
 		await page.waitForSelector( '.entry-content' );
 
-		assertCSSValue( '.entry-content p', 'font-size', `${globalTypegraphy['font-size-body'].desktop}px` );
+		assertCSSValue( '.entry-content p', 'font-size', `${globalTypegraphy['font-size-body'].desktop}${globalTypegraphy['font-size-body']['desktop-unit']}` );
 		assertCSSValue( '.entry-content p', 'font-family', `${globalTypegraphy['body-font-family']}` );
 	} );
 } );
