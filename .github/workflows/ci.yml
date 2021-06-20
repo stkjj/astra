@@ -49,6 +49,9 @@ jobs:
         exclude: "{**/*.map,**/node_modules/**}"
         build-script: "dynamic-css"
 
+    - name: E2E Tests
+      run: npm run test:e2e:ci
+
     - name: Stop Docker environment
       run: npm run env:stop
       if: always()
