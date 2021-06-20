@@ -165,25 +165,7 @@ function observeConsoleLogging() {
  * @return {?Promise} Promise resolving once Axe texts are finished.
  */
 async function runAxeTests() {
-	await expect( page ).toPassAxeTests( {
-		/**
-		 * Rules are disabled, as there are still accessibility issues within gutenberg.
-		 *
-		 * See: https://github.com/WordPress/gutenberg/pull/15018 & https://github.com/WordPress/gutenberg/issues/15452
-		 */
-		disabledRules: [
-			'aria-allowed-role',
-			'aria-valid-attr-value',
-			'button-name',
-			'color-contrast',
-			'dlitem',
-			'duplicate-id',
-			'label',
-			'link-name',
-			'listitem',
-			'region',
-		]
-	} );
+	await expect( page ).toPassAxeTests();
 }
 
 /**
