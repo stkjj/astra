@@ -64,7 +64,7 @@ jobs:
               env:
                 COMPOSE_INTERACTIVE_NO_CLI: true
 
-            - uses: preactjs/compressed-size-action@2 # v2.1.0
+            - uses: preactjs/compressed-size-action@2
               with:
                   # Any JS files anywhere within a dist directory:
                   pattern: "{assets/**/**/*.js,assets/**/**/*.css}"
