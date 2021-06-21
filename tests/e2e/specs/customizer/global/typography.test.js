@@ -70,7 +70,7 @@ describe( 'Global Typography settings in the customizer', () => {
 		const headingTypography = {
 			'body-font-family': 'inherit',
 			'body-font-weight': '400',
-			'headings-font-family': "'Ubuntu',sans-serif",
+			'headings-font-family': "'Tulpen One', display",
 			'headings-font-weight': '400',
 		};
 
@@ -81,6 +81,6 @@ describe( 'Global Typography settings in the customizer', () => {
 		await expect( {
 			selector: '.site-title a',
 			property: 'font-family',
-		} ).cssValueToBe( 'Ubuntu, sans-serif' );
+		} ).cssValueToBe( `${headingTypography['headings-font-family']}` );
 	} );
 } );
