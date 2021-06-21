@@ -31,7 +31,7 @@ describe( 'Global Typography settings in the customizer', () => {
 		await createNewPost( { postType: 'post', title: 'Typography Test' } );
 		await setPostContent( TPOGRAPHY_TEST_POST_CONTENT );
 		await publishPost();
-		page.goto( createURL( '/typography-test/' ), {
+		await page.goto( createURL( '/typography-test/' ), {
 			waitUntil: 'networkidle0',
 		} );
 		await page.waitForSelector( '.entry-content' );
@@ -57,7 +57,7 @@ describe( 'Global Typography settings in the customizer', () => {
 		};
 
 		await setCustomize( globalTypegraphy );
-		page.goto( createURL( '/' ), { waitUntil: 'networkidle0' } );
+		await page.goto( createURL( '/' ), { waitUntil: 'networkidle0' } );
 		await page.waitForSelector( '.entry-content' );
 
 		await expect( {
@@ -75,7 +75,7 @@ describe( 'Global Typography settings in the customizer', () => {
 		};
 
 		await setCustomize( headingTypography );
-		page.goto( createURL( '/' ), { waitUntil: 'networkidle0' } );
+		await page.goto( createURL( '/' ), { waitUntil: 'networkidle0' } );
 		await page.waitForSelector( '.entry-content' );
 
 		await expect( {
