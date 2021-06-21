@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<psalm totallyTyped="true" ensureArrayStringOffsetsExist="true" errorLevel="4">
+<psalm ensureArrayStringOffsetsExist="true" errorLevel="5">
     <projectFiles>
         <directory name="./"/>
         <ignoreFiles>
