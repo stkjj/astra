@@ -1,5 +1,5 @@
 v3.6.1
-- Fix: Avoided extra search-form markup and added compatibility with get_search_form().
+- Fix: Theme check warning - Replaced search form markup with get_search_form().
 
 v3.6.0
 - New: Performance - Load Google Font locally. (https://wpastra.com/docs/self-hosted-google-fonts/)
