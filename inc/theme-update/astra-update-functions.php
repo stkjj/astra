@@ -3070,7 +3070,7 @@ function astra_transparent_header_default_value() {
 /**
  * Clear Astra + Astra Pro assets cache.
  *
- * @since x.x.x
+ * @since 3.6.1
  * @return void.
  */
 function astra_clear_all_assets_cache() {
