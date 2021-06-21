@@ -9,7 +9,8 @@
     "wptrt/wpthemereview": "^0.2.0",
     "szepeviktor/phpstan-wordpress": "^0.7.5",
     "phpstan/extension-installer": "^1.1",
-    "php-stubs/woocommerce-stubs": "^5.2"
+    "php-stubs/woocommerce-stubs": "^5.2",
+    "humanmade/psalm-plugin-wordpress": "^2.0"
   },
   "extra": {
     "hooks": {
@@ -23,6 +24,7 @@
     "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
     "post-update-cmd": "vendor/bin/cghooks update",
     "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
-    "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source"
+    "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source",
+    "check-types": "./vendor/bin/psalm"
   }
 }
