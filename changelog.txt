@@ -1,5 +1,5 @@
 v3.6.1
-- Fix: Displaying desktop and mobile headers together due to Astra's cache.
+- Fix: Both desktop and mobile headers appearing on desktop due to Astra's cache.
 
 v3.6.0
 - New: Performance - Load Google Font locally. (https://wpastra.com/docs/self-hosted-google-fonts/)
