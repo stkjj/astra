@@ -25,6 +25,7 @@
     "post-update-cmd": "vendor/bin/cghooks update",
     "format": "phpcbf --standard=phpcs.xml.dist --report-summary --report-source",
     "lint": "phpcs --standard=phpcs.xml.dist --report-summary --report-source",
-    "check-types": "./vendor/bin/psalm"
+    "psalm": "./vendor/bin/psalm",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=1G"
   }
 }
