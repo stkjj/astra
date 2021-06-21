@@ -13,9 +13,9 @@ describe( 'Global Typography settings in the customizer', () => {
 			"body-font-weight": "800",
 			"body-text-transform": "",
 			"font-size-body": {
-				"desktop": 19,
-				"tablet": "",
-				"mobile": "",
+				"desktop": 21,
+				"tablet": "20",
+				"mobile": "18",
 				"desktop-unit": "px",
 				"tablet-unit": "px",
 				"mobile-unit": "px"
@@ -34,5 +34,35 @@ describe( 'Global Typography settings in the customizer', () => {
 
 		await expect( { selector: '.entry-content p', property: 'font-size' } ).cssValueToBe( `${globalTypegraphy['font-size-body'].desktop}${globalTypegraphy['font-size-body']['desktop-unit']}` );
 		await expect( { selector: '.entry-content p', property: 'font-family' } ).cssValueToBe( `${globalTypegraphy['body-font-family']}` );
+	} );
+
+	it ( 'body typography and heading typography combinations for site title', async () => {
+		const globalTypegraphy = {
+			"body-font-family": "'Open Sans', sans-serif",
+			"body-font-weight": "400",
+			"headings-font-family": "inherit",
+			"headings-font-weight": "400",
+		};
+
+		await setCustomize( globalTypegraphy );
+		page.goto( createURL( '/' ), { waitUntil: 'networkidle0' } );
+		await page.waitForSelector( '.entry-content' );
+
+		await expect( { selector: '.site-title a', property: 'font-family' } ).cssValueToBe( `${globalTypegraphy['body-font-family']}` );
+	} );
+
+	it ( 'Heading typography is applied when global headings typography is set', async () => {
+		const headingTypography = {
+			"body-font-family": "inherit",
+			"body-font-weight": "400",
+			"headings-font-family": "'Ubuntu',sans-serif",
+			"headings-font-weight": "400",
+		};
+
+		await setCustomize( headingTypography );
+		page.goto( createURL( '/' ), { waitUntil: 'networkidle0' } );
+		await page.waitForSelector( '.entry-content' );
+
+		await expect( { selector: '.site-title a', property: 'font-family' } ).cssValueToBe( 'Ubuntu, sans-serif' );
 	} );
 } );
