@@ -23,4 +23,4 @@ jobs:
         run: vendor/bin/phpcs
 
       - name: "Static Analysis"
-        run: vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=1G
+        run: composer run psalm
