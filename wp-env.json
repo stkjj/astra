@@ -1,0 +1,10 @@
+{
+	"core": "WordPress/WordPress",
+	"themes": [ "astra" ],
+	"env": {
+		"tests": {
+			"mappings": {
+			}
+		}
+	}
+}
