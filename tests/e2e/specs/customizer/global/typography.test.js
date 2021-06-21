@@ -81,6 +81,6 @@ describe( 'Global Typography settings in the customizer', () => {
 		await expect( {
 			selector: '.site-title a',
 			property: 'font-family',
-		} ).cssValueToBe( `${headingTypography['headings-font-family']}` );
+		} ).cssValueToBe( `${ headingTypography[ 'headings-font-family' ] }` );
 	} );
 } );
