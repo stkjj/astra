@@ -3,7 +3,7 @@ import { TPOGRAPHY_TEST_POST_CONTENT } from '../../utils/post';
 import { setCustomize } from '../../utils/customize';
 
 describe( 'Typography in the block editor', () => {
-	it( 'should load properly', async () => {
+	it( 'should work as set in the customizer for h1-h6', async () => {
 		const headingTypography = {
 			'headings-font-family': "'Alex Brush', handwriting",
 			'headings-font-weight': '400',
@@ -118,7 +118,7 @@ describe( 'Typography in the block editor', () => {
 			`${ headingTypography[ 'font-size-h4' ].desktop }${ headingTypography[ 'font-size-h4' ][ 'desktop-unit' ] }`,
 		);
 
-		// Test typography for h3.
+		// Test typography for h5.
 		await expect( {
 			selector: '.block-editor-writing-flow h5',
 			property: 'font-family',
@@ -134,6 +134,24 @@ describe( 'Typography in the block editor', () => {
 			property: 'font-size',
 		} ).cssValueToBe(
 			`${ headingTypography[ 'font-size-h5' ].desktop }${ headingTypography[ 'font-size-h5' ][ 'desktop-unit' ] }`,
+		);
+
+		// Test typography for h6.
+		await expect( {
+			selector: '.block-editor-writing-flow h6',
+			property: 'font-family',
+		} ).cssValueToBe( `${ headingTypography[ 'headings-font-family' ] }` );
+
+		await expect( {
+			selector: '.block-editor-writing-flow h6',
+			property: 'font-weight',
+		} ).cssValueToBe( `${ headingTypography[ 'headings-font-weight' ] }` );
+
+		await expect( {
+			selector: '.block-editor-writing-flow h6',
+			property: 'font-size',
+		} ).cssValueToBe(
+			`${ headingTypography[ 'font-size-h6' ].desktop }${ headingTypography[ 'font-size-h6' ][ 'desktop-unit' ] }`,
 		);
 	} );
 } );
