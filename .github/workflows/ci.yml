@@ -19,6 +19,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Use desired version of NodeJS
+      uses: actions/setup-node@v2
+      with:
+          node-version: 12
+
     - name: Cache NPM packages
       uses: actions/cache@v2
       with:
