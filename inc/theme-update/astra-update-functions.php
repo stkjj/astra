@@ -3073,7 +3073,7 @@ function astra_transparent_header_default_value() {
  * @since x.x.x
  * @return void.
  */
-function astra_clear_cache_assets() {
+function astra_clear_addon_and_theme_assets_cache() {
 	if ( class_exists( 'Astra_Cache_Base' ) ) {
 		// Clear Astra theme cache.
 		$astra_cache_base_instance = new Astra_Cache_Base( 'astra' );

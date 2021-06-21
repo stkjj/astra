@@ -91,7 +91,7 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 				'astra_transparent_header_default_value',
 			),
 			'3.6.1' => array(
-				'astra_clear_cache_assets',
+				'astra_clear_addon_and_theme_assets_cache',
 			),
 		);
 
