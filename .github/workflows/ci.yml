@@ -3,12 +3,6 @@ name: CI
 # Run the deployment only when code is committed to the branch.
 on:
   pull_request:
-      branches:
-      - next-release
-      - milestones
-      - release-candidate
-      - master
-      - dev
 
 # Cancels all previous workflow runs for pull requests that have not completed.
 concurrency:
