@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<psalm ensureArrayStringOffsetsExist="true" reportMixedIssues="false" errorLevel="1">
+<psalm ensureArrayStringOffsetsExist="true" reportMixedIssues="false" errorLevel="1" errorBaseline="tests/php/psalm-baseline.xml">
     <projectFiles>
         <directory name="./"/>
         <ignoreFiles>
