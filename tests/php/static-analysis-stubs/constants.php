@@ -1,6 +1,6 @@
 <?php
 
-define( 'ASTRA_THEME_DIR', __DIR__ );
+define( 'ASTRA_THEME_DIR', '' );
 define( 'ASTRA_THEME_URI', '' );
 define( 'SCRIPT_DEBUG', true );
 define( 'WP_PLUGIN_DIR', '' );

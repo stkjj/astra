@@ -38,6 +38,16 @@
                 <directory name="."/>
             </errorLevel>
         </InvalidReturnType>
+		<UnresolvableInclude>
+            <errorLevel type="suppress">
+                <file name="functions.php"/>
+            </errorLevel>
+        </UnresolvableInclude>
+		<HookNotFound>
+			<errorLevel type="suppress">
+                <directory name="."/>
+            </errorLevel>
+		</HookNotFound>
     </issueHandlers>
     <plugins>
         <pluginClass xmlns="https://getpsalm.org/schema/config" class="PsalmWordPress\Plugin"/>
