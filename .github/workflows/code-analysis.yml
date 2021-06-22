@@ -1,9 +1,9 @@
-name: PHP_CodeSniffer
+name: Code Analysis
 
 on: pull_request
 
 jobs:
-  phpcs:
+  analysis:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
