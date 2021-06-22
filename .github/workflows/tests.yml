@@ -12,7 +12,7 @@ concurrency:
     cancel-in-progress: true
 
 jobs:
-  Test:
+  E2ETests:
 
     runs-on: ubuntu-latest
 
@@ -39,10 +39,6 @@ jobs:
       run: npm run env:start
       env:
         COMPOSE_INTERACTIVE_NO_CLI: true
-
-    - name: Lint JS
-      if: always()
-      run: npm run lint:js
 
     - name: E2E Tests
       if: always()
