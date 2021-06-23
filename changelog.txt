@@ -1,5 +1,5 @@
 v3.6.2
-- Fix: 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
+- Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
 
 v3.6.1
 - Fix: Theme check warning - Replaced search form markup with get_search_form().
