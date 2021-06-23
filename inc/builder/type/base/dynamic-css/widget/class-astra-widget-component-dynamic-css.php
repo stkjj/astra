@@ -78,16 +78,16 @@ class Astra_Widget_Component_Dynamic_CSS {
 			/**
 			 * Updating spacing CSS handle.
 			 */
-			$top_spacing_selector = 'padding-top';
+			$top_spacing_selector    = 'padding-top';
 			$bottom_spacing_selector = 'padding-bottom';
-			$right_spacing_selector = 'padding-right';
-			$left_spacing_selector = 'padding-left';
+			$right_spacing_selector  = 'padding-right';
+			$left_spacing_selector   = 'padding-left';
 
-			if( astra_check_existing_widgets_with_margin_space() ) {
-				$top_spacing_selector = 'margin-top';
+			if ( astra_check_existing_widgets_with_margin_space() ) {
+				$top_spacing_selector    = 'margin-top';
 				$bottom_spacing_selector = 'margin-bottom';
-				$right_spacing_selector = 'margin-right';
-				$left_spacing_selector = 'margin-left';
+				$right_spacing_selector  = 'margin-right';
+				$left_spacing_selector   = 'margin-left';
 			}
 
 			$css_output_desktop = array(
