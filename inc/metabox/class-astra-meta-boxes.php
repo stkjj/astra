@@ -335,6 +335,11 @@ if ( ! class_exists( 'Astra_Meta_Boxes' ) ) {
 						</div>
 					<?php } ?>
 
+					<?php
+					$footer_adv_layout = astra_get_option( 'footer-adv' );
+
+					if ( $show_meta_field && ( 'disabled' != $footer_adv_layout || true === Astra_Builder_Helper::$is_header_footer_builder_active ) ) {
+						?>
 					<div class="footer-adv-display-option-wrap">
 						<label for="footer-adv-display">
 							<input type="checkbox" id="footer-adv-display" name="footer-adv-display" value="disabled" <?php checked( $footer_widgets, 'disabled' ); ?> />
@@ -342,12 +347,20 @@ if ( ! class_exists( 'Astra_Meta_Boxes' ) ) {
 						</label>
 					</div>
 
+						<?php
+					}
+					$footer_sml_layout = astra_get_option( 'footer-sml-layout' );
+					if ( 'disabled' != $footer_sml_layout || true === Astra_Builder_Helper::$is_header_footer_builder_active ) {
+						?>
 					<div class="footer-sml-layout-option-wrap">
 						<label for="footer-sml-layout">
 							<input type="checkbox" id="footer-sml-layout" name="footer-sml-layout" value="disabled" <?php checked( $footer_bar, 'disabled' ); ?> />
 							<?php esc_html_e( 'Disable Footer', 'astra' ); ?>
 						</label>
 					</div>
+						<?php
+					}
+					?>
 					<?php do_action( 'astra_meta_box_markup_disable_sections_after', $meta ); ?>
 				</div>
 			</div>
