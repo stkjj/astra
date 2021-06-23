@@ -86,7 +86,7 @@ class Astra_Related_Posts_Markup {
 
 			while ( $query_posts->have_posts() && $post_counter < $total_posts_count ) {
 				$query_posts->the_post();
-				$post_id = get_the_ID();
+				$post_id    = get_the_ID();
 				$output_str = astra_get_post_meta( $related_post_meta );
 
 				if ( is_array( $exclude_ids ) && ! in_array( $post_id, $exclude_ids ) ) {
