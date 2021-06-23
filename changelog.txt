@@ -1,5 +1,5 @@
 v3.6.2
-- Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
+- Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block
 - Fix: Related Posts articles showing meta structure based on current active post.
 
 v3.6.1
