@@ -65,6 +65,6 @@
     "env:destroy": "wp-env destroy",
     "env:reset-site": "wp-env clean all",
     "dynamic-css": "node ./bin/scripts/dynamic-css-to-file.js http://localhost:8888 '#astra-theme-css-inline-css'",
-    "wp-env": "wp-env"
+    "env": "wp-env"
   }
 }
