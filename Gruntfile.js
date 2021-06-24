@@ -590,6 +590,7 @@ module.exports = function (grunt) {
                     '!.gitignore',
                     '!phpunit.xml',
                     '!README.md',
+                    '!artifacts',
                     '!sass/**',
                     '!codesniffer.ruleset.xml',
                     '!vendor/**',
