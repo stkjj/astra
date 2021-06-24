@@ -83,7 +83,7 @@ class Astra_Widget_Component_Dynamic_CSS {
 			$right_spacing_selector  = 'padding-right';
 			$left_spacing_selector   = 'padding-left';
 
-			if ( astra_check_existing_widgets_with_margin_space() ) {
+			if ( astra_is_builder_widgets_have_margin_space() ) {
 				$top_spacing_selector    = 'margin-top';
 				$bottom_spacing_selector = 'margin-bottom';
 				$right_spacing_selector  = 'margin-right';

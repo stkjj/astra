@@ -653,7 +653,7 @@ function astra_get_transparent_header_default_value() {
  *
  * @since x.x.x
  */
-function astra_check_existing_widgets_with_margin_space() {
+function astra_is_builder_widgets_have_margin_space() {
 	$astra_settings                                      = get_option( ASTRA_THEME_SETTINGS );
 	$astra_settings['builder-widgets-with-margin-space'] = isset( $astra_settings['builder-widgets-with-margin-space'] ) ? true : false;
 	return apply_filters( 'astra_use_widget_spacing_with_margin', $astra_settings['builder-widgets-with-margin-space'] );
