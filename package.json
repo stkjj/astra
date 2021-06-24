@@ -48,9 +48,6 @@
     "puppeteer": "^8.0.0"
   },
   "scripts": {
-    "env:start:old": "./bin/local-env/start.sh",
-    "env:stop:old": "./bin/local-env/stop.sh",
-    "env:reset-site:old": "./bin/local-env/install-wordpress.sh --reset-site",
     "pree2etests": "cross-env sh ./bin/scripts/pre-e2e-tests.sh",
     "test:e2e": "npm run pree2etests && cross-env WP_BASE_URL=http://localhost:8888 wp-scripts test-e2e --config=tests/e2e/jest.config.js",
     "test:e2e:interactive": "npm run test:e2e -- --puppeteer-interactive",
