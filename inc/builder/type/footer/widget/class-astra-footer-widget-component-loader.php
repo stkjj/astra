@@ -52,7 +52,6 @@ class Astra_Footer_Widget_Component_Loader {
 				'tablet_break_point'       => astra_get_tablet_breakpoint(),
 				'mobile_break_point'       => astra_get_mobile_breakpoint(),
 				'is_flex_based_css'        => Astra_Builder_Helper::apply_flex_based_css(),
-				'footer_with_margin_space' => astra_is_builder_widgets_have_margin_space(),
 			)
 		);
 	}
