@@ -77,7 +77,7 @@ function astra_fb_widget_dynamic_css( $dynamic_css, $dynamic_css_filtered = '' )
 			),
 		);
 
-		if( is_support_footer_widget_right_margin() ) {
+		if ( is_support_footer_widget_right_margin() ) {
 			$css_output_desktop['.footer-widget-area.widget-area.site-footer-focus-item'] = array(
 				'width' => 'auto',
 			);
