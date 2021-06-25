@@ -598,7 +598,7 @@ function astra_builder_widget_css( builder_type = 'header' ) {
 						dynamicStyle += 'margin-bottom: ' + margin['mobile']['bottom'] + margin['desktop-unit'] + ';';
 						dynamicStyle += '} ';
 						dynamicStyle += '} ';
-						astra_add_dynamic_css( 'sidebar-widgets-' + builder_type + '-widget-' + index + '-space', dynamicStyle );
+						astra_add_dynamic_css( 'sidebar-widgets-' + builder_type + '-widget-' + index + '-margin', dynamicStyle );
 					}
 				} );
 			} );
