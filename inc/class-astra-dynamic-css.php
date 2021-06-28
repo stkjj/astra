@@ -2263,7 +2263,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			/* Parse CSS from array()*/
 			$parse_css .= astra_parse_css( $site_width, astra_get_tablet_breakpoint( '', 1 ) );
-			
+
 			if ( Astra_Builder_Helper::apply_flex_based_css() ) {
 				$max_site_container_css = array(
 					'.site-content .ast-container' => array(
