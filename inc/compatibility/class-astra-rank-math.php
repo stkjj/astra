@@ -22,7 +22,7 @@ class Astra_Rank_Math {
 	 * Constructor
 	 */
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'web_stories_setup' ) );
+		add_action( 'after_setup_theme', array( $this, 'rank_math_setup' ) );
 	}
 
 	/**
@@ -31,7 +31,7 @@ class Astra_Rank_Math {
 	 * @since x.x.x
 	 * @return void
 	 */
-	public function web_stories_setup() {
+	public function rank_math_setup() {
 		add_theme_support( 'rank-math-breadcrumbs' );
 	}
 }
