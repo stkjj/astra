@@ -19,18 +19,18 @@ describe( 'Related Posts correct Author Name', () => {
 		await setCustomize( relatedPosts );
 
 		// Create New User.
-		await createUser( 'teamAstra01', '', '', 'administrator' );
+		await createUser( 'adminRelatedPost', '', '', 'administrator' );
 
 		// Create New Post.
 		await createNewPost( { postType: 'post', title: 'Related Post - admin' } );
 		await publishPost();
 
 		// Create New Post.
-		await createNewPost( { postType: 'post', title: 'Related Post - teamAstra01' } );
+		await createNewPost( { postType: 'post', title: 'Related Post - adminRelatedPost' } );
 		await publishPost();
 		await visitAdminPage( 'edit.php' );
 
-		const title = 'teamAstra01';
+		const title = 'adminRelatedPost';
 
 		const [ postLink ] = await page.$x(
 			`//td[@data-colname="Title"]//a[contains(text(), "${ title }")]`
@@ -72,7 +72,7 @@ describe( 'Related Posts correct Author Name', () => {
 		await page.keyboard.press( 'Tab' );
 		await page.keyboard.press( 'Tab' );
 
-		// Set Post Author to New User - teamAstra01.
+		// Set Post Author to New User - adminRelatedPost.
 		await page.keyboard.press( 'Enter' );
 
 		await page.goto( createURL( '/related-post-admin/' ), {
@@ -91,6 +91,6 @@ describe( 'Related Posts correct Author Name', () => {
 		relatedPostAuthor = await page.evaluate( el => el.textContent, relatedPostAuthor );
 
 		// Check if related post author name correct or not. If not, throw error.
-		await expect( relatedPostAuthor ).toBe( 'teamAstra01' );
+		await expect( relatedPostAuthor ).toBe( 'adminRelatedPost' );
 	});
 } );
