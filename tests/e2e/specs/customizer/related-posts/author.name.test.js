@@ -19,7 +19,7 @@ describe( 'Related Posts correct Author Name', () => {
 		await setCustomize( relatedPosts );
 
 		// Create New User.
-		await createUser( 'adminRelatedPost', '', '', 'administrator' );
+		await createUser( 'adminRelatedPost', { role: 'administrator' } );
 
 		// Create New Post.
 		await createNewPost( { postType: 'post', title: 'Related Post - admin' } );
