@@ -82,20 +82,16 @@ describe( 'Related Posts correct Author Name', () => {
 		await page.waitForSelector( '.entry-content' );
 
 		let currentPostAuthor = await page.$('.single-layout-1 .author-name');
-		let currentPostAuthorValue = await page.evaluate(el => el.textContent, currentPostAuthor);
+		currentPostAuthor = await page.evaluate(el => el.textContent, currentPostAuthor);
 
 		// Check if current author name correct or not. If not, throw error.
-		if ( 'admin' !== currentPostAuthorValue ) {
-			throw 'Author name for Current Post is not correct in the frontend!';
-		}
+		await expect( currentPostAuthor ).toBe('admin');
 
-		let relatedPostAuthor = await page.$('.ast-related-post-content .author-name');
-		let relatedPostAuthorValue = await page.evaluate(el => el.textContent, relatedPostAuthor);
+		let relatedPostAuthor = await page.$( '.ast-related-post-content .author-name' );
+		relatedPostAuthor = await page.evaluate( el => el.textContent, relatedPostAuthor );
 
 		// Check if related post author name correct or not. If not, throw error.
-		if ( 'teamAstra01' !== relatedPostAuthorValue ) {
-			throw 'Author name for Related Post is not correct in the frontend!';
-		}
+		await expect( relatedPostAuthor ).toBe('teamAstra01');
 
 		// Delete user teamAstra01.
 		await deleteUser( 'teamAstra01' );
