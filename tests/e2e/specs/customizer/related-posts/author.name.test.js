@@ -28,13 +28,13 @@ describe( 'Related Posts correct Author Name', () => {
 		// Select new user for publishing the post.
 		await page.waitForSelector( '#inspector-select-control-3' );
 
-		const option = (await page.$x(
-			'//*[@id = "inspector-select-control-3"]/option[text() = "adminRelatedPost"]'
-		))[0];
+		const authorNameOption = ( await page.$x(
+			'//*[@id = "inspector-select-control-3"]/option[text() = "adminRelatedPost"]',
+		) )[0];
 
-		const value = await (await option.getProperty('value')).jsonValue();
+		const authorNameValue = await (await authorNameOption.getProperty('value')).jsonValue();
 
-		await page.select('#inspector-select-control-3', value);
+		await page.select( '#inspector-select-control-3', authorNameValue );
 
 		await publishPost();
 
