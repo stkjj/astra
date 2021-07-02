@@ -1,5 +1,5 @@
  /**
-  * Internal dependencies
+  * WordPress dependencies.
   */
  import { switchUserToAdmin } from '@wordpress/e2e-test-utils';
  import { switchUserToTest } from '@wordpress/e2e-test-utils';
@@ -10,10 +10,11 @@
  *
  * @param {string}  username  User name.
  * @param {string?} firstName First name.
- * @param {string?} lastName  Larst name.
+ * @param {string?} lastName  Last name.
+ * @param {string?} role  Role.
  */
  export async function createUser( username, firstName, lastName, role ) {
-	 console.log(username);
+
 	await switchUserToAdmin();
 	await visitAdminPage( 'user-new.php' );
 

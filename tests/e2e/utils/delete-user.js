@@ -1,5 +1,5 @@
 /**
- * Internal dependencies
+ * WordPress dependencies
  */
  import { switchUserToAdmin } from '@wordpress/e2e-test-utils';
  import { switchUserToTest } from '@wordpress/e2e-test-utils';
@@ -35,6 +35,7 @@
 		 page.waitForNavigation( { waitUntil: 'networkidle0' } ),
 	 ] );
 
+	//  Select radio button to delete all the content.
 	 await page.click( 'input#delete_option0' );
 
 	 // Confirm
