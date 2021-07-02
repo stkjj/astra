@@ -38,6 +38,7 @@ class Astra_Customizer_Header_Builder_Configs extends Astra_Customizer_Config_Ba
 
 		$cloned_component_track = Astra_Builder_Helper::$component_count_array;
 		$widget_config          = array();
+		$astra_is_wp5_8_version = astra_is_wp5_8_version();
 
 		for ( $index = 1; $index <= Astra_Builder_Helper::$num_of_header_button; $index++ ) {
 
@@ -98,18 +99,22 @@ class Astra_Customizer_Header_Builder_Configs extends Astra_Customizer_Config_Ba
 				'builder' => 'header',
 			);
 
-			$widget_config[] = array(
-				'name'     => $header_widget_section,
-				'type'     => 'section',
-				'priority' => 5,
-				'panel'    => 'panel-header-builder-group',
-			);
+			if ( $astra_is_wp5_8_version ) {
+				$widget_config[] = array(
+					'name'     => $header_widget_section,
+					'type'     => 'section',
+					'priority' => 5,
+					'panel'    => 'panel-header-builder-group',
+				);
+			}
 
 			Astra_Builder_Helper::$header_desktop_items[ 'widget-' . $index ] = $item;
 			Astra_Builder_Helper::$header_mobile_items[ 'widget-' . $index ]  = $item;
 		}
-
-		$configurations = array_merge( $configurations, $widget_config );
+		
+		if ( $astra_is_wp5_8_version ) {
+			$configurations = array_merge( $configurations, $widget_config );
+		}
 
 		for ( $index = 1; $index <= Astra_Builder_Helper::$num_of_header_menu; $index++ ) {
 

@@ -106,24 +106,22 @@ const ItemComponent = props => {
 			</div>
 		}
 		
-		{props.item.includes('widget') &&(
+		{ astra.customizer.is_block_widget && props.item.includes('widget') &&(
 		<Button	className="ahfb-builder-item-icon" onClick={ (e) => {
-							e.stopPropagation();
-							props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? choices[props.item].section : '' );
-							} }
-						>
-						<Dashicon icon="dashicon dashicons dashicons-admin-generic"/>
-				</Button>
+				e.stopPropagation();
+				props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? choices[props.item].section : '' );
+				} }>
+			<Dashicon icon="dashicon dashicons dashicons-admin-generic"/>
+		</Button>
 		)}
 
-		{props.item.includes('widget') &&(
+		{astra.customizer.is_block_widget && props.item.includes('widget') &&(
 		<Button	className="ahfb-builder-item-icon" onClick={ (e) => {
-							e.stopPropagation();
-							props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? 'astra-' + choices[props.item].section : '' );
-							} }
-						>
-						<Dashicon icon="dashicon dashicons dashicons-admin-settings"/>
-				</Button>
+				e.stopPropagation();
+				props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? 'astra-' + choices[props.item].section : '' );
+				} }>
+			<Dashicon icon="dashicon dashicons dashicons-admin-settings"/>
+		</Button>
 		)}
 
 		<Button className="ahfb-builder-item-icon" onClick={e => {
