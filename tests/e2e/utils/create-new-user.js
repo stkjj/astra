@@ -14,7 +14,6 @@
  * @param {string?} role  Role.
  */
  export async function createUser( username, firstName, lastName, role ) {
-
 	await switchUserToAdmin();
 	await visitAdminPage( 'user-new.php' );
 
