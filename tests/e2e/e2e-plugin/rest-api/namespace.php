@@ -41,6 +41,14 @@ function rest_route() : void {
 					delete_option( 'site_icon' );
 					update_option( 'blogdescription', 'Astra Test Enviornment' );
 
+					$all_users = get_users();
+					require_once(ABSPATH.'wp-admin/includes/user.php');
+					foreach ( $all_users as $user ) {
+						if ( 1 !== (int) $user->data->ID ) {
+							wp_delete_user( $user->data->ID );
+						}
+					}
+
 					return rest_ensure_response(
 						array(
 							'success' => true,

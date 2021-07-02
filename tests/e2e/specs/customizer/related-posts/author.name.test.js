@@ -92,11 +92,5 @@ describe( 'Related Posts correct Author Name', () => {
 
 		// Check if related post author name correct or not. If not, throw error.
 		await expect( relatedPostAuthor ).toBe('teamAstra01');
-
-		// Delete user teamAstra01.
-		await deleteUser( 'teamAstra01' );
-
-		// Delete all newly create posts.
-		await trashAllPosts();
 	});
 } );
