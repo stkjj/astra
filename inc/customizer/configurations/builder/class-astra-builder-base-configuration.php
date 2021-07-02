@@ -268,12 +268,12 @@ final class Astra_Builder_Base_Configuration {
 
 		for ( $index = 1; $index <= $component_limit; $index++ ) {
 
-			$_section = 'sidebar-widgets-' . $type . '-widget-' . $index;
+			$_section = 'astra-sidebar-widgets-' . $type . '-widget-' . $index;
 
 			$html_config[] = array(
 
 				array(
-					'name'        => 'sidebar-widgets-' . $type . '-widget-' . $index,
+					'name'        => $_section,
 					'type'        => 'section',
 					'priority'    => 5,
 					'title'       => __( 'Widget ', 'astra' ) . $index,

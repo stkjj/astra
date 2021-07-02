@@ -105,6 +105,16 @@ const ItemComponent = props => {
 				}
 			</div>
 		}
+		
+		{props.item.includes('widget') &&(
+		<Button	className="ahfb-builder-item-icon" onClick={ (e) => {
+							e.stopPropagation();
+							props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? 'astra-'+choices[props.item].section : '' );
+							} }
+						>
+						<Dashicon icon="dashicon dashicons dashicons-admin-generic"/>
+				</Button>
+		)}
 
 		<Button className="ahfb-builder-item-icon" onClick={e => {
 			e.stopPropagation();
