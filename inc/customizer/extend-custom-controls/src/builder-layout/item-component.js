@@ -107,7 +107,7 @@ const ItemComponent = props => {
 		}
 		
 		{ astra.customizer.is_block_widget && props.item.includes('widget') &&(
-		<Button	className="ahfb-builder-item-icon" onClick={ (e) => {
+		<Button	className="ahfb-builder-item-icon ahfb-setting-icon" onClick={ (e) => {
 				e.stopPropagation();
 				props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? choices[props.item].section : '' );
 				} }>
@@ -116,7 +116,7 @@ const ItemComponent = props => {
 		)}
 
 		{astra.customizer.is_block_widget && props.item.includes('widget') &&(
-		<Button	className="ahfb-builder-item-icon" onClick={ (e) => {
+		<Button	className="ahfb-builder-item-icon ahfb-setting-icon" onClick={ (e) => {
 				e.stopPropagation();
 				props.focusItem( undefined !== choices[props.item] && undefined !== choices[props.item].section ? 'astra-' + choices[props.item].section : '' );
 				} }>
