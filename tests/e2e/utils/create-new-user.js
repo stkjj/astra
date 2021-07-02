@@ -12,7 +12,7 @@
  * @param {string?} firstName First name.
  * @param {string?} lastName  Larst name.
  */
- export async function createUser( username, firstName, lastName ) {
+ export async function createUser( username, firstName, lastName, role ) {
 	 console.log(username);
 	await switchUserToAdmin();
 	await visitAdminPage( 'user-new.php' );
@@ -25,6 +25,10 @@
 	if ( lastName ) {
 		await page.type( '#last_name', lastName );
 	}
+	if ( role ) {
+		await page.select( '#role', role );
+	}
+
 	await page.click( '#send_user_notification' );
 
 	await Promise.all( [

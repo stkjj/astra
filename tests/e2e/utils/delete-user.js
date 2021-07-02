@@ -35,6 +35,8 @@
 		 page.waitForNavigation( { waitUntil: 'networkidle0' } ),
 	 ] );
 
+	 await page.click( 'input#delete_option0' );
+
 	 // Confirm
 	 await Promise.all( [
 		 page.click( 'input#submit' ),
