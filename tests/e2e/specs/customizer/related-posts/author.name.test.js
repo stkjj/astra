@@ -81,16 +81,16 @@ describe( 'Related Posts correct Author Name', () => {
 
 		await page.waitForSelector( '.entry-content' );
 
-		let currentPostAuthor = await page.$('.single-layout-1 .author-name');
-		currentPostAuthor = await page.evaluate(el => el.textContent, currentPostAuthor);
+		let currentPostAuthor = await page.$( '.single-layout-1 .author-name' );
+		currentPostAuthor = await page.evaluate( el => el.textContent, currentPostAuthor );
 
 		// Check if current author name correct or not. If not, throw error.
-		await expect( currentPostAuthor ).toBe('admin');
+		await expect( currentPostAuthor ).toBe( 'admin' );
 
 		let relatedPostAuthor = await page.$( '.ast-related-post-content .author-name' );
 		relatedPostAuthor = await page.evaluate( el => el.textContent, relatedPostAuthor );
 
 		// Check if related post author name correct or not. If not, throw error.
-		await expect( relatedPostAuthor ).toBe('teamAstra01');
+		await expect( relatedPostAuthor ).toBe( 'teamAstra01' );
 	});
 } );
