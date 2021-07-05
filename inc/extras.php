@@ -656,7 +656,7 @@ function astra_get_transparent_header_default_value() {
  */
 function astra_has_widgets_block_editor() {
 	if ( ( defined( 'GUTENBERG_VERSION' ) && version_compare( GUTENBERG_VERSION, '10.6.2', '>' ) ) 
-	|| version_compare( get_bloginfo( 'version' ), '5.8-wew', '>=' ) ) {
+	|| version_compare( get_bloginfo( 'version' ), '5.8-alpha', '>=' ) ) {
 		return true;
 	}
 	return false;
