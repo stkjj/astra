@@ -2,13 +2,12 @@ import {
 	createURL,
 	createNewPost,
 	publishPost,
-	visitAdminPage,
 } from '@wordpress/e2e-test-utils';
 import { setCustomize } from '../../../utils/set-customize';
 import { createUser } from '../../../utils/create-new-user';
 
 describe( 'Related Posts correct Author Name', () => {
-	it( 'Related Posts should display correct author name', async () => {
+	it( 'related posts should display correct author name', async () => {
 		const relatedPosts = {
 			'enable-related-posts': true,
 		};
@@ -29,10 +28,10 @@ describe( 'Related Posts correct Author Name', () => {
 		await page.waitForSelector( '#inspector-select-control-3' );
 
 		const authorNameOption = ( await page.$x(
-			'//*[@id = "inspector-select-control-3"]/option[text() = "adminRelatedPost"]',
+			'//*[ @id = "inspector-select-control-3"]/option[text() = "adminRelatedPost" ]',
 		) )[0];
 
-		const authorNameValue = await (await authorNameOption.getProperty('value')).jsonValue();
+		const authorNameValue = await ( await authorNameOption.getProperty( 'value' ) ).jsonValue();
 
 		await page.select( '#inspector-select-control-3', authorNameValue );
 
@@ -45,13 +44,13 @@ describe( 'Related Posts correct Author Name', () => {
 		await page.waitForSelector( '.entry-content' );
 
 		let currentPostAuthor = await page.$( '.single-layout-1 .author-name' );
-		currentPostAuthor = await page.evaluate( el => el.textContent, currentPostAuthor );
+		currentPostAuthor = await page.evaluate( ( el ) => el.textContent, currentPostAuthor );
 
 		// Check if current author name correct or not. If not, throw error.
 		await expect( currentPostAuthor ).toBe( 'admin' );
 
 		let relatedPostAuthor = await page.$( '.ast-related-post-content .author-name' );
-		relatedPostAuthor = await page.evaluate( el => el.textContent, relatedPostAuthor );
+		relatedPostAuthor = await page.evaluate( ( el ) => el.textContent, relatedPostAuthor );
 
 		// Check if related post author name correct or not. If not, throw error.
 		await expect( relatedPostAuthor ).toBe( 'adminRelatedPost' );
