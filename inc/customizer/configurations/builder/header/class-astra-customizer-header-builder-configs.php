@@ -36,8 +36,8 @@ class Astra_Customizer_Header_Builder_Configs extends Astra_Customizer_Config_Ba
 	 */
 	public function register_configuration( $configurations, $wp_customize ) {
 
-		$cloned_component_track = Astra_Builder_Helper::$component_count_array;
-		$widget_config          = array();
+		$cloned_component_track         = Astra_Builder_Helper::$component_count_array;
+		$widget_config                  = array();
 		$astra_has_widgets_block_editor = astra_has_widgets_block_editor();
 
 		for ( $index = 1; $index <= Astra_Builder_Helper::$num_of_header_button; $index++ ) {
