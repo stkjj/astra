@@ -654,7 +654,7 @@ function astra_get_transparent_header_default_value() {
  * @since x.x.x 
  * @return boolean
  */
-function astra_is_wp5_8_version() {
+function astra_has_widgets_block_editor() {
 	if ( ( defined( 'GUTENBERG_VERSION' ) && version_compare( GUTENBERG_VERSION, '10.6.2', '>' ) ) 
 	|| version_compare( substr( get_bloginfo( 'version' ), 0, 3 ), '5.8', '>=' ) ) {
 		return true;

@@ -50,7 +50,7 @@ class Astra_Customizer_Footer_Builder_Configs extends Astra_Customizer_Config_Ba
 
 		$cloned_component_track = Astra_Builder_Helper::$component_count_array;
 		$widget_config          = array();
-		$astra_is_wp5_8_version = astra_is_wp5_8_version();
+		$astra_has_widgets_block_editor = astra_has_widgets_block_editor();
 
 		for ( $index = 1; $index <= Astra_Builder_Helper::$num_of_footer_html; $index++ ) {
 
@@ -87,7 +87,7 @@ class Astra_Customizer_Footer_Builder_Configs extends Astra_Customizer_Config_Ba
 				'builder' => 'footer',
 			);
 
-			if ( $astra_is_wp5_8_version ) {
+			if ( $astra_has_widgets_block_editor ) {
 				$widget_config[] = array(
 					'name'     => $footer_widget_section,
 					'type'     => 'section',
@@ -97,7 +97,7 @@ class Astra_Customizer_Footer_Builder_Configs extends Astra_Customizer_Config_Ba
 			}
 		}
 
-		if ( $astra_is_wp5_8_version ) {
+		if ( $astra_has_widgets_block_editor ) {
 			$configurations = array_merge( $configurations, $widget_config );
 		}
 

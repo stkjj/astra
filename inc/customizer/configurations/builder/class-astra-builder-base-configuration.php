@@ -265,10 +265,10 @@ final class Astra_Builder_Base_Configuration {
 			$component_limit = defined( 'ASTRA_EXT_VER' ) ?
 				Astra_Builder_Helper::$component_limit : Astra_Builder_Helper::$num_of_header_widgets;
 		}
-		$astra_is_wp5_8_version = astra_is_wp5_8_version();
+		$astra_has_widgets_block_editor = astra_has_widgets_block_editor();
 		for ( $index = 1; $index <= $component_limit; $index++ ) {
 
-			$_section = ( ! $astra_is_wp5_8_version ) ? 'sidebar-widgets-' . $type . '-widget-' . $index : 'astra-sidebar-widgets-' . $type . '-widget-' . $index;
+			$_section = ( ! $astra_has_widgets_block_editor ) ? 'sidebar-widgets-' . $type . '-widget-' . $index : 'astra-sidebar-widgets-' . $type . '-widget-' . $index;
 
 			$html_config[] = array(
 
