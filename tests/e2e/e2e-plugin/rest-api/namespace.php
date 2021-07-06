@@ -42,7 +42,7 @@ function rest_route() : void {
 					update_option( 'blogdescription', 'Astra Test Enviornment' );
 
 					$all_users = get_users();
-					require_once( ABSPATH . 'wp-admin/includes/user.php' );
+					require_once ABSPATH . 'wp-admin/includes/user.php';
 					foreach ( $all_users as $user ) {
 						if ( 1 === (int) $user->data->ID ) {
 							continue;
