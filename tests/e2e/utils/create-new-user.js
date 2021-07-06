@@ -1,9 +1,9 @@
- /**
-  * WordPress dependencies.
-  */
- import { switchUserToAdmin } from '@wordpress/e2e-test-utils';
- import { switchUserToTest } from '@wordpress/e2e-test-utils';
- import { visitAdminPage } from '@wordpress/e2e-test-utils';
+/**
+ * WordPress dependencies.
+ */
+import { switchUserToAdmin } from '@wordpress/e2e-test-utils';
+import { switchUserToTest } from '@wordpress/e2e-test-utils';
+import { visitAdminPage } from '@wordpress/e2e-test-utils';
 
 /**
  * Create a new user account.
@@ -16,7 +16,7 @@
  *
  * @return {string} Password for the newly created user account.
  */
- export async function createUser(
+export async function createUser(
 	username,
 	{ firstName, lastName, role } = {}
 ) {
