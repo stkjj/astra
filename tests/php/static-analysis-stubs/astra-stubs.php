@@ -14785,6 +14785,54 @@ namespace {
      */
     $mobile_header_type = \astra_get_option('mobile-header-type');
     /**
+     * Template for Small Footer Layout 2
+     *
+     * @package     Astra
+     * @author      Astra
+     * @copyright   Copyright (c) 2020, Astra
+     * @link        https://wpastra.com/
+     * @since       Astra 1.0.0
+     */
+    $section_1 = \astra_get_small_footer('footer-sml-section-1');
+    /**
+     * Template for Small Footer Layout 1
+     *
+     * @package     Astra
+     * @author      Astra
+     * @copyright   Copyright (c) 2020, Astra
+     * @link        https://wpastra.com/
+     * @since       Astra 1.0.0
+     */
+    $section_1 = \astra_get_small_footer('footer-sml-section-1');
+    /**
+     * Template part for displaying the Mobile Header
+     *
+     * @package Astra Builder
+     */
+    $mobile_header_type = \astra_get_option('mobile-header-type');
+    /**
+     * Template part for displaying header row.
+     *
+     * @package Astra Builder
+     */
+    $mobile_header_type = \astra_get_option('mobile-header-type');
+    /**
+     * Search Form for Astra theme.
+     *
+     * @package     Astra
+     * @author      Brainstorm Force
+     * @copyright   Copyright (c) 2020, Brainstorm Force
+     * @link        https://www.brainstormforce.com
+     * @since       Astra 3.3.0
+     */
+    /**
+     * Adding argument checks to avoid rendering search-form markup from other places & to easily use get_search_form() function.
+     *
+     * @see https://themes.trac.wordpress.org/ticket/101061
+     * @since 3.6.1
+     */
+    $astra_search_input_placeholder = isset($args['input_placeholder']) ? $args['input_placeholder'] : \astra_default_strings('string-search-input-placeholder', \false);
+    /**
      * Search Form for Astra theme.
      *
      * @package     Astra
