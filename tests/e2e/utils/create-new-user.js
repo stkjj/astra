@@ -1,9 +1,11 @@
 /**
  * WordPress dependencies.
  */
-import { switchUserToAdmin } from '@wordpress/e2e-test-utils';
-import { switchUserToTest } from '@wordpress/e2e-test-utils';
-import { visitAdminPage } from '@wordpress/e2e-test-utils';
+import {
+	switchUserToAdmin,
+	switchUserToTest,
+	visitAdminPage,
+} from '@wordpress/e2e-test-utils';
 
 /**
  * Create a new user account.
@@ -18,7 +20,7 @@ import { visitAdminPage } from '@wordpress/e2e-test-utils';
  */
 export async function createUser(
 	username,
-	{ firstName, lastName, role } = {}
+	{ firstName, lastName, role } = {},
 ) {
 	await switchUserToAdmin();
 	await visitAdminPage( 'user-new.php' );

@@ -29,7 +29,7 @@ describe( 'Related Posts correct Author Name', () => {
 
 		const authorNameOption = ( await page.$x(
 			'//*[ @id = "inspector-select-control-3" ]/option[ text() = "adminRelatedPost" ]',
-		) )[0];
+		) )[ 0 ];
 
 		const authorNameValue = await ( await authorNameOption.getProperty( 'value' ) ).jsonValue();
 
