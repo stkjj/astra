@@ -358,7 +358,7 @@
     color: #777777;
 }
 
-.active-builder-item .ahfb-builder-item-icon .dashicons-no-alt, .ahfb-builder-item-icon:hover .dashicons-no-alt, .ahfb-builder-item:hover .ahfb-builder-item-icon .dashicons-no-alt {
+.active-builder-item .ahfb-builder-item-icon .dashicons-no-alt, .ahfb-builder-item-icon:hover .dashicons-no-alt, .ahfb-builder-item:hover .ahfb-builder-item-icon .dashicons-no-alt, .ahfb-builder-item:hover .ahfb-builder-item-icon .dashicons-admin-settings,.ahfb-builder-item:hover .ahfb-builder-item-icon .dashicons-admin-generic  {
     color: #111111;
 }
 
