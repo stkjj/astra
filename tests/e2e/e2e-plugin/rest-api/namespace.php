@@ -30,7 +30,7 @@ function bootstrap() : void {
 function rest_route() : void {
 	register_rest_route(
 		REST_NAMESPACE,
-		REST_BASE . '/reset-theme',
+		REST_BASE . '/reset-site',
 		array(
 			array(
 				'methods'             => WP_Rest_Server::DELETABLE,
