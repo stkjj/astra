@@ -11,6 +11,7 @@ v3.7.0 (Unreleased)
 - Fix: Search icon color is not applying to the Standard and Transparent Header Search Box style.
 - Fix: Removed the spacing applied for the menu items in the customizer section.
 - Fix: Builder - WooCommerce & EDD cart - Cart and Checkout buttons not visible when multiple products added to cart flyout.
+- Fix: Builder - Social Icons - Tiktok icon not appearing in customizer and on frontend.
 - Fix: 'Disable Footer' option is missing in Page meta settings for new Header Footer builder.
 - Fix: Removed 'Disable Footer Widgets' option in Page meta settings for new Header Footer builder.
 
