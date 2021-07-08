@@ -185,7 +185,6 @@ html {
 
 // WP5.8 compatibility - added the editor specific class selector so that the font weight css is applied in the editor view only. 
 .edit-post-visual-editor{
-
 	h1 {
 		font-weight: inherit;
 	}
@@ -204,7 +203,28 @@ html {
 	h6 {
 		font-weight: inherit;
 	}
+}
 
+// WP5.8 compatibility - apply the inherit to heading for the block editor in the customizer.
+.customize-control-sidebar_block_editor {
+	h1 {
+		font-weight: inherit;
+	}
+	h2 {
+		font-weight: inherit;
+	}
+	h3 {
+		font-weight: inherit;
+	}
+	h4 {
+		font-weight: inherit;
+	}
+	h5 {
+		font-weight: inherit;
+	}
+	h6 {
+		font-weight: inherit;
+	}
 }
 
 .mce-widget i {
