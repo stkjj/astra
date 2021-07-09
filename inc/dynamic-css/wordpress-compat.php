@@ -22,7 +22,7 @@ function astra_wordpress_compat_css( $dynamic_css ) {
 
 	if ( Astra_Dynamic_CSS::is_wordpress_5_8_support_enabled() ) {
 
-		$desktop_css         = '
+		$desktop_css = '
         form.wp-block-search .wp-block-search__input, .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
             border-color: #eaeaea;
 			background: #fafafa;

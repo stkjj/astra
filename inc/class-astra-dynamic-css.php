@@ -1430,8 +1430,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			 */
 			if ( self::page_builder_button_style_css() ) {
 
-				$search_button_selector = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button' : '' ;
-				$search_button_hover_selector = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover, .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:focus' : '' ;
+				$search_button_selector       = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button' : '';
+				$search_button_hover_selector = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover, .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:focus' : '';
 
 				/**
 				 * Global button CSS - Desktop.
@@ -1705,8 +1705,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$parse_css .= astra_parse_css( $global_button_page_builder_mobile, '', astra_get_mobile_breakpoint() );
 			} else {
 
-				$search_button_selector = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button' : '' ;
-				$search_button_hover_selector = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover, .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:focus' : '' ;
+				$search_button_selector       = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button' : '';
+				$search_button_hover_selector = $is_wp_5_8_support_enabled ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover, .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:focus' : '';
 
 				/**
 				 * Global button CSS - Desktop.
@@ -3179,7 +3179,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		 * @return boolean true if WordPress-5.8 compatibility enabled, False if not.
 		 */
 		public static function is_wordpress_5_8_support_enabled() {
-			$astra_settings                                        = get_option( ASTRA_THEME_SETTINGS );
+			$astra_settings                        = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['astra-suport-wp-5-8'] = ( isset( $astra_settings['astra-suport-wp-5-8'] ) && false === $astra_settings['astra-suport-wp-5-8'] ) ? false : true;
 			return apply_filters( 'astra_wordpress_5_8_support', $astra_settings['astra-suport-wp-5-8'] );
 		}

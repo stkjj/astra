@@ -1366,7 +1366,7 @@ if ( ! class_exists( 'Astra_Customizer' ) ) {
 				'dynamic_partial_options'              => self::$dynamic_options['partials'],
 				'gb_outline_buttons_patterns_support'  => Astra_Dynamic_CSS::gutenberg_core_patterns_compat(),
 				'font_weights_widget_title_support'    => Astra_Dynamic_CSS::support_font_css_to_widget_and_in_editor(),
-				'is_wp_5_8_compat' => Astra_Dynamic_CSS::is_wordpress_5_8_support_enabled(),
+				'is_wp_5_8_compat'                     => Astra_Dynamic_CSS::is_wordpress_5_8_support_enabled(),
 			);
 
 			wp_localize_script( 'astra-customizer-preview-js', 'astraCustomizer', $localize_array );
