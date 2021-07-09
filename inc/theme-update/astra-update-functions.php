@@ -3100,3 +3100,19 @@ function astra_fix_footer_widget_right_margin_case() {
 		update_option( 'astra-settings', $theme_options );
 	}
 }
+
+/**
+ * Add compatibility support for WP-5.8. as some of settings & blocks already their in WP-5.7 versions, that's why added backward here.
+ *
+ * @since x.x.x
+ * @return void
+ */
+function astra_support_wp_5_8() {
+	$theme_options = get_option( 'astra-settings' );
+
+	// Set flag on existing user's site to not reflect changes directly.
+	if ( ! isset( $theme_options['astra-suport-wp-5-8'] ) ) {
+		$theme_options['astra-suport-wp-5-8'] = false;
+		update_option( 'astra-settings', $theme_options );
+	}
+}

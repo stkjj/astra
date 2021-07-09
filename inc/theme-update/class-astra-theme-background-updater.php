@@ -95,6 +95,7 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 			),
 			'3.7.0' => array(
 				'astra_fix_footer_widget_right_margin_case',
+				'astra_support_wp_5_8',
 			),
 		);
 
