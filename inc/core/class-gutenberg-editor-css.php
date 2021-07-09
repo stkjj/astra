@@ -408,6 +408,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 
 				$is_support_wp_5_8 = Astra_Dynamic_CSS::is_wordpress_5_8_support_enabled();
 				$search_button_selector = $is_support_wp_5_8 ? ', .block-editor-writing-flow .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button' : '' ;
+				$search_button_hover_selector = $is_support_wp_5_8 ? ', .block-editor-writing-flow .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:hover, .block-editor-writing-flow .wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button:focus' : '' ;
 
 				$button_desktop_css = array(
 					/**
@@ -434,7 +435,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 						'padding-bottom'      => astra_responsive_spacing( $theme_btn_padding, 'bottom', 'desktop' ),
 						'padding-left'        => astra_responsive_spacing( $theme_btn_padding, 'left', 'desktop' ),
 					),
-					'.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus' . $search_button_selector . ':hover' . $search_button_selector . ':focus' => array(
+					'.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:focus' . $search_button_hover_selector => array(
 						'color'            => esc_attr( $btn_h_color ),
 						'background-color' => esc_attr( $btn_bg_h_color ),
 						'border-color'     => empty( $btn_border_h_color ) ? esc_attr( $btn_bg_h_color ) : esc_attr( $btn_border_h_color ),
