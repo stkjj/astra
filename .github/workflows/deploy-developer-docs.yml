@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Deploy on Developer Docs
 
 # Run the deployment only when code is committed to teh branch.
 on:
