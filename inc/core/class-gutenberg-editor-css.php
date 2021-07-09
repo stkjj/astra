@@ -1022,6 +1022,23 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 
 			$css .= astra_parse_css( $gtn_full_wide_image_css );
 
+			// Remove margin applied to the sidebar in the block editor based widgets page in WP5.8.
+			if ( astra_wp_version_compare( '5.7.2', '>=' ) ) {
+
+				$block_editor_sidebar = array(
+					'.ast-separate-container .edit-widgets-block-editor .block-editor-writing-flow, .ast-two-container .edit-widgets-block-editor .block-editor-writing-flow' => array(
+						'margin' => 'unset',
+					),
+
+					// Remove negative margin for the fullwidth images so that they do not go out of sidebar in WP5.8.
+					'.ast-separate-container .edit-widgets-block-editor .block-editor-block-list__layout .wp-block[data-align="full"] figure.wp-block-image , .ast-separate-container .edit-widgets-block-editor .wp-block[data-align="full"] .wp-block-cover' => array(
+						'margin' => 'unset',
+					),
+				);
+
+				$css .= astra_parse_css( $block_editor_sidebar );
+			}
+
 			if ( in_array( $pagenow, array( 'post-new.php' ) ) && ! isset( $post ) ) {
 
 				$boxed_container = array(
