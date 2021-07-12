@@ -742,6 +742,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			);
 			$parse_css                         .= astra_parse_css( $gtn_plugin_button_center_alignment );
 
+			$ast_container_layout = astra_get_content_layout();
+
 			/*
 			* Fix the wide width issue in gutenberg
 			* check if the current user is existing user or new user.
@@ -749,9 +751,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			*/
 			if ( self::gtn_image_group_css_comp() ) {
 
-				$container_layout = astra_get_content_layout();
-
-				if ( 'content-boxed-container' == $container_layout || 'boxed-container' == $container_layout ) {
+				if ( 'content-boxed-container' == $ast_container_layout || 'boxed-container' == $ast_container_layout ) {
 					$parse_css .= astra_parse_css(
 						array(
 							'.ast-separate-container.ast-right-sidebar .entry-content .wp-block-image.alignfull,.ast-separate-container.ast-left-sidebar .entry-content .wp-block-image.alignfull,.ast-separate-container.ast-right-sidebar .entry-content .wp-block-cover.alignfull,.ast-separate-container.ast-left-sidebar .entry-content .wp-block-cover.alignfull' => array(
@@ -791,11 +791,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 
 			if ( self::gtn_group_cover_css_comp() ) {
 
-				$container_layout = astra_get_content_layout();
-
 				if ( 'no-sidebar' !== astra_page_layout() ) {
 
-					switch ( $container_layout ) {
+					switch ( $ast_container_layout ) {
 						case 'content-boxed-container':
 						case 'boxed-container':
 							$parse_css .= astra_parse_css(
@@ -1103,10 +1101,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			 *
 			 * @since 3.6.3
 			 */
+			$default_border_size = '2px';
 			if ( astra_button_default_padding_updated() ) {
 				$default_border_size = '';
-			} else {
-				$default_border_size = '2px';
 			}
 
 			// Outline Gutenberg button compatibility CSS.
@@ -1682,10 +1679,9 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					);
 				} else {
 
+					$default_border_size = '0';
 					if ( astra_button_default_padding_updated() ) {
 						$default_border_size = '';
-					} else {
-						$default_border_size = '0';
 					}
 
 					$global_button_page_builder_desktop['.wp-block-button .wp-block-button__link'] = array(

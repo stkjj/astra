@@ -482,10 +482,9 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				 *
 				 * @since 3.6.3
 				 */
+				$default_border_size = '2px';
 				if ( ! astra_button_default_padding_updated() ) {
 					$default_border_size = '';
-				} else {
-					$default_border_size = '2px';
 				}
 
 				// Outline Gutenberg button compatibility CSS.
