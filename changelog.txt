@@ -1,6 +1,6 @@
 v3.6.3
 - Improvement: Global button default padding values updated from 10px-40px to 15px-30px.
-- Fix: Global button padding settings not working for Gutenberg buttons. (Needs Doc)
+- Fix: Global button padding settings not working for Gutenberg buttons. (https://wpastra.com/docs/apply-new-default-button-padding/)
 
 v3.6.2
 - Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
