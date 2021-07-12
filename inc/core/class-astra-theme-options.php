@@ -101,7 +101,7 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 			 *
 			 * @since 3.6.3
 			 */
-			$apply_new_default_values = astra_update_default_button_padding_values();
+			$apply_new_default_values = astra_button_default_padding_updated();
 
 			// Defaults list of options.
 			self::$defaults = apply_filters(

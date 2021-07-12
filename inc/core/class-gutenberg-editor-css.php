@@ -482,7 +482,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				 *
 				 * @since 3.6.3
 				 */
-				if ( ! astra_update_default_button_padding_values() ) {
+				if ( ! astra_button_default_padding_updated() ) {
 					$default_border_size = '';
 				} else {
 					$default_border_size = '2px';
@@ -507,7 +507,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 					),
 				);
 
-				if ( ! astra_update_default_button_padding_values() ) {
+				if ( ! astra_button_default_padding_updated() ) {
 					$button_patterns_compat_css['.wp-block-button .wp-block-button__link']                  = array(
 						'border'  => 'none',
 						'padding' => '15px 30px',
@@ -528,7 +528,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 
 				$css .= astra_parse_css( $button_patterns_compat_css );
 
-				if ( ! astra_update_default_button_padding_values() ) {
+				if ( ! astra_button_default_padding_updated() ) {
 					// Tablet CSS.
 					$button_patterns_tablet_compat_css = array(
 						'.wp-block-button .wp-block-button__link' => array(
@@ -585,7 +585,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 					);
 				}
 
-				if ( ! astra_update_default_button_padding_values() ) {
+				if ( ! astra_button_default_padding_updated() ) {
 					$gb_patterns_min_mobile_css['.editor-styles-wrapper p.has-background'] = array(
 						'padding' => '20px',
 					);

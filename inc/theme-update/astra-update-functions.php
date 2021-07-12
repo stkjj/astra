@@ -3094,8 +3094,8 @@ function astra_clear_all_assets_cache() {
 function astra_button_default_values_updated() {
 	$theme_options = get_option( 'astra-settings', array() );
 
-	if ( ! isset( $theme_options['button-default-values-updated'] ) ) {
-		$theme_options['button-default-values-updated'] = false;
+	if ( ! isset( $theme_options['btn-default-padding-updated'] ) ) {
+		$theme_options['btn-default-padding-updated'] = false;
 		update_option( 'astra-settings', $theme_options );
 	}
 }
