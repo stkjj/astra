@@ -4,9 +4,8 @@ name: Deploy on Developer Docs
 on:
   push:
     branches:
-      - development
+      # Remove this once implemented and keep just `master` branch.
       - next-release
-      - release-candidate
       - master
 
 jobs:
