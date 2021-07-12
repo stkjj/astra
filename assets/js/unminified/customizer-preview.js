@@ -1301,7 +1301,7 @@ function wordpress_5_8_compat() {
 	wp.customize( 'astra-settings[theme-button-border-group-border-size]', function( value ) {
 		value.bind( function( border ) {
 			if( '' != border.top || '' != border.right || '' != border.bottom || '' != border.left ) {
-				if( astraCustomizer.gb_outline_buttons_patterns_support ) {
+				if( astraCustomizer.gb_outline_buttons_patterns_support && ! astraCustomizer.updated_gb_outline_button_patterns ) {
 					wp.customize.preview.send( 'refresh' );
 				} else {
 					var search_button_selector = wordpress_5_8_compat() ? ', .site-content form.wp-block-search .wp-block-search__inside-wrapper .wp-block-search__button' : '' ;
