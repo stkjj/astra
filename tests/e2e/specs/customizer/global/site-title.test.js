@@ -30,14 +30,14 @@ describe( 'Site Title Typography settings and color settings in the customizer',
 			selector: '.site-title',
 			property: 'font-size',
 		} ).cssValueToBe(
-			`${ sitetitleTypography[ 'font-size-site-title' ].desktop }${ sitetitleTypography[ 'font-size-site-title' ][ 'desktop-unit' ] }`
+			`${ sitetitleTypography[ 'font-size-site-title' ].desktop }${ sitetitleTypography[ 'font-size-site-title' ][ 'desktop-unit' ] }`,
 		);
 
 		await expect( {
 			selector: '.ast-site-identity .site-title a',
 			property: 'color',
 		} ).cssValueToBe(
-			`${ sitetitleTypography[ 'header-color-site-title' ] }`
+			`${ sitetitleTypography[ 'header-color-site-title' ] }`,
 		);
 
 		await expect( {

@@ -17,7 +17,7 @@ export async function deleteUser( username ) {
 	await visitAdminPage( 'users.php' );
 
 	const [ userLink ] = await page.$x(
-		`//td[ @data-colname="Username"]//a[contains(text(), "${ username }") ]`
+		`//td[ @data-colname="Username"]//a[contains(text(), "${ username }") ]`,
 	);
 
 	if ( ! userLink ) {

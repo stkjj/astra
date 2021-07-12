@@ -4,11 +4,11 @@ import { setCustomize } from '../../../../utils/set-customize';
 describe( 'Site Tagline Typography settings and color settings in the customizer', () => {
 	it( 'site tagline typography and color should apply corectly', async () => {
 		const siteTagline = {
-			'display-site-tagline-responsive'{
+			'display-site-tagline-responsive': {
 				desktop: true,
 				tablet: true,
 				mobile: true,
-			}
+			},
 			'body-font-family': 'Raleway, sans-serif',
 			'body-font-variant': '800',
 			'body-font-weight': '800',
@@ -41,9 +41,7 @@ describe( 'Site Tagline Typography settings and color settings in the customizer
 		await expect( {
 			selector: '.ast-site-identity .site-description',
 			property: 'color',
-		} ).cssValueToBe(
-			`${ siteTagline[ 'header-color-site-tagline' ] }`,
-		);
+		} ).cssValueToBe( `${ siteTagline[ 'header-color-site-tagline' ] }` );
 
 		await expect( {
 			selector: '.site-description',
