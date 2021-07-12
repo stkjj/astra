@@ -651,7 +651,7 @@ function astra_get_transparent_header_default_value() {
 /**
  * Check whether user is exising or new to apply the updated default values for button padding & support GB button paddings with global button padding options.
  *
- * @since x.x.x
+ * @since 3.6.3
  * @return string
  */
 function astra_update_default_button_padding_values() {

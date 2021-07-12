@@ -3088,7 +3088,7 @@ function astra_clear_all_assets_cache() {
 /**
  * Set flag for updated default values for buttons & add GB Buttons padding support.
  *
- * @since x.x.x
+ * @since 3.6.3
  * @return void.
  */
 function astra_default_layout_updated_values() {

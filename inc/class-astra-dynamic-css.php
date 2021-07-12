@@ -1101,7 +1101,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			 * When supporting GB button outline patterns in v3.3.0 we have given 2px as default border for GB outline button, where we restrict button border for flat type buttons.
 			 * But now while reverting this change there is no need of default border because whatever customizer border will set it should behave accordingly. Although it is empty ('') WP applying 2px as default border for outline buttons.
 			 *
-			 * @since x.x.x
+			 * @since 3.6.3
 			 */
 			if ( astra_update_default_button_padding_values() ) {
 				$default_border_size = '';

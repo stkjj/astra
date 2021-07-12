@@ -99,7 +99,7 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 			/**
 			 * Update Astra customizer default values. To not update directly on existing users site, added backwards.
 			 *
-			 * @since x.x.x
+			 * @since 3.6.3
 			 */
 			$apply_new_default_values = astra_update_default_button_padding_values();
 
