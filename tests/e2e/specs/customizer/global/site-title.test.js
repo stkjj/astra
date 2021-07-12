@@ -4,7 +4,7 @@ import { setCustomize } from '../../../utils/set-customize';
 describe( 'Site Title Typography settings and color settings in the customizer', () => {
 	it( 'site title typography and color should apply corectly', async () => {
 		const sitetitleTypography = {
-			'body-font-family': "Raleway, sans-serif",
+			'body-font-family': 'Raleway, sans-serif',
 			'body-font-variant': '800',
 			'body-font-weight': '800',
 			'body-text-transform': 'uppercase',
@@ -30,21 +30,19 @@ describe( 'Site Title Typography settings and color settings in the customizer',
 			selector: '.site-title',
 			property: 'font-size',
 		} ).cssValueToBe(
-			`${ sitetitleTypography[ 'font-size-site-title' ].desktop }${ sitetitleTypography[ 'font-size-site-title' ][ 'desktop-unit' ] }`,
+			`${ sitetitleTypography[ 'font-size-site-title' ].desktop }${ sitetitleTypography[ 'font-size-site-title' ][ 'desktop-unit' ] }`
 		);
 
 		await expect( {
 			selector: '.ast-site-identity .site-title a',
 			property: 'color',
 		} ).cssValueToBe(
-			`${ sitetitleTypography[ 'header-color-site-title' ] }`,
+			`${ sitetitleTypography[ 'header-color-site-title' ] }`
 		);
 
 		await expect( {
 			selector: '#ast-desktop-header .site-title a',
 			property: 'font-family',
-		} ).cssValueToBe(
-			`${ sitetitleTypography[ 'body-font-family' ] }`,
-		);
+		} ).cssValueToBe( `${ sitetitleTypography[ 'body-font-family' ] }` );
 	} );
 } );

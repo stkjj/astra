@@ -10,6 +10,6 @@ export const setCustomize = async ( data ) => {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify( { settings: data } ),
-		},
+		}
 	);
 };
