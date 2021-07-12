@@ -4,12 +4,12 @@ import { setCustomize } from '../../../utils/set-customize';
 describe( 'Site Title Typography settings and color settings in the customizer', () => {
 	it( 'site title typography and color should apply corectly', async () => {
 		const sitetitleTypography = {
-			'font-family-site-title': "'Raleway', sans-serif",
-			'site-title-font-variant': '800',
-			'site-title-font-weight': '800',
-			'site-title-text-transform': '',
+			'body-font-family': "'Raleway', sans-serif",
+			'body-font-variant': '800',
+			'body-font-weight': '800',
+			'body-text-transform': 'uppercase',
 			'font-size-site-title': {
-				desktop: 10,
+				desktop: 72,
 				tablet: '42',
 				mobile: '32',
 				'desktop-unit': 'px',
@@ -41,10 +41,10 @@ describe( 'Site Title Typography settings and color settings in the customizer',
 		);
 
 		await expect( {
-			selector: '.site-title, .site-title a',
+			selector: '.site-title a',
 			property: 'font-family',
 		} ).cssValueToBe(
-			`${ sitetitleTypography[ 'font-family-site-title' ] }`,
+			`${ sitetitleTypography[ 'body-font-family' ] }`,
 		);
 	} );
 } );
