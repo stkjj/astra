@@ -3091,11 +3091,11 @@ function astra_clear_all_assets_cache() {
  * @since 3.6.3
  * @return void.
  */
-function astra_default_layout_updated_values() {
+function astra_button_default_values_updated() {
 	$theme_options = get_option( 'astra-settings', array() );
 
-	if ( ! isset( $theme_options['default-layout-updated-values'] ) ) {
-		$theme_options['default-layout-updated-values'] = false;
+	if ( ! isset( $theme_options['button-default-values-updated'] ) ) {
+		$theme_options['button-default-values-updated'] = false;
 		update_option( 'astra-settings', $theme_options );
 	}
 }

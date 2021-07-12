@@ -656,6 +656,6 @@ function astra_get_transparent_header_default_value() {
  */
 function astra_update_default_button_padding_values() {
 	$astra_settings                                  = get_option( ASTRA_THEME_SETTINGS );
-	$astra_settings['default-layout-updated-values'] = isset( $astra_settings['default-layout-updated-values'] ) ? $astra_settings['default-layout-updated-values'] : true;
-	return apply_filters( 'astra_update_button_padding_defaults', $astra_settings['default-layout-updated-values'] );
+	$astra_settings['button-default-values-updated'] = isset( $astra_settings['button-default-values-updated'] ) ? $astra_settings['button-default-values-updated'] : true;
+	return apply_filters( 'astra_update_button_padding_defaults', $astra_settings['button-default-values-updated'] );
 }
