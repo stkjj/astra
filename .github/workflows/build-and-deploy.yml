@@ -44,10 +44,6 @@ jobs:
           then
             echo "ENVIRONMENT=RELEASE_CANDIDATE" >> $GITHUB_ENV
           fi
-          if [ '${{github.ref}}' = 'refs/heads/dev' ]
-          then
-            echo "ENVIRONMENT=RELEASE_CANDIDATE" >> $GITHUB_ENV
-          fi
           if [ '${{github.ref}}' = 'refs/heads/master' ]
           then
             echo "ENVIRONMENT=MASTER" >> $GITHUB_ENV
