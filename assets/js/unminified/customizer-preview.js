@@ -963,6 +963,20 @@ function isJsonString( str ) {
 		} );
 	} );
 
+	// Add preview underline in customizer for content links.
+	wp.customize( 'astra-settings[underline-content-links]', function( setting ) {
+		setting.bind( function( value ) {
+			var dynamicStyle = '';
+			if ( value ) {
+				dynamicStyle = ' .entry-content a { text-decoration: underline; } ';
+				astra_add_dynamic_css( 'underline-content-links', dynamicStyle );
+			} else {
+				dynamicStyle = ' .entry-content a { text-decoration: unset; } ';
+				astra_add_dynamic_css( 'underline-content-links', dynamicStyle );
+			}
+		} );
+	} );
+
 	if ( astraCustomizer.page_builder_button_style_css ) {
 		if (true == astraCustomizer.includeAnchorsInHeadindsCss) {
 			if ( 'color-typo' == astraCustomizer.elementor_default_color_font_setting || 'typo' == astraCustomizer.elementor_default_color_font_setting ) {
