@@ -34,7 +34,7 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 
 	// Common CSS options.
 	$hba_header_height  = astra_get_option( 'hba-header-height' );
-	$hba_header_divider = astra_get_option( 'hba-header-separator' );
+	$hba_header_divider = absint( astra_get_option( 'hba-header-separator' ) );
 	$hba_border_color   = astra_get_option( 'hba-header-bottom-border-color' );
 
 	// Background CSS options.

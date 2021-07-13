@@ -105,7 +105,7 @@ function astra_primary_header_breakpoint_style( $dynamic_css, $dynamic_css_filte
 	$parse_css .= astra_parse_css( $padding_below_breakpoint, '', astra_get_tablet_breakpoint() );
 
 	// Header Separator.
-	$header_separator = astra_get_option( 'hb-header-main-sep' );
+	$header_separator = absint( astra_get_option( 'hb-header-main-sep' ) );
 
 	// Apply border only when it has positive value.
 	if ( $header_separator ) {
