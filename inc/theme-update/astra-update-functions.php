@@ -3084,3 +3084,18 @@ function astra_clear_all_assets_cache() {
 		$astra_addon_cache_base_instance->refresh_assets( 'astra-addon' );
 	}
 }
+
+/**
+ * Set flag for updated default values for buttons & add GB Buttons padding support.
+ *
+ * @since 3.6.3
+ * @return void.
+ */
+function astra_button_default_values_updated() {
+	$theme_options = get_option( 'astra-settings', array() );
+
+	if ( ! isset( $theme_options['btn-default-padding-updated'] ) ) {
+		$theme_options['btn-default-padding-updated'] = false;
+		update_option( 'astra-settings', $theme_options );
+	}
+}

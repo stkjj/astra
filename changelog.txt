@@ -1,6 +1,10 @@
 v3.7.0
 - Fix: Headers showing border even though its not set from customizer in FireFox browser.
 
+v3.6.3
+- Improvement: Global button default padding values updated.
+- Fix: Global button padding settings not working for Gutenberg buttons. ( https://wpastra.com/docs/apply-default-button-padding/ )
+
 v3.6.2
 - Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
 - Fix: Related Posts articles showing meta structure based on current active post.
