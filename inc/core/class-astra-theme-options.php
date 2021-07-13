@@ -371,7 +371,7 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 
 					'body-line-height'                     => '',
 					'para-margin-bottom'                   => '',
-					'underline-content-links'          	   => astra_underline_content_links(),
+					'underline-content-links'              => astra_underline_content_links(),
 					'body-text-transform'                  => '',
 					'headings-font-family'                 => 'inherit',
 					'headings-font-weight'                 => 'inherit',
