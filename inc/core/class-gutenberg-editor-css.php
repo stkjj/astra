@@ -569,9 +569,6 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 						'.editor-styles-wrapper .alignright' => array(
 							'margin-right' => '20px',
 						),
-						'.editor-styles-wrapper p.has-background' => array(
-							'padding' => '20px',
-						),
 					);
 				} else {
 					$gb_patterns_min_mobile_css = array(
