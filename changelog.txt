@@ -14,6 +14,7 @@ v3.7.0 (Unreleased)
 - Fix: Builder - Social Icons - Tiktok icon not appearing in customizer and on frontend.
 - Fix: 'Disable Footer' option is missing in Page meta settings for new Header Footer builder.
 - Fix: Removed 'Disable Footer Widgets' option in Page meta settings for new Header Footer builder.
+- Fix: Off-canvas menu closes on scrolling on mobile devices.
 
 v3.6.2
 - Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
