@@ -3103,14 +3103,14 @@ function astra_button_default_values_updated() {
 /**
  * Set flag for old users, to not directly apply underline to content links.
  *
- * @since x.x.x
+ * @since 3.6.4
  * @return void.
  */
 function astra_update_underline_link_setting() {
 	$theme_options = get_option( 'astra-settings', array() );
 
-	if ( ! isset( $theme_options['ast-underline-content-links'] ) ) {
-		$theme_options['ast-underline-content-links'] = false;
+	if ( ! isset( $theme_options['underline-content-links'] ) ) {
+		$theme_options['underline-content-links'] = false;
 		update_option( 'astra-settings', $theme_options );
 	}
 }

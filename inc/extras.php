@@ -663,11 +663,11 @@ function astra_button_default_padding_updated() {
 /**
  * Check whether user is exising or new to enable underline setting & supportive dynamic CSS for that.
  *
- * @since x.x.x
+ * @since 3.6.4
  * @return string
  */
 function astra_underline_content_links() {
 	$astra_settings                                = get_option( ASTRA_THEME_SETTINGS );
-	$astra_settings['ast-underline-content-links'] = isset( $astra_settings['ast-underline-content-links'] ) ? false : true;
-	return apply_filters( 'astra_apply_underline_content_links', $astra_settings['ast-underline-content-links'] );
+	$astra_settings['underline-content-links'] = isset( $astra_settings['underline-content-links'] ) ? false : true;
+	return apply_filters( 'astra_apply_underline_content_links', $astra_settings['underline-content-links'] );
 }
