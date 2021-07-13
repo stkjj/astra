@@ -14769,7 +14769,7 @@ namespace {
      * Set flag for updated default values for buttons & add GB Buttons padding support.
      *
      * @since 3.6.3
-     * @return void.
+     * @return void
      */
     function astra_button_default_values_updated()
     {
