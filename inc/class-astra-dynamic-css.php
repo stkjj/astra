@@ -563,7 +563,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$css_output['.ast-single-post .entry-content a, .ast-comment-content a:not(.ast-comment-edit-reply-wrap a)'] = array(
 					'text-decoration' => 'underline',
 				);
-				$css_output['.ast-single-post .wp-block-button .wp-block-button__link']                                      = array(
+				$css_output['.ast-single-post .wp-block-button .wp-block-button__link, .ast-single-post .elementor-button-wrapper .elementor-button']                                      = array(
 					'text-decoration' => 'none',
 				);
 			}
@@ -1521,12 +1521,6 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 							'padding-left'   => astra_responsive_spacing( $theme_btn_padding, 'left', 'desktop' ),
 						),
 					);
-
-					if ( $content_links_underline ) {
-						$ele_btn_default_desktop['.ast-single-post .elementor-button-wrapper .elementor-button'] = array(
-							'text-decoration' => 'none',
-						);
-					}
 
 					/* Parse CSS from array() */
 					$parse_css .= astra_parse_css( $ele_btn_default_desktop );
