@@ -15,6 +15,10 @@ v3.7.0 (Unreleased)
 - Fix: 'Disable Footer' option is missing in Page meta settings for new Header Footer builder.
 - Fix: Removed 'Disable Footer Widgets' option in Page meta settings for new Header Footer builder.
 
+v3.6.3
+- Improvement: Global button default padding values updated.
+- Fix: Global button padding settings not working for Gutenberg buttons. ( https://wpastra.com/docs/apply-default-button-padding/ )
+
 v3.6.2
 - Fix: Enable 'Preload Local Fonts' option affects on height of Gutenberg Cover edit block.
 - Fix: Related Posts articles showing meta structure based on current active post.
