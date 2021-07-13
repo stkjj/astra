@@ -559,7 +559,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			// Add underline to every link in content area.
 			$content_links_underline = astra_get_option( 'underline-content-links' );
 
-			if ( astra_underline_content_links() && $content_links_underline ) {
+			if ( $content_links_underline ) {
 				$css_output['.entry-content a'] = array(
 					'text-decoration' => 'underline',
 				);

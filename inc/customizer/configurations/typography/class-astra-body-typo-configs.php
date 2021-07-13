@@ -166,6 +166,20 @@ if ( ! class_exists( 'Astra_Body_Typo_Configs' ) ) {
 				),
 
 				/**
+				 * Option: Underline links in entry-content.
+				 */
+				array(
+					'name'      => ASTRA_THEME_SETTINGS . '[underline-content-links]',
+					'default'   => astra_get_option( 'underline-content-links' ),
+					'type'      => 'control',
+					'control'   => 'ast-toggle-control',
+					'section'   => 'section-body-typo',
+					'priority'  => 27,
+					'title'     => __( 'Underline Content Links', 'astra' ),
+					'transport' => 'postMessage',
+				),
+
+				/**
 				 * Option: Headings Font Family
 				 */
 				array(
@@ -254,22 +268,6 @@ if ( ! class_exists( 'Astra_Body_Typo_Configs' ) ) {
 					),
 				),
 			);
-
-			/**
-			 * Option: Underline links in entry-content.
-			 */
-			if( astra_underline_content_links() ) {
-				$_configs[] = array(
-					'name'      => ASTRA_THEME_SETTINGS . '[underline-content-links]',
-					'default'   => astra_get_option( 'underline-content-links' ),
-					'type'      => 'control',
-					'control'   => 'ast-toggle-control',
-					'section'   => 'section-body-typo',
-					'priority'  => 27,
-					'title'     => __( 'Underline Content Links', 'astra' ),
-					'transport' => 'postMessage',
-				);
-			}
 
 			return array_merge( $configurations, $_configs );
 		}
