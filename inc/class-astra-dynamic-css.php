@@ -563,7 +563,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 				$css_output['.ast-single-post .entry-content a, .ast-comment-content a:not(.ast-comment-edit-reply-wrap a)'] = array(
 					'text-decoration' => 'underline',
 				);
-				$css_output['.ast-single-post .wp-block-button .wp-block-button__link'] = array(
+				$css_output['.ast-single-post .wp-block-button .wp-block-button__link']                                      = array(
 					'text-decoration' => 'none',
 				);
 			}
@@ -1507,7 +1507,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					$ele_btn_default_desktop = array(
 						'.elementor-button-wrapper .elementor-button' => array(
 							'border-style'        => 'solid',
-							'text-decoration'        => 'none',
+							'text-decoration'     => 'none',
 							'border-top-width'    => ( isset( $global_custom_button_border_size['top'] ) && '' !== $global_custom_button_border_size['top'] ) ? astra_get_css_value( $global_custom_button_border_size['top'], 'px' ) : '0',
 							'border-right-width'  => ( isset( $global_custom_button_border_size['right'] ) && '' !== $global_custom_button_border_size['right'] ) ? astra_get_css_value( $global_custom_button_border_size['right'], 'px' ) : '0',
 							'border-left-width'   => ( isset( $global_custom_button_border_size['left'] ) && '' !== $global_custom_button_border_size['left'] ) ? astra_get_css_value( $global_custom_button_border_size['left'], 'px' ) : '0',
