@@ -560,7 +560,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 			$content_links_underline = astra_get_option( 'underline-content-links' );
 
 			if ( $content_links_underline ) {
-				$css_output['.ast-single-post .entry-content a, .ast-comment-content p a'] = array(
+				$css_output['.ast-comment-content a:not(.ast-comment-edit-reply-wrap .comment-edit-link)'] = array(
 					'text-decoration' => 'underline',
 				);
 			}

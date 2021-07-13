@@ -968,10 +968,10 @@ function isJsonString( str ) {
 		setting.bind( function( value ) {
 			var dynamicStyle = '';
 			if ( value ) {
-				dynamicStyle = ' .ast-single-post .entry-content a, .ast-comment-content p a { text-decoration: underline; } ';
+				dynamicStyle = '.ast-comment-content a:not(.ast-comment-edit-reply-wrap .comment-edit-link) { text-decoration: underline; } ';
 				astra_add_dynamic_css( 'underline-content-links', dynamicStyle );
 			} else {
-				dynamicStyle = ' .ast-single-post .entry-content a, .ast-comment-content p a { text-decoration: unset; } ';
+				dynamicStyle = '.ast-comment-content a:not(.ast-comment-edit-reply-wrap .comment-edit-link) { text-decoration: unset; } ';
 				astra_add_dynamic_css( 'underline-content-links', dynamicStyle );
 			}
 		} );
