@@ -3105,7 +3105,7 @@ function astra_fix_footer_widget_right_margin_case() {
  * Set flag for updated default values for buttons & add GB Buttons padding support.
  *
  * @since 3.6.3
- * @return void.
+ * @return void
  */
 function astra_button_default_values_updated() {
 	$theme_options = get_option( 'astra-settings', array() );
@@ -3120,7 +3120,7 @@ function astra_button_default_values_updated() {
  * Set flag for old users, to not directly apply underline to content links.
  *
  * @since 3.6.4
- * @return void.
+ * @return void
  */
 function astra_update_underline_link_setting() {
 	$theme_options = get_option( 'astra-settings', array() );
