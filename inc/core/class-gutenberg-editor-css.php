@@ -339,7 +339,7 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				);
 				$desktop_css['.edit-post-visual-editor .editor-styles-wrapper']     = array(
 					'max-width' => astra_get_css_value( $site_content_width - 56, 'px' ),
-					'width' => '100%',
+					'width'     => '100%',
 					'margin'    => '0 auto',
 					'padding'   => '0',
 				);
