@@ -26,6 +26,9 @@ function astra_wordpress_compat_css( $dynamic_css ) {
 		.wp-block-search {
 			margin-bottom: 20px;
 		}
+		.wp-block-site-tagline {
+			margin-top: 20px;
+		}
         form.wp-block-search .wp-block-search__input, .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper, .site-content .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
             border-color: #eaeaea;
 			background: #fafafa;
