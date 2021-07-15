@@ -361,6 +361,14 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 				$css             .= astra_parse_css( $destop_title_css );
 			}
 
+			$content_links_underline = astra_get_option( 'underline-content-links' );
+
+			if ( $content_links_underline ) {
+				$desktop_css['.edit-post-visual-editor a'] = array(
+					'text-decoration' => 'underline',
+				);
+			}
+
 			$css .= astra_parse_css( $desktop_css );
 
 			/**
@@ -586,9 +594,6 @@ if ( ! class_exists( 'Gutenberg_Editor_CSS' ) ) :
 						),
 						'.editor-styles-wrapper .alignright' => array(
 							'margin-right' => '20px',
-						),
-						'.editor-styles-wrapper p.has-background' => array(
-							'padding' => '20px',
 						),
 					);
 				} else {

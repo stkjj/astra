@@ -371,6 +371,7 @@ if ( ! class_exists( 'Astra_Theme_Options' ) ) {
 
 					'body-line-height'                     => '',
 					'para-margin-bottom'                   => '',
+					'underline-content-links'              => true,
 					'body-text-transform'                  => '',
 					'headings-font-family'                 => 'inherit',
 					'headings-font-weight'                 => 'inherit',
