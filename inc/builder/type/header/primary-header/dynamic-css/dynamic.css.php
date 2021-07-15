@@ -119,7 +119,6 @@ function astra_primary_header_breakpoint_style( $dynamic_css, $dynamic_css_filte
 			),
 		);
 
-		$parse_css .= astra_parse_css( $border_responsive_style );
 
 		$border_desktop_style = array(
 			'.ast-primary-header-bar' => array(
@@ -129,8 +128,22 @@ function astra_primary_header_breakpoint_style( $dynamic_css, $dynamic_css_filte
 			),
 		);
 
-		$parse_css .= astra_parse_css( $border_desktop_style, astra_get_tablet_breakpoint( '', 1 ) );
+	} else {
+		$border_responsive_style = array(
+			'.ast-header-break-point .ast-primary-header-bar' => array(
+				'border-bottom-style' => 'none',
+			),
+		);
+
+		$border_desktop_style = array(
+			'.ast-primary-header-bar' => array(
+				'border-bottom-style' => 'none',
+			),
+		);
 	}
+
+	$parse_css .= astra_parse_css( $border_responsive_style );
+	$parse_css .= astra_parse_css( $border_desktop_style, astra_get_tablet_breakpoint( '', 1 ) );
 
 	$header_bg_obj = astra_get_option( 'hb-header-bg-obj-responsive' );
 

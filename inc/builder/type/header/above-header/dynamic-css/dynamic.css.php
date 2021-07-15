@@ -85,6 +85,10 @@ function astra_above_header_row_setting( $dynamic_css, $dynamic_css_filtered = '
 			'border-bottom-color' => esc_attr( $hba_border_color ),
 			'border-bottom-style' => 'solid',
 		);
+	} else {
+		$common_css_output['.ast-above-header-bar'] = array(
+			'border-bottom-style' => 'none',
+		);
 	}
 
 	if ( is_astra_addon_3_5_0_version() ) {
