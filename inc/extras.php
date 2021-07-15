@@ -681,7 +681,7 @@ function astra_button_default_padding_updated() {
  * @return string
  */
 function astra_can_remove_elementor_toc_margin_space() {
-	$astra_settings                                = get_option( ASTRA_THEME_SETTINGS );
+	$astra_settings                                    = get_option( ASTRA_THEME_SETTINGS );
 	$astra_settings['remove-elementor-toc-margin-css'] = isset( $astra_settings['remove-elementor-toc-margin-css'] ) ? false : true;
 	return apply_filters( 'astra_remove_elementor_toc_margin', $astra_settings['remove-elementor-toc-margin-css'] );
 }
