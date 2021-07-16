@@ -1,4 +1,4 @@
-v3.7.0 (Unreleased)
+v3.6.5 (Unreleased)
 - Improvement: Compatibility with WordPress 5.8.
 - Fix: Headers showing border even though its not set from customizer in FireFox browser.
 
