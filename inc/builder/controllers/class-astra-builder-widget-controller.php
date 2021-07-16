@@ -90,7 +90,7 @@ if ( ! class_exists( 'Astra_Builder_Widget_Controller' ) ) {
 			$component_limit = defined( 'ASTRA_EXT_VER' ) ? Astra_Builder_Helper::$component_limit : Astra_Builder_Helper::$num_of_header_widgets;
 			for ( $index = 1; $index <= $component_limit; $index++ ) {
 
-				if ( ! is_customize_preview() && ! Astra_Builder_Helper::is_component_loaded( 'widget-' . $index, 'header' ) ) {
+				if ( ! Astra_Builder_Helper::is_component_loaded( 'widget-' . $index, 'header' ) ) {
 					continue;
 				}
 
