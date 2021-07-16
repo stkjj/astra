@@ -1131,7 +1131,7 @@ final class Astra_Builder_Helper {
 			$is_loaded = in_array( $component_id, $loaded_components[ $builder_type . '_' . $device ], true );
 		}
 
-		return $is_loaded;
+		return $is_loaded || is_customize_preview();
 	}
 
 	/**
