@@ -3229,7 +3229,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		public static function is_wordpress_5_8_support_enabled() {
 			$astra_settings                        = get_option( ASTRA_THEME_SETTINGS );
 			$astra_settings['astra-suport-wp-5-8'] = ( isset( $astra_settings['astra-suport-wp-5-8'] ) && false === $astra_settings['astra-suport-wp-5-8'] ) ? false : true;
-			return apply_filters( 'astra_wordpress_5_8_support', $astra_settings['astra-suport-wp-5-8'] );
+			return apply_filters( 'astra_has_block_editor_support', $astra_settings['astra-suport-wp-5-8'] );
 		}
 
 		/**
