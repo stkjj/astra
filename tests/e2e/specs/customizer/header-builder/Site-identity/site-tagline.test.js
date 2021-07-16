@@ -51,9 +51,9 @@ describe( 'Site Tagline Typography settings and color settings in the customizer
 			property: 'color',
 		} ).cssValueToBe( `${ siteTagline[ 'header-color-site-tagline' ] }` );
 
-		// await expect( {
-		// 	selector: '.site-description',
-		// 	property: 'font-family',
-		// } ).cssValueToBe( `${ siteTagline[ 'body-font-family' ] }` );
+		await expect( {
+			selector: '.site-header .site-description',
+			property: 'font-family',
+		} ).cssValueToBe( `${ siteTagline[ 'body-font-family' ] }` );
 	} );
 } );
