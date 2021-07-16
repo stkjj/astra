@@ -22,7 +22,7 @@ function astra_wordpress_compat_css( $dynamic_css ) {
 
 	if ( Astra_Dynamic_CSS::is_wordpress_5_8_support_enabled() ) {
 
-		$desktop_css = '
+		$compatibility_css = '
 		.wp-block-search {
 			margin-bottom: 20px;
 		}
@@ -42,7 +42,7 @@ function astra_wordpress_compat_css( $dynamic_css ) {
 			height: 20px;
         }';
 
-		return $dynamic_css .= Astra_Enqueue_Scripts::trim_css( $desktop_css );
+		return $dynamic_css .= Astra_Enqueue_Scripts::trim_css( $compatibility_css );
 	}
 
 	return $dynamic_css;
