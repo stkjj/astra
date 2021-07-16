@@ -3141,8 +3141,8 @@ function astra_support_block_editor() {
 	$theme_options = get_option( 'astra-settings' );
 
 	// Set flag on existing user's site to not reflect changes directly.
-	if ( ! isset( $theme_options['astra-suport-wp-5-8'] ) ) {
-		$theme_options['astra-suport-wp-5-8'] = false;
+	if ( ! isset( $theme_options['astra-support-block-editor'] ) ) {
+		$theme_options['astra-support-block-editor'] = false;
 		update_option( 'astra-settings', $theme_options );
 	}
 }
