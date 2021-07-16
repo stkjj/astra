@@ -3137,7 +3137,7 @@ function astra_fix_footer_widget_right_margin_case() {
  * @since x.x.x
  * @return void
  */
-function astra_support_wp_5_8() {
+function astra_support_block_editor() {
 	$theme_options = get_option( 'astra-settings' );
 
 	// Set flag on existing user's site to not reflect changes directly.
