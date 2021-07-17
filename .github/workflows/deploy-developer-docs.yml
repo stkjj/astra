@@ -2,12 +2,11 @@ name: Deploy on Developer Docs
 
 # Run the deployment only when code is committed to teh branch.
 on:
-  pull_request:
+  push:
     branches:
-      # Remove this once implemented and keep just `master` branch.
-      # Replace pull_request with push once implemented.
-      - next-release
+      # Remove "- developer-doc-github-action" once implemented and keep just `master` branch.
       - master
+      - developer-doc-github-action
 
 jobs:
   deploy:
