@@ -12,6 +12,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Test Secrets
+      run: ls -l ${{ secrets.DEVELOPER_DOC_SSH_HOST }}wp-content/themes/astra/
+
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@master
       with:
