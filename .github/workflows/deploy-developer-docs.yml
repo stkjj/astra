@@ -2,9 +2,10 @@ name: Deploy on Developer Docs
 
 # Run the deployment only when code is committed to teh branch.
 on:
-  push:
+  pull_request:
     branches:
       # Remove this once implemented and keep just `master` branch.
+      # Replace pull_request with push once implemented.
       - next-release
       - master
 
@@ -28,17 +29,6 @@ jobs:
 
     - name: Build
       run: npm install && grunt release-no-clean
-
-    - name: Set environment name
-      run: |
-          if [ '${{github.ref}}' = 'refs/heads/next-release' ]
-          then
-            echo "ENVIRONMENT=NEXT_RELEASE" >> $GITHUB_ENV
-          fi
-          if [ '${{github.ref}}' = 'refs/heads/master' ]
-          then
-            echo "ENVIRONMENT=MASTER" >> $GITHUB_ENV
-          fi
 
     - name:
       run: ssh -T ${{ secrets.DEVELOPER_DOC_SSH_HOST }}@${{ secrets.DEVELOPER_DOC_SSH_USERNAME }}
