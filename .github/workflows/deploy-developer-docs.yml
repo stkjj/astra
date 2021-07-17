@@ -19,4 +19,4 @@ jobs:
         name: id_rsa # optional
         known_hosts: ${{ secrets.SSH_HOST }}
     - name: rsync over ssh
-      run: ssh -T ${{ secrets.DEVELOPER_DOC_SSH_HOST }}@${{ secrets.DEVELOPER_DOC_SSH_USERNAME }}
+      run: ls -l /home/runner/.ssh && ssh -T ${{ secrets.DEVELOPER_DOC_SSH_HOST }}@${{ secrets.DEVELOPER_DOC_SSH_USERNAME }}
