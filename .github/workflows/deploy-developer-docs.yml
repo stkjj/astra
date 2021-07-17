@@ -12,15 +12,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Test Secrets
-      env:
-        DEVELOPER_DOC_SSH_PATH: ${{ secrets.DEVELOPER_DOC_SSH_PATH }}
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        script: ls ${{ secrets.DEVELOPER_DOC_SSH_PATH }}/wp-content/themes/astra/
 
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@master
