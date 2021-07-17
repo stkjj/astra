@@ -18,4 +18,4 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
-        script: whoami
+        script: wp parser create /home/runcloud/webapps/developers-wpastra/wp-content/themes/astra --user=1 --url=https://developers.wpastra.com/astra-theme/ --path=/home/runcloud/webapps/developers-wpastra/
