@@ -13,7 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Test Secrets
-      run: ls -l ${{ secrets.DEVELOPER_DOC_SSH_HOST }}wp-content/themes/astra/
+      env:
+        DEVELOPER_DOC_SSH_HOST: ${{ secrets.DEVELOPER_DOC_SSH_HOST }}
+      run: ls -l "$env:DEVELOPER_DOC_SSH_HOST/wp-content/themes/astra/"
 
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@master
