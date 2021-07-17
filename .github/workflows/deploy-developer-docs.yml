@@ -30,25 +30,6 @@ jobs:
     - name: Build
       run: npm install && grunt release-no-clean
 
-    - name: Set environment name
-      run: |
-          if [ '${{github.ref}}' = 'refs/heads/development' ]
-          then
-            echo "ENVIRONMENT=DEVELOPMENT" >> $GITHUB_ENV
-          fi
-          if [ '${{github.ref}}' = 'refs/heads/next-release' ]
-          then
-            echo "ENVIRONMENT=NEXT_RELEASE" >> $GITHUB_ENV
-          fi
-          if [ '${{github.ref}}' = 'refs/heads/release-candidate' ]
-          then
-            echo "ENVIRONMENT=RELEASE_CANDIDATE" >> $GITHUB_ENV
-          fi
-          if [ '${{github.ref}}' = 'refs/heads/master' ]
-          then
-            echo "ENVIRONMENT=MASTER" >> $GITHUB_ENV
-          fi
-
     - name: Rsync Deployment
       uses: burnett01/rsync-deployments@4.1
       with:
