@@ -14,8 +14,8 @@ jobs:
     steps:
     - name: Test Secrets
       env:
-        DEVELOPER_DOC_SSH_HOST: ${{ secrets.DEVELOPER_DOC_SSH_HOST }}
-      run: ls "$DEVELOPER_DOC_SSH_HOST"
+        DEVELOPER_DOC_SSH_PATH: ${{ secrets.DEVELOPER_DOC_SSH_PATH }}
+      run: ls "$DEVELOPER_DOC_SSH_PATH"
 
     - name: executing remote ssh commands using key
       uses: appleboy/ssh-action@master
