@@ -68,4 +68,4 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
-        script: wp parser create ${{ secrets.DEVELOPER_DOC_SSH_PATH }}wp-content/themes/astra --user=1 --url=https://developers.wpastra.com/astra-theme/ --path=/home/runcloud/webapps/developers-wpastra/
+        script: wp parser create ${{ secrets.DEVELOPER_DOC_SSH_PATH }}wp-content/themes/astra --user=1 --url=https://developers.wpastra.com/astra-theme/ --path=${{ secrets.DEVELOPER_DOC_SSH_PATH }}
