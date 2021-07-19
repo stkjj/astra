@@ -626,7 +626,7 @@ function isJsonString( str ) {
 }
 
 function hasWordPressWidgetBlockEditor() {
-	return astraCustomizer.is_wp_5_8_compat || false;
+	return astraCustomizer.has_block_editor_support || false;
 }
 
 ( function( $ ) {
