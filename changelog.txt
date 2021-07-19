@@ -1,5 +1,10 @@
-v3.7.0
+v3.6.5 (Unreleased)
+- Improvement: Compatibility with WordPress 5.8.
+- Improvement: Added default styling for - Site Logo, Site Tagline, Login/out, Search blocks.
+- Improvement: Widget Element - block editor and design section added.
+- Improvement: Theme support added for Rank Math plugin - breadcrumbs module.
 - Fix: Headers showing border even though its not set from customizer in FireFox browser.
+- Fix: Customizer not working due to conflict with block editor JS.
 
 v3.6.4
 - Improvement: Introducing content links underline option.
