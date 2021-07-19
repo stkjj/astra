@@ -3178,7 +3178,7 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		/**
 		 * For existing users, do not reflect direct change.
 		 *
-		 * @since x.x.x
+		 * @since 3.6.5
 		 * @return boolean true if WordPress-5.8 compatibility enabled, False if not.
 		 */
 		public static function is_block_editor_support_enabled() {

@@ -3118,7 +3118,7 @@ function astra_update_underline_link_setting() {
 /**
  * Add compatibility support for WP-5.8. as some of settings & blocks already their in WP-5.7 versions, that's why added backward here.
  *
- * @since x.x.x
+ * @since 3.6.5
  * @return void
  */
 function astra_support_block_editor() {

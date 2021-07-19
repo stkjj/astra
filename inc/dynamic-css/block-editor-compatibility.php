@@ -3,7 +3,7 @@
  * Astra WordPress-5.8 compatibility - Dynamic CSS.
  *
  * @package astra
- * @since x.x.x
+ * @since 3.6.5
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -16,7 +16,7 @@ add_filter( 'astra_dynamic_theme_css', 'astra_block_editor_compatibility_css' );
  * Astra WordPress compatibility - Dynamic CSS.
  *
  * @param string $dynamic_css Dynamic CSS.
- * @since x.x.x
+ * @since 3.6.5
  */
 function astra_block_editor_compatibility_css( $dynamic_css ) {
 

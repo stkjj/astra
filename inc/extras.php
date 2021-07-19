@@ -663,7 +663,7 @@ function astra_button_default_padding_updated() {
 /**
  * Check is WordPress version is greater than or equal to beta 5.8 version.
  *
- * @since x.x.x
+ * @since 3.6.5
  * @return boolean
  */
 function astra_has_widgets_block_editor() {
