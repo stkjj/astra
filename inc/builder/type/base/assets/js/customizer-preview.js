@@ -514,9 +514,8 @@ function astra_builder_widget_css( builder_type = 'header' ) {
 	for ( var index = 1; index <= widget_count; index++ ) {
 
 		var selector = '.' + builder_type + '-widget-area[data-section="sidebar-widgets-' + builder_type + '-widget-' + index + '"]';
-console.error( AstraBuilderWidgetData.has_block_editor );
+
 		var section = AstraBuilderWidgetData.has_block_editor ? 'astra-sidebar-widgets-' + builder_type + '-widget-' + index : 'sidebar-widgets-' + builder_type + '-widget-' + index;
-console.error( section );
 
 		// Widget Content Color.
 		astra_color_responsive_css(
