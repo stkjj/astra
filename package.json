@@ -14,13 +14,14 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@lodder/grunt-postcss": "^3.0.1",
     "@wordpress/api-fetch": "^5.1.1",
     "@wordpress/e2e-test-utils": "^5.3.0",
     "@wordpress/env": "^4.0.5",
     "@wordpress/eslint-plugin": "^9.0.6",
     "@wordpress/jest-puppeteer-axe": "^3.0.5",
     "@wordpress/scripts": "^16.1.2",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.3.1",
     "cross-env": "^7.0.3",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "grunt": "^1.4.0",
@@ -47,7 +48,7 @@
     "minimist": ">=1.2.3",
     "node-fetch": "^2.6.1",
     "node-sass": "^6.0.1",
-    "postcss-flexibility": "^2.0.0"
+    "postcss-flexibility": "git://github.com/Nikschavan/postcss-flexibility.git#fix-145-build"
   },
   "scripts": {
     "pree2etests": "cross-env sh ./bin/scripts/pre-e2e-tests.sh",
