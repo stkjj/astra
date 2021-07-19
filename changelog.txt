@@ -8,7 +8,7 @@ v3.6.5 (Unreleased)
 - Fix: WP 5.8 UI conflict with extra control spacing and section title font in the customizer.
 - Fix: Widget page block editor width not appearing properly.
 - Update Astra notices.
-- Compatibility with Rank Math plugin.
+- Improvement: Theme support added for Rank Math plugin - breadcrumbs module.
 
 v3.6.4
 - Improvement: Introducing content links underline option.
