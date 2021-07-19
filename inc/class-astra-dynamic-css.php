@@ -3183,8 +3183,8 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 		 */
 		public static function is_block_editor_support_enabled() {
 			$astra_settings                               = get_option( ASTRA_THEME_SETTINGS );
-			$astra_settings['astra-support-block-editor'] = ( isset( $astra_settings['astra-support-block-editor'] ) && false === $astra_settings['astra-support-block-editor'] ) ? false : true;
-			return apply_filters( 'astra_has_block_editor_support', $astra_settings['astra-support-block-editor'] );
+			$astra_settings['support-block-editor'] = ( isset( $astra_settings['support-block-editor'] ) && false === $astra_settings['support-block-editor'] ) ? false : true;
+			return apply_filters( 'astra_has_block_editor_support', $astra_settings['support-block-editor'] );
 		}
 
 		/**
