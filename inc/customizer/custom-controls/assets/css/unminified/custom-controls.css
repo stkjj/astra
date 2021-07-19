@@ -1174,6 +1174,11 @@ input[type="text"].select2-search__field {
   font-weight: 600;
 }
 
+/* Customizer - widget appender bottom space CSS */
+.block-list-appender {
+  margin-bottom: 20px;
+}
+
 .customize-control-ast-description .ast-description {
   font-style: italic;
 }
