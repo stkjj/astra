@@ -1,4 +1,4 @@
-v3.6.5 (Unreleased)
+v3.6.5
 - Improvement: Compatibility with WordPress 5.8.
 - Improvement: Added default styling for - Site Logo, Site Tagline, Login/out, Search blocks.
 - Improvement: Widget Element - block editor and design section added.
