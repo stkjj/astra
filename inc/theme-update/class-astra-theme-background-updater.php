@@ -100,6 +100,9 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 			'3.6.4' => array(
 				'astra_update_underline_link_setting',
 			),
+			'3.6.5' => array(
+				'astra_support_block_editor',
+			),
 		);
 
 		/**
