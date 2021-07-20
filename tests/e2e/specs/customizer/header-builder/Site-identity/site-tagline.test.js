@@ -5,11 +5,8 @@ describe( 'Site Tagline Typography settings and color settings in the customizer
 	it( 'site tagline typography and color should apply corectly', async () => {
 		const siteTagline = {
 			'display-site-tagline-responsive': {
-				// eslint-disable-next-line quote-props
 				'desktop': true,
-				// eslint-disable-next-line quote-props
 				'tablet': true,
-				// eslint-disable-next-line quote-props
 				'mobile': true,
 			},
 			'body-font-family': 'Raleway, sans-serif',
@@ -17,11 +14,8 @@ describe( 'Site Tagline Typography settings and color settings in the customizer
 			'body-font-weight': '800',
 			'body-text-transform': 'uppercase',
 			'font-size-site-tagline': {
-				// eslint-disable-next-line quote-props
 				'desktop': 22,
-				// eslint-disable-next-line quote-props
 				'tablet': 20,
-				// eslint-disable-next-line quote-props
 				'mobile': 18,
 				'desktop-unit': 'px',
 				'tablet-unit': 'px',
