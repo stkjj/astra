@@ -3960,6 +3960,10 @@ input[type="text"].select2-search__field {
   margin-bottom: 20px;
 }
 
+.block-editor-block-inspector .block-editor-block-card {
+  margin-top: 12px;
+}
+
 .customize-control-ast-description .ast-description {
   font-style: italic;
 }

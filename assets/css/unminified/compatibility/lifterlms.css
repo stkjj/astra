@@ -662,6 +662,10 @@ body .llms-loop-item-content .llms-progress-bar .progress-bar-complete {
   margin-bottom: 1em;
 }
 
+.lifterlms .llms-checkout-wrapper.llms-col-2 {
+  height: inherit;
+}
+
 .lifterlms .llms-checkout-wrapper .llms-form-field > label {
   display: inline-block;
   font-size: 0.9em;
