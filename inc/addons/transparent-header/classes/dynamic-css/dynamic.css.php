@@ -440,7 +440,7 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 			$selector = '.ast-theme-transparent-header #ast-desktop-header > ' . $header_child_selector . ', .ast-theme-transparent-header.ast-header-break-point #ast-mobile-header > ' . $header_child_selector;
 		}
 
-		if ( '' !== $transparent_header_separator && $transparent_header_separator ) {
+		if ( '' !== $transparent_header_separator && 'inherit' !== $transparent_header_separator ) {
 			$css .= astra_parse_css(
 				array(
 					$selector => array(
@@ -470,7 +470,7 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 			$selector = '.ast-theme-transparent-header.ast-header-break-point #ast-mobile-header > ' . $header_child_selector;
 		}
 
-		if ( '' !== $transparent_header_separator && $transparent_header_separator ) {
+		if ( '' !== $transparent_header_separator && 'inherit' !== $transparent_header_separator ) {
 			$css .= astra_parse_css(
 				array(
 					$selector => array(
@@ -504,7 +504,7 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 			$selector = '.ast-theme-transparent-header #ast-desktop-header > ' . $header_child_selector;
 		}
 
-		if( '' !== $transparent_header_separator && $transparent_header_separator ) {
+		if( '' !== $transparent_header_separator && 'inherit' !== $transparent_header_separator ) {
 			$css .= astra_parse_css(
 				array(
 					$selector => array(
