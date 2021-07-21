@@ -3151,7 +3151,7 @@ function astra_support_block_editor() {
  * Set flag to avoid direct reflections on live site & to maintain backward compatibility for existing users.
  *
  * @since x.x.x
- * @return void.
+ * @return void
  */
 function astra_remove_elementor_toc_margin() {
 	$theme_options = get_option( 'astra-settings', array() );
