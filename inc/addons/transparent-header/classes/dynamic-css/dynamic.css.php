@@ -432,7 +432,7 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 		$header_child_selector = '[CLASS*="-header-wrap"]:last-child > [CLASS*="-header-bar"]';
 	}
 
-	if ( 'both' === $transparent_header_devices && $transparent_header_separator ) {
+	if ( 'both' === $transparent_header_devices && ( '' !== $transparent_header_separator && $transparent_header_separator ) ) {
 
 		$selector = '.ast-theme-transparent-header .main-header-bar, .ast-theme-transparent-header.ast-header-break-point .main-header-bar';
 
@@ -451,7 +451,7 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 		);
 	}
 
-	if ( 'mobile' === $transparent_header_devices && $transparent_header_separator ) {
+	if ( 'mobile' === $transparent_header_devices && ( '' !== $transparent_header_separator && $transparent_header_separator ) ) {
 
 		$selector = '.ast-theme-transparent-header.ast-header-break-point .main-header-bar';
 
@@ -472,7 +472,7 @@ function astra_ext_transparent_header_dynamic_css( $dynamic_css, $dynamic_css_fi
 		);
 	}
 
-	if ( 'desktop' === $transparent_header_devices && $transparent_header_separator ) {
+	if ( 'desktop' === $transparent_header_devices && ( '' !== $transparent_header_separator && $transparent_header_separator ) ) {
 
 		$selector = '.ast-theme-transparent-header .main-header-bar';
 
