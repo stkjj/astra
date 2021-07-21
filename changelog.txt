@@ -1,4 +1,4 @@
-v3.7.0 (Unreleased)
+v3.6.6 (Unreleased)
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
 - Fix: Changing Off-canvas flyout close button color not reflecting on frontend.
 - Fix: Broken layout WooCommerce Shop/Archive page on mobile view when using elementor template or Product archive widget.
@@ -15,6 +15,9 @@ v3.7.0 (Unreleased)
 - Fix: Removed 'Disable Footer Widgets' option in Page meta settings for new Header Footer builder.
 - Fix: Sidebar block editor width changes on the widgets page.
 - Fix: Off-canvas menu closes on scrolling on mobile devices.
+- Fix: Theme's default margin space of OL tag apply to Elementor's TOC widget.
+- Fix: Menu dropdown icons showing at incorrect position in RTL languages.
+- Fix: “Search” string in Search Form is not translatable.
 
 v3.6.5
 - Improvement: Compatibility with WordPress 5.8.
