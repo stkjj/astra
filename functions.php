@@ -173,16 +173,3 @@ require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-filters.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-hooks.php';
 require_once ASTRA_THEME_DIR . 'inc/core/deprecated/deprecated-functions.php';
 
-
-
-add_filter( 'navigation_markup_template', 'change_template' );
-
-function change_template() {
-	$new_template = '
-	        <nav class="navigation %1$s" role="navigation" aria-label="%4$s">
-	                <span class="screen-reader-text">%2$s</span>
-	                <div class="nav-links">%3$s</div>
-	        </nav>';
-
-	return $new_template;
-}
