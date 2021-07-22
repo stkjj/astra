@@ -1595,7 +1595,8 @@ endif;
 /**
  * Added this filter to modify the post navigation template to remove the h2 tag from screen reader text.
  */
-function astra_post_navigation_template(){
+function astra_post_navigation_template() {
+
 	$new_template = '
 	        <nav class="navigation %1$s" role="navigation" aria-label="%4$s">
 	                <span class="screen-reader-text">%2$s</span>
@@ -1603,6 +1604,7 @@ function astra_post_navigation_template(){
 	        </nav>';
 
 	return $new_template;
+
 }
 
 add_filter('navigation_markup_template', 'astra_post_navigation_template');
