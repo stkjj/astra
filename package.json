@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.0.1",
-    "@wordpress/api-fetch": "^5.1.1",
+    "@wordpress/api-fetch": "^5.2.0",
     "@wordpress/e2e-test-utils": "^5.3.0",
     "@wordpress/env": "^4.0.5",
     "@wordpress/eslint-plugin": "^9.0.6",
