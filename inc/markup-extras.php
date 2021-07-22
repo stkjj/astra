@@ -1607,4 +1607,4 @@ function astra_post_navigation_template() {
 
 }
 
-add_filter('navigation_markup_template', 'astra_post_navigation_template');
+add_filter( 'navigation_markup_template', 'astra_post_navigation_template' );
