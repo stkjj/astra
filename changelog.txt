@@ -1,4 +1,4 @@
-v3.6.6
+v3.6.7
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
 - Improvement: Changed the screen reader text tag from 'h2' to 'span' for better SEO.
 - Fix: Changing Off-canvas flyout close button color not reflecting on frontend.
@@ -20,6 +20,9 @@ v3.6.6
 - Fix: Menu dropdown icons showing at incorrect position in RTL languages.
 - Fix: “Search” string in Search Form is not translatable.
 - Fix: Transparent header showing border even if it is not set from customizer in FireFox browser.
+
+v3.6.6
+- Fix: Installing Starter Templates plugin notice's "Get Started" button not working.
 
 v3.6.5
 - Improvement: Compatibility with WordPress 5.8.
