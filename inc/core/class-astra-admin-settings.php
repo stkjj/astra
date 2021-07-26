@@ -474,7 +474,7 @@ if ( ! class_exists( 'Astra_Admin_Settings' ) ) {
 		/**
 		 * Get register & enqueue astra-admin scripts.
 		 *
-		 * @since x.x.x
+		 * @since 3.6.6
 		 */
 		public static function load_astra_admin_script() {
 			wp_register_script( 'astra-admin-settings', ASTRA_THEME_URI . 'inc/assets/js/astra-admin-menu-settings.js', array( 'jquery', 'wp-util', 'updates' ), ASTRA_THEME_VERSION, false );
