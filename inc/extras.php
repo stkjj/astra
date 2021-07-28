@@ -703,9 +703,20 @@ function astra_remove_widget_design_options() {
 	$widget_design_sections_visibility = true;
 
 	if ( ! $astra_settings['remove-widget-design-options'] ) {
+		// For old users we will show widget design options by anyways.
 		$widget_design_sections_visibility = false;
-	} elseif ( astra_has_widgets_block_editor() ) {
-		$widget_design_sections_visibility = false;
+	} else {
+		// Considering the user is new now.
+		if( astra_get_option( 'astra_user_may_update_wp_5_8', false ) ) {
+			// User was on WP-5.8 lesser version previously and he may update their WordPress to 5.8 in future. So we display the options in this case.
+			$widget_design_sections_visibility = false;
+		} elseif ( astra_has_widgets_block_editor() ) {
+			// User is new & having block widgets active. So we will hide those options.
+			$widget_design_sections_visibility = true;
+		} else {
+			// Setting up flag because user is on lesser WP versions and may update WP to 5.8.
+			astra_update_option( 'astra_user_may_update_wp_5_8', true );
+		}
 	}
 
 	return apply_filters( 'astra_show_widget_design_options', $widget_design_sections_visibility );
