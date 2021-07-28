@@ -107,6 +107,9 @@ if ( ! class_exists( 'Astra_Theme_Background_Updater' ) ) {
 				'astra_fix_footer_widget_right_margin_case',
 				'astra_remove_elementor_toc_margin',
 			),
+			'3.7.1' => array(
+				'astra_set_removal_widget_design_options_flag',
+			),
 		);
 
 		/**

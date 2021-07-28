@@ -1,3 +1,6 @@
+v3.7.1 (Unreleased)
+- Improvement: Builder - Removed design specific options from widgets in WordPress 5.8.
+
 v3.6.6 (Unreleased)
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
 - Fix: Changing Off-canvas flyout close button color not reflecting on frontend.

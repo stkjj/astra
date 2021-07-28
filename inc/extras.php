@@ -685,3 +685,28 @@ function astra_can_remove_elementor_toc_margin_space() {
 	$astra_settings['remove-elementor-toc-margin-css'] = isset( $astra_settings['remove-elementor-toc-margin-css'] ) ? false : true;
 	return apply_filters( 'astra_remove_elementor_toc_margin', $astra_settings['remove-elementor-toc-margin-css'] );
 }
+
+/**
+ * Check whether widget specific config, dynamic CSS, preview JS needs to remove or not. Following cases considered while implementing this.
+ *
+ * 1. Is WordPress 5.8 active.
+ * 2. Is user is from old setup / new setup.
+ *
+ * @since x.x.x
+ * @return boolean
+ */
+function astra_remove_widget_design_options() {
+	$astra_settings = get_option( ASTRA_THEME_SETTINGS );
+	$astra_settings['remove-widget-design-options'] = isset( $astra_settings['remove-widget-design-options'] ) ? false : true;
+
+	// True -> Hide widget sections, False -> Display widget sections.
+	$widget_design_sections_visibility = true;
+
+	if ( ! $astra_settings['remove-widget-design-options'] ) {
+		$widget_design_sections_visibility = false;
+	} elseif ( astra_has_widgets_block_editor() ) {
+		$widget_design_sections_visibility = false;
+	}
+
+	return apply_filters( 'astra_show_widget_design_options', $widget_design_sections_visibility );
+}
