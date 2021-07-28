@@ -328,7 +328,7 @@ final class Astra_Builder_Base_Configuration {
 				);
 			}
 
-			if( ! astra_remove_widget_design_options() ) {
+			if ( ! astra_remove_widget_design_options() ) {
 
 				$html_config[] = array(
 

@@ -697,7 +697,7 @@ function astra_can_remove_elementor_toc_margin_space() {
  * @return boolean
  */
 function astra_remove_widget_design_options() {
-	$astra_settings = get_option( ASTRA_THEME_SETTINGS );
+	$astra_settings                                 = get_option( ASTRA_THEME_SETTINGS );
 	$astra_settings['remove-widget-design-options'] = isset( $astra_settings['remove-widget-design-options'] ) ? false : true;
 
 	// True -> Hide widget sections, False -> Display widget sections.
@@ -708,7 +708,7 @@ function astra_remove_widget_design_options() {
 		$is_widget_design_sections_hidden = false;
 	} else {
 		// Considering the user is new now.
-		if( $astra_settings['remove-widget-design-options'] ) {
+		if ( $astra_settings['remove-widget-design-options'] ) {
 			// User was on WP-5.8 lesser version previously and he may update their WordPress to 5.8 in future. So we display the options in this case.
 			$is_widget_design_sections_hidden = false;
 		} elseif ( astra_has_widgets_block_editor() ) {
