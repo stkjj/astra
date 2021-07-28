@@ -689,8 +689,9 @@ function astra_can_remove_elementor_toc_margin_space() {
 /**
  * Check whether widget specific config, dynamic CSS, preview JS needs to remove or not. Following cases considered while implementing this.
  *
- * 1. Is WordPress 5.8 active.
- * 2. Is user is from old setup / new setup.
+ * 1. Is user is from old Astra setup.
+ * 2. Check if user is new but on lesser WordPress 5.8 versions.
+ * 3. User is new with block widget editor.
  *
  * @since x.x.x
  * @return boolean
