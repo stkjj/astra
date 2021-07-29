@@ -2603,16 +2603,16 @@ if ( ! class_exists( 'Astra_Dynamic_CSS' ) ) {
 					$widget_link_color       = astra_get_option( 'transparent-header-widget-link-color' );
 					$widget_link_hover_color = astra_get_option( 'transparent-header-widget-link-h-color' );
 
-					$transparent_header_builder_desktop_css[ '.ast-theme-transparent-header .widget-area.header-widget-area .widget-title' ]              = array(
+					$transparent_header_builder_desktop_css['.ast-theme-transparent-header .widget-area.header-widget-area .widget-title']                     = array(
 						'color' => esc_attr( $widget_title_color ),
 					);
-					$transparent_header_builder_desktop_css[ '.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner' ]       = array(
+					$transparent_header_builder_desktop_css['.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner']         = array(
 						'color' => esc_attr( $widget_content_color ),
 					);
-					$transparent_header_builder_desktop_css[ '.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner a' ] = array(
+					$transparent_header_builder_desktop_css['.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner a']       = array(
 						'color' => esc_attr( $widget_link_color ),
 					);
-					$transparent_header_builder_desktop_css[ '.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner a:hover' ] = array(
+					$transparent_header_builder_desktop_css['.ast-theme-transparent-header .widget-area.header-widget-area .header-widget-area-inner a:hover'] = array(
 						'color' => esc_attr( $widget_link_hover_color ),
 					);
 
