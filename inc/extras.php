@@ -720,5 +720,5 @@ function astra_remove_widget_design_options() {
 		}
 	}
 
-	return apply_filters( 'astra_show_widget_design_options', $is_widget_design_sections_hidden );
+	return apply_filters( 'astra_remove_widget_design_options', $is_widget_design_sections_hidden );
 }
