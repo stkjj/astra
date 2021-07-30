@@ -1,3 +1,6 @@
+v3.6.8 (Unreleased)
+- Fix: Bulk action selection not working on any WordPress list table when Astra's Get Started notice is active.
+
 v3.6.7
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
 - Improvement: Changed the screen reader text tag from 'h2' to 'span' for better SEO.
