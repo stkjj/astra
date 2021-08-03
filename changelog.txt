@@ -1,5 +1,5 @@
 v3.6.8
-- Improvement: Added WPML translation support for all customizer's  strings through wpml-config.xml file.
+- Improvement: Added WPML translation support for all customizer's strings through wpml-config.xml file.
 
 v3.6.7
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
