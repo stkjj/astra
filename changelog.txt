@@ -1,3 +1,6 @@
+v3.6.8
+- Improvement: Added WPML translation support for all customizer strings through wpml-config.xml file.
+
 v3.6.7
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
 - Improvement: Changed the screen reader text tag from 'h2' to 'span' for better SEO.
