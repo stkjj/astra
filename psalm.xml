@@ -12,7 +12,7 @@
     </projectFiles>
     <stubs>
         <file name="vendor/php-stubs/wordpress-stubs/wordpress-stubs.php"/>
-		<file name="vendor/php-stubs/woocommerce-stubs/woocommerce-stubs.php"/>
+        <file name="vendor/php-stubs/woocommerce-stubs/woocommerce-stubs.php"/>
         <file name="tests/php/static-analysis-stubs/constants.php"/>
         <file name="tests/php/static-analysis-stubs/astra-stubs.php"/>
     </stubs>
