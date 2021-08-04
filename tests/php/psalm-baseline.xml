@@ -67,10 +67,12 @@
       <code>get_the_time( esc_html_x( 'j', 'daily archives date format',   'astra' ) )</code>
       <code>get_the_time( esc_html_x( 'j', 'daily archives date format', 'astra' ) )</code>
     </PossiblyFalseArgument>
-    <PossiblyInvalidArgument occurrences="6">
+    <PossiblyInvalidArgument occurrences="8">
       <code>$term</code>
       <code>$term</code>
       <code>$term</code>
+      <code>$terms</code>
+      <code>$terms</code>
       <code>get_term_link( $term, $taxonomy )</code>
       <code>get_term_link( $term, $taxonomy )</code>
       <code>get_term_link( $term, $term-&gt;taxonomy )</code>
@@ -213,6 +215,14 @@
     <TooFewArguments occurrences="1">
       <code>get_day_link( get_the_time( 'Y' ) )</code>
     </TooFewArguments>
+    <TooManyArguments occurrences="6">
+      <code>apply_filters( 'astra_breadcrumb_trail', $breadcrumb, $this-&gt;args )</code>
+      <code>apply_filters( 'astra_breadcrumb_trail_items', $this-&gt;items, $this-&gt;args )</code>
+      <code>apply_filters( 'astra_breadcrumb_trail_object', null, $args )</code>
+      <code>apply_filters( 'post_type_archive_title', $label, $post_type_object-&gt;name )</code>
+      <code>apply_filters( 'post_type_archive_title', $label, $post_type_object-&gt;name )</code>
+      <code>apply_filters( 'post_type_archive_title', $label, $post_type_object-&gt;name )</code>
+    </TooManyArguments>
     <TypeDoesNotContainType occurrences="2">
       <code>$slug === $type-&gt;has_archive</code>
       <code>empty( $post_types )</code>
@@ -296,6 +306,7 @@
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
+    <TooManyArguments occurrences="1"/>
     <UndefinedClass occurrences="2">
       <code>WPSEO_Options</code>
       <code>WPSEO_Options</code>
@@ -424,7 +435,6 @@
       <code>astra_get_mobile_breakpoint( 1 )</code>
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint( '', 1 )</code>
-      <code>astra_get_tablet_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -637,6 +647,16 @@
     <RedundantConditionGivenDocblockType occurrences="1">
       <code>is_array( $class )</code>
     </RedundantConditionGivenDocblockType>
+    <TooManyArguments occurrences="8">
+      <code>apply_filters( 'astra_blog_layout_class', $classes, $class )</code>
+      <code>apply_filters( 'astra_meta_case_' . $meta_value, $output_str, $loop_count, $separator )</code>
+      <code>apply_filters( 'astra_post_author', $output, $output_filter )</code>
+      <code>apply_filters( 'astra_post_categories', $output, $output_filter )</code>
+      <code>apply_filters( 'astra_post_comments', $output, $output_filter )</code>
+      <code>apply_filters( 'astra_post_link', $output, $output_filter )</code>
+      <code>apply_filters( 'astra_post_tags', $output, $output_filter )</code>
+      <code>apply_filters( 'astra_the_content_more_link', $more_link_element, $more_link_text )</code>
+    </TooManyArguments>
     <UndefinedDocblockClass occurrences="7">
       <code>html</code>
       <code>html</code>
@@ -671,6 +691,9 @@
     <PossiblyInvalidArgument occurrences="1">
       <code>$post_featured_data</code>
     </PossiblyInvalidArgument>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_blog_post_meta', '&lt;div class="entry-meta"&gt;' . $output_str . '&lt;/div&gt;', $output_str )</code>
+    </TooManyArguments>
     <UndefinedDocblockClass occurrences="2">
       <code>number</code>
       <code>number</code>
@@ -690,6 +713,9 @@
     <PossiblyNullPropertyFetch occurrences="1">
       <code>$post_obj-&gt;labels</code>
     </PossiblyNullPropertyFetch>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_single_post_meta', '&lt;div class="entry-meta"&gt;' . $output_str . '&lt;/div&gt;', $output_str )</code>
+    </TooManyArguments>
     <UndefinedDocblockClass occurrences="1">
       <code>number</code>
     </UndefinedDocblockClass>
@@ -1635,6 +1661,9 @@
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_toggle_button_markup', $item_output, $item )</code>
+    </TooManyArguments>
   </file>
   <file src="inc/compatibility/class-astra-amp.php">
     <DocblockTypeContradiction occurrences="2">
@@ -1725,6 +1754,9 @@
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'fl_builder_do_render_content', true, FLBuilderModel::get_post_id() )</code>
+    </TooManyArguments>
     <UndefinedClass occurrences="2">
       <code>FLBuilderModel</code>
       <code>FLBuilderModel</code>
@@ -1963,6 +1995,9 @@
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'llms_blocks_is_post_migrated', get_post_meta( get_the_ID(), '_llms_blocks_migrated', true ), get_the_ID() )</code>
+    </TooManyArguments>
     <UndefinedFunction occurrences="26">
       <code>'lifterlms_get_sidebar'</code>
       <code>'lifterlms_output_content_wrapper'</code>
@@ -2082,7 +2117,10 @@
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
     </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="2"/>
+    <RedundantConditionGivenDocblockType occurrences="2">
+      <code>null !== WC()-&gt;cart</code>
+      <code>null !== WC()-&gt;cart</code>
+    </RedundantConditionGivenDocblockType>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2113,11 +2151,15 @@
     <InvalidGlobal occurrences="1">
       <code>global $product;</code>
     </InvalidGlobal>
-    <PossiblyFalseArgument occurrences="3">
+    <PossiblyFalseArgument occurrences="4">
+      <code>get_the_ID()</code>
       <code>get_the_ID()</code>
       <code>get_the_permalink()</code>
       <code>get_the_permalink()</code>
     </PossiblyFalseArgument>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_woo_shop_product_categories', esc_html( $parent_cat ), get_the_ID() )</code>
+    </TooManyArguments>
   </file>
   <file src="inc/core/builder/class-astra-builder-admin.php">
     <DocblockTypeContradiction occurrences="1">
@@ -2262,13 +2304,20 @@
     <PossiblyNullPropertyFetch occurrences="1">
       <code>$screen-&gt;id</code>
     </PossiblyNullPropertyFetch>
-    <PossiblyUndefinedStringArrayOffset occurrences="6">
+    <PossiblyNullReference occurrences="1">
+      <code>get_error_message</code>
+    </PossiblyNullReference>
+    <PossiblyUndefinedStringArrayOffset occurrences="10">
       <code>$ast_sites_notice_btn['button_text']</code>
       <code>$ast_sites_notice_btn['button_text']</code>
       <code>$ast_sites_notice_btn['class']</code>
       <code>$ast_sites_notice_btn['class']</code>
       <code>$ast_sites_notice_btn['class']</code>
       <code>$ast_sites_notice_btn['detail_link_text']</code>
+      <code>$info['class']</code>
+      <code>$info['links']</code>
+      <code>$info['title']</code>
+      <code>$link['link_text']</code>
     </PossiblyUndefinedStringArrayOffset>
     <RedundantCastGivenDocblockType occurrences="1">
       <code>(array) $post_types</code>
@@ -2284,6 +2333,10 @@
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
+    <TooManyArguments occurrences="2">
+      <code>apply_filters( "astra_attr_{$context}", $attributes, $context, $args )</code>
+      <code>apply_filters( "astra_attr_{$context}_output", $output, $attributes, $context, $args )</code>
+    </TooManyArguments>
   </file>
   <file src="inc/core/class-astra-enqueue-scripts.php">
     <DocblockTypeContradiction occurrences="2">
@@ -2325,12 +2378,18 @@
       <code>Astra_Cache_Base</code>
     </UndefinedClass>
   </file>
+  <file src="inc/core/class-astra-icons.php">
+    <TooManyArguments occurrences="3">
+      <code>apply_filters( 'astra_svg_icon', $output, $icon )</code>
+      <code>apply_filters( 'astra_svg_icon', $output, $icon )</code>
+      <code>apply_filters( 'astra_svg_icon_element', $output, $icon )</code>
+    </TooManyArguments>
+  </file>
   <file src="inc/core/class-astra-theme-options.php">
     <InvalidArgument occurrences="1">
       <code>self::defaults()</code>
     </InvalidArgument>
     <InvalidReturnStatement occurrences="1">
-      <code>self::$defaults</code>
       <code>self::$defaults</code>
     </InvalidReturnStatement>
     <MissingDocblockType occurrences="2">
@@ -2427,6 +2486,19 @@
       <code>isset( $medium )</code>
       <code>isset( $source )</code>
     </RedundantConditionGivenDocblockType>
+    <TooManyArguments occurrences="11">
+      <code>apply_filters( "astra_get_db_option_{$option}", $value, $option, $default )</code>
+      <code>apply_filters( "astra_get_option_meta_{$option_id}", $value, $default, $default )</code>
+      <code>apply_filters( "astra_get_option_{$option}", $value, $option, $default )</code>
+      <code>apply_filters( 'astra_get_db_option_array', $theme_options, $option, $default )</code>
+      <code>apply_filters( 'astra_get_option_array', $theme_options, $option, $default )</code>
+      <code>apply_filters( 'astra_get_post_format', $post_format, $post_format_override )</code>
+      <code>apply_filters( 'astra_get_post_id', Astra_Theme_Options::$post_id, $post_id_override )</code>
+      <code>apply_filters( 'astra_get_pro_url', $astra_pro_url, $url )</code>
+      <code>apply_filters( 'astra_primary_class', $classes, $class )</code>
+      <code>apply_filters( 'astra_secondary_class', $classes, $class )</code>
+      <code>apply_filters( 'astra_the_title', $title, $post_id )</code>
+    </TooManyArguments>
     <UndefinedClass occurrences="1">
       <code>Astra_Ext_White_Label_Markup</code>
     </UndefinedClass>
@@ -2709,6 +2781,9 @@
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_customizer_configurations', array(), $wp_customize )</code>
+    </TooManyArguments>
     <TypeDoesNotContainType occurrences="3">
       <code>is_numeric( $val )</code>
       <code>is_numeric( $val )</code>
@@ -2746,6 +2821,9 @@
       <code>is_array( $subsets )</code>
       <code>is_array( $variants )</code>
     </RedundantConditionGivenDocblockType>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_font_subset', '', $name )</code>
+    </TooManyArguments>
   </file>
   <file src="inc/customizer/configurations/builder/base/class-astra-button-component-configs.php">
     <ParadoxicalCondition occurrences="1">
@@ -2987,6 +3065,7 @@
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
+    <TooManyArguments occurrences="1"/>
   </file>
   <file src="inc/customizer/configurations/layout/class-astra-sidebar-layout-configs.php">
     <ParadoxicalCondition occurrences="1">
@@ -3270,7 +3349,12 @@
     <PossiblyUndefinedVariable occurrences="1">
       <code>$widget_id</code>
     </PossiblyUndefinedVariable>
-    <TooManyArguments occurrences="1">
+    <TooManyArguments occurrences="6">
+      <code>apply_filters( 'astra_get_dynamic_header_content', '', $option, $section )</code>
+      <code>apply_filters( 'astra_get_post_thumbnail', $output, $before, $after )</code>
+      <code>apply_filters( 'astra_get_search', $search_html, $option, $device )</code>
+      <code>apply_filters( 'astra_logo', $html, $display_site_title, $display_site_tagline )</code>
+      <code>apply_filters( 'astra_sidebar_data_attrs', '', $widget_id )</code>
       <code>astra_single_get_post_meta( '', '', false )</code>
     </TooManyArguments>
     <UndefinedDocblockClass occurrences="4">
@@ -3323,11 +3407,23 @@
       <code>$post_id</code>
       <code>get_permalink()</code>
     </PossiblyFalseArgument>
+    <PossiblyInvalidArgument occurrences="1">
+      <code>$terms</code>
+    </PossiblyInvalidArgument>
     <PossiblyInvalidMethodCall occurrences="3">
       <code>have_posts</code>
       <code>have_posts</code>
       <code>the_post</code>
     </PossiblyInvalidMethodCall>
+    <TooManyArguments occurrences="7">
+      <code>apply_filters( 'astra_related_post_excerpt', $excerpt, $current_post_id )</code>
+      <code>apply_filters( 'astra_related_post_link', get_the_permalink(), $current_post_id )</code>
+      <code>apply_filters( 'astra_related_post_link', get_the_permalink(), $current_post_id )</code>
+      <code>apply_filters( 'astra_related_post_thumbnail', $featured_img_markup, $before, $after )</code>
+      <code>apply_filters( 'astra_related_posts_exclude_post_ids', array( $post_id ), $post_id )</code>
+      <code>apply_filters( 'astra_related_posts_meta_html', '&lt;div class="entry-meta"&gt;' . $output_str . '&lt;/div&gt;', $output_str )</code>
+      <code>apply_filters( 'astra_related_posts_no_posts_avilable_message', '', $post_id )</code>
+    </TooManyArguments>
   </file>
   <file src="inc/modules/related-posts/css/dynamic-css.php">
     <InvalidArgument occurrences="2">
@@ -3400,6 +3496,9 @@
     <InvalidReturnStatement occurrences="1">
       <code>$items</code>
     </InvalidReturnStatement>
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_masthead_custom_menu_item', array( 'ast-masthead-custom-menu-items', $section . '-custom-menu-item' ), $section )</code>
+    </TooManyArguments>
   </file>
   <file src="inc/template-tags.php">
     <PossiblyNullArgument occurrences="1">
@@ -3527,10 +3626,21 @@
       <code>$process</code>
     </InvalidOperand>
   </file>
+  <file src="sidebar.php">
+    <TooManyArguments occurrences="1">
+      <code>apply_filters( 'astra_sidebar_data_attrs', '', $sidebar )</code>
+    </TooManyArguments>
+  </file>
   <file src="template-parts/advanced-footer/layout-4.php">
     <PossiblyUndefinedGlobalVariable occurrences="1">
       <code>$classes</code>
     </PossiblyUndefinedGlobalVariable>
+    <TooManyArguments occurrences="4">
+      <code>apply_filters( 'astra_sidebar_data_attrs', '', 'advanced-footer-widget-1' )</code>
+      <code>apply_filters( 'astra_sidebar_data_attrs', '', 'advanced-footer-widget-2' )</code>
+      <code>apply_filters( 'astra_sidebar_data_attrs', '', 'advanced-footer-widget-3' )</code>
+      <code>apply_filters( 'astra_sidebar_data_attrs', '', 'advanced-footer-widget-4' )</code>
+    </TooManyArguments>
   </file>
   <file src="template-parts/content-blog.php">
     <PossiblyFalseOperand occurrences="1">
@@ -3562,6 +3672,9 @@
     </PossiblyNullArgument>
   </file>
   <file src="template-parts/footer/builder/components.php">
+    <PossiblyUndefinedStringArrayOffset occurrences="1">
+      <code>$component_slug['type']</code>
+    </PossiblyUndefinedStringArrayOffset>
     <UndefinedGlobalVariable occurrences="1">
       <code>$args</code>
     </UndefinedGlobalVariable>
@@ -3571,6 +3684,9 @@
       <code>$zones</code>
       <code>$zones</code>
     </InvalidScalarArgument>
+    <PossiblyUndefinedStringArrayOffset occurrences="1">
+      <code>$row['row']</code>
+    </PossiblyUndefinedStringArrayOffset>
     <UndefinedGlobalVariable occurrences="1">
       <code>$args</code>
     </UndefinedGlobalVariable>
@@ -3579,17 +3695,26 @@
     <PossiblyUndefinedGlobalVariable occurrences="1">
       <code>$component_args</code>
     </PossiblyUndefinedGlobalVariable>
+    <PossiblyUndefinedStringArrayOffset occurrences="1">
+      <code>$component_args['type']</code>
+    </PossiblyUndefinedStringArrayOffset>
     <UndefinedGlobalVariable occurrences="2">
       <code>$args</code>
       <code>$args</code>
     </UndefinedGlobalVariable>
   </file>
   <file src="template-parts/header/builder/header-row.php">
+    <PossiblyUndefinedStringArrayOffset occurrences="1">
+      <code>$row['row']</code>
+    </PossiblyUndefinedStringArrayOffset>
     <UndefinedGlobalVariable occurrences="1">
       <code>$args</code>
     </UndefinedGlobalVariable>
   </file>
   <file src="template-parts/header/builder/mobile-header-row.php">
+    <PossiblyUndefinedStringArrayOffset occurrences="1">
+      <code>$row['row']</code>
+    </PossiblyUndefinedStringArrayOffset>
     <TooManyArguments occurrences="7">
       <code>Astra_Builder_Helper::has_mobile_center_column( $row, 'header', 'mobile' )</code>
       <code>Astra_Builder_Helper::has_mobile_center_column( $row, 'header', 'mobile' )</code>
