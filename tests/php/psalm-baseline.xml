@@ -95,9 +95,7 @@
       <code>$type-&gt;has_archive</code>
       <code>$type-&gt;rewrite</code>
     </PossiblyInvalidPropertyFetch>
-    <PossiblyNullArgument occurrences="11">
-      <code>$label</code>
-      <code>$label</code>
+    <PossiblyNullArgument occurrences="9">
       <code>$post_id</code>
       <code>$post_id</code>
       <code>$post_type_object-&gt;name</code>
@@ -212,9 +210,6 @@
       <code>isset( $matches )</code>
       <code>isset( $matches )</code>
     </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>is_object( $breadcrumb )</code>
-    </RedundantConditionGivenDocblockType>
     <TooFewArguments occurrences="1">
       <code>get_day_link( get_the_time( 'Y' ) )</code>
     </TooFewArguments>
@@ -241,10 +236,6 @@
     </UndefinedPropertyFetch>
   </file>
   <file src="inc/addons/breadcrumbs/class-astra-breadcrumbs-loader.php">
-    <HookNotFound occurrences="2">
-      <code>add_action( 'astra_get_fonts', array( $this, 'add_fonts' ), 1 )</code>
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-    </HookNotFound>
     <InvalidPropertyAssignmentValue occurrences="1">
       <code>new self()</code>
     </InvalidPropertyAssignmentValue>
@@ -265,9 +256,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/addons/breadcrumbs/class-astra-breadcrumbs-markup.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'astra_before_archive_title', array( $this, 'astra_hook_breadcrumb_position' ), 15 )</code>
-    </HookNotFound>
     <PossiblyFalseArgument occurrences="1">
       <code>get_the_ID()</code>
     </PossiblyFalseArgument>
@@ -319,9 +307,6 @@
     </DocblockTypeContradiction>
   </file>
   <file src="inc/addons/breadcrumbs/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_breadcrumb_section_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="5">
       <code>$default_color_array</code>
       <code>$default_color_array</code>
@@ -334,10 +319,6 @@
     </UndefinedClass>
   </file>
   <file src="inc/addons/heading-colors/class-astra-heading-colors-loader.php">
-    <HookNotFound occurrences="2">
-      <code>add_action( 'astra_get_fonts', array( $this, 'add_fonts' ), 1 )</code>
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-    </HookNotFound>
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
@@ -365,11 +346,6 @@
       <code>Astra_Ext_Extension</code>
     </UndefinedClass>
   </file>
-  <file src="inc/addons/heading-colors/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_heading_colors_section_dynamic_css' )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/addons/transparent-header/class-astra-ext-transparent-header.php">
     <InvalidPropertyAssignmentValue occurrences="1">
       <code>new self()</code>
@@ -385,9 +361,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/addons/transparent-header/classes/class-astra-ext-transparent-header-loader.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-    </HookNotFound>
     <InvalidPropertyAssignmentValue occurrences="1">
       <code>new self()</code>
     </InvalidPropertyAssignmentValue>
@@ -411,18 +384,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/addons/transparent-header/classes/class-astra-ext-transparent-header-markup.php">
-    <HookNotFound occurrences="5">
-      <code>add_action( 'astra_customizer_save', array( $this, 'customizer_save' ) )</code>
-      <code>add_action( 'astra_header', array( $this, 'transparent_header_logo' ), 1 )</code>
-      <code>add_action( 'astra_meta_box_markup_after', array( $this, 'add_options_markup' ) )</code>
-      <code>add_filter( 'astra_has_custom_logo', '__return_true' )</code>
-      <code>add_filter( 'astra_meta_box_options', array( $this, 'add_options' ) )</code>
-    </HookNotFound>
-    <InvalidArgument occurrences="3">
-      <code>array( $this, 'add_body_class' )</code>
-      <code>array( $this, 'replace_trans_header_attr' )</code>
-      <code>array( $this, 'transparent_custom_logo' )</code>
-    </InvalidArgument>
     <InvalidReturnStatement occurrences="1">
       <code>$html</code>
     </InvalidReturnStatement>
@@ -447,9 +408,6 @@
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
-    <UndefinedFunction occurrences="1">
-      <code>is_product()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/addons/transparent-header/classes/class-astra-transparent-header-panels-and-sections.php">
     <DocblockTypeContradiction occurrences="1">
@@ -462,9 +420,6 @@
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_ext_transparent_header_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="14">
       <code>astra_get_mobile_breakpoint( 1 )</code>
       <code>astra_get_mobile_breakpoint()</code>
@@ -531,10 +486,6 @@
     </PossiblyUndefinedStringArrayOffset>
   </file>
   <file src="inc/addons/transparent-header/classes/dynamic-css/header-sections-dynamic.css.php">
-    <HookNotFound occurrences="2">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_ext_transparent_above_header_sections_dynamic_css' )</code>
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_ext_transparent_below_header_sections_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="4">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_mobile_breakpoint()</code>
@@ -641,17 +592,7 @@
     </InvalidScalarArgument>
   </file>
   <file src="inc/blog/blog-config.php">
-    <DocblockTypeContradiction occurrences="2">
-      <code>! $enabled</code>
-      <code>! $enabled</code>
-    </DocblockTypeContradiction>
-    <FalsableReturnStatement occurrences="2">
-      <code>apply_filters( 'astra_post_author', $output, $output_filter )</code>
-      <code>apply_filters( 'astra_post_comments', $output, $output_filter )</code>
-    </FalsableReturnStatement>
-    <InvalidArgument occurrences="4">
-      <code>'astra_post_link'</code>
-      <code>'astra_the_content_more_link'</code>
+    <InvalidArgument occurrences="2">
       <code>get_the_ID()</code>
       <code>get_the_ID()</code>
     </InvalidArgument>
@@ -665,16 +606,9 @@
       <code>astra_post_author()</code>
       <code>astra_post_date()</code>
     </InvalidOperand>
-    <InvalidReturnStatement occurrences="9">
+    <InvalidReturnStatement occurrences="2">
       <code>$more_link_element</code>
       <code>$output_filter</code>
-      <code>apply_filters( 'astra_post_author', $output, $output_filter )</code>
-      <code>apply_filters( 'astra_post_categories', $output, $output_filter )</code>
-      <code>apply_filters( 'astra_post_comments', $output, $output_filter )</code>
-      <code>apply_filters( 'astra_post_date', $output )</code>
-      <code>apply_filters( 'astra_post_link', $output, $output_filter )</code>
-      <code>apply_filters( 'astra_post_tags', $output, $output_filter )</code>
-      <code>apply_filters( 'astra_the_content_more_link', $more_link_element, $more_link_text )</code>
     </InvalidReturnStatement>
     <InvalidScalarArgument occurrences="2">
       <code>get_the_author_meta( 'ID' )</code>
@@ -717,9 +651,6 @@
     </UndefinedFunction>
   </file>
   <file src="inc/blog/blog.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'astra_blog_post_featured_format', 'astra_blog_post_get_featured_item' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="3">
       <code>$post_meta</code>
       <code>get_the_ID()</code>
@@ -740,18 +671,12 @@
     <PossiblyInvalidArgument occurrences="1">
       <code>$post_featured_data</code>
     </PossiblyInvalidArgument>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>in_array( $current_post_type, $post_type_array ) &amp;&amp; is_array( $post_meta ) &amp;&amp; $enable_meta</code>
-    </RedundantConditionGivenDocblockType>
     <UndefinedDocblockClass occurrences="2">
       <code>number</code>
       <code>number</code>
     </UndefinedDocblockClass>
   </file>
   <file src="inc/blog/single-blog.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'astra_entry_after', 'astra_single_post_navigation_markup' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="1">
       <code>$post_meta</code>
     </InvalidArgument>
@@ -765,10 +690,6 @@
     <PossiblyNullPropertyFetch occurrences="1">
       <code>$post_obj-&gt;labels</code>
     </PossiblyNullPropertyFetch>
-    <RedundantConditionGivenDocblockType occurrences="2">
-      <code>is_array( $post_meta ) &amp;&amp; ( in_array( $current_post_type, $post_type_array ) || 'attachment' == $current_post_type ) &amp;&amp; $enable_meta</code>
-      <code>is_single() &amp;&amp; $single_post_navigation_enabled</code>
-    </RedundantConditionGivenDocblockType>
     <UndefinedDocblockClass occurrences="1">
       <code>number</code>
     </UndefinedDocblockClass>
@@ -780,11 +701,6 @@
       <code>is_null( self::$instance )</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="3">
-      <code>add_filter( 'astra_addon_existing_header_footer_configs', '__return_false' )</code>
-      <code>add_filter( 'astra_existing_header_footer_configs', '__return_false' )</code>
-      <code>add_filter( 'astra_quick_settings', array( $this, 'quick_settings' ) )</code>
-    </HookNotFound>
     <InvalidPropertyAssignmentValue occurrences="1">
       <code>new self()</code>
     </InvalidPropertyAssignmentValue>
@@ -853,15 +769,6 @@
       <code>is_null( self::$instance )</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="7">
-      <code>add_action( 'astra_above_footer', array( $this, 'above_footer' ), 10 )</code>
-      <code>add_action( 'astra_below_footer', array( $this, 'below_footer' ), 10 )</code>
-      <code>add_action( 'astra_footer', array( $this, 'footer_markup' ), 10 )</code>
-      <code>add_action( 'astra_footer_copyright', array( $this, 'footer_copyright' ), 10 )</code>
-      <code>add_action( 'astra_footer_menu', array( $this, 'footer_menu' ) )</code>
-      <code>add_action( 'astra_primary_footer', array( $this, 'primary_footer' ), 10 )</code>
-      <code>add_action( 'astra_render_footer_column', array( $this, 'render_column' ), 10, 2 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="1">
       <code>self::$methods</code>
     </InvalidArgument>
@@ -903,29 +810,7 @@
       <code>is_null( self::$instance )</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="19">
-      <code>add_action( 'astra_above_header', array( $this, 'above_header' ) )</code>
-      <code>add_action( 'astra_below_header', array( $this, 'below_header' ) )</code>
-      <code>add_action( 'astra_header_account', array( $this, 'header_account' ) )</code>
-      <code>add_action( 'astra_header_edd_cart', array( $this, 'header_edd_cart' ) )</code>
-      <code>add_action( 'astra_header_menu_mobile', array( $this, 'header_mobile_menu_markup' ) )</code>
-      <code>add_action( 'astra_header_mobile_trigger', array( $this, 'header_mobile_trigger' ) )</code>
-      <code>add_action( 'astra_header_search', array( $this, 'header_search' ), 10, 1 )</code>
-      <code>add_action( 'astra_header_woo_cart', array( $this, 'header_woo_cart' ) )</code>
-      <code>add_action( 'astra_masthead', array( $this, 'desktop_header' ) )</code>
-      <code>add_action( 'astra_mobile_above_header', array( $this, 'mobile_above_header' ) )</code>
-      <code>add_action( 'astra_mobile_below_header', array( $this, 'mobile_below_header' ) )</code>
-      <code>add_action( 'astra_mobile_header', array( $this, 'mobile_header' ) )</code>
-      <code>add_action( 'astra_mobile_header_content', array( $this, 'render_mobile_column' ), 10, 2 )</code>
-      <code>add_action( 'astra_mobile_primary_header', array( $this, 'mobile_primary_header' ) )</code>
-      <code>add_action( 'astra_mobile_site_identity', __CLASS__ . '::site_identity' )</code>
-      <code>add_action( 'astra_primary_header', array( $this, 'primary_header' ) )</code>
-      <code>add_action( 'astra_render_header_column', array( $this, 'render_column' ), 10, 2 )</code>
-      <code>add_action( 'astra_render_mobile_header_column', array( $this, 'render_mobile_column' ), 10, 2 )</code>
-      <code>add_action( 'astra_site_identity', __CLASS__ . '::site_identity' )</code>
-    </HookNotFound>
-    <InvalidArgument occurrences="2">
-      <code>array( $this, 'add_body_class' )</code>
+    <InvalidArgument occurrences="1">
       <code>self::$methods</code>
     </InvalidArgument>
     <InvalidPropertyAssignmentValue occurrences="2">
@@ -1045,10 +930,6 @@
     <DocblockTypeContradiction occurrences="1">
       <code>is_null( self::$instance )</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="2">
-      <code>add_filter( 'astra_dynamic_theme_css', array( $this, 'footer_dynamic_css' ) )</code>
-      <code>add_filter( 'astra_dynamic_theme_css', array( $this, 'mobile_header_logo_css' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="10">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_mobile_breakpoint()</code>
@@ -1104,9 +985,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/builder/type/footer/above-footer/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_above_footer_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1141,9 +1019,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/builder/type/footer/below-footer/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_below_footer_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1168,9 +1043,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/footer/button/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_button_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1199,9 +1071,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/builder/type/footer/copyright/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_copyright_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1224,9 +1093,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/footer/html/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_html_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1248,9 +1114,6 @@
     <DuplicateArrayKey occurrences="1">
       <code>$selector                                       =&gt; $arr_footer_ul_mobile</code>
     </DuplicateArrayKey>
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_footer_menu_dynamic_css', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1282,9 +1145,6 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/builder/type/footer/primary-footer/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_primary_footer_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1314,11 +1174,6 @@
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
-  <file src="inc/builder/type/footer/social-icon/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_social_icon_dynamic_css' )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/builder/type/footer/widget/class-astra-footer-widget-component-loader.php">
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
@@ -1329,9 +1184,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/footer/widget/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_fb_widget_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1350,9 +1202,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/above-header/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_above_header_row_setting', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1376,20 +1225,12 @@
       <code>ASTRA_HEADER_ACCOUNT_DIR</code>
       <code>ASTRA_HEADER_ACCOUNT_DIR</code>
     </UndefinedConstant>
-    <UndefinedFunction occurrences="3">
-      <code>wc_get_account_endpoint_url( $endpoint )</code>
-      <code>wc_get_account_menu_item_classes( $endpoint )</code>
-      <code>wc_get_account_menu_items()</code>
-    </UndefinedFunction>
     <UnresolvableInclude occurrences="2">
       <code>require_once ASTRA_HEADER_ACCOUNT_DIR . '/class-astra-header-account-component-loader.php'</code>
       <code>require_once ASTRA_HEADER_ACCOUNT_DIR . '/dynamic-css/dynamic.css.php'</code>
     </UnresolvableInclude>
   </file>
   <file src="inc/builder/type/header/account/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_account_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1426,9 +1267,6 @@
     </ParadoxicalCondition>
   </file>
   <file src="inc/builder/type/header/below-header/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_below_header_row_setting', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1446,11 +1284,6 @@
     <UndefinedConstant occurrences="1">
       <code>ASTRA_HEADER_BUTTON_URI</code>
     </UndefinedConstant>
-  </file>
-  <file src="inc/builder/type/header/button/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_button_dynamic_css' )</code>
-    </HookNotFound>
   </file>
   <file src="inc/builder/type/header/edd-cart/class-astra-header-edd-cart-component.php">
     <UndefinedConstant occurrences="2">
@@ -1472,9 +1305,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/edd-cart/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_edd_cart_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1495,15 +1325,7 @@
       <code>ASTRA_HEADER_HTML_URI</code>
     </UndefinedConstant>
   </file>
-  <file src="inc/builder/type/header/html/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_html_dynamic_css' )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/builder/type/header/menu/class-astra-header-menu-component-loader.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'astra_get_fonts', array( $this, 'add_fonts' ), 1 )</code>
-    </HookNotFound>
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
@@ -1516,9 +1338,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/menu/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_menu_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="3">
       <code>$sub_menu_top_offset . 'px'</code>
       <code>astra_get_mobile_breakpoint()</code>
@@ -1547,9 +1366,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/mobile-menu/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_mobile_menu_dynamic_css', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1571,9 +1387,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/mobile-trigger/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_mobile_trigger_row_setting', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1596,9 +1409,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/off-canvas/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_off_canvas_row_setting', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1622,9 +1432,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/primary-header/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_primary_header_breakpoint_style', 11 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="6">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_mobile_breakpoint()</code>
@@ -1645,9 +1452,6 @@
     </InvalidScalarArgument>
   </file>
   <file src="inc/builder/type/header/search/class-astra-header-search-component-loader.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_get_search', array( $this, 'get_search_markup' ), 10, 3 )</code>
-    </HookNotFound>
     <InvalidReturnStatement occurrences="1">
       <code>$search_markup</code>
     </InvalidReturnStatement>
@@ -1657,9 +1461,6 @@
     </RedundantCondition>
   </file>
   <file src="inc/builder/type/header/search/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_search_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1686,9 +1487,6 @@
     </RedundantCondition>
   </file>
   <file src="inc/builder/type/header/site-identity/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_site_identity_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1709,11 +1507,6 @@
       <code>ASTRA_HEADER_SOCIAL_ICON_URI</code>
     </UndefinedConstant>
   </file>
-  <file src="inc/builder/type/header/social-icon/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_social_icon_dynamic_css' )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/builder/type/header/widget/class-astra-header-widget-component-loader.php">
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
@@ -1722,11 +1515,6 @@
     <UndefinedConstant occurrences="1">
       <code>ASTRA_BUILDER_HEADER_WIDGET_URI</code>
     </UndefinedConstant>
-  </file>
-  <file src="inc/builder/type/header/widget/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_widget_dynamic_css' )</code>
-    </HookNotFound>
   </file>
   <file src="inc/builder/type/header/woo-cart/class-astra-header-woo-cart-component.php">
     <UndefinedConstant occurrences="2">
@@ -1748,9 +1536,6 @@
     </UndefinedConstant>
   </file>
   <file src="inc/builder/type/header/woo-cart/dynamic-css/dynamic.css.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_dynamic_theme_css', 'astra_hb_woo_cart_dynamic_css' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1766,14 +1551,13 @@
     <InvalidGlobal occurrences="1">
       <code>global $content_width;</code>
     </InvalidGlobal>
-    <InvalidScalarArgument occurrences="7">
+    <InvalidScalarArgument occurrences="6">
       <code>1200</code>
       <code>1200</code>
       <code>1200</code>
       <code>1200</code>
       <code>1200</code>
       <code>1200</code>
-      <code>array( $this, 'responsive_oembed_wrapper' )</code>
     </InvalidScalarArgument>
     <MissingDocblockType occurrences="1">
       <code>private static $instance;</code>
@@ -1782,11 +1566,6 @@
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
     </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="3">
-      <code>$add_astra_oembed_wrapper</code>
-      <code>apply_filters( 'astra_fullwidth_oembed', true )</code>
-      <code>apply_filters( 'astra_theme_editor_style', true )</code>
-    </RedundantConditionGivenDocblockType>
   </file>
   <file src="inc/class-astra-dynamic-css.php">
     <DocblockTypeContradiction occurrences="5">
@@ -1831,36 +1610,13 @@
     </UndefinedClass>
   </file>
   <file src="inc/class-astra-loop.php">
-    <HookNotFound occurrences="13">
-      <code>add_action( 'astra_404_content_template', array( $this, 'template_parts_404' ) )</code>
-      <code>add_action( 'astra_content_loop', array( $this, 'loop_markup' ) )</code>
-      <code>add_action( 'astra_content_page_loop', array( $this, 'loop_markup_page' ) )</code>
-      <code>add_action( 'astra_page_template_parts_content', array( $this, 'template_parts_comments' ), 15 )</code>
-      <code>add_action( 'astra_page_template_parts_content', array( $this, 'template_parts_page' ) )</code>
-      <code>add_action( 'astra_template_parts_content', array( $this, 'template_parts_comments' ), 15 )</code>
-      <code>add_action( 'astra_template_parts_content', array( $this, 'template_parts_default' ) )</code>
-      <code>add_action( 'astra_template_parts_content', array( $this, 'template_parts_post' ) )</code>
-      <code>add_action( 'astra_template_parts_content', array( $this, 'template_parts_search' ) )</code>
-      <code>add_action( 'astra_template_parts_content_bottom', array( $this, 'astra_templat_part_wrap_close' ), 5 )</code>
-      <code>add_action( 'astra_template_parts_content_bottom', array( $this, 'template_parts_content_bottom' ) )</code>
-      <code>add_action( 'astra_template_parts_content_none', array( $this, 'template_parts_404' ) )</code>
-      <code>add_action( 'astra_template_parts_content_none', array( $this, 'template_parts_none' ) )</code>
-    </HookNotFound>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/class-astra-mobile-header.php">
-    <HookNotFound occurrences="4">
-      <code>add_filter( 'astra_has_custom_logo', '__return_true' )</code>
-      <code>add_filter( 'astra_is_logo_attachment', array( $this, 'add_mobile_logo_svg_class' ), 10, 2 )</code>
-      <code>add_filter( 'astra_main_menu_toggle_classes', array( $this, 'menu_toggle_classes' ) )</code>
-      <code>add_filter( 'astra_walker_nav_menu_start_el', array( $this, 'toggle_button' ), 10, 4 )</code>
-    </HookNotFound>
-    <InvalidArgument occurrences="3">
+    <InvalidArgument occurrences="1">
       <code>$item</code>
-      <code>array( $this, 'add_body_class' )</code>
-      <code>array( $this, 'astra_mobile_header_custom_logo' )</code>
     </InvalidArgument>
     <InvalidDocblock occurrences="1">
       <code>public function menu_toggle_classes( $classes ) {</code>
@@ -1933,14 +1689,6 @@
       <code>'width'            =&gt; 'calc(100% + 40px )'</code>
       <code>'width'  =&gt; 'calc( 100% + 40px)'</code>
     </DuplicateArrayKey>
-    <HookNotFound occurrences="6">
-      <code>add_filter( 'astra_attr_ast-main-header-bar-alignment', array( $this, 'nav_menu_wrapper' ) )</code>
-      <code>add_filter( 'astra_attr_ast-menu-toggle', array( $this, 'menu_toggle_button' ), 20, 3 )</code>
-      <code>add_filter( 'astra_schema_body', array( $this, 'body_id' ) )</code>
-      <code>add_filter( 'astra_search_field_toggle_data_attrs', array( $this, 'add_search_field_toggle_attrs' ) )</code>
-      <code>add_filter( 'astra_search_slide_toggle_data_attrs', array( $this, 'add_search_slide_toggle_attrs' ) )</code>
-      <code>add_filter( 'astra_theme_dynamic_css', array( $this, 'dynamic_css' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="6">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -1960,38 +1708,6 @@
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-bb-ultimate-addon.php">
-    <HookNotFound occurrences="30">
-      <code>add_filter( 'uabb_global_support', array( $this, 'remove_uabb_global_setting' ) )</code>
-      <code>add_filter( 'uabb_theme_border_color', array( $this, 'button_border_color' ) )</code>
-      <code>add_filter( 'uabb_theme_border_hover_color', array( $this, 'button_border_hover_color' ) )</code>
-      <code>add_filter( 'uabb_theme_button_bg_color', array( $this, 'button_bg_color' ) )</code>
-      <code>add_filter( 'uabb_theme_button_bg_hover_color', array( $this, 'button_bg_hover_color' ) )</code>
-      <code>add_filter( 'uabb_theme_button_border_radius', array( $this, 'button_border_radius' ) )</code>
-      <code>add_filter( 'uabb_theme_button_border_width', array( $this, 'button_border_width' ) )</code>
-      <code>add_filter( 'uabb_theme_button_font_family', array( $this, 'button_font_family' ) )</code>
-      <code>add_filter( 'uabb_theme_button_font_size', array( $this, 'button_font_size' ) )</code>
-      <code>add_filter( 'uabb_theme_button_horizontal_padding', array( $this, 'button_horizontal_padding' ) )</code>
-      <code>add_filter( 'uabb_theme_button_letter_spacing', array( $this, 'button_letter_spacing' ) )</code>
-      <code>add_filter( 'uabb_theme_button_line_height', array( $this, 'button_line_height' ) )</code>
-      <code>add_filter( 'uabb_theme_button_padding', array( $this, 'button_padding' ) )</code>
-      <code>add_filter( 'uabb_theme_button_text_color', array( $this, 'button_text_color' ) )</code>
-      <code>add_filter( 'uabb_theme_button_text_hover_color', array( $this, 'button_text_hover_color' ) )</code>
-      <code>add_filter( 'uabb_theme_button_text_transform', array( $this, 'button_text_transform' ) )</code>
-      <code>add_filter( 'uabb_theme_button_vertical_padding', array( $this, 'button_vertical_padding' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_bg_color', array( $this, 'default_type_button_bg_color' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_bg_hover_color', array( $this, 'default_type_button_bg_hover_color' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_font_size', array( $this, 'default_type_button_font_size' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_letter_spacing', array( $this, 'default_type_button_letter_spacing' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_line_height', array( $this, 'default_type_button_line_height' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_padding', array( $this, 'default_type_button_padding' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_text_color', array( $this, 'default_type_button_text_color' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_text_hover_color', array( $this, 'default_type_button_text_hover_color' ) )</code>
-      <code>add_filter( 'uabb_theme_default_button_text_transform', array( $this, 'default_type_button_text_transform' ) )</code>
-      <code>add_filter( 'uabb_theme_link_color', array( $this, 'link_color' ) )</code>
-      <code>add_filter( 'uabb_theme_link_hover_color', array( $this, 'link_hover_color' ) )</code>
-      <code>add_filter( 'uabb_theme_text_color', array( $this, 'text_color' ) )</code>
-      <code>add_filter( 'uabb_theme_theme_color', array( $this, 'theme_color' ) )</code>
-    </HookNotFound>
     <InvalidScalarArgument occurrences="1">
       <code>1.85714285714286</code>
     </InvalidScalarArgument>
@@ -2000,18 +1716,12 @@
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-beaver-builder.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="1">
       <code>$id</code>
     </InvalidArgument>
     <InvalidGlobal occurrences="1">
       <code>global $post;</code>
     </InvalidGlobal>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>empty( $post-&gt;post_content ) &amp;&amp; $do_render</code>
-    </RedundantConditionGivenDocblockType>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2021,11 +1731,6 @@
     </UndefinedClass>
   </file>
   <file src="inc/compatibility/class-astra-beaver-themer.php">
-    <HookNotFound occurrences="3">
-      <code>add_action( 'fl_theme_builder_after_render_content', array( $this, 'builder_after_render_content' ), 10, 1 )</code>
-      <code>add_action( 'fl_theme_builder_before_render_content', array( $this, 'builder_before_render_content' ), 10, 1 )</code>
-      <code>add_filter( 'fl_theme_builder_part_hooks', array( $this, 'register_part_hooks' ) )</code>
-    </HookNotFound>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2035,17 +1740,11 @@
     </UndefinedClass>
   </file>
   <file src="inc/compatibility/class-astra-bne-flyout.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-contact-form-7.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'wpcf7_enqueue_styles', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
@@ -2055,17 +1754,11 @@
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-divi-builder.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-gravity-forms.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'gform_enqueue_scripts', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
@@ -2080,26 +1773,16 @@
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-site-origin.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-ubermeu.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_enable_mobile_menu_buttons', array( $this, 'disable_primary_menu_toggle' ), 30 )</code>
-    </HookNotFound>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
   </file>
   <file src="inc/compatibility/class-astra-visual-composer.php">
-    <HookNotFound occurrences="2">
-      <code>add_action( 'vc_frontend_editor_render', array( $this, 'vc_frontend_default_setting' ) )</code>
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="5">
       <code>$id</code>
       <code>$id</code>
@@ -2115,21 +1798,8 @@
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
   </file>
-  <file src="inc/compatibility/class-astra-web-stories.php">
-    <HookNotFound occurrences="2">
-      <code>add_action( 'astra_body_top', array( $this, 'web_stories_embed' ) )</code>
-      <code>add_filter( 'astra_dynamic_theme_css', array( $this, 'web_stories_css' ) )</code>
-    </HookNotFound>
-  </file>
-  <file src="inc/compatibility/class-astra-yoast-seo.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'wpseo_sitemap_exclude_post_type', array( $this, 'sitemap_exclude_post_type' ), 10, 2 )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/compatibility/edd/class-astra-edd.php">
-    <DocblockTypeContradiction occurrences="7">
-      <code>''</code>
-      <code>'no-cart-total'</code>
+    <DocblockTypeContradiction occurrences="5">
       <code>false === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>false === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>false === Astra_Builder_Helper::$is_header_footer_builder_active</code>
@@ -2148,17 +1818,6 @@
       <code>'width' =&gt; 'calc(50% - 10px)'</code>
       <code>'width' =&gt; 'calc(50% - 10px)'</code>
     </DuplicateArrayKey>
-    <HookNotFound occurrences="10">
-      <code>add_action( 'astra_edd_header_cart_icons_before', array( $this, 'header_cart_icon_markup' ) )</code>
-      <code>add_filter( 'astra_dynamic_theme_css', array( $this, 'add_inline_styles' ) )</code>
-      <code>add_filter( 'astra_edd_cart_in_menu_class', array( $this, 'header_cart_icon_class' ), 99 )</code>
-      <code>add_filter( 'astra_get_content_layout', array( $this, 'store_content_layout' ) )</code>
-      <code>add_filter( 'astra_get_sidebar', array( $this, 'replace_store_sidebar' ) )</code>
-      <code>add_filter( 'astra_header_section_elements', array( $this, 'header_section_elements' ) )</code>
-      <code>add_filter( 'astra_page_layout', array( $this, 'store_sidebar_layout' ) )</code>
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="9">
       <code>'title='</code>
       <code>astra_get_mobile_breakpoint( '', 1 )</code>
@@ -2196,13 +1855,6 @@
       <code>$next_post-&gt;post_title</code>
       <code>$prev_post-&gt;post_title</code>
     </PossiblyInvalidPropertyFetch>
-    <RedundantConditionGivenDocblockType occurrences="5">
-      <code>$cart_count_display</code>
-      <code>$cart_count_display</code>
-      <code>apply_filters( 'astra_edd_default_header_cart_icon', true )</code>
-      <code>apply_filters( 'astra_edd_header_cart_total', true )</code>
-      <code>apply_filters( 'astra_enable_edd_integration', true )</code>
-    </RedundantConditionGivenDocblockType>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2232,9 +1884,6 @@
     </ParadoxicalCondition>
   </file>
   <file src="inc/compatibility/edd/edd-common-functions.php">
-    <HookNotFound occurrences="1">
-      <code>add_action( 'astra_edd_archive_product_content', 'astra_edd_archive_product_structure' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_edd_cart_button_markup()</code>
       <code>astra_edd_terms_list( 'download_category' )</code>
@@ -2269,19 +1918,9 @@
     </UndefinedFunction>
   </file>
   <file src="inc/compatibility/learndash/class-astra-learndash.php">
-    <HookNotFound occurrences="5">
-      <code>add_filter( 'astra_dynamic_theme_css', array( $this, 'add_dynamic_styles' ) )</code>
-      <code>add_filter( 'astra_get_content_layout', array( $this, 'content_layout' ) )</code>
-      <code>add_filter( 'astra_page_layout', array( $this, 'sidebar_layout' ) )</code>
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-    </HookNotFound>
     <InvalidGlobal occurrences="1">
       <code>global $learndash_shortcode_used;</code>
     </InvalidGlobal>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>apply_filters( 'astra_enable_learndash_integration', true )</code>
-    </RedundantConditionGivenDocblockType>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2291,22 +1930,6 @@
     </UndefinedClass>
   </file>
   <file src="inc/compatibility/lifterlms/class-astra-lifterlms.php">
-    <HookNotFound occurrences="14">
-      <code>add_action( 'astra_entry_after', 'lifterlms_template_lesson_navigation' )</code>
-      <code>add_action( 'lifterlms_after_main_content', array( $this, 'before_main_content_end' ) )</code>
-      <code>add_action( 'lifterlms_before_main_content', array( $this, 'before_main_content_start' ) )</code>
-      <code>add_action( 'lifterlms_single_course_after_summary', array( $this, 'single_reviews' ), 100 )</code>
-      <code>add_filter( 'astra_get_content_layout', array( $this, 'content_layout' ) )</code>
-      <code>add_filter( 'astra_page_layout', array( $this, 'sidebar_layout' ) )</code>
-      <code>add_filter( 'astra_theme_assets', array( $this, 'add_styles' ) )</code>
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-      <code>add_filter( 'lifterlms_loop_columns', array( $this, 'course_grid' ) )</code>
-      <code>add_filter( 'lifterlms_show_page_title', '__return_false' )</code>
-      <code>add_filter( 'lifterlms_show_page_title', '__return_false' )</code>
-      <code>add_filter( 'llms_builder_register_custom_fields', array( $this, 'register_builder_fields' ) )</code>
-      <code>add_filter( 'llms_get_loop_list_classes', array( $this, 'course_responsive_grid' ), 999 )</code>
-      <code>add_filter( 'llms_get_theme_default_sidebar', array( $this, 'add_sidebar' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="2">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
@@ -2337,9 +1960,6 @@
     <PossiblyUndefinedVariable occurrences="1">
       <code>$fields</code>
     </PossiblyUndefinedVariable>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>apply_filters( 'astra_enable_lifterlms_integration', true )</code>
-    </RedundantConditionGivenDocblockType>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2383,9 +2003,7 @@
     </UndefinedClass>
   </file>
   <file src="inc/compatibility/woocommerce/class-astra-woocommerce.php">
-    <DocblockTypeContradiction occurrences="8">
-      <code>''</code>
-      <code>'no-cart-total'</code>
+    <DocblockTypeContradiction occurrences="6">
       <code>'page-builder' !== astra_get_content_layout()</code>
       <code>false === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>false === Astra_Builder_Helper::$is_header_footer_builder_active</code>
@@ -2411,39 +2029,6 @@
       <code>'width' =&gt; 'calc(50% - 10px)'</code>
       <code>'width' =&gt; 'calc(50% - 10px)'</code>
     </DuplicateArrayKey>
-    <HookNotFound occurrences="31">
-      <code>add_action( 'astra_cart_in_menu_class', array( $this, 'header_cart_icon_class' ), 99 )</code>
-      <code>add_action( 'astra_woo_header_cart_icons_before', array( $this, 'header_cart_icon_markup' ) )</code>
-      <code>add_action( 'woocommerce_after_main_content', array( $this, 'before_main_content_end' ) )</code>
-      <code>add_action( 'woocommerce_after_shop_loop_item', 'astra_woo_shop_thumbnail_wrap_end', 8 )</code>
-      <code>add_action( 'woocommerce_after_shop_loop_item', 'astra_woo_woocommerce_shop_product_content' )</code>
-      <code>add_action( 'woocommerce_before_main_content', array( $this, 'before_main_content_start' ) )</code>
-      <code>add_action( 'woocommerce_before_shop_loop_item', 'astra_woo_shop_thumbnail_wrap_start', 6 )</code>
-      <code>add_action( 'woocommerce_before_shop_loop_item', 'woocommerce_show_product_loop_sale_flash', 9 )</code>
-      <code>add_action( 'woocommerce_before_shop_loop_item_title', array( $this, 'product_flip_image' ), 10 )</code>
-      <code>add_action( 'woocommerce_checkout_billing', array( WC()-&gt;checkout(), 'checkout_form_shipping' ) )</code>
-      <code>add_action( 'woocommerce_shop_loop_item_title', 'astra_woo_shop_out_of_stock', 8 )</code>
-      <code>add_action( 'woocommerce_single_product_summary', 'woocommerce_breadcrumb', 2 )</code>
-      <code>add_filter( 'add_to_cart_fragments', array( $this, 'cart_link_fragment' ) )</code>
-      <code>add_filter( 'astra_get_content_layout', array( $this, 'store_content_layout' ) )</code>
-      <code>add_filter( 'astra_get_dynamic_header_content', array( $this, 'astra_header_cart' ), 10, 3 )</code>
-      <code>add_filter( 'astra_get_sidebar', array( $this, 'replace_store_sidebar' ) )</code>
-      <code>add_filter( 'astra_header_section_elements', array( $this, 'header_section_elements' ) )</code>
-      <code>add_filter( 'astra_page_layout', array( $this, 'store_sidebar_layout' ) )</code>
-      <code>add_filter( 'astra_schema_body', array( $this, 'remove_body_schema' ) )</code>
-      <code>add_filter( 'astra_theme_defaults', array( $this, 'theme_defaults' ) )</code>
-      <code>add_filter( 'loop_shop_columns', array( $this, 'shop_columns' ) )</code>
-      <code>add_filter( 'loop_shop_per_page', array( $this, 'shop_no_of_products' ) )</code>
-      <code>add_filter( 'woocommerce_add_to_cart_fragments', array( $this, 'cart_link_fragment' ) )</code>
-      <code>add_filter( 'woocommerce_enqueue_styles', array( $this, 'woo_filter_style' ) )</code>
-      <code>add_filter( 'woocommerce_get_stock_html', 'astra_woo_product_in_stock', 10, 2 )</code>
-      <code>add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) )</code>
-      <code>add_filter( 'woocommerce_product_additional_information_heading', '__return_false' )</code>
-      <code>add_filter( 'woocommerce_product_description_heading', '__return_false' )</code>
-      <code>add_filter( 'woocommerce_product_get_rating_html', array( $this, 'rating_markup' ), 10, 3 )</code>
-      <code>add_filter( 'woocommerce_show_page_title', '__return_false' )</code>
-      <code>add_filter( 'woocommerce_subcategory_count_html', array( $this, 'subcategory_count_markup' ), 10, 2 )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="14">
       <code>'title='</code>
       <code>astra_get_mobile_breakpoint( '', 1 )</code>
@@ -2497,12 +2082,7 @@
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
     </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="4">
-      <code>$cart_count_display</code>
-      <code>$cart_count_display</code>
-      <code>apply_filters( 'astra_enable_woocommerce_integration', true )</code>
-      <code>apply_filters( 'astra_woo_default_header_cart_icon', true )</code>
-    </RedundantConditionGivenDocblockType>
+    <RedundantConditionGivenDocblockType occurrences="2"/>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2515,64 +2095,6 @@
     <UndefinedDocblockClass occurrences="1">
       <code>$this-&gt;woo_mini_cart_markup()</code>
     </UndefinedDocblockClass>
-    <UndefinedFunction occurrences="56">
-      <code>'woocommerce_breadcrumb'</code>
-      <code>'woocommerce_breadcrumb'</code>
-      <code>'woocommerce_cross_sell_display'</code>
-      <code>'woocommerce_get_sidebar'</code>
-      <code>'woocommerce_output_content_wrapper'</code>
-      <code>'woocommerce_output_content_wrapper_end'</code>
-      <code>'woocommerce_show_product_loop_sale_flash'</code>
-      <code>'woocommerce_show_product_loop_sale_flash'</code>
-      <code>'woocommerce_template_loop_add_to_cart'</code>
-      <code>'woocommerce_template_loop_price'</code>
-      <code>'woocommerce_template_loop_product_title'</code>
-      <code>'woocommerce_template_loop_rating'</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>WC()</code>
-      <code>is_account_page()</code>
-      <code>is_account_page()</code>
-      <code>is_account_page()</code>
-      <code>is_cart()</code>
-      <code>is_cart()</code>
-      <code>is_cart()</code>
-      <code>is_cart()</code>
-      <code>is_checkout()</code>
-      <code>is_checkout()</code>
-      <code>is_checkout()</code>
-      <code>is_product()</code>
-      <code>is_product()</code>
-      <code>is_product()</code>
-      <code>is_product()</code>
-      <code>is_product()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_product_taxonomy()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_shop()</code>
-      <code>is_woocommerce()</code>
-      <code>is_woocommerce()</code>
-      <code>wc_get_cart_url()</code>
-      <code>wc_get_star_rating_html( $rating, $count )</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/compatibility/woocommerce/customizer/sections/layout/class-astra-woo-shop-cart-layout-configs.php">
     <ParadoxicalCondition occurrences="1">
@@ -2588,9 +2110,6 @@
     </ParadoxicalCondition>
   </file>
   <file src="inc/compatibility/woocommerce/woocommerce-common-functions.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'woocommerce_product_tag_cloud_widget_args', 'astra_widget_product_tag_cloud_args', 90 )</code>
-    </HookNotFound>
     <InvalidGlobal occurrences="1">
       <code>global $product;</code>
     </InvalidGlobal>
@@ -2599,27 +2118,11 @@
       <code>get_the_permalink()</code>
       <code>get_the_permalink()</code>
     </PossiblyFalseArgument>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>apply_filters( 'astra_woo_shop_parent_category', true )</code>
-    </RedundantConditionGivenDocblockType>
-    <UndefinedFunction occurrences="5">
-      <code>is_product()</code>
-      <code>woocommerce_template_loop_add_to_cart()</code>
-      <code>woocommerce_template_loop_price()</code>
-      <code>woocommerce_template_loop_product_title()</code>
-      <code>woocommerce_template_loop_rating()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/core/builder/class-astra-builder-admin.php">
     <DocblockTypeContradiction occurrences="1">
       <code>is_null( self::$instance )</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="4">
-      <code>add_action( 'astra_welcome_page_content', array( $this, 'migrate_to_builder_box' ), 5 )</code>
-      <code>add_action( 'wp_ajax_ast-migrate-to-builder', array( $this, 'migrate_to_builder' ) )</code>
-      <code>add_filter( 'astra_quick_settings', array( $this, 'update_customizer_header_footer_link' ) )</code>
-      <code>add_filter( 'astra_quick_settings', array( $this, 'update_customizer_header_footer_link' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="3">
       <code>$astra_theme_title</code>
       <code>$astra_theme_title</code>
@@ -2644,9 +2147,6 @@
       <code>is_null( self::$instance )</code>
       <code>is_null( self::$loaded_grid )</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_addon_list', array( $this, 'deprecate_old_header_and_footer' ) )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="3">
       <code>array()</code>
       <code>array()</code>
@@ -2704,26 +2204,10 @@
       <code>public static $loaded_grid = null;</code>
     </UndefinedDocblockClass>
   </file>
-  <file src="inc/core/builder/class-astra-builder-options.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_theme_defaults', 'astra_hf_builder_customizer_defaults' )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/core/class-astra-admin-settings.php">
     <ArgumentTypeCoercion occurrences="1">
       <code>'Astra_Ext_White_Label_Markup'</code>
     </ArgumentTypeCoercion>
-    <HookNotFound occurrences="9">
-      <code>add_action( 'astra_header_right_section', __CLASS__ . '::top_header_right_section' )</code>
-      <code>add_action( 'astra_menu_general_action', __CLASS__ . '::general_page' )</code>
-      <code>add_action( 'astra_notice_before_markup', __CLASS__ . '::notice_assets' )</code>
-      <code>add_action( 'astra_welcome_page_content', __CLASS__ . '::astra_welcome_page_content' )</code>
-      <code>add_action( 'astra_welcome_page_content', __class__ . '::astra_available_plugins', 30 )</code>
-      <code>add_action( 'astra_welcome_page_right_sidebar_content', __CLASS__ . '::astra_welcome_page_starter_sites_section', 10 )</code>
-      <code>add_action( 'astra_welcome_page_right_sidebar_content', __CLASS__ . '::external_important_links_section', 11 )</code>
-      <code>add_action( 'wp_ajax_astra-sites-plugin-activate', __CLASS__ . '::required_plugin_activate' )</code>
-      <code>add_action( 'wp_ajax_astra-sites-plugin-deactivate', __CLASS__ . '::required_plugin_deactivate' )</code>
-    </HookNotFound>
     <InvalidArgument occurrences="6">
       <code>$page_menu_slug</code>
       <code>$page_title</code>
@@ -2732,9 +2216,6 @@
       <code>self::$page_title</code>
       <code>self::$page_title</code>
     </InvalidArgument>
-    <InvalidArrayOffset occurrences="1">
-      <code>$info['url']</code>
-    </InvalidArrayOffset>
     <InvalidOperand occurrences="8">
       <code>$parent_page</code>
       <code>self::$plugin_slug</code>
@@ -2745,7 +2226,7 @@
       <code>self::$starter_templates_slug</code>
       <code>self::$starter_templates_slug</code>
     </InvalidOperand>
-    <InvalidPropertyAssignmentValue occurrences="11">
+    <InvalidPropertyAssignmentValue occurrences="9">
       <code>'Astra'</code>
       <code>'astra'</code>
       <code>'astra-sites'</code>
@@ -2754,13 +2235,8 @@
       <code>'starter-templates'</code>
       <code>'starter-templates'</code>
       <code>'themes.php'</code>
-      <code>apply_filters( 'astra_menu_page_title', __( 'Astra Options', 'astra' ) )</code>
-      <code>apply_filters( 'astra_page_title', __( 'Astra', 'astra' ) )</code>
       <code>self::get_theme_page_slug()</code>
     </InvalidPropertyAssignmentValue>
-    <InvalidReturnStatement occurrences="1">
-      <code>apply_filters( 'astra_theme_page_slug', self::$plugin_slug )</code>
-    </InvalidReturnStatement>
     <InvalidScalarArgument occurrences="1">
       <code>''</code>
     </InvalidScalarArgument>
@@ -2794,22 +2270,9 @@
       <code>$ast_sites_notice_btn['class']</code>
       <code>$ast_sites_notice_btn['detail_link_text']</code>
     </PossiblyUndefinedStringArrayOffset>
-    <RedundantCastGivenDocblockType occurrences="4">
-      <code>(array) $extensions</code>
+    <RedundantCastGivenDocblockType occurrences="1">
       <code>(array) $post_types</code>
-      <code>(array) $quick_settings</code>
-      <code>(array) $top_links</code>
     </RedundantCastGivenDocblockType>
-    <RedundantConditionGivenDocblockType occurrences="8">
-      <code>$ast_icon</code>
-      <code>apply_filters( 'astra_dashboard_admin_menu', true )</code>
-      <code>apply_filters( 'astra_show_free_extend_plugins', true )</code>
-      <code>empty( $extensions )</code>
-      <code>empty( $quick_settings )</code>
-      <code>empty( $recommended_plugins )</code>
-      <code>empty( $top_links )</code>
-      <code>isset( $link['target_blank'] ) &amp;&amp; $link['target_blank']</code>
-    </RedundantConditionGivenDocblockType>
     <UndefinedClass occurrences="1">
       <code>Astra_Ext_White_Label_Markup</code>
     </UndefinedClass>
@@ -2827,11 +2290,6 @@
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="3">
-      <code>add_action( 'astra_get_fonts', array( $this, 'add_fonts' ), 1 )</code>
-      <code>add_filter( 'astra_dynamic_theme_css', array( 'Astra_Dynamic_CSS', 'return_meta_output' ) )</code>
-      <code>add_filter( 'astra_dynamic_theme_css', array( 'Astra_Dynamic_CSS', 'return_output' ) )</code>
-    </HookNotFound>
     <InvalidGlobal occurrences="1">
       <code>global $pagenow;</code>
     </InvalidGlobal>
@@ -2867,16 +2325,11 @@
       <code>Astra_Cache_Base</code>
     </UndefinedClass>
   </file>
-  <file src="inc/core/class-astra-icons.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_enable_default_fonts', '__return_false' )</code>
-    </HookNotFound>
-  </file>
   <file src="inc/core/class-astra-theme-options.php">
     <InvalidArgument occurrences="1">
       <code>self::defaults()</code>
     </InvalidArgument>
-    <InvalidReturnStatement occurrences="2">
+    <InvalidReturnStatement occurrences="1">
       <code>self::$defaults</code>
       <code>self::$defaults</code>
     </InvalidReturnStatement>
@@ -2936,12 +2389,6 @@
       <code>is_numeric( $font )</code>
       <code>is_numeric( $option )</code>
     </DocblockTypeContradiction>
-    <FalsableReturnStatement occurrences="1">
-      <code>apply_filters( 'astra_get_post_format', $post_format, $post_format_override )</code>
-    </FalsableReturnStatement>
-    <HookNotFound occurrences="1">
-      <code>add_action( 'astra_archive_header', 'astra_archive_page_info' )</code>
-    </HookNotFound>
     <InvalidDocblock occurrences="3">
       <code>return apply_filters( "astra_get_db_option_{$option}", $value, $option, $default );</code>
       <code>return apply_filters( "astra_get_option_meta_{$option_id}", $value, $default, $default );</code>
@@ -2951,20 +2398,15 @@
       <code>global $post;</code>
       <code>global $wp_query;</code>
     </InvalidGlobal>
-    <InvalidOperand occurrences="8">
-      <code>$max</code>
-      <code>$max</code>
-      <code>$min</code>
-      <code>$min</code>
+    <InvalidOperand occurrences="4">
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint()</code>
       <code>esc_attr( $value )</code>
       <code>esc_attr( $value )</code>
     </InvalidOperand>
-    <InvalidReturnStatement occurrences="3">
+    <InvalidReturnStatement occurrences="2">
       <code>absint( $header_breakpoint )</code>
       <code>absint( $header_breakpoint )</code>
-      <code>apply_filters( 'astra_get_post_id', Astra_Theme_Options::$post_id, $post_id_override )</code>
     </InvalidReturnStatement>
     <InvalidScalarArgument occurrences="9">
       <code>$body_font_size_desktop</code>
@@ -2977,17 +2419,9 @@
       <code>$value</code>
       <code>true</code>
     </InvalidScalarArgument>
-    <PossiblyNullOperand occurrences="3">
-      <code>$title</code>
-      <code>$title</code>
-      <code>$title</code>
-    </PossiblyNullOperand>
-    <RedundantConditionGivenDocblockType occurrences="9">
-      <code>$enabled</code>
+    <RedundantConditionGivenDocblockType occurrences="6">
       <code>''</code>
       <code>''</code>
-      <code>apply_filters( 'astra_the_title_enabled', true )</code>
-      <code>apply_filters( 'astra_the_title_enabled', true )</code>
       <code>is_array( $css_output )</code>
       <code>isset( $campaign )</code>
       <code>isset( $medium )</code>
@@ -3002,16 +2436,8 @@
       <code>number</code>
       <code>number</code>
     </UndefinedDocblockClass>
-    <UndefinedFunction occurrences="2">
-      <code>is_shop()</code>
-      <code>woocommerce_page_title( false )</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/core/deprecated/deprecated-filters.php">
-    <HookNotFound occurrences="2">
-      <code>add_filter( 'astra_color_palettes', 'astra_deprecated_color_palette', 10, 1 )</code>
-      <code>add_filter( 'astra_header_section_elements', 'astra_deprecated_primary_header_main_rt_section', 10, 2 )</code>
-    </HookNotFound>
     <InvalidParamDefault occurrences="1">
       <code>string</code>
     </InvalidParamDefault>
@@ -3033,34 +2459,6 @@
     </PossiblyNullArgument>
   </file>
   <file src="inc/core/markup/class-astra-markup.php">
-    <HookNotFound occurrences="26">
-      <code>add_filter( 'astra_attr_ast-blog-col_output', array( $this, 'ast_blog_common_css' ) )</code>
-      <code>add_filter( 'astra_attr_ast-comment-cite-wrap_output', array( $this, 'ast_comment_cite_wrap_attr' ) )</code>
-      <code>add_filter( 'astra_attr_ast-comment-time_output', array( $this, 'ast_comment_time_attr' ) )</code>
-      <code>add_filter( 'astra_attr_ast-grid-blog-col_output', array( $this, 'ast_grid_blog_col' ) )</code>
-      <code>add_filter( 'astra_attr_ast-grid-col-6_output', array( $this, 'ast_grid_col_6' ) )</code>
-      <code>add_filter( 'astra_attr_ast-grid-common-col_output', array( $this, 'ast_grid_common_css' ) )</code>
-      <code>add_filter( 'astra_attr_ast-grid-lg-12_output', array( $this, 'ast_grid_lg_12' ) )</code>
-      <code>add_filter( 'astra_attr_ast-layout-1-grid_output', array( $this, 'ast_layout_1_grid' ) )</code>
-      <code>add_filter( 'astra_attr_ast-layout-2-grid_output', array( $this, 'ast_layout_2_grid' ) )</code>
-      <code>add_filter( 'astra_attr_ast-layout-3-grid_output', array( $this, 'ast_layout_3_grid' ) )</code>
-      <code>add_filter( 'astra_attr_ast-layout-4-grid_output', array( $this, 'ast_layout_4_grid' ) )</code>
-      <code>add_filter( 'astra_attr_ast-layout-5-grid_output', array( $this, 'ast_layout_5_grid' ) )</code>
-      <code>add_filter( 'astra_attr_ast-layout-6-grid_output', array( $this, 'ast_layout_6_grid' ) )</code>
-      <code>add_filter( 'astra_attr_comment-form-grid-class_output', array( $this, 'comment_form_grid_class' ) )</code>
-      <code>add_filter( 'astra_attr_footer-widget-area-inner', array( $this, 'footer_widget_area_inner' ) )</code>
-      <code>add_filter( 'astra_attr_header-widget-area-inner', array( $this, 'header_widget_area_inner' ) )</code>
-      <code>add_filter( 'astra_markup_ast-comment-data-wrap_close', array( $this, 'ast_comment_data_wrap_close' ) )</code>
-      <code>add_filter( 'astra_markup_ast-comment-data-wrap_open', array( $this, 'ast_comment_data_wrap_open' ) )</code>
-      <code>add_filter( 'astra_markup_ast-comment-meta-wrap_close', array( $this, 'ast_comment_meta_wrap_close' ) )</code>
-      <code>add_filter( 'astra_markup_ast-comment-meta-wrap_open', array( $this, 'ast_comment_meta_wrap_open' ) )</code>
-      <code>add_filter( 'astra_markup_comment-count-wrapper_close', array( $this, 'comment_count_wrapper_close' ) )</code>
-      <code>add_filter( 'astra_markup_comment-count-wrapper_open', array( $this, 'comment_count_wrapper_open' ) )</code>
-      <code>add_filter( 'astra_markup_footer-widget-div_close', array( $this, 'footer_widget_div_close' ) )</code>
-      <code>add_filter( 'astra_markup_footer-widget-div_open', array( $this, 'footer_widget_div_open' ) )</code>
-      <code>add_filter( 'astra_markup_header-widget-div_close', array( $this, 'footer_widget_div_close' ) )</code>
-      <code>add_filter( 'astra_markup_header-widget-div_open', array( $this, 'header_widget_div_open' ) )</code>
-    </HookNotFound>
     <InvalidDocblock occurrences="25">
       <code>public function ast_blog_common_css() {</code>
       <code>public function ast_comment_cite_wrap_attr() {</code>
@@ -3098,11 +2496,6 @@
       <code>get_post_type()</code>
       <code>get_post_type()</code>
     </PossiblyFalseOperand>
-  </file>
-  <file src="inc/core/theme-hooks.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'current_theme_supports-astra_hooks', 'astra_current_theme_supports', 10, 3 )</code>
-    </HookNotFound>
   </file>
   <file src="inc/customizer/class-astra-builder-customizer.php">
     <DocblockTypeContradiction occurrences="1">
@@ -3187,14 +2580,8 @@
       <code>false === $partial_args</code>
       <code>false === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <HookNotFound occurrences="2">
-      <code>add_action( 'wp_ajax_astra_regenerate_fonts_folder', array( $this, 'regenerate_astra_fonts_folder' ) )</code>
-      <code>add_filter( 'gutenberg_use_widgets_block_editor', '__return_false' )</code>
-    </HookNotFound>
-    <InvalidArgument occurrences="4">
+    <InvalidArgument occurrences="2">
       <code>$default_values</code>
-      <code>array( $this, 'filter_dynamic_partial_args' )</code>
-      <code>array( $this, 'filter_dynamic_setting_args' )</code>
       <code>self::$tabbed_sections</code>
     </InvalidArgument>
     <InvalidArrayAccess occurrences="10">
@@ -3313,8 +2700,7 @@
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
     </RedundantCondition>
-    <RedundantConditionGivenDocblockType occurrences="5">
-      <code>apply_filters( 'astra_resize_logo', true )</code>
+    <RedundantConditionGivenDocblockType occurrences="4">
       <code>false !== $instance</code>
       <code>is_array( $sizes )</code>
       <code>is_null( self::$configuration )</code>
@@ -3338,11 +2724,6 @@
       <code>require_once ABSPATH . 'wp-admin/includes/image.php'</code>
     </UnresolvableInclude>
   </file>
-  <file src="inc/customizer/class-astra-font-families.php">
-    <PossiblyInvalidIterator occurrences="1">
-      <code>$single_font</code>
-    </PossiblyInvalidIterator>
-  </file>
   <file src="inc/customizer/class-astra-fonts-data.php">
     <PossiblyFalseOperand occurrences="4">
       <code>$google</code>
@@ -3352,8 +2733,7 @@
     </PossiblyFalseOperand>
   </file>
   <file src="inc/customizer/class-astra-fonts.php">
-    <DocblockTypeContradiction occurrences="2">
-      <code>empty( $subset )</code>
+    <DocblockTypeContradiction occurrences="1">
       <code>is_array( $variants )</code>
     </DocblockTypeContradiction>
     <InvalidScalarArgument occurrences="1">
@@ -3813,9 +3193,8 @@
     <ArgumentTypeCoercion occurrences="1">
       <code>$compare</code>
     </ArgumentTypeCoercion>
-    <DocblockTypeContradiction occurrences="3">
+    <DocblockTypeContradiction occurrences="2">
       <code>! is_array( $array )</code>
-      <code>$args['open']</code>
       <code>is_array( $needles )</code>
     </DocblockTypeContradiction>
     <InvalidArgument occurrences="1">
@@ -3825,9 +3204,6 @@
       <code>$value</code>
       <code>$value</code>
     </InvalidOperand>
-    <InvalidReturnStatement occurrences="1">
-      <code>apply_filters( 'astra_404_page_layout', $layout )</code>
-    </InvalidReturnStatement>
     <MissingDocblockType occurrences="1">
       <code>function astra_remove_controls( $wp_customize ) {</code>
     </MissingDocblockType>
@@ -3847,11 +3223,6 @@
     <PossiblyInvalidArgument occurrences="1">
       <code>wp_unslash( $_SERVER['HTTP_USER_AGENT'] )</code>
     </PossiblyInvalidArgument>
-    <RedundantConditionGivenDocblockType occurrences="3">
-      <code>$args['echo']</code>
-      <code>$args['echo']</code>
-      <code>''</code>
-    </RedundantConditionGivenDocblockType>
     <UndefinedClass occurrences="1">
       <code>Astra_Ext_Extension</code>
     </UndefinedClass>
@@ -3860,17 +3231,12 @@
     </UndefinedDocblockClass>
   </file>
   <file src="inc/markup-extras.php">
-    <DocblockTypeContradiction occurrences="5">
-      <code>! $enabled</code>
-      <code>$all_post_type_support</code>
-      <code>apply_filters( 'astra_edit_post_link', false )</code>
+    <DocblockTypeContradiction occurrences="2">
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <InvalidArgument occurrences="3">
+    <InvalidArgument occurrences="1">
       <code>$post_id</code>
-      <code>'astra_replace_header_attr'</code>
-      <code>'astra_replace_header_logo'</code>
     </InvalidArgument>
     <InvalidGlobal occurrences="1">
       <code>global $wp_registered_sidebars;</code>
@@ -3904,10 +3270,6 @@
     <PossiblyUndefinedVariable occurrences="1">
       <code>$widget_id</code>
     </PossiblyUndefinedVariable>
-    <RedundantConditionGivenDocblockType occurrences="2">
-      <code>apply_filters( 'astra_replace_logo_width', true )</code>
-      <code>apply_filters( 'astra_replace_logo_width', true )</code>
-    </RedundantConditionGivenDocblockType>
     <TooManyArguments occurrences="1">
       <code>astra_single_get_post_meta( '', '', false )</code>
     </TooManyArguments>
@@ -3929,16 +3291,11 @@
     </PossiblyFalseArgument>
   </file>
   <file src="inc/metabox/class-astra-meta-boxes.php">
-    <HookNotFound occurrences="2">
-      <code>add_action( 'load-post-new.php', array( $this, 'init_metabox' ) )</code>
-      <code>add_action( 'load-post.php', array( $this, 'init_metabox' ) )</code>
-    </HookNotFound>
-    <InvalidArgument occurrences="5">
+    <InvalidArgument occurrences="4">
       <code>$post_id</code>
       <code>$post_id</code>
       <code>$post_id</code>
       <code>$post_id</code>
-      <code>array( $this, 'save_meta_box' )</code>
     </InvalidArgument>
     <MissingDocblockType occurrences="2">
       <code>private static $instance;</code>
@@ -3955,30 +3312,15 @@
     </UnresolvableInclude>
   </file>
   <file src="inc/modules/related-posts/class-astra-related-posts-markup.php">
-    <DocblockTypeContradiction occurrences="4">
-      <code>'full-content' === $related_posts_content_type</code>
-      <code>'full-content' === $related_posts_content_type</code>
-      <code>'full-content' === $related_posts_content_type</code>
-      <code>'full-content' === $related_posts_content_type</code>
-    </DocblockTypeContradiction>
-    <InvalidArgument occurrences="2">
-      <code>$terms</code>
-      <code>$terms</code>
-    </InvalidArgument>
-    <InvalidReturnStatement occurrences="1">
-      <code>apply_filters( 'astra_related_posts_no_posts_avilable_message', '', $post_id )</code>
-    </InvalidReturnStatement>
     <InvalidScalarArgument occurrences="2">
       <code>2</code>
       <code>2</code>
     </InvalidScalarArgument>
-    <PossiblyFalseArgument occurrences="7">
+    <PossiblyFalseArgument occurrences="5">
       <code>$post_id</code>
       <code>$post_id</code>
       <code>$post_id</code>
       <code>$post_id</code>
-      <code>apply_filters( 'astra_related_post_link', get_the_permalink(), $current_post_id )</code>
-      <code>apply_filters( 'astra_related_post_link', get_the_permalink(), $current_post_id )</code>
       <code>get_permalink()</code>
     </PossiblyFalseArgument>
     <PossiblyInvalidMethodCall occurrences="3">
@@ -3986,12 +3328,6 @@
       <code>have_posts</code>
       <code>the_post</code>
     </PossiblyInvalidMethodCall>
-    <PossiblyNullArgument occurrences="1">
-      <code>$excerpt</code>
-    </PossiblyNullArgument>
-    <RedundantConditionGivenDocblockType occurrences="1">
-      <code>is_array( $exclude_ids )</code>
-    </RedundantConditionGivenDocblockType>
   </file>
   <file src="inc/modules/related-posts/css/dynamic-css.php">
     <InvalidArgument occurrences="2">
@@ -4023,95 +3359,41 @@
     </ParadoxicalCondition>
   </file>
   <file src="inc/schema/class-astra-creativework-schema.php">
-    <HookNotFound occurrences="16">
-      <code>add_filter( 'astra_attr_article-blog', array( $this, 'creative_work_schema' ) )</code>
-      <code>add_filter( 'astra_attr_article-content', array( $this, 'creative_work_schema' ) )</code>
-      <code>add_filter( 'astra_attr_article-entry-content', array( $this, 'article_content_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-entry-content-blog-layout', array( $this, 'article_content_blog_layout_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-entry-content-blog-layout-2', array( $this, 'article_content_blog_layout_2_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-entry-content-blog-layout-3', array( $this, 'article_content_blog_layout_3_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-entry-content-page', array( $this, 'article_content_page_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-entry-content-single-layout', array( $this, 'article_content_single_layout_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-image-blog-archive', array( $this, 'article_image_blog_archive_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-image-blog-single-post', array( $this, 'article_image_blog_single_post_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-page', array( $this, 'creative_work_schema' ) )</code>
-      <code>add_filter( 'astra_attr_article-single', array( $this, 'creative_work_schema' ) )</code>
-      <code>add_filter( 'astra_attr_article-title-blog', array( $this, 'article_title_blog_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-title-blog-single', array( $this, 'article_title_blog_single_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-title-content', array( $this, 'article_title_content_schema_prop' ) )</code>
-      <code>add_filter( 'astra_attr_article-title-content-page', array( $this, 'article_title_content_page_schema_prop' ) )</code>
-    </HookNotFound>
     <InvalidReturnStatement occurrences="1">
       <code>$attr</code>
     </InvalidReturnStatement>
   </file>
   <file src="inc/schema/class-astra-organization-schema.php">
-    <HookNotFound occurrences="7">
-      <code>add_filter( 'astra_attr_site-identity', array( $this, 'organization_Schema' ) )</code>
-      <code>add_filter( 'astra_attr_site-title', array( $this, 'site_title_attr' ) )</code>
-      <code>add_filter( 'astra_attr_site-title-custom-link', array( $this, 'site_title_custom_link_attr' ) )</code>
-      <code>add_filter( 'astra_attr_site-title-link', array( $this, 'site_title_link_attr' ) )</code>
-      <code>add_filter( 'astra_attr_site-title-none-sticky-custom-link', array( $this, 'site_title_none_sticky_custom_link_attr' ) )</code>
-      <code>add_filter( 'astra_attr_site-title-sticky-custom-link', array( $this, 'site_title_sticky_custom_link_attr' ) )</code>
-      <code>add_filter( 'astra_attr_site-title-sticky-custom-logo-link', array( $this, 'site_title_sticky_custom_logo_link_attr' ) )</code>
-    </HookNotFound>
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
   <file src="inc/schema/class-astra-person-schema.php">
-    <HookNotFound occurrences="7">
-      <code>add_filter( 'astra_attr_author-desc-info', array( $this, 'author_desc_schema_itemprop' ) )</code>
-      <code>add_filter( 'astra_attr_author-item-info', array( $this, 'author_item_schema_itemprop' ) )</code>
-      <code>add_filter( 'astra_attr_author-name', array( $this, 'author_name_schema_itemprop' ) )</code>
-      <code>add_filter( 'astra_attr_author-name-info', array( $this, 'author_name_info_schema_itemprop' ) )</code>
-      <code>add_filter( 'astra_attr_author-url', array( $this, 'author_url_schema_itemprop' ) )</code>
-      <code>add_filter( 'astra_attr_author-url-info', array( $this, 'author_info_url_schema_itemprop' ) )</code>
-      <code>add_filter( 'astra_attr_post-meta-author', array( $this, 'person_Schema' ) )</code>
-    </HookNotFound>
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
   <file src="inc/schema/class-astra-site-navigation-schema.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_attr_site-navigation', array( $this, 'site_navigation_schema' ) )</code>
-    </HookNotFound>
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
   <file src="inc/schema/class-astra-wpfooter-schema.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_attr_footer', array( $this, 'wpfooter_Schema' ) )</code>
-    </HookNotFound>
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
   <file src="inc/schema/class-astra-wpheader-schema.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_attr_header', array( $this, 'wpheader_Schema' ) )</code>
-    </HookNotFound>
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
   <file src="inc/schema/class-astra-wpsidebar-schema.php">
-    <HookNotFound occurrences="1">
-      <code>add_filter( 'astra_attr_sidebar', array( $this, 'wpsidebar_Schema' ) )</code>
-    </HookNotFound>
     <ParadoxicalCondition occurrences="1">
       <code>! defined( 'ABSPATH' )</code>
     </ParadoxicalCondition>
   </file>
   <file src="inc/template-parts.php">
-    <DocblockTypeContradiction occurrences="1">
-      <code>apply_filters( 'astra_advanced_footer_disable', false )</code>
-    </DocblockTypeContradiction>
-    <InvalidArgument occurrences="1">
-      <code>'astra_masthead_custom_nav_menu_items'</code>
-    </InvalidArgument>
     <InvalidPropertyFetch occurrences="1">
       <code>$args-&gt;theme_location</code>
     </InvalidPropertyFetch>
