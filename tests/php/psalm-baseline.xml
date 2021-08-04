@@ -465,7 +465,7 @@
     <HookNotFound occurrences="1">
       <code>add_filter( 'astra_dynamic_theme_css', 'astra_ext_transparent_header_dynamic_css' )</code>
     </HookNotFound>
-    <InvalidArgument occurrences="15">
+    <InvalidArgument occurrences="14">
       <code>astra_get_mobile_breakpoint( 1 )</code>
       <code>astra_get_mobile_breakpoint()</code>
       <code>astra_get_tablet_breakpoint( '', 1 )</code>
@@ -1261,9 +1261,6 @@
     <InvalidScalarArgument occurrences="1">
       <code>'menu'</code>
     </InvalidScalarArgument>
-    <UndefinedFunction occurrences="1">
-      <code>footer_menu_static_css()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/builder/type/footer/primary-footer/class-astra-primary-footer-component-loader.php">
     <RedundantCondition occurrences="2">
@@ -1364,9 +1361,6 @@
       <code>Astra_Builder_Base_Dynamic_CSS::prepare_advanced_margin_padding_css( $_section, $parent_selector )</code>
       <code>Astra_Builder_Base_Dynamic_CSS::prepare_visibility_css( $_section, '.ast-above-header-bar', 'block', $mobile_tablet_default_display = 'grid' )</code>
     </InvalidOperand>
-    <UndefinedFunction occurrences="1">
-      <code>is_astra_addon_3_5_0_version()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/builder/type/header/account/class-astra-header-account-component-loader.php">
     <RedundantCondition occurrences="2">
@@ -1542,9 +1536,6 @@
       <code>$sub_menu_top_offset</code>
       <code>'menu-' . $index</code>
     </InvalidScalarArgument>
-    <UndefinedFunction occurrences="1">
-      <code>astra_menu_hover_style_css()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/builder/type/header/mobile-menu/class-astra-mobile-menu-component-loader.php">
     <RedundantCondition occurrences="2">
@@ -1687,9 +1678,6 @@
       <code>$icon_color_mobile</code>
       <code>$icon_color_tablet</code>
     </PossiblyNullArgument>
-    <UndefinedFunction occurrences="1">
-      <code>astra_search_static_css()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/builder/type/header/site-identity/class-astra-header-site-identity-component-loader.php">
     <RedundantCondition occurrences="2">
@@ -1790,9 +1778,6 @@
     <MissingDocblockType occurrences="1">
       <code>private static $instance;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="1">
-      <code>$instance</code>
-    </MissingPropertyType>
     <RedundantCondition occurrences="2">
       <code>SCRIPT_DEBUG</code>
       <code>SCRIPT_DEBUG</code>
@@ -1886,9 +1871,6 @@
     <InvalidPropertyFetch occurrences="1">
       <code>$attachment-&gt;ID</code>
     </InvalidPropertyFetch>
-    <InvalidReturnStatement occurrences="1">
-      <code>' ast-mobile-menu-buttons-' . astra_get_option( 'mobile-header-toggle-btn-style' ) . ' '</code>
-    </InvalidReturnStatement>
     <RedundantConditionGivenDocblockType occurrences="3">
       <code>is_object( $args )</code>
       <code>isset( $item-&gt;post_parent )</code>
@@ -2044,9 +2026,6 @@
       <code>add_action( 'fl_theme_builder_before_render_content', array( $this, 'builder_before_render_content' ), 10, 1 )</code>
       <code>add_filter( 'fl_theme_builder_part_hooks', array( $this, 'register_part_hooks' ) )</code>
     </HookNotFound>
-    <InvalidScalarArgument occurrences="1">
-      <code>'__return_false'</code>
-    </InvalidScalarArgument>
     <RedundantPropertyInitializationCheck occurrences="1">
       <code>isset( self::$instance )</code>
     </RedundantPropertyInitializationCheck>
@@ -2174,7 +2153,6 @@
       <code>add_filter( 'astra_dynamic_theme_css', array( $this, 'add_inline_styles' ) )</code>
       <code>add_filter( 'astra_edd_cart_in_menu_class', array( $this, 'header_cart_icon_class' ), 99 )</code>
       <code>add_filter( 'astra_get_content_layout', array( $this, 'store_content_layout' ) )</code>
-      <code>add_filter( 'astra_get_dynamic_header_content', array( $this, 'astra_header_cart' ), 10, 3 )</code>
       <code>add_filter( 'astra_get_sidebar', array( $this, 'replace_store_sidebar' ) )</code>
       <code>add_filter( 'astra_header_section_elements', array( $this, 'header_section_elements' ) )</code>
       <code>add_filter( 'astra_page_layout', array( $this, 'store_sidebar_layout' ) )</code>
@@ -2466,9 +2444,8 @@
       <code>add_filter( 'woocommerce_show_page_title', '__return_false' )</code>
       <code>add_filter( 'woocommerce_subcategory_count_html', array( $this, 'subcategory_count_markup' ), 10, 2 )</code>
     </HookNotFound>
-    <InvalidArgument occurrences="15">
+    <InvalidArgument occurrences="14">
       <code>'title='</code>
-      <code>array( $this, 'header_cart_icon_class' )</code>
       <code>astra_get_mobile_breakpoint( '', 1 )</code>
       <code>astra_get_mobile_breakpoint( '', 1 )</code>
       <code>astra_get_mobile_breakpoint()</code>
@@ -2731,9 +2708,6 @@
     <HookNotFound occurrences="1">
       <code>add_filter( 'astra_theme_defaults', 'astra_hf_builder_customizer_defaults' )</code>
     </HookNotFound>
-    <UndefinedFunction occurrences="1">
-      <code>astra_get_transparent_header_default_value()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/core/class-astra-admin-settings.php">
     <ArgumentTypeCoercion occurrences="1">
@@ -2871,10 +2845,6 @@
       <code>public static $scripts;</code>
       <code>public static $styles;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="2">
-      <code>$scripts</code>
-      <code>$styles</code>
-    </MissingPropertyType>
     <NullArgument occurrences="1">
       <code>null</code>
     </NullArgument>
@@ -2914,10 +2884,6 @@
       <code>private static $instance;</code>
       <code>public static $post_id = null;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="2">
-      <code>$instance</code>
-      <code>$post_id</code>
-    </MissingPropertyType>
     <RedundantConditionGivenDocblockType occurrences="1">
       <code>is_null( self::$defaults )</code>
     </RedundantConditionGivenDocblockType>
@@ -3122,10 +3088,6 @@
       <code>public function header_widget_area_inner( $args ) {</code>
       <code>public function header_widget_div_open( $args ) {</code>
     </InvalidDocblock>
-    <InvalidReturnStatement occurrences="2">
-      <code>$args</code>
-      <code>$args</code>
-    </InvalidReturnStatement>
     <PossiblyUndefinedStringArrayOffset occurrences="2">
       <code>$args['class']</code>
       <code>$args['class']</code>
@@ -3372,10 +3334,6 @@
     <UndefinedDocblockClass occurrences="1">
       <code>Astra_Theme_Options::defaults()</code>
     </UndefinedDocblockClass>
-    <UndefinedFunction occurrences="2">
-      <code>astra_webfont_loader_instance( '' )</code>
-      <code>astra_webfont_loader_instance( '' )</code>
-    </UndefinedFunction>
     <UnresolvableInclude occurrences="1">
       <code>require_once ABSPATH . 'wp-admin/includes/image.php'</code>
     </UnresolvableInclude>
@@ -3408,10 +3366,6 @@
       <code>is_array( $subsets )</code>
       <code>is_array( $variants )</code>
     </RedundantConditionGivenDocblockType>
-    <UndefinedFunction occurrences="2">
-      <code>ast_get_webfont_url( $google_font_url )</code>
-      <code>ast_load_preload_local_fonts( $google_font_url )</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/customizer/configurations/builder/base/class-astra-button-component-configs.php">
     <ParadoxicalCondition occurrences="1">
@@ -3679,9 +3633,6 @@
     <UndefinedClass occurrences="1">
       <code>Astra_Ext_Extension</code>
     </UndefinedClass>
-    <UndefinedFunction occurrences="1">
-      <code>is_astra_addon_3_5_0_version()</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/customizer/configurations/layout/class-astra-site-layout-configs.php">
     <UndefinedClass occurrences="1">
@@ -3907,10 +3858,6 @@
     <UndefinedDocblockClass occurrences="1">
       <code>sting</code>
     </UndefinedDocblockClass>
-    <UndefinedFunction occurrences="2">
-      <code>astra_webfont_loader_instance( $url )</code>
-      <code>astra_webfont_loader_instance( $url )</code>
-    </UndefinedFunction>
   </file>
   <file src="inc/markup-extras.php">
     <DocblockTypeContradiction occurrences="5">
@@ -3920,9 +3867,8 @@
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
       <code>true === Astra_Builder_Helper::$is_header_footer_builder_active</code>
     </DocblockTypeContradiction>
-    <InvalidArgument occurrences="4">
+    <InvalidArgument occurrences="3">
       <code>$post_id</code>
-      <code>'astra_page_css_class'</code>
       <code>'astra_replace_header_attr'</code>
       <code>'astra_replace_header_logo'</code>
     </InvalidArgument>
@@ -3973,15 +3919,9 @@
     </UndefinedDocblockClass>
   </file>
   <file src="inc/metabox/class-astra-meta-box-operations.php">
-    <InvalidScalarArgument occurrences="1">
-      <code>array( $this, 'post_title' )</code>
-    </InvalidScalarArgument>
     <MissingDocblockType occurrences="1">
       <code>private static $instance;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="1">
-      <code>$instance</code>
-    </MissingPropertyType>
     <PossiblyFalseArgument occurrences="3">
       <code>get_the_ID()</code>
       <code>get_the_ID()</code>
@@ -4004,9 +3944,6 @@
       <code>private static $instance;</code>
       <code>private static $meta_option;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="1">
-      <code>$instance</code>
-    </MissingPropertyType>
     <PossiblyInvalidArgument occurrences="2">
       <code>$type</code>
       <code>wp_unslash( $_POST['astra_settings_meta_box'] )</code>
@@ -4104,9 +4041,6 @@
       <code>add_filter( 'astra_attr_article-title-content', array( $this, 'article_title_content_schema_prop' ) )</code>
       <code>add_filter( 'astra_attr_article-title-content-page', array( $this, 'article_title_content_page_schema_prop' ) )</code>
     </HookNotFound>
-    <InvalidArgument occurrences="1">
-      <code>array( $this, 'article_image_schema_prop' )</code>
-    </InvalidArgument>
     <InvalidReturnStatement occurrences="1">
       <code>$attr</code>
     </InvalidReturnStatement>
@@ -4242,9 +4176,6 @@
     <MissingDocblockType occurrences="1">
       <code>private static $instance;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="1">
-      <code>$instance</code>
-    </MissingPropertyType>
     <PossiblyFalseArgument occurrences="2">
       <code>false</code>
       <code>get_the_date( 'Y-m-d H:i:s', $current_post_id )</code>
@@ -4285,9 +4216,6 @@
     <MissingDocblockType occurrences="1">
       <code>private static $instance;</code>
     </MissingDocblockType>
-    <MissingPropertyType occurrences="1">
-      <code>$instance</code>
-    </MissingPropertyType>
     <PossiblyFalseArgument occurrences="1">
       <code>false</code>
     </PossiblyFalseArgument>
