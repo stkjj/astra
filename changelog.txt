@@ -1,4 +1,5 @@
-v3.7.1 (Unreleased)
+v3.6.8 (Unreleased)
+- Improvement: Added WPML translation support for all customizer's strings through wpml-config.xml file.
 - Fix: Bulk action selection not working on any WordPress list table when theme's "Get Started" notice is active.
 - Deprecated: Header Footer Widgets - Deprecated design specific options for better compatibility with WordPress 5.8.
 
