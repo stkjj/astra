@@ -441,6 +441,9 @@ if ( ! class_exists( 'Astra_Admin_Settings' ) ) {
 				);
 
 				wp_localize_script( 'astra-admin-settings', 'astra', apply_filters( 'astra_theme_js_localize', $localize ) );
+
+				// Script.
+				wp_enqueue_script( 'astra-admin-settings' );
 			}
 		}
 
