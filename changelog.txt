@@ -1,5 +1,6 @@
 v3.7.1 (Unreleased)
 - Improvement: Builder - Removed design specific options from widgets in WordPress 5.8.
+- Fix: Bulk action selection not working on any WordPress list table when theme's "Get Started" notice is active.
 
 v3.6.7
 - Improvement: Rendered Addon dependent toggle code conditionally and removed unwanted code.
