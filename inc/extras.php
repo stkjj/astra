@@ -697,7 +697,7 @@ function astra_can_remove_elementor_toc_margin_space() {
  * @return boolean
  */
 function astra_remove_widget_design_options() {
-	$astra_settings                                 = get_option( ASTRA_THEME_SETTINGS );
+	$astra_settings               = get_option( ASTRA_THEME_SETTINGS );
 	$remove_widget_design_options = isset( $astra_settings['remove-widget-design-options'] ) ? false : true;
 
 	// True -> Hide widget sections, False -> Display widget sections.
