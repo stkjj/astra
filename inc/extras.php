@@ -693,7 +693,7 @@ function astra_can_remove_elementor_toc_margin_space() {
  * 2. Check if user is new but on lesser WordPress 5.8 versions.
  * 3. User is new with block widget editor.
  *
- * @since x.x.x
+ * @since 3.6.8
  * @return boolean
  */
 function astra_remove_widget_design_options() {
