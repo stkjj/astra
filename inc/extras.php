@@ -705,19 +705,19 @@ function astra_remove_widget_design_options() {
 
 	if ( ! $remove_widget_design_options ) {
 		// For old users we will show widget design options by anyways.
+		return apply_filters( 'astra_remove_widget_design_options', $is_widget_design_sections_hidden );
+	}
+
+	// Considering the user is new now.
+	if ( isset( $astra_settings['remove-widget-design-options'] ) && $astra_settings['remove-widget-design-options'] ) {
+		// User was on WP-5.8 lesser version previously and he may update their WordPress to 5.8 in future. So we display the options in this case.
 		$is_widget_design_sections_hidden = false;
+	} elseif ( astra_has_widgets_block_editor() ) {
+		// User is new & having block widgets active. So we will hide those options.
+		$is_widget_design_sections_hidden = true;
 	} else {
-		// Considering the user is new now.
-		if ( isset( $astra_settings['remove-widget-design-options'] ) && $astra_settings['remove-widget-design-options'] ) {
-			// User was on WP-5.8 lesser version previously and he may update their WordPress to 5.8 in future. So we display the options in this case.
-			$is_widget_design_sections_hidden = false;
-		} elseif ( astra_has_widgets_block_editor() ) {
-			// User is new & having block widgets active. So we will hide those options.
-			$is_widget_design_sections_hidden = true;
-		} else {
-			// Setting up flag because user is on lesser WP versions and may update WP to 5.8.
-			astra_update_option( 'remove-widget-design-options', true );
-		}
+		// Setting up flag because user is on lesser WP versions and may update WP to 5.8.
+		astra_update_option( 'remove-widget-design-options', true );
 	}
 
 	return apply_filters( 'astra_remove_widget_design_options', $is_widget_design_sections_hidden );
