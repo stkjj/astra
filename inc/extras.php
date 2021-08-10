@@ -705,7 +705,7 @@ function astra_remove_widget_design_options() {
 
 	if ( ! $remove_widget_design_options ) {
 		// For old users we will show widget design options by anyways.
-		return apply_filters( 'astra_remove_widget_design_options', $is_widget_design_sections_hidden );
+		return apply_filters( 'astra_remove_widget_design_options', false );
 	}
 
 	// Considering the user is new now.
